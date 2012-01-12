@@ -1,4 +1,4 @@
-update=Sat 07 Jan 2012 02:33:57 AM EET
+update=Thu 12 Jan 2012 01:46:10 AM EET
 version=1
 last_client=eeschema
 [cvpcb]
@@ -154,3 +154,5 @@ LibName40=/home/lauri/Projektit/kicad_lib_oma/schema_components/op-amp/tlc272
 LibName41=/home/lauri/Projektit/kicad_lib_oma/schema_components/regulators/tps799xx
 LibName42=/home/lauri/Projektit/kicad_lib_oma/schema_components/mem_cards/microsd_sim_combo
 LibName43=/home/lauri/Projektit/kicad_lib_oma/schema_components/chargers/fan3989
+LibName44=/home/lauri/Projektit/kicad_lib_oma/schema_components/logic_gates/sn74aup1g08_and
+LibName45=/home/lauri/Projektit/kicad_lib_oma/schema_components/logic_gates/sn74lvc1g38_nand
