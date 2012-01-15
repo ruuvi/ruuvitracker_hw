@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Sat 14 Jan 2012 05:39:55 PM EET
+Cmp-Mod V01 Created by CvPcb (2011-11-27 BZR 3249)-stable date = Sun 15 Jan 2012 02:14:14 AM EET
 
 BeginCmp
 TimeStamp = /4EF51F70;
@@ -351,6 +351,13 @@ IdModule  = 005INCH_PINSTRIP_THRUHOLE_12PIN;
 EndCmp
 
 BeginCmp
+TimeStamp = /4F1219CE;
+Reference = P2;
+ValeurCmp = HOLE;
+IdModule  = 3MM_PLATED_HOLE;
+EndCmp
+
+BeginCmp
 TimeStamp = /4EFE065C;
 Reference = P3;
 ValeurCmp = JTAG;
@@ -362,6 +369,13 @@ TimeStamp = /4EFE08C5;
 Reference = P4;
 ValeurCmp = USART;
 IdModule  = 005INCH_PINSTRIP_THRUHOLE_6PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F1219D8;
+Reference = P5;
+ValeurCmp = HOLE;
+IdModule  = 3MM_PLATED_HOLE;
 EndCmp
 
 BeginCmp

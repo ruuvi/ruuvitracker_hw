@@ -1,4 +1,4 @@
-update=Sat 14 Jan 2012 05:54:12 PM EET
+update=Sun 15 Jan 2012 02:14:28 AM EET
 last_client=pcbnew
 [general]
 version=1
@@ -51,3 +51,4 @@ LibName22=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/lqfp/LQFP-64
 LibName23=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/usb/MICROUSB_B_SMD
 LibName24=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/common_components/SMD_0603
 LibName25=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/common_components/SMD_0805
+LibName26=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/holes/3MM_PLATED_HOLE
