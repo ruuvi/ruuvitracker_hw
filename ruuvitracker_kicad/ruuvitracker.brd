@@ -1,4 +1,4 @@
-PCBNEW-BOARD Version 1 date Tue 17 Jan 2012 05:55:30 AM EET
+PCBNEW-BOARD Version 1 date Tue 17 Jan 2012 06:17:44 AM EET
 
 # Created by Pcbnew(2011-11-27 BZR 3249)-stable
 
@@ -65,8 +65,10 @@ TextModWidth 39
 PadSize 600 600
 PadDrill 320
 Pad2MaskClearance 20
-AuxiliaryAxisOrg 0 0
-PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 4) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference false) (plotvalue false) (plotothertext false) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory /home/lauri/Projektit/RuuviTracker/ruuvitracker_kicad-backups_and_schema_plots/export/gerbers/))
+Pad2PasteClearance -12
+GridOrigin 39370 39370
+AuxiliaryAxisOrg 39370 39370
+PcbPlotParams (pcbplotparams (layerselection 284196865) (usegerberextensions true) (excludeedgelayer true) (linewidth 4) (plotframeref false) (viasonmask false) (mode 1) (useauxorigin false) (hpglpennumber 1) (hpglpenspeed 20) (hpglpendiameter 15) (hpglpenoverlay 0) (pscolor true) (psnegative false) (psa4output false) (plotreference false) (plotvalue false) (plotothertext false) (plotinvisibletext false) (padsonsilk false) (subtractmaskfromsilk false) (outputformat 1) (mirror false) (drillshape 1) (scaleselection 1) (outputdirectory /home/lauri/Projektit/RuuviTracker/ruuvitracker_kicad-backups_and_schema_plots/export/order/))
 $EndSETUP
 
 $EQUIPOT
