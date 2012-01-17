@@ -1,4 +1,4 @@
-update=Sun 15 Jan 2012 02:14:28 AM EET
+update=Tue 17 Jan 2012 05:47:19 AM EET
 last_client=pcbnew
 [general]
 version=1
@@ -18,7 +18,7 @@ TxtPcbH=394
 TxtModV=394
 TxtModH=394
 TxtModW=39
-VEgarde=39
+VEgarde=20
 DrawLar=20
 EdgeLar=20
 TxtLar=39
@@ -52,3 +52,6 @@ LibName23=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/usb/MICROUSB_B_SMD
 LibName24=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/common_components/SMD_0603
 LibName25=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/common_components/SMD_0805
 LibName26=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/holes/3MM_PLATED_HOLE
+LibName27=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/leds/LED_SMD-0603
+LibName28=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/bmp_exports/ruuvitracker_logo
+LibName29=/home/lauri/Projektit/kicad_lib_oma/pcb_modules/bmp_exports/ruuvitracker_logo_flip
