@@ -1,4 +1,4 @@
-update=Tue 17 Jan 2012 06:13:15 AM EET
+update=Thu 19 Jan 2012 03:50:00 AM EET
 last_client=pcbnew
 [general]
 version=1
@@ -25,7 +25,7 @@ TxtLar=39
 MSegLar=28
 LastNetListRead=ruuvitracker.net
 [pcbnew/libraries]
-LibDir=
+LibDir=../kicad_lib/packages3d
 LibName1=sockets
 LibName2=connect
 LibName3=discret
