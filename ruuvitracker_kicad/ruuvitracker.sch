@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 18 Jan 2012 12:28:59 AM EET
+EESchema Schematic File Version 2  date Thu 19 Jan 2012 04:51:11 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +29,17 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:crystal_4pin
+LIBS:esda6v1w5
+LIBS:fan3989
+LIBS:lsm303dlhc
+LIBS:microphone
+LIBS:microsd_sim_combo
+LIBS:sim908
+LIBS:sn74lvc1g38_nand
+LIBS:stm32f10xxx_lqfp64
+LIBS:tps799xx
+LIBS:usb_micro_b
 LIBS:ruuvitracker-cache
 EELAYER 25  0
 EELAYER END
