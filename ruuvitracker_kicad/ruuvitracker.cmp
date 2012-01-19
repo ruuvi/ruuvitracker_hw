@@ -158,7 +158,7 @@ BeginCmp
 TimeStamp = /4F0E0A5C;
 Reference = C23;
 ValeurCmp = 100u;
-IdModule  = c_tant_C;
+IdModule  = C_TANT_C;
 EndCmp
 
 BeginCmp

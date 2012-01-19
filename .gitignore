@@ -9,6 +9,10 @@
 *.u1conflict
 
 
+# Folders #
+#############################
+#kicad_lib/
+
 # Compiled source #
 ###################
 *.com
