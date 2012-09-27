@@ -1,5 +1,5 @@
-update=Thu 20 Sep 2012 11:17:57 PM EEST
-last_client=kicad
+update=Thu 27 Sep 2012 08:44:09 PM EEST
+last_client=eeschema
 [cvpcb]
 version=1
 NetIExt=net
@@ -53,6 +53,8 @@ LibName26=3MM_PLATED_HOLE
 LibName27=LED_SMD-0603
 LibName28=RUUVITRACKER_LOGO
 LibName29=RUUVITRACKER_LOGO_FLIP
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=../kicad_lib/schema
@@ -128,6 +130,5 @@ LibName40=24lc16b
 LibName41=drv2603
 LibName42=smf05c
 LibName43=tps799xx
-LibName44=stm32f415rg_lqfp64
-[general]
-version=1
+LibName44=conn_16
+LibName45=stm32f4xx_lqfp100
