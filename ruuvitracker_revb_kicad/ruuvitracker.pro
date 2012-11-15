@@ -1,4 +1,4 @@
-update=Fri 19 Oct 2012 09:37:58 PM EEST
+update=Sun 21 Oct 2012 10:45:30 PM EEST
 last_client=eeschema
 [cvpcb]
 version=1
@@ -133,3 +133,4 @@ LibName43=tps799xx
 LibName44=conn_16
 LibName45=stm32f4xx_lqfp100
 LibName46=bq24190
+LibName47=admp404
