@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 25 Nov 2012 01:13:55 PM EET
+EESchema Schematic File Version 2  date Sun 25 Nov 2012 02:03:22 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -47,6 +47,7 @@ LIBS:stm32f4xx_lqfp100
 LIBS:bq24190
 LIBS:admp404
 LIBS:tps737xx_son8
+LIBS:24lc1025
 LIBS:ruuvitracker-cache
 EELAYER 25  0
 EELAYER END
@@ -62,8 +63,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 18100 27450 0    120  Italic 0
-LEDs (uC + GSM)
+Wire Wire Line
+	-9350 28100 -9550 28100
+Wire Wire Line
+	-9350 28000 -9450 28000
+Connection ~ -7950 28500
+Wire Wire Line
+	-7950 28600 -7950 28200
+Wire Wire Line
+	-7950 28200 -8050 28200
 Wire Wire Line
 	18450 29000 18550 29000
 Wire Wire Line
@@ -263,8 +271,6 @@ Wire Wire Line
 	11650 28350 11550 28350
 Wire Wire Line
 	11550 28350 11550 28750
-Wire Wire Line
-	2450 3050 2350 3050
 Connection ~ 27850 10100
 Wire Wire Line
 	27850 10100 27850 10200
@@ -363,13 +369,13 @@ Wire Wire Line
 Wire Wire Line
 	12300 21600 12400 21600
 Wire Wire Line
-	2400 1750 2400 1650
+	-4850 28700 -4850 28600
 Wire Wire Line
-	1200 1650 1200 1750
+	-6050 28600 -6050 28700
 Wire Wire Line
-	1200 1000 1200 1250
+	-6050 27950 -6050 28200
 Wire Wire Line
-	2400 1000 2400 1250
+	-4850 27950 -4850 28200
 Wire Wire Line
 	10300 22200 10200 22200
 Wire Wire Line
@@ -529,19 +535,19 @@ Wire Wire Line
 Wire Wire Line
 	10200 21500 10300 21500
 Wire Wire Line
-	2200 1150 2400 1150
-Connection ~ 2400 1150
+	-5050 28100 -4850 28100
+Connection ~ -4850 28100
 Wire Wire Line
-	1400 1150 1200 1150
-Connection ~ 1200 1150
+	-5850 28100 -6050 28100
+Connection ~ -6050 28100
 Wire Wire Line
-	1350 1750 1350 1300
+	-5900 28700 -5900 28250
 Wire Wire Line
-	1350 1300 1400 1300
+	-5900 28250 -5850 28250
 Wire Wire Line
-	2250 1750 2250 1300
+	-5000 28700 -5000 28250
 Wire Wire Line
-	2250 1300 2200 1300
+	-5000 28250 -5050 28250
 Wire Wire Line
 	12300 22150 12300 22100
 Wire Wire Line
@@ -669,13 +675,9 @@ Wire Wire Line
 	28300 10100 27450 10100
 Connection ~ 28000 10100
 Wire Wire Line
-	2450 2850 2350 2850
+	-7650 28000 -7650 28050
 Wire Wire Line
-	800  2950 1250 2950
-Wire Wire Line
-	2750 2700 2750 2750
-Wire Wire Line
-	2750 3150 2750 3250
+	-7650 28450 -7650 28550
 Wire Wire Line
 	11550 28450 11650 28450
 Connection ~ 11550 28450
@@ -875,6 +877,55 @@ Wire Wire Line
 	19650 28100 19550 28100
 Wire Wire Line
 	18450 28700 18550 28700
+Wire Wire Line
+	-7950 28500 -8050 28500
+Wire Wire Line
+	-7950 27900 -7950 28000
+Wire Wire Line
+	-7950 28000 -8050 28000
+Wire Wire Line
+	-9450 28000 -9450 28200
+Wire Wire Line
+	-9450 28200 -9350 28200
+Connection ~ -9450 28100
+$Comp
+L GND #PWR?
+U 1 1 50B20245
+P -9550 28100
+F 0 "#PWR?" H -9550 28100 30  0001 C CNN
+F 1 "GND" H -9550 28030 30  0001 C CNN
+	1    -9550 28100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 50B20215
+P -7650 28550
+F 0 "#PWR?" H -7650 28550 30  0001 C CNN
+F 1 "GND" H -7650 28480 30  0001 C CNN
+	1    -7650 28550
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR?
+U 1 1 50B2020D
+P -7950 27900
+F 0 "#PWR?" H -7950 28000 30  0001 C CNN
+F 1 "VDD" H -7950 28010 30  0000 C CNN
+	1    -7950 27900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 24LC1025 U?
+U 1 1 50B201EE
+P -8700 28250
+F 0 "U?" H -9000 27850 60  0000 C CNN
+F 1 "24LC1025" H -8600 27850 60  0000 C CNN
+	1    -8700 28250
+	1    0    0    -1  
+$EndComp
+Text Notes 18100 27450 0    120  Italic 0
+LEDs (uC + GSM)
 $Comp
 L R R?
 U 1 1 50B1FCB2
@@ -1679,8 +1730,8 @@ Text Notes 12050 10400 0    30   Italic 0
 PC13, PC14 and PC15 are supplied through the power switch.\nSince the switch only sinks a limited amount of current (3 mA),\nthe use of GPIOs PC13 to PC15 and PI8 in output mode is limited:\n- The speed should not exceed 2 MHz with a maximum load of 30 pF.\n- These I/Os must not be used as a current source (e.g. to drive an LED).\n\nMain function after the first backup domain power-up. Later on, it\ndepends on the contents of the RTC registers even after reset\n(because these registers are not reset by the main reset).
 Text Notes 8000 15000 0    30   Italic 0
 The regulator ON/internal reset ON mode is always enabled on LQFP64 and LQFP100 package.\n\nThere are three low-power modes:\n– MR is used in the nominal regulation mode (Run)\n– LPR is used in the Stop modes\n– Power-down is used in Standby mode: the regulator output is in high\nimpedance: the kernel circuitry is powered down, inducing zero\nconsumption (but the contents of the registers and SRAM are lost).
-Text Notes 1000 1900 0    30   Italic 0
-STM32F41x datasheet: On reset the 16 MHz internal RC oscillator is\nselected as the default CPU clock. The 16 MHz internal RC oscillator\nis factory-trimmed to offer 1% accuracy over the full temperature\nrange. The application can then select as system clock either the RC\noscillator or an external 4-26 MHz clock source.
+Text Notes -6250 28850 0    30   Italic 0
+STM32F41x datasheet: On reset the 16 MHz internal RC oscillator is\nselected as the default CPU clock. The 16 MHz internal RC oscillator\nis factory-trimmed to offer 1% accuracy over the full temperature\nrange. The application can then select as system clock either the RC\noscillator or an external 4-26 MHz clock source.\n\nEthernet requires 25MHz crystal.
 $Comp
 L GND #PWR?
 U 1 1 504B1D0C
@@ -1968,76 +2019,40 @@ Text Label 10300 8250 2    60   ~ 0
 CAN1_TX
 Text Label 10300 8150 2    60   ~ 0
 CAN1_RX
-Text Notes 1100 3450 0    40   Italic 0
-Standby current max 1uA @ room temperature.\n\nPin-compatible models:\n24AA64 (64Kbit)
+Text Notes -9150 28900 0    30   Italic 0
+- Read current 1 mA, typical\n- Standby current 100 nA, typical\n- Data retention >200 years\n- More than 1 million erase/write cycles\n- 24LC1025 = 128K x 8bit\n\nI2C Slave address: 0b1010000
 $Comp
 L C C?
 U 1 1 5040F24C
-P 2750 2950
-F 0 "C?" H 2800 3050 50  0000 L CNN
-F 1 "100n" H 2800 2850 50  0000 L CNN
-	1    2750 2950
+P -7650 28250
+F 0 "C?" H -7600 28350 50  0000 L CNN
+F 1 "100n" H -7600 28150 50  0000 L CNN
+	1    -7650 28250
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 5040F24B
-P 2750 3250
-F 0 "#PWR?" H 2750 3250 30  0001 C CNN
-F 1 "GND" H 2750 3180 30  0001 C CNN
-	1    2750 3250
+P -7950 28600
+F 0 "#PWR?" H -7950 28600 30  0001 C CNN
+F 1 "GND" H -7950 28530 30  0001 C CNN
+	1    -7950 28600
 	1    0    0    -1  
 $EndComp
 $Comp
 L VDD #PWR?
 U 1 1 5040F24A
-P 2750 2700
-F 0 "#PWR?" H 2750 2800 30  0001 C CNN
-F 1 "VDD" H 2750 2810 30  0000 C CNN
-	1    2750 2700
+P -7650 28000
+F 0 "#PWR?" H -7650 28100 30  0001 C CNN
+F 1 "VDD" H -7650 28110 30  0000 C CNN
+	1    -7650 28000
 	1    0    0    -1  
 $EndComp
-$Comp
-L VDD #PWR?
-U 1 1 5040F21A
-P 2450 3050
-F 0 "#PWR?" H 2450 3150 30  0001 C CNN
-F 1 "VDD" H 2450 3160 30  0000 C CNN
-	1    2450 3050
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 5040F210
-P 2450 2850
-F 0 "#PWR?" H 2450 2850 30  0001 C CNN
-F 1 "GND" H 2450 2780 30  0001 C CNN
-	1    2450 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 5040F0A6
-P 800 2950
-F 0 "#PWR?" H 800 2950 30  0001 C CNN
-F 1 "GND" H 800 2880 30  0001 C CNN
-	1    800  2950
-	0    1    1    0   
-$EndComp
-Text Label 1250 2850 2    60   ~ 0
+Text Label -9350 28500 2    60   ~ 0
 I2C_SCL
-Text Label 1250 3050 2    60   ~ 0
+Text Label -9350 28400 2    60   ~ 0
 I2C_SDA
-$Comp
-L 24LC16B U?
-U 1 1 5040F06B
-P 1800 2950
-F 0 "U?" H 2050 2700 60  0000 C CNN
-F 1 "24LC16B" H 1700 2700 60  0000 C CNN
-	1    1800 2950
-	1    0    0    -1  
-$EndComp
-Text Notes 1400 2550 0    120  Italic 0
+Text Notes -9050 27650 0    120  Italic 0
 EEPROM
 $Comp
 L CP1 C?
@@ -2720,60 +2735,60 @@ F 1 "USART" V 12800 21850 60  0000 C CNN
 	1    12750 21850
 	1    0    0    -1  
 $EndComp
-Text Label 1200 1000 2    60   ~ 0
+Text Label -6050 27950 2    60   ~ 0
 STM32_OSC_IN
 $Comp
 L GND #PWR034
 U 1 1 4EFE0845
-P 2400 1750
-F 0 "#PWR034" H 2400 1750 30  0001 C CNN
-F 1 "GND" H 2400 1680 30  0001 C CNN
-	1    2400 1750
+P -4850 28700
+F 0 "#PWR034" H -4850 28700 30  0001 C CNN
+F 1 "GND" H -4850 28630 30  0001 C CNN
+	1    -4850 28700
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR035
 U 1 1 4EFE0844
-P 2250 1750
-F 0 "#PWR035" H 2250 1750 30  0001 C CNN
-F 1 "GND" H 2250 1680 30  0001 C CNN
-	1    2250 1750
+P -5000 28700
+F 0 "#PWR035" H -5000 28700 30  0001 C CNN
+F 1 "GND" H -5000 28630 30  0001 C CNN
+	1    -5000 28700
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR036
 U 1 1 4EFE0841
-P 1350 1750
-F 0 "#PWR036" H 1350 1750 30  0001 C CNN
-F 1 "GND" H 1350 1680 30  0001 C CNN
-	1    1350 1750
+P -5900 28700
+F 0 "#PWR036" H -5900 28700 30  0001 C CNN
+F 1 "GND" H -5900 28630 30  0001 C CNN
+	1    -5900 28700
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR037
 U 1 1 4EFE083E
-P 1200 1750
-F 0 "#PWR037" H 1200 1750 30  0001 C CNN
-F 1 "GND" H 1200 1680 30  0001 C CNN
-	1    1200 1750
+P -6050 28700
+F 0 "#PWR037" H -6050 28700 30  0001 C CNN
+F 1 "GND" H -6050 28630 30  0001 C CNN
+	1    -6050 28700
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C11
 U 1 1 4EFE0821
-P 1200 1450
-F 0 "C11" H 1250 1550 50  0000 L CNN
-F 1 "10p" H 1250 1350 50  0000 L CNN
-	1    1200 1450
+P -6050 28400
+F 0 "C11" H -6000 28500 50  0000 L CNN
+F 1 "10p" H -6000 28300 50  0000 L CNN
+	1    -6050 28400
 	-1   0    0    1   
 $EndComp
 $Comp
 L CRYSTAL_4PIN X1
 U 1 1 4EFE0805
-P 1800 1150
-F 0 "X1" H 1800 1350 60  0000 C CNN
-F 1 "4-26MHZ" H 1800 900 60  0000 C CNN
-	1    1800 1150
+P -5450 28100
+F 0 "X1" H -5450 28300 60  0000 C CNN
+F 1 "4-26MHZ" H -5450 27850 60  0000 C CNN
+	1    -5450 28100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3366,17 +3381,17 @@ F 1 "1u" H 31350 19850 50  0000 L CNN
 	1    31300 19950
 	1    0    0    -1  
 $EndComp
-Text Notes 1500 750  0    120  Italic 0
+Text Notes -5750 27700 0    120  Italic 0
 Crystal
-Text Label 2400 1000 0    60   ~ 0
+Text Label -4850 27950 0    60   ~ 0
 STM32_OSC_OUT
 $Comp
 L C C12
 U 1 1 4EF5208E
-P 2400 1450
-F 0 "C12" H 2450 1550 50  0000 L CNN
-F 1 "10p" H 2450 1350 50  0000 L CNN
-	1    2400 1450
+P -4850 28400
+F 0 "C12" H -4800 28500 50  0000 L CNN
+F 1 "10p" H -4800 28300 50  0000 L CNN
+	1    -4850 28400
 	1    0    0    -1  
 $EndComp
 Text Label 16500 8400 2    60   ~ 0
