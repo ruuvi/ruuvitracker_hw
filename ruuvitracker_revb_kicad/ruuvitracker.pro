@@ -1,4 +1,4 @@
-update=Sat 08 Dec 2012 04:51:36 PM EET
+update=Sat 08 Dec 2012 07:22:32 PM EET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -138,3 +138,4 @@ LibName48=tps737xx_son8
 LibName49=24lc1025
 LibName50=conn_28
 LibName51=conn_18
+LibName52=lm4890m_mm
