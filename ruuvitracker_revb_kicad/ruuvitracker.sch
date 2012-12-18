@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 17 Dec 2012 06:26:15 PM EET
+EESchema Schematic File Version 2  date Wed 19 Dec 2012 01:33:44 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -51,6 +51,7 @@ LIBS:24lc1025
 LIBS:conn_28
 LIBS:conn_18
 LIBS:lm4890m_mm
+LIBS:emif02-usb04f3
 LIBS:ruuvitracker-cache
 EELAYER 25  0
 EELAYER END
@@ -58,7 +59,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "17 dec 2012"
+Date "18 dec 2012"
 Rev "RevB"
 Comp "Ruuvipenkki.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -66,12 +67,26 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 9650 29400 0    30   Italic 0
-Current consumption in normal mode 110 μA (typical, magnetic sensor setting ODR = 7.5 Hz, Accelerometer sensor ODR = 50 Hz)\nCurrent consumption in sleep-mode 1 μA (typical, linear accelerometer in sleep-mode and magnetic sensor in power-down mode)
-Text Label 4650 7700 2    60   ~ 0
-MEMS_MIC_POWER
-Text Label 3750 27750 2    60   ~ 0
-MEMS_MIC_POWER
+Text Label 3850 7300 0    60   ~ 0
+PULL_DOWN_TO_ACT_AS_A_HOST
+Text Label 3850 7400 0    60   ~ 0
+PULL_UP_TO_ACT_AS_A_FS_DEVICE
+Wire Wire Line
+	14400 31500 14400 31250
+Wire Wire Line
+	15050 31050 14700 31050
+Wire Wire Line
+	15050 31150 14300 31150
+Wire Wire Line
+	14650 31050 14700 30950
+Wire Wire Line
+	14650 31050 14300 31050
+Wire Wire Line
+	16750 30700 16250 30700
+Wire Wire Line
+	14400 30500 14250 30500
+Wire Wire Line
+	14400 30700 14400 30850
 Wire Wire Line
 	2050 27750 2550 27750
 Wire Wire Line
@@ -96,10 +111,6 @@ Wire Wire Line
 	16750 11550 17000 11550
 Wire Wire Line
 	17000 11550 17150 11550
-Wire Wire Line
-	-2300 8900 -2100 8900
-Wire Wire Line
-	-2100 8900 -1900 8900
 Wire Notes Line
 	6550 20400 6950 20400
 Wire Notes Line
@@ -251,15 +262,8 @@ Wire Wire Line
 	2250 13650 2250 13600
 Wire Wire Line
 	2250 13600 2250 13550
-Connection ~ -4250 8750
 Wire Wire Line
-	-4300 8750 -4250 8750
-Wire Wire Line
-	-4250 8750 -4150 8750
-Wire Wire Line
-	-4150 8750 -4150 9600
-Wire Wire Line
-	-4150 9600 -4350 9600
+	14400 30850 14300 30850
 Connection ~ 350  13600
 Wire Wire Line
 	250  13600 350  13600
@@ -303,7 +307,7 @@ Wire Wire Line
 Wire Wire Line
 	12700 15050 12700 14950
 Wire Wire Line
-	16750 11650 16750 11550
+	16750 11550 16750 11650
 Connection ~ 17000 11550
 Connection ~ 16500 11850
 Wire Wire Line
@@ -319,7 +323,7 @@ Wire Wire Line
 	16400 9800 16500 9800
 Connection ~ 16600 8150
 Wire Wire Line
-	16600 8400 16600 8150
+	16600 8150 16600 8400
 Wire Wire Line
 	17400 8150 17300 8150
 Wire Wire Line
@@ -456,10 +460,6 @@ Wire Wire Line
 Wire Wire Line
 	25700 12500 26400 12500
 Wire Wire Line
-	-3000 8400 -3300 8400
-Wire Wire Line
-	-3300 8400 -3500 8400
-Wire Wire Line
 	28500 27100 28300 27100
 Wire Wire Line
 	27000 29100 27200 29100
@@ -534,22 +534,6 @@ Wire Wire Line
 Wire Wire Line
 	9450 7550 9350 7550
 Wire Wire Line
-	-3900 8850 -4300 8850
-Wire Wire Line
-	-2100 7850 -2100 7950
-Wire Wire Line
-	-1900 8800 -2300 8800
-Wire Wire Line
-	-3300 8450 -3300 8400
-Wire Wire Line
-	-3300 8400 -3300 8300
-Wire Wire Line
-	-4300 9150 -4250 9150
-Wire Wire Line
-	-4250 9150 -4250 9400
-Wire Wire Line
-	-4250 9400 -4250 9450
-Wire Wire Line
 	11900 28550 12100 28550
 Wire Wire Line
 	12100 28550 12100 28950
@@ -591,10 +575,6 @@ Wire Wire Line
 Wire Wire Line
 	10100 29150 10100 29050
 Wire Wire Line
-	-3300 11000 -3300 10950
-Wire Wire Line
-	-3900 8950 -4300 8950
-Wire Wire Line
 	38150 28050 38150 28150
 Wire Wire Line
 	26900 9800 26950 9800
@@ -619,7 +599,7 @@ Wire Wire Line
 Wire Wire Line
 	28000 10100 28000 10050
 Wire Wire Line
-	27450 9650 27450 9550
+	27450 9550 27450 9650
 Connection ~ 27450 9550
 Wire Wire Line
 	28000 9550 28000 9650
@@ -631,9 +611,6 @@ Wire Wire Line
 Connection ~ 23800 9400
 Wire Wire Line
 	29750 13200 29850 13200
-Wire Wire Line
-	-4250 8750 -4250 8400
-Connection ~ -3300 8400
 Wire Wire Line
 	10200 22250 10200 22200
 Wire Wire Line
@@ -666,11 +643,6 @@ Wire Wire Line
 	25700 12650 25700 12500
 Wire Wire Line
 	26300 12650 26400 12650
-Wire Wire Line
-	-4300 8400 -4250 8400
-Wire Wire Line
-	-4250 8400 -4200 8400
-Connection ~ -4250 8400
 Connection ~ 32850 28100
 Connection ~ 32850 28300
 Connection ~ 32850 28500
@@ -734,7 +706,7 @@ Wire Wire Line
 Wire Wire Line
 	32200 28200 32100 28200
 Wire Wire Line
-	28300 9550 28300 9650
+	28300 9650 28300 9550
 Connection ~ 28300 9550
 Wire Wire Line
 	27850 10100 27850 10200
@@ -882,9 +854,6 @@ Wire Wire Line
 	350  13600 350  13550
 Wire Wire Line
 	350  13550 450  13550
-Wire Wire Line
-	-4350 9400 -4250 9400
-Connection ~ -4250 9400
 Wire Wire Line
 	2250 13550 2150 13550
 Wire Wire Line
@@ -1067,9 +1036,6 @@ Wire Notes Line
 Wire Notes Line
 	6600 20950 6450 21100
 Wire Wire Line
-	-2100 8900 -2100 8450
-Connection ~ -2100 8900
-Wire Wire Line
 	16400 11350 16600 11350
 Wire Wire Line
 	16600 11350 16600 11550
@@ -1082,6 +1048,70 @@ Wire Wire Line
 	17950 11550 17850 11550
 Wire Wire Line
 	2550 27950 2550 27750
+Wire Wire Line
+	14250 30700 14400 30700
+Wire Wire Line
+	14400 30700 15550 30700
+Connection ~ 14400 30700
+Wire Wire Line
+	14400 31250 14300 31250
+Wire Wire Line
+	14300 30950 14650 30950
+Wire Wire Line
+	14650 30950 14700 31050
+Wire Wire Line
+	14700 30950 15050 30950
+Wire Wire Line
+	14950 31500 14950 31350
+Wire Wire Line
+	14950 31350 15050 31350
+$Comp
+L GND #PWR?
+U 1 1 50D0FC38
+P 14950 31500
+F 0 "#PWR?" H 14950 31500 30  0001 C CNN
+F 1 "GND" H 14950 31430 30  0001 C CNN
+	1    14950 31500
+	1    0    0    -1  
+$EndComp
+$Comp
+L EMIF02-USB04F3 U?
+U 1 1 50D0FBBC
+P 15900 31150
+F 0 "U?" H 15400 30800 60  0000 C CNN
+F 1 "EMIF02-USB04F3" H 16050 30800 60  0000 C CNN
+	1    15900 31150
+	1    0    0    -1  
+$EndComp
+Text Label 16750 31350 0    60   ~ 0
+PULL_UP_TO_ACT_AS_A_FS_DEVICE
+Text Label 16750 31250 0    60   ~ 0
+PULL_DOWN_TO_ACT_AS_A_HOST
+Text Label 16750 31050 0    60   ~ 0
+USB_DM
+Text Label 16750 30950 0    60   ~ 0
+USB_DP
+Text Label 16750 31150 0    60   ~ 0
+PULL_DOWN_TO_ACT_AS_A_HOST
+Text Notes 3150 14350 0    30   Italic 0
+Iinmax = (1V/Rilim)*530\n\nThe actual input current limit is the lower value between ILIM setting and\n register setting (REG00[2:0]). For example, if the register setting is 111\nfor 3A, and ILIM has a 353Ω resistor to ground for 1.5A, the input current\nlimit is 1.5A. ILIM pin can be used to set the input current limit rather than\nthe register settings.
+$Comp
+L GND #PWR?
+U 1 1 50D0E7B0
+P 14400 30500
+F 0 "#PWR?" H 14400 30500 30  0001 C CNN
+F 1 "GND" H 14400 30430 30  0001 C CNN
+	1    14400 30500
+	0    -1   -1   0   
+$EndComp
+Text Label 16750 30700 0    60   ~ 0
+OTG_FS_VBUS
+Text Notes 9650 29400 0    30   Italic 0
+Current consumption in normal mode 110 μA (typical, magnetic sensor setting ODR = 7.5 Hz, Accelerometer sensor ODR = 50 Hz)\nCurrent consumption in sleep-mode 1 μA (typical, linear accelerometer in sleep-mode and magnetic sensor in power-down mode)
+Text Label 4650 7700 2    60   ~ 0
+MEMS_MIC_POWER
+Text Label 3750 27750 2    60   ~ 0
+MEMS_MIC_POWER
 Text Label 2050 27750 2    60   ~ 0
 MEMS_MIC_POWER
 Text Label 8750 8450 2    60   ~ 0
@@ -1121,24 +1151,6 @@ P 23350 9400
 F 0 "R?" V 23350 9500 50  0000 C CNN
 F 1 "22" V 23350 9300 50  0000 C CNN
 	1    23350 9400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R?
-U 1 1 50C956E3
-P -2550 8900
-F 0 "R?" V -2470 8900 50  0000 C CNN
-F 1 "22" V -2550 8900 50  0000 C CNN
-	1    -2550 8900
-	0    1    1    0   
-$EndComp
-$Comp
-L R R?
-U 1 1 50C956CB
-P -2550 8800
-F 0 "R?" V -2470 8800 50  0000 C CNN
-F 1 "22" V -2550 8800 50  0000 C CNN
-	1    -2550 8800
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1714,13 +1726,11 @@ F 1 "4k7" V 0   15050 50  0000 C CNN
 $EndComp
 NoConn ~ 2150 14950
 Text Notes -600 13450 0    30   Italic 0
-For best performance, VBUS should be\ndecoupleto PGND with 1μF capacitance.
+For best performance, VBUS should be\ndecoupled to PGND with 1μF capacitance.
 Text Notes 2350 13350 0    30   Italic 0
 To get good loop stability, the resonant frequency of the output inductor\nand output capacitor should be designed between 15kHz and 25kHz. With\n2.2μH inductor, the typical output capacitor value is 20μF.
 Text Notes 950  16950 0    30   Italic 0
 Protection:\n\nThe battery over-voltage limit is clamped at 4% above the battery\nregulation voltage. When battery over voltage occurs, the charger\ndevice immediately disables charge. The fault register REG09[5]\ngoes high and an INT is asserted to the host.\n\nIf the battery voltage falls below 2V, the charge current is reduced\nto 100mA for battery safety.\n\nIf the system is shorted or exceeds the over-current limit, the\nBATFET is latched off. DC source insertion on VBUS is required\nto reset the latch-off condition and turn on BATFET.
-Text Label -3200 8350 0    60   ~ 0
-VBUS
 $Comp
 L C C?
 U 1 1 5081C5D5
@@ -1797,8 +1807,6 @@ Text Label -950 14900 2    60   ~ 0
 SYSTEM_LOAD
 Text Notes 1000 15750 0    30   Italic 0
 I2C Slave address: 0x6BH
-Text Label -3050 7350 2    60   ~ 0
-CHARGER_VBUS
 Text Label 2850 14900 0    60   ~ 0
 BATTERY_TEMP
 Text Label 10400 28250 2    60   ~ 0
@@ -1858,10 +1866,10 @@ $EndComp
 $Comp
 L CONN_2 P?
 U 1 1 50819F4B
-P -4700 9500
-F 0 "P?" V -4750 9500 40  0000 C CNN
-F 1 "PWR" V -4650 9500 40  0000 C CNN
-	1    -4700 9500
+P 13900 30600
+F 0 "P?" V 13850 30600 40  0000 C CNN
+F 1 "PWR" V 13950 30600 40  0000 C CNN
+	1    13900 30600
 	-1   0    0    1   
 $EndComp
 Text Label 2350 14400 0    60   ~ 0
@@ -2184,9 +2192,7 @@ F 1 "GND" H 16500 14080 30  0001 C CNN
 $EndComp
 Text Notes 2350 27400 0    120  Italic 0
 MEMS Microphone
-Text Notes -4050 9600 0    40   Italic 0
-EMIF02-USB03F2 olisi ok vaihtoehto, mutta die-size-kotelointi\narvelluttaa ja lisäksi sitä ei ole saatavilla Mouser/DK... STM:llä\nei vastaavia OTG:lle suunniteltuja...
-Text Label -4300 9050 0    60   ~ 0
+Text Label 14900 31150 2    60   ~ 0
 OTG_FS_ID
 Text Label 9700 6650 2    60   ~ 0
 OTG_FS_ID
@@ -2752,15 +2758,6 @@ Text Label 32100 28500 2    60   ~ 0
 SDIO_D1
 Text Label 32100 28600 2    60   ~ 0
 SDIO_D2
-$Comp
-L PWR_FLAG #FLG016
-U 1 1 4EFFB6C9
-P -3000 8400
-F 0 "#FLG016" H -3000 8495 30  0001 C CNN
-F 1 "PWR_FLAG" H -3000 8580 30  0000 C CNN
-	1    -3000 8400
-	0    1    1    0   
-$EndComp
 Text Notes 25250 12900 0    30   Italic 0
 R is used to adjust bias voltage level.\nFor more information, please refer application\nnote AN_SIM900_Audio_LINE-IN_Input.
 Text Label 26400 12650 0    60   ~ 0
@@ -3052,30 +3049,12 @@ F 1 "JTAG" V 10700 21850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG040
-U 1 1 4EF9D86E
-P -4300 8400
-F 0 "#FLG040" H -4300 8495 30  0001 C CNN
-F 1 "PWR_FLAG" H -4300 8580 30  0000 C CNN
-	1    -4300 8400
-	0    -1   -1   0   
-$EndComp
-$Comp
 L FILTER FB1
 U 1 1 4EF9D83C
-P -3850 8400
-F 0 "FB1" H -3850 8550 60  0000 C CNN
-F 1 "FILTER" H -3850 8300 60  0000 C CNN
-	1    -3850 8400
-	1    0    0    -1  
-$EndComp
-$Comp
-L VDD #PWR041
-U 1 1 4EF9D7C0
-P -2100 7850
-F 0 "#PWR041" H -2100 7950 30  0001 C CNN
-F 1 "VDD" H -2100 7960 30  0000 C CNN
-	1    -2100 7850
+P 15900 30700
+F 0 "FB1" H 15900 30850 60  0000 C CNN
+F 1 "2A+" H 15900 30600 60  0000 C CNN
+	1    15900 30700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3669,55 +3648,24 @@ F 1 "100n" H 13500 14650 50  0000 L CNN
 	1    13450 14750
 	1    0    0    -1  
 $EndComp
-Text Notes -4350 8050 0    120  Italic 0
-Micro-USB-AB
-Text Label -1900 8900 0    60   ~ 0
-USB_DP
-Text Label -1900 8800 0    60   ~ 0
-USB_DM
-$Comp
-L R R21
-U 1 1 4EF51E9C
-P -2100 8200
-F 0 "R21" V -2020 8200 50  0000 C CNN
-F 1 "2k2" V -2100 8200 50  0000 C CNN
-	1    -2100 8200
-	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR084
-U 1 1 4EF51E54
-P -3300 11000
-F 0 "#PWR084" H -3300 11000 30  0001 C CNN
-F 1 "GND" H -3300 10930 30  0001 C CNN
-	1    -3300 11000
-	1    0    0    -1  
-$EndComp
+Text Notes 14250 30100 0    120  Italic 0
+Micro-USB-AB + EMI Protection
 $Comp
 L GND #PWR085
 U 1 1 4EF51E4F
-P -4250 9450
-F 0 "#PWR085" H -4250 9450 30  0001 C CNN
-F 1 "GND" H -4250 9380 30  0001 C CNN
-	1    -4250 9450
+P 14400 31500
+F 0 "#PWR085" H 14400 31500 30  0001 C CNN
+F 1 "GND" H 14400 31430 30  0001 C CNN
+	1    14400 31500
 	1    0    0    -1  
 $EndComp
 $Comp
 L USB_MICRO_B J1
 U 1 1 4EF51E2C
-P -4600 8950
-F 0 "J1" H -4625 8600 60  0000 C CNN
-F 1 "USB_MICRO_B" H -4600 9300 60  0001 C CNN
-	1    -4600 8950
-	1    0    0    -1  
-$EndComp
-$Comp
-L TPD2S017 U9
-U 1 1 4EF51E21
-P -3300 10500
-F 0 "U9" H -3200 10800 60  0000 L CNN
-F 1 "TPD2S017" H -3200 10200 60  0000 L CNN
-	1    -3300 10500
+P 14000 31050
+F 0 "J1" H 13975 30700 60  0000 C CNN
+F 1 "USB_MICRO_B" H 14000 31400 60  0001 C CNN
+	1    14000 31050
 	1    0    0    -1  
 $EndComp
 Text Notes 31300 27800 0    120  Italic 0
