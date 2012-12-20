@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 20 Dec 2012 12:37:29 PM EET
+EESchema Schematic File Version 2  date Fri 21 Dec 2012 01:29:10 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -67,20 +67,23 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+NoConn ~ 26900 7900
+Wire Wire Line
+	-300 13600 -450 13600
+Wire Wire Line
+	-1500 14450 -1400 14450
 Wire Wire Line
 	16550 30450 16550 30550
 Wire Wire Line
-	16400 32050 16500 32050
+	-650 12600 -550 12600
 Wire Wire Line
-	16500 32050 16500 32150
+	-550 12600 -550 12700
 Wire Wire Line
 	17750 30900 17650 30900
 Wire Wire Line
 	17150 31100 17050 31100
 Wire Wire Line
 	14800 30550 14900 30550
-Wire Wire Line
-	-450 13600 -350 13600
 Wire Wire Line
 	15400 31250 15500 31250
 Wire Wire Line
@@ -106,8 +109,6 @@ Wire Notes Line
 	6600 21250 6450 21100
 Wire Notes Line
 	7100 20550 7100 21250
-Wire Wire Line
-	-550 13750 -550 13850
 Wire Wire Line
 	28500 26850 28150 26850
 Wire Wire Line
@@ -159,7 +160,7 @@ Wire Bus Line
 Wire Bus Line
 	7600 29700 7500 29700
 Wire Wire Line
-	23650 28300 23450 28300
+	23450 28300 23650 28300
 Connection ~ 23550 28000
 Wire Wire Line
 	23550 28900 23550 27700
@@ -182,7 +183,7 @@ Wire Notes Line
 Wire Notes Line
 	6500 20450 6450 20500
 Wire Wire Line
-	-4800 27950 -5000 27950
+	-5000 27950 -4800 27950
 Wire Wire Line
 	-4800 27850 -4900 27850
 Connection ~ -3400 28350
@@ -323,7 +324,7 @@ Wire Wire Line
 Wire Wire Line
 	16600 10000 16500 10000
 Wire Wire Line
-	16800 8150 16400 8150
+	16400 8150 16800 8150
 Wire Wire Line
 	16750 12150 16750 12050
 Connection ~ 16500 13650
@@ -337,7 +338,7 @@ Wire Wire Line
 Wire Wire Line
 	16400 13950 16500 13950
 Wire Wire Line
-	15550 28050 14900 28050
+	14900 28050 15550 28050
 Wire Wire Line
 	15200 28650 15200 28600
 Wire Wire Line
@@ -389,11 +390,11 @@ Wire Wire Line
 Wire Wire Line
 	32200 28400 32100 28400
 Wire Wire Line
-	23000 9500 23100 9500
+	23000 9500 23400 9500
 Wire Wire Line
-	23600 9600 24500 9600
+	23900 9600 24500 9600
 Wire Wire Line
-	24500 9400 23600 9400
+	24500 9400 23900 9400
 Wire Wire Line
 	23100 9200 24500 9200
 Wire Wire Line
@@ -451,18 +452,15 @@ Wire Wire Line
 Wire Wire Line
 	-1500 28450 -1500 28550
 Wire Wire Line
-	-1500 27800 -1500 28050
+	-1500 28050 -1500 27800
 Wire Wire Line
-	-300 27800 -300 28050
+	-300 28050 -300 27800
 Wire Wire Line
 	10300 22200 10200 22200
 Wire Wire Line
 	10200 22200 10200 22250
 Wire Wire Line
 	29750 13200 29850 13200
-Connection ~ 23800 9400
-Wire Wire Line
-	23800 9650 23800 9400
 Wire Wire Line
 	27250 12100 27250 12050
 Connection ~ 28000 9550
@@ -574,8 +572,6 @@ Wire Wire Line
 Wire Wire Line
 	27250 11600 26900 11600
 Wire Wire Line
-	23800 10100 23800 10050
-Wire Wire Line
 	5500 28050 5500 27800
 Connection ~ 5500 27800
 Wire Wire Line
@@ -607,10 +603,10 @@ Wire Wire Line
 Wire Wire Line
 	28300 27100 28500 27100
 Wire Wire Line
-	26400 12500 25600 12500
+	25600 12500 26400 12500
 Connection ~ 25700 12500
 Wire Wire Line
-	6100 27800 5300 27800
+	5300 27800 6100 27800
 Connection ~ 32850 28200
 Connection ~ 32850 28400
 Connection ~ 32850 28600
@@ -638,11 +634,11 @@ Connection ~ 24950 28400
 Wire Wire Line
 	34700 27100 35250 27100
 Wire Wire Line
-	23600 9500 24500 9500
+	23900 9500 24500 9500
 Wire Wire Line
-	23000 9600 23100 9600
+	23000 9600 23400 9600
 Wire Wire Line
-	23000 9400 23100 9400
+	23000 9400 23400 9400
 Wire Wire Line
 	32200 28500 32100 28500
 Wire Wire Line
@@ -688,10 +684,10 @@ Wire Wire Line
 Wire Wire Line
 	6100 28000 6000 28000
 Wire Wire Line
-	8250 27700 8250 28150
+	8250 28150 8250 27700
 Connection ~ 8250 27800
 Wire Wire Line
-	14300 27850 15550 27850
+	15550 27850 14300 27850
 Wire Wire Line
 	14950 28650 14950 28600
 Wire Wire Line
@@ -772,8 +768,6 @@ Wire Wire Line
 Wire Wire Line
 	350  15350 450  15350
 Connection ~ 350  15350
-Wire Wire Line
-	250  13600 350  13600
 Connection ~ 350  13600
 Wire Wire Line
 	2250 13550 2250 13650
@@ -793,7 +787,7 @@ Wire Wire Line
 Wire Wire Line
 	-450 14900 -250 14900
 Wire Wire Line
-	250  14900 450  14900
+	450  14900 250  14900
 Wire Wire Line
 	-950 14900 -850 14900
 Wire Wire Line
@@ -833,7 +827,7 @@ Connection ~ 16500 11750
 Wire Wire Line
 	16500 10000 16500 9900
 Wire Wire Line
-	16800 8400 16500 8400
+	16500 8400 16800 8400
 Connection ~ 16600 8400
 Wire Wire Line
 	23550 28600 23450 28600
@@ -906,16 +900,12 @@ Wire Wire Line
 	28400 27250 28500 27250
 Wire Wire Line
 	28150 27850 28150 27800
-Wire Wire Line
-	450  14450 -550 14450
-Wire Wire Line
-	-550 14450 -550 14350
 Wire Notes Line
 	6400 20550 6400 21250
 Wire Notes Line
 	6550 20400 6950 20400
 Wire Wire Line
-	17150 11550 16400 11550
+	16400 11550 17150 11550
 Wire Wire Line
 	32850 28700 32850 28050
 Wire Wire Line
@@ -951,6 +941,21 @@ Wire Wire Line
 	17650 31100 17750 31100
 Wire Wire Line
 	16550 31550 16550 31450
+Wire Wire Line
+	-900 14450 450  14450
+Wire Wire Line
+	200  13600 350  13600
+$Comp
+L R R?
+U 1 1 50D39DBF
+P -50 13600
+F 0 "R?" V 30  13600 50  0000 C CNN
+F 1 "0" V -50 13600 50  0000 C CNN
+	1    -50  13600
+	0    1    1    0   
+$EndComp
+Text Label 25100 12500 2    60   ~ 0
+GSM_LINE_IN
 Text Label 16550 30450 2    60   ~ 0
 OTG_FS_VBUS
 $Comp
@@ -980,16 +985,7 @@ F 1 "TPD2S017" H 16650 30700 60  0000 L CNN
 	1    16550 31000
 	1    0    0    -1  
 $EndComp
-$Comp
-L JUMPER JP?
-U 1 1 50D2E8A9
-P -50 13600
-F 0 "JP?" H -50 13750 60  0000 C CNN
-F 1 "JUMPER" H -50 13520 40  0000 C CNN
-	1    -50  13600
-	-1   0    0    1   
-$EndComp
-Text Label 16400 31850 0    60   ~ 0
+Text Label -650 12400 0    60   ~ 0
 HIGH_VOLTAGE_VBUS
 Text Label -450 13450 2    60   ~ 0
 HIGH_VOLTAGE_VBUS
@@ -997,8 +993,8 @@ Text Label 9700 6550 2    60   ~ 0
 OTG_FS_VBUS
 Text Label 29150 14250 2    60   ~ 0
 OTG_FS_ID
-Text Notes -1500 13150 0    40   Italic 0
-If using over 5V power sources (17VDC max), remove\nsolder bridge to save the ARM's life!\nUSB (device mode) is still functioning, but OTG is disabled.
+Text Notes -1450 13050 0    40   Italic 0
+If using over 5V power sources (17VDC max), remove\nzero ohm resistor to save the ARM's life!\n\nUSB (device mode) is still functioning, but OTG\ncannot be used.
 Text Label 3850 7300 0    60   ~ 0
 PULL_DOWN_TO_ACT_AS_A_HOST
 Text Label 3850 7400 0    60   ~ 0
@@ -1021,10 +1017,10 @@ Iinmax = (1V/Rilim)*530\n\nThe actual input current limit is the lower value bet
 $Comp
 L GND #PWR?
 U 1 1 50D0E7B0
-P 16500 32150
-F 0 "#PWR?" H 16500 32150 30  0001 C CNN
-F 1 "GND" H 16500 32080 30  0001 C CNN
-	1    16500 32150
+P -550 12700
+F 0 "#PWR?" H -550 12700 30  0001 C CNN
+F 1 "GND" H -550 12630 30  0001 C CNN
+	1    -550 12700
 	1    0    0    -1  
 $EndComp
 Text Label 14800 30550 2    60   ~ 0
@@ -1052,28 +1048,28 @@ ETH_MDC
 $Comp
 L R R?
 U 1 1 50C95765
-P 23350 9600
-F 0 "R?" V 23350 9700 50  0000 C CNN
-F 1 "22" V 23350 9500 50  0000 C CNN
-	1    23350 9600
+P 23650 9600
+F 0 "R?" V 23650 9700 50  0000 C CNN
+F 1 "22" V 23650 9500 50  0000 C CNN
+	1    23650 9600
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R?
 U 1 1 50C95763
-P 23350 9500
-F 0 "R?" V 23350 9600 50  0000 C CNN
-F 1 "22" V 23350 9400 50  0000 C CNN
-	1    23350 9500
+P 23650 9500
+F 0 "R?" V 23650 9600 50  0000 C CNN
+F 1 "22" V 23650 9400 50  0000 C CNN
+	1    23650 9500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R?
 U 1 1 50C95742
-P 23350 9400
-F 0 "R?" V 23350 9500 50  0000 C CNN
-F 1 "22" V 23350 9300 50  0000 C CNN
-	1    23350 9400
+P 23650 9400
+F 0 "R?" V 23650 9500 50  0000 C CNN
+F 1 "22" V 23650 9300 50  0000 C CNN
+	1    23650 9400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1628,13 +1624,13 @@ SYSTEM_LOAD
 $Comp
 L R R?
 U 1 1 5083DAB8
-P -550 14100
-F 0 "R?" V -470 14100 50  0000 C CNN
-F 1 "4k7" V -550 14100 50  0000 C CNN
-	1    -550 14100
-	-1   0    0    1   
+P -1150 14450
+F 0 "R?" V -1070 14450 50  0000 C CNN
+F 1 "4k7" V -1150 14450 50  0000 C CNN
+	1    -1150 14450
+	0    1    1    0   
 $EndComp
-Text Label -550 13750 2    60   ~ 0
+Text Label -1500 14450 2    60   ~ 0
 SYSTEM_LOAD
 Text Label -950 15050 2    60   ~ 0
 SYSTEM_LOAD
@@ -1789,10 +1785,10 @@ $EndComp
 $Comp
 L CONN_2 P?
 U 1 1 50819F4B
-P 16050 31950
-F 0 "P?" V 16000 31950 40  0000 C CNN
-F 1 "PWR" V 16100 31950 40  0000 C CNN
-	1    16050 31950
+P -1000 12500
+F 0 "P?" V -1050 12500 40  0000 C CNN
+F 1 "PWR" V -950 12500 40  0000 C CNN
+	1    -1000 12500
 	-1   0    0    -1  
 $EndComp
 Text Label 2350 14400 0    60   ~ 0
@@ -2316,8 +2312,6 @@ F 1 "SMF05C" H 30350 14750 60  0000 C CNN
 	1    30700 15300
 	1    0    0    -1  
 $EndComp
-Text Label 26900 7900 0    60   ~ 0
-GPS_ANT
 $Comp
 L SMF05C U?
 U 1 1 5047B0AE
@@ -2707,8 +2701,6 @@ F 1 "1u" H 25450 12400 50  0000 L CNN
 	1    25400 12500
 	0    1    1    0   
 $EndComp
-Text Label 25100 12500 2    60   ~ 0
-DAC_OUT1
 Text Notes 26950 29600 2    40   Italic 0
 Electret Condenser Microphone
 NoConn ~ 24500 8600
@@ -3082,24 +3074,6 @@ F 0 "#PWR047" H 29750 13200 30  0001 C CNN
 F 1 "GND" H 29750 13130 30  0001 C CNN
 	1    29750 13200
 	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR048
-U 1 1 4EF8E9DF
-P 23800 10100
-F 0 "#PWR048" H 23800 10100 30  0001 C CNN
-F 1 "GND" H 23800 10030 30  0001 C CNN
-	1    23800 10100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L C C20
-U 1 1 4EF8E9D3
-P 23800 9850
-F 0 "C20" H 23850 9950 50  0000 L CNN
-F 1 "33p" H 23850 9750 50  0000 L CNN
-	1    23800 9850
-	1    0    0    -1  
 $EndComp
 Text Label 26900 8800 0    60   ~ 0
 GSM_DCD
