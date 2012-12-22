@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 22 Dec 2012 01:04:04 AM EET
+EESchema Schematic File Version 2  date Sat 22 Dec 2012 01:03:44 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -53,6 +53,7 @@ LIBS:conn_18
 LIBS:lm4890m_mm
 LIBS:emif02-usb04f3
 LIBS:tpd4e004
+LIBS:tp
 LIBS:ruuvitracker-cache
 EELAYER 25  0
 EELAYER END
@@ -60,7 +61,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "21 dec 2012"
+Date "22 dec 2012"
 Rev "RevB"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -68,24 +69,55 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Connection ~ 3150 13600
+Wire Wire Line
+	3250 13600 3050 13600
+Wire Wire Line
+	8350 27800 7700 27800
+Wire Wire Line
+	15400 31250 15850 31250
+Wire Wire Line
+	26900 9000 28100 9000
+Wire Wire Line
+	23000 9200 23200 9200
+Wire Wire Line
+	23700 9200 24500 9200
+Wire Wire Line
+	26900 9200 27000 9200
+Wire Wire Line
+	27500 9200 27600 9200
+Wire Wire Line
+	27500 8900 27600 8900
+Wire Wire Line
+	26900 8900 27000 8900
+Wire Wire Line
+	26900 8800 27000 8800
+Wire Wire Line
+	27500 8800 27600 8800
+Wire Wire Line
+	27500 8700 27600 8700
+Wire Wire Line
+	26900 8700 27000 8700
+Wire Wire Line
+	3450 8300 3550 8300
+Wire Wire Line
+	30000 27100 30550 27100
 Wire Wire Line
 	24350 8000 24500 8000
-Connection ~ 24000 9400
+Connection ~ 23850 9400
 Wire Wire Line
-	24000 9650 24000 9400
+	23850 9650 23850 9400
 Wire Wire Line
-	30000 27100 30300 27100
+	30550 27100 30550 27150
 Wire Wire Line
-	30300 27100 30300 27150
-Wire Wire Line
-	30300 27150 30350 27150
+	30550 27150 30600 27150
 Wire Wire Line
 	40800 26750 40900 26750
 Wire Wire Line
 	40900 26750 40900 26650
 Connection ~ 16000 31050
 Wire Wire Line
-	16000 31050 16000 31600
+	16000 31050 16000 31650
 Wire Wire Line
 	16100 31050 15400 31050
 Wire Wire Line
@@ -97,13 +129,11 @@ Wire Wire Line
 Wire Wire Line
 	-550 12600 -550 12700
 Wire Wire Line
-	16700 30600 16600 30600
+	16700 30550 16600 30550
 Wire Wire Line
-	16000 31600 16100 31600
+	16000 31650 16100 31650
 Wire Wire Line
 	14800 30550 14900 30550
-Wire Wire Line
-	15400 31250 15500 31250
 Wire Wire Line
 	2550 27950 2550 27750
 Wire Wire Line
@@ -134,9 +164,9 @@ Wire Wire Line
 Wire Wire Line
 	28400 27850 28400 27750
 Wire Wire Line
-	31050 26800 31050 26850
+	31300 26800 31300 26850
 Wire Wire Line
-	31050 27350 31050 27250
+	31300 27350 31300 27250
 Wire Wire Line
 	30000 26850 30100 26850
 Wire Wire Line
@@ -146,9 +176,9 @@ Wire Wire Line
 Wire Wire Line
 	28300 27200 28300 27100
 Wire Wire Line
-	26900 29300 27000 29300
+	28750 29100 28850 29100
 Wire Wire Line
-	27000 29300 27000 29200
+	28850 29100 28850 29000
 Wire Wire Line
 	6700 29900 6800 29900
 Wire Wire Line
@@ -361,8 +391,6 @@ Wire Wire Line
 	15200 28650 15200 28600
 Wire Wire Line
 	7900 28700 7900 28550
-Wire Wire Line
-	7700 27800 8250 27800
 Connection ~ 14950 27850
 Wire Wire Line
 	14950 28100 14950 27850
@@ -408,13 +436,11 @@ Wire Wire Line
 Wire Wire Line
 	32200 28400 32100 28400
 Wire Wire Line
-	23000 9500 23400 9500
+	23000 9500 23200 9500
 Wire Wire Line
-	23900 9600 24500 9600
+	23700 9600 24500 9600
 Wire Wire Line
-	24500 9400 23900 9400
-Wire Wire Line
-	23100 9200 24500 9200
+	24500 9400 23700 9400
 Wire Wire Line
 	24500 9300 23100 9300
 Wire Wire Line
@@ -458,7 +484,7 @@ Wire Wire Line
 Wire Wire Line
 	25200 12500 25100 12500
 Wire Wire Line
-	27000 29200 27200 29200
+	28850 29000 29050 29000
 Wire Wire Line
 	12300 21550 12300 21600
 Wire Wire Line
@@ -613,7 +639,7 @@ Wire Wire Line
 Wire Wire Line
 	12300 22100 12400 22100
 Wire Wire Line
-	27200 29100 27000 29100
+	29050 28900 28850 28900
 Wire Wire Line
 	28300 27100 28500 27100
 Wire Wire Line
@@ -648,11 +674,11 @@ Connection ~ 24950 28400
 Wire Wire Line
 	34700 27100 35250 27100
 Wire Wire Line
-	23900 9500 24500 9500
+	23700 9500 24500 9500
 Wire Wire Line
-	23000 9600 23400 9600
+	23000 9600 23200 9600
 Wire Wire Line
-	23000 9400 23400 9400
+	23000 9400 23200 9400
 Wire Wire Line
 	32200 28500 32100 28500
 Wire Wire Line
@@ -795,8 +821,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 14100 3150 13600
 Wire Wire Line
-	3150 13600 3050 13600
-Wire Wire Line
 	2150 13850 2250 13850
 Wire Wire Line
 	-450 14900 -250 14900
@@ -899,9 +923,9 @@ Wire Notes Line
 Wire Notes Line
 	7550 29600 7650 29600
 Wire Wire Line
-	27000 29100 27000 29000
+	28850 28900 28850 28800
 Wire Wire Line
-	27000 29000 26900 29000
+	28850 28800 28750 28800
 Wire Wire Line
 	27350 27000 28500 27000
 Wire Wire Line
@@ -925,8 +949,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 27750 2050 27750
 Wire Wire Line
-	15500 31250 15500 31500
-Wire Wire Line
 	-450 13450 350  13450
 Wire Wire Line
 	350  13450 350  13650
@@ -938,9 +960,9 @@ Wire Wire Line
 Wire Wire Line
 	15700 30550 15600 30550
 Wire Wire Line
-	16100 30600 16000 30600
+	16100 30550 16000 30550
 Wire Wire Line
-	16600 31600 16700 31600
+	16600 31650 16700 31650
 Wire Wire Line
 	17300 31350 17300 31250
 Wire Wire Line
@@ -954,7 +976,7 @@ Wire Wire Line
 Wire Wire Line
 	16100 30950 15400 30950
 Wire Wire Line
-	16000 30600 16000 30950
+	16000 30550 16000 30950
 Connection ~ 16000 30950
 Wire Wire Line
 	18050 30850 18050 30900
@@ -1005,11 +1027,9 @@ Wire Wire Line
 Wire Wire Line
 	40900 29700 40800 29700
 Wire Wire Line
-	30000 27000 30300 27000
+	30550 26950 30550 27000
 Wire Wire Line
-	30300 27000 30300 26950
-Wire Wire Line
-	30300 26950 30350 26950
+	30550 26950 30600 26950
 Wire Wire Line
 	40800 30650 40900 30650
 Wire Wire Line
@@ -1023,23 +1043,184 @@ Wire Wire Line
 Wire Wire Line
 	41100 30550 41100 30600
 Wire Wire Line
-	24000 10100 24000 10050
+	23850 10150 23850 10050
+Wire Wire Line
+	30550 27000 30000 27000
+Wire Wire Line
+	2850 8300 2950 8300
+Wire Wire Line
+	28100 8600 26900 8600
+Wire Wire Line
+	26900 9100 28100 9100
+Wire Wire Line
+	15700 31250 15700 31650
+Connection ~ 15700 31250
+Wire Wire Line
+	6150 29700 6800 29700
+$Comp
+L TP P?
+U 1 1 50D59343
+P 3250 13600
+F 0 "P?" H 3250 13850 60  0000 C CNN
+F 1 "TP" H 3250 13750 60  0000 C CNN
+	1    3250 13600
+	0    1    1    0   
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D592FC
+P 6150 29700
+F 0 "P?" H 6150 29950 60  0000 C CNN
+F 1 "TP" H 6150 29850 60  0000 C CNN
+	1    6150 29700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D592B7
+P 8350 27800
+F 0 "P?" H 8350 28050 60  0000 C CNN
+F 1 "TP" H 8350 27950 60  0000 C CNN
+	1    8350 27800
+	0    1    1    0   
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D5927A
+P 16600 8150
+F 0 "P?" H 16600 8400 60  0000 C CNN
+F 1 "TP" H 16600 8300 60  0000 C CNN
+	1    16600 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D59241
+P 15700 31650
+F 0 "P?" H 15700 31900 60  0000 C CNN
+F 1 "TP" H 15700 31800 60  0000 C CNN
+	1    15700 31650
+	-1   0    0    1   
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D59207
+P 15700 30550
+F 0 "P?" H 15700 30800 60  0000 C CNN
+F 1 "TP" H 15700 30700 60  0000 C CNN
+	1    15700 30550
+	1    0    0    -1  
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D591F4
+P 16000 31650
+F 0 "P?" H 16000 31900 60  0000 C CNN
+F 1 "TP" H 16000 31800 60  0000 C CNN
+	1    16000 31650
+	-1   0    0    1   
+$EndComp
+$Comp
+L TP P?
+U 1 1 50D591D3
+P 16000 30550
+F 0 "P?" H 16000 30800 60  0000 C CNN
+F 1 "TP" H 16000 30700 60  0000 C CNN
+	1    16000 30550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 50D58D1B
+P 23450 9200
+F 0 "R?" V 23450 9300 50  0000 C CNN
+F 1 "1k" V 23450 9100 50  0000 C CNN
+	1    23450 9200
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 50D58C94
+P 27250 9200
+F 0 "R?" V 27250 9300 50  0000 C CNN
+F 1 "1k" V 27250 9100 50  0000 C CNN
+	1    27250 9200
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 50D58C91
+P 27250 8900
+F 0 "R?" V 27250 9000 50  0000 C CNN
+F 1 "1k" V 27250 8800 50  0000 C CNN
+	1    27250 8900
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 50D58C89
+P 27250 8800
+F 0 "R?" V 27250 8900 50  0000 C CNN
+F 1 "1k" V 27250 8700 50  0000 C CNN
+	1    27250 8800
+	0    -1   1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 50D58C84
+P 27250 8700
+F 0 "R?" V 27250 8800 50  0000 C CNN
+F 1 "1k" V 27250 8600 50  0000 C CNN
+	1    27250 8700
+	0    -1   1    0   
+$EndComp
+Text Notes 23550 9800 2    30   Italic 0
+Reference design uses 22pF cap on data line.
+$Comp
+L R R?
+U 1 1 50D4ECB6
+P 3200 8300
+F 0 "R?" V 3280 8300 50  0000 C CNN
+F 1 "1k" V 3200 8300 50  0000 C CNN
+	1    3200 8300
+	0    1    -1   0   
+$EndComp
+Text Label 29050 29000 0    60   ~ 0
+GSM_MIC1N
+Text Label 29050 28900 0    60   ~ 0
+GSM_MIC1P
+Text Label 39700 26750 2    60   ~ 0
+GSM_SPK1P
+Text Label 39700 26850 2    60   ~ 0
+GSM_SPK1N
+Text Label 39700 26950 2    60   ~ 0
+GSM_MIC1P
+Text Label 39700 27050 2    60   ~ 0
+GSM_MIC1N
+Text Label 30000 27100 0    60   ~ 0
+GSM_SPK1N
+Text Label 30000 27000 0    60   ~ 0
+GSM_SPK1P
+Text Label 26400 12650 0    60   ~ 0
+GSM_MIC2N
+Text Label 26400 12500 0    60   ~ 0
+GSM_MIC2P
 $Comp
 L GND #PWR?
 U 1 1 50D4EA78
-P 24000 10100
-F 0 "#PWR?" H 24000 10100 30  0001 C CNN
-F 1 "GND" H 24000 10030 30  0001 C CNN
-	1    24000 10100
+P 23850 10150
+F 0 "#PWR?" H 23850 10150 30  0001 C CNN
+F 1 "GND" H 23850 10080 30  0001 C CNN
+	1    23850 10150
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C?
 U 1 1 50D4EA66
-P 24000 9850
-F 0 "C?" H 24050 9950 50  0000 L CNN
-F 1 "10p" H 24050 9750 50  0000 L CNN
-	1    24000 9850
+P 23850 9850
+F 0 "C?" H 23900 9950 50  0000 L CNN
+F 1 "10p" H 23900 9750 50  0000 L CNN
+	1    23850 9850
 	-1   0    0    1   
 $EndComp
 Text Label 41100 27650 0    60   ~ 0
@@ -1048,7 +1229,7 @@ Text Label 40900 27650 2    60   ~ 0
 SIM-VDD
 Text Notes 27100 9400 0    40   Italic 0
 Leave copper keep-out area under the GSM and GPS antenna pins (pins 59 and 79).
-Text Label 3200 8100 0    60   ~ 0
+Text Label 2850 8300 2    60   ~ 0
 GSM_STATUS
 NoConn ~ 24800 29300
 NoConn ~ 25100 29300
@@ -1135,10 +1316,10 @@ $EndComp
 $Comp
 L CONN_2 P?
 U 1 1 50D3A6B0
-P 30700 27050
-F 0 "P?" V 30650 27050 40  0000 C CNN
-F 1 "SPK_BEFORE_AMP" V 30750 27050 40  0000 C CNN
-	1    30700 27050
+P 30950 27050
+F 0 "P?" V 30900 27050 40  0000 C CNN
+F 1 "SPK_BEFORE_AMP" V 31000 27050 40  0000 C CNN
+	1    30950 27050
 	1    0    0    -1  
 $EndComp
 NoConn ~ 39700 30000
@@ -1387,19 +1568,19 @@ OTG_FS_VBUS
 $Comp
 L R R?
 U 1 1 50D2E9F6
-P 16350 31600
-F 0 "R?" V 16430 31600 50  0000 C CNN
-F 1 "22" V 16350 31600 50  0000 C CNN
-	1    16350 31600
+P 16350 31650
+F 0 "R?" V 16430 31650 50  0000 C CNN
+F 1 "22" V 16350 31650 50  0000 C CNN
+	1    16350 31650
 	0    1    1    0   
 $EndComp
 $Comp
 L R R?
 U 1 1 50D2E9EB
-P 16350 30600
-F 0 "R?" V 16430 30600 50  0000 C CNN
-F 1 "22" V 16350 30600 50  0000 C CNN
-	1    16350 30600
+P 16350 30550
+F 0 "R?" V 16430 30550 50  0000 C CNN
+F 1 "22" V 16350 30550 50  0000 C CNN
+	1    16350 30550
 	0    -1   -1   0   
 $EndComp
 Text Label -650 12400 0    60   ~ 0
@@ -1423,9 +1604,9 @@ F 1 "GND" H 17300 31280 30  0001 C CNN
 	1    17300 31350
 	1    0    0    -1  
 $EndComp
-Text Label 16700 30600 0    60   ~ 0
+Text Label 16700 30550 0    60   ~ 0
 USB_DM
-Text Label 16700 31600 0    60   ~ 0
+Text Label 16700 31650 0    60   ~ 0
 USB_DP
 Text Notes 3150 14350 0    30   Italic 0
 Iinmax = (1V/Rilim)*530\n\nThe actual input current limit is the lower value between ILIM setting and\n register setting (REG00[2:0]). For example, if the register setting is 111\nfor 3A, and ILIM has a 353Ω resistor to ground for 1.5A, the input current\nlimit is 1.5A. ILIM pin can be used to set the input current limit rather than\nthe register settings.
@@ -1463,28 +1644,28 @@ ETH_MDC
 $Comp
 L R R?
 U 1 1 50C95765
-P 23650 9600
-F 0 "R?" V 23650 9700 50  0000 C CNN
-F 1 "22" V 23650 9500 50  0000 C CNN
-	1    23650 9600
+P 23450 9600
+F 0 "R?" V 23450 9700 50  0000 C CNN
+F 1 "22" V 23450 9500 50  0000 C CNN
+	1    23450 9600
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R?
 U 1 1 50C95763
-P 23650 9500
-F 0 "R?" V 23650 9600 50  0000 C CNN
-F 1 "22" V 23650 9400 50  0000 C CNN
-	1    23650 9500
+P 23450 9500
+F 0 "R?" V 23450 9600 50  0000 C CNN
+F 1 "22" V 23450 9400 50  0000 C CNN
+	1    23450 9500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L R R?
 U 1 1 50C95742
-P 23650 9400
-F 0 "R?" V 23650 9500 50  0000 C CNN
-F 1 "22" V 23650 9300 50  0000 C CNN
-	1    23650 9400
+P 23450 9400
+F 0 "R?" V 23450 9500 50  0000 C CNN
+F 1 "22" V 23450 9300 50  0000 C CNN
+	1    23450 9400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1572,13 +1753,9 @@ Text Label 10300 5950 2    60   ~ 0
 GPS/DBG-TXD
 Text Label 10300 5850 2    60   ~ 0
 GPS/DBG-RXD
-Text Label 39700 26750 2    60   ~ 0
-SPK_AMP_OUT1
-Text Label 39700 26850 2    60   ~ 0
-SPK_AMP_OUT2
-Text Label 27350 27200 0    60   ~ 0
-SPK_AMP_OUT1
 Text Label 27350 27000 0    60   ~ 0
+SPK_AMP_OUT1
+Text Label 27350 27200 0    60   ~ 0
 SPK_AMP_OUT2
 Text Label 3700 7500 2    60   ~ 0
 AUDIO_AMP_SHUTDOWN
@@ -1623,28 +1800,28 @@ $EndComp
 $Comp
 L C C?
 U 1 1 50C377C8
-P 31050 27050
-F 0 "C?" H 31100 27150 50  0000 L CNN
-F 1 "1u" H 31100 26950 50  0000 L CNN
-	1    31050 27050
+P 31300 27050
+F 0 "C?" H 31350 27150 50  0000 L CNN
+F 1 "1u" H 31350 26950 50  0000 L CNN
+	1    31300 27050
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 50C377C7
-P 31050 27350
-F 0 "#PWR?" H 31050 27350 30  0001 C CNN
-F 1 "GND" H 31050 27280 30  0001 C CNN
-	1    31050 27350
+P 31300 27350
+F 0 "#PWR?" H 31300 27350 30  0001 C CNN
+F 1 "GND" H 31300 27280 30  0001 C CNN
+	1    31300 27350
 	1    0    0    -1  
 $EndComp
 $Comp
 L VDD #PWR?
 U 1 1 50C377C6
-P 31050 26800
-F 0 "#PWR?" H 31050 26900 30  0001 C CNN
-F 1 "VDD" H 31050 26910 30  0000 C CNN
-	1    31050 26800
+P 31300 26800
+F 0 "#PWR?" H 31300 26900 30  0001 C CNN
+F 1 "VDD" H 31300 26910 30  0000 C CNN
+	1    31300 26800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1735,18 +1912,18 @@ F 1 "EXPANDER_1" V 5750 20900 60  0000 C CNN
 	1    5700 20900
 	1    0    0    1   
 $EndComp
-Text Label 30400 8400 2    60   ~ 0
+Text Label 30300 8400 2    60   ~ 0
 GSM_TXD
-Text Label 30400 8500 2    60   ~ 0
+Text Label 30300 8500 2    60   ~ 0
 GSM_DCD
-Text Label 30400 8600 2    60   ~ 0
+Text Label 30300 8600 2    60   ~ 0
 GSM_RI
 Text Label 30400 8700 2    60   ~ 0
 GSM_RTS
-Text Notes 31150 8250 0    40   Italic 0
-Input to the module
-Text Notes 29750 8250 0    40   Italic 0
-Output from the module
+Text Notes 28200 8350 0    40   Italic 0
+Input\nto the\nmodule
+Text Notes 27650 8300 0    40   Italic 0
+Output\nfrom the\nmodule\n(2V8 level)
 Text Label 30400 8800 2    60   ~ 0
 GPS/DBG-TXD
 NoConn ~ 26900 9900
@@ -1935,7 +2112,7 @@ F 1 "STM32F4XX_LQFP100" H 15600 5500 60  0000 C CNN
 	1    13350 9800
 	1    0    0    -1  
 $EndComp
-Text Notes 8300 27800 0    40   Italic 0
+Text Notes 8350 27600 0    40   Italic 0
 VDD = 3.300V
 Text Notes 6350 28850 0    30   Italic 0
 TPS73733 delivers up to 1A and at the same\ntime the drop-out voltage is as low as 130mV.
@@ -2530,7 +2707,7 @@ Text Label 15400 31150 0    60   ~ 0
 OTG_FS_ID
 Text Label 9700 6650 2    60   ~ 0
 OTG_FS_ID
-Text Notes 16200 7800 0    30   Italic 0
+Text Notes 16200 7650 0    30   Italic 0
 The boot loader is located in system memory. It is used to reprogram\nthe Flash memory by using USART1 (PA9/PA10), USART3 (PC10/PC11\nor PB10/PB11), CAN2 (PB5/PB13), USB OTG FS in Device mode\n(PA11/PA12) through DFU (device firmware upgrade).
 Text Notes 15450 28850 0    40   Italic 0
 Max shutdown current (EN = Low) 3uA (typical 0,3uA).
@@ -2798,7 +2975,7 @@ L CP1 C?
 U 1 1 503FBB2E
 P 28300 9850
 F 0 "C?" H 28350 9950 50  0000 L CNN
-F 1 "100u" H 28350 9750 50  0000 L CNN
+F 1 "470u" H 28350 9750 50  0000 L CNN
 	1    28300 9850
 	1    0    0    -1  
 $EndComp
@@ -2955,7 +3132,7 @@ F 1 "470u" H 28050 9750 50  0000 L CNN
 	1    28000 9850
 	1    0    0    -1  
 $EndComp
-Text Notes 27550 8250 0    40   Italic 0
+Text Notes 27050 8000 0    40   Italic 0
 Short GPS-VANT-OUT and GPS-VANT-IN\nto apply 2V8 for the active GPS antenna.
 $Comp
 L R R5
@@ -3053,14 +3230,10 @@ Text Label 32100 28600 2    60   ~ 0
 SDIO_D2
 Text Notes 25250 12900 0    30   Italic 0
 R is used to adjust bias voltage level.\nFor more information, please refer application\nnote AN_SIM900_Audio_LINE-IN_Input.
-Text Label 26400 12650 0    60   ~ 0
-MIC2N
-Text Label 26400 12500 0    60   ~ 0
-MIC2P
 Text Label 24500 10400 2    60   ~ 0
-MIC2P
+GSM_MIC2P
 Text Label 24500 10500 2    60   ~ 0
-MIC2N
+GSM_MIC2N
 $Comp
 L R R20
 U 1 1 4EFFB327
@@ -3079,7 +3252,7 @@ F 1 "1u" H 25450 12400 50  0000 L CNN
 	1    25400 12500
 	0    1    1    0   
 $EndComp
-Text Notes 26950 29600 2    40   Italic 0
+Text Notes 28800 29400 2    40   Italic 0
 Electret Condenser Microphone
 NoConn ~ 24500 8600
 NoConn ~ 24500 8500
@@ -3090,9 +3263,9 @@ NoConn ~ 26900 10200
 Text Notes 6150 18450 0    120  Italic 0
 IO Expanders
 Text Label 24500 9900 2    60   ~ 0
-SPK1P
+GSM_SPK1P
 Text Label 24500 9800 2    60   ~ 0
-SPK1N
+GSM_SPK1N
 $Comp
 L SPEAKER SP1
 U 1 1 4EFFA89D
@@ -3100,14 +3273,10 @@ P 27050 27100
 F 0 "SP1" H 26950 27350 70  0000 C CNN
 F 1 "SPEAKER" H 26950 26850 70  0000 C CNN
 	1    27050 27100
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Text Notes 28100 26450 0    120  Italic 0
 GSM's Speaker
-Text Label 30000 27100 0    60   ~ 0
-SPK1N
-Text Label 30000 27000 0    60   ~ 0
-SPK1P
 Text Notes 26750 27600 0    40   Italic 0
 Route speaker's signal wires according\ndifferential signal design rules.\n\nTrace width should be 10-12 mil.\n\nPlace ESD IC close to the speaker.
 Text Label 10300 10150 2    60   ~ 0
@@ -3162,29 +3331,21 @@ F 1 "2u2" H 16850 9900 50  0000 L CNN
 $EndComp
 Text Notes 39600 26150 0    120  Italic 0
 ESD Protection
-Text Notes 27050 29300 0    40   Italic 0
+Text Notes 28900 29100 0    40   Italic 0
 Route MIC's signal wires according\ndifferential signal design rules.\n\nTrace width should be 6-8 mil.\n\nPlace ESD IC close\nto the microphone.
 $Comp
 L MICROPHONE U5
 U 1 1 4EFE3918
-P 26500 29150
-F 0 "U5" H 26500 29400 60  0000 C CNN
-F 1 "MICROPHONE" H 26500 28850 60  0000 C CNN
-	1    26500 29150
+P 28350 28950
+F 0 "U5" H 28350 29200 60  0000 C CNN
+F 1 "MICROPHONE" H 28350 28650 60  0000 C CNN
+	1    28350 28950
 	1    0    0    -1  
 $EndComp
-Text Label 39700 27050 2    60   ~ 0
-MIC1N
-Text Label 39700 26950 2    60   ~ 0
-MIC1P
-Text Label 27200 29100 0    60   ~ 0
-MIC1P
-Text Label 27200 29200 0    60   ~ 0
-MIC1N
 Text Label 24500 10100 2    60   ~ 0
-MIC1N
+GSM_MIC1N
 Text Label 24500 10000 2    60   ~ 0
-MIC1P
+GSM_MIC1P
 Text Label 12400 22000 2    60   ~ 0
 STM32_RST
 Text Label 12400 21900 2    60   ~ 0
@@ -3335,7 +3496,7 @@ L FILTER FB1
 U 1 1 4EF9D83C
 P 15250 30550
 F 0 "FB1" H 15250 30700 60  0000 C CNN
-F 1 "2A+" H 15250 30450 60  0000 C CNN
+F 1 "FILTER" H 15250 30450 60  0000 C CNN
 	1    15250 30550
 	-1   0    0    1   
 $EndComp
@@ -3357,7 +3518,7 @@ F 1 "1u" H 17050 11750 50  0000 L CNN
 	1    17000 11850
 	1    0    0    -1  
 $EndComp
-Text Notes 26050 28700 0    120  Italic 0
+Text Notes 27900 28500 0    120  Italic 0
 GSM's Microphone
 Text Notes 11650 21100 0    120  Italic 0
 USART Connector
@@ -3435,9 +3596,9 @@ Text Label 39700 27850 2    60   ~ 0
 SIM-RST
 Text Label 39700 27750 2    60   ~ 0
 SIM-VDD
-Text Label 26900 8800 0    60   ~ 0
+Text Label 27600 8800 0    60   ~ 0
 GSM_DCD
-Text Label 26900 8900 0    60   ~ 0
+Text Label 27600 8900 0    60   ~ 0
 GSM_RI
 $Comp
 L GND #PWR049
@@ -3459,7 +3620,7 @@ F 1 "PWR_FLAG" H 1850 12630 30  0000 C CNN
 $EndComp
 Text Label 5300 27800 2    60   ~ 0
 SYSTEM_LOAD
-Text Label 26900 8600 0    60   ~ 0
+Text Label 28100 8600 0    60   ~ 0
 GSM_DTR
 Text Label 4800 9300 0    60   ~ 0
 GSM_PWRKEY
@@ -3484,9 +3645,9 @@ Text Label 10300 5750 2    60   ~ 0
 ACCMAGN_INT2
 Text Label 10300 5650 2    60   ~ 0
 ACCMAGN_INT1
-Text Label 26900 9100 0    60   ~ 0
+Text Label 28100 9100 0    60   ~ 0
 GSM_CTS
-Text Label 26900 9200 0    60   ~ 0
+Text Label 27600 9200 0    60   ~ 0
 GSM_RTS
 Text Label 10300 8050 2    60   ~ 0
 I2C_SDA
@@ -3501,9 +3662,9 @@ F 1 "GND" H 24450 8130 30  0001 C CNN
 	1    24450 8200
 	0    1    1    0   
 $EndComp
-Text Label 26900 8700 0    60   ~ 0
+Text Label 27600 8700 0    60   ~ 0
 GSM_TXD
-Text Label 26900 9000 0    60   ~ 0
+Text Label 28100 9000 0    60   ~ 0
 GSM_RXD
 $Comp
 L C C24
@@ -3754,7 +3915,7 @@ NoConn ~ 24500 11600
 NoConn ~ 24500 11500
 Text Label 23100 9300 2    60   ~ 0
 GPS/DBG-RXD
-Text Label 23100 9200 2    60   ~ 0
+Text Label 23000 9200 2    60   ~ 0
 GPS/DBG-TXD
 Text Label 10300 6650 2    60   ~ 0
 USART1_RX
@@ -3827,7 +3988,7 @@ L R R1
 U 1 1 4EF52049
 P 17050 8150
 F 0 "R1" V 17130 8150 50  0000 C CNN
-F 1 "10k" V 17050 8150 50  0000 C CNN
+F 1 "4k7" V 17050 8150 50  0000 C CNN
 	1    17050 8150
 	0    1    1    0   
 $EndComp
@@ -3908,11 +4069,11 @@ Micro-USB-AB + ESD Protection
 $Comp
 L GND #PWR085
 U 1 1 4EF51E4F
-P 15500 31500
-F 0 "#PWR085" H 15500 31500 30  0001 C CNN
-F 1 "GND" H 15500 31430 30  0001 C CNN
-	1    15500 31500
-	1    0    0    -1  
+P 15850 31250
+F 0 "#PWR085" H 15850 31250 30  0001 C CNN
+F 1 "GND" H 15850 31180 30  0001 C CNN
+	1    15850 31250
+	0    -1   -1   0   
 $EndComp
 $Comp
 L USB_MICRO_B J1

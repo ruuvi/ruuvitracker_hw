@@ -1,4 +1,4 @@
-update=Fri 21 Dec 2012 01:51:00 AM EET
+update=Sat 22 Dec 2012 12:56:17 PM EET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -141,3 +141,4 @@ LibName51=conn_18
 LibName52=lm4890m_mm
 LibName53=emif02-usb04f3
 LibName54=tpd4e004
+LibName55=tp
