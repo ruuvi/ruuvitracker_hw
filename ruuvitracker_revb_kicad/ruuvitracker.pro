@@ -1,4 +1,4 @@
-update=Sat 22 Dec 2012 04:59:36 PM EET
+update=Sat 22 Dec 2012 10:49:04 PM EET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -143,3 +143,4 @@ LibName53=emif02-usb04f3
 LibName54=tpd4e004
 LibName55=tp
 LibName56=sn74avc4t245_rsv
+LibName57=push_button
