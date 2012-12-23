@@ -1,4 +1,4 @@
-update=Sat 22 Dec 2012 10:49:04 PM EET
+update=Sun 23 Dec 2012 08:48:04 PM EET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -144,3 +144,5 @@ LibName54=tpd4e004
 LibName55=tp
 LibName56=sn74avc4t245_rsv
 LibName57=push_button
+LibName58=conn_16x2
+LibName59=conn_26
