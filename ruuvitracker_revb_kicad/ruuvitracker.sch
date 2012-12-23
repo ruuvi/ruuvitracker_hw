@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 22 Dec 2012 10:51:24 PM EET
+EESchema Schematic File Version 2  date Sun 23 Dec 2012 04:20:00 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -63,7 +63,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "22 dec 2012"
+Date "23 dec 2012"
 Rev "RevB"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -71,6 +71,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 8050 10850 2    60   ~ 0
+CAN1_TX
+Text Label 8050 10750 2    60   ~ 0
+CAN1_RX
+Wire Notes Line
+	8050 14100 8050 5400
+Wire Notes Line
+	8600 14100 8600 5400
 Connection ~ 6400 35300
 Wire Wire Line
 	6700 35300 6300 35300
@@ -376,8 +384,6 @@ Wire Wire Line
 	2350 14400 2250 14400
 Wire Wire Line
 	2150 14050 2250 14050
-Wire Wire Line
-	9700 6550 10300 6550
 Wire Wire Line
 	9250 7750 10300 7750
 Wire Wire Line
@@ -818,8 +824,6 @@ Wire Wire Line
 Wire Wire Line
 	9250 7850 10300 7850
 Wire Wire Line
-	9700 6650 10300 6650
-Wire Wire Line
 	2250 14050 2250 14150
 Wire Wire Line
 	2250 14150 2150 14150
@@ -1128,6 +1132,24 @@ Wire Wire Line
 	6400 35400 6300 35400
 Wire Wire Line
 	6400 35500 6300 35500
+Wire Notes Line
+	9300 14100 9300 5400
+Wire Notes Line
+	8750 5400 8750 14100
+Text Label 8050 8550 2    60   ~ 0
+CAN2_RX
+Text Label 8050 8650 2    60   ~ 0
+CAN2_TX
+Text Label 8750 6450 2    60   ~ 0
+MCO1_CONNECTEC_TO_REF_CLK
+Text Label 8750 5750 2    60   ~ 0
+ETH_RMII_REF_CLK
+Text Label 8750 6350 2    60   ~ 0
+ETH_RMII_CRS_DV
+Text Label 8750 5850 2    60   ~ 0
+ETH_MDIO
+Text Notes 8750 5350 1    40   Italic 0
+ETHERNET\nReduced media-independent interface: RMII
 $Comp
 L PUSH_BUTTON SW?
 U 1 1 50D61D09
@@ -1365,11 +1387,11 @@ F 1 "VDD" H 24700 31510 30  0000 C CNN
 	1    24700 31400
 	1    0    0    -1  
 $EndComp
-Text Label 10300 5850 2    60   ~ 0
+Text Label 10300 7950 2    60   ~ 0
 GPS/DBG-RXD_3V3SIDE
-Text Label 10300 8350 2    60   ~ 0
+Text Label 10300 11250 2    60   ~ 0
 GSM_RXD_3V3SIDE
-Text Label 10300 8750 2    60   ~ 0
+Text Label 10300 11150 2    60   ~ 0
 GSM_CTS_3V3SIDE
 Text Label 5400 8800 2    60   ~ 0
 GSM_DTR_3V3SIDE
@@ -1902,7 +1924,7 @@ Text Label -650 12400 0    60   ~ 0
 HIGH_VOLTAGE_VBUS
 Text Label -450 13450 2    60   ~ 0
 HIGH_VOLTAGE_VBUS
-Text Label 9700 6550 2    60   ~ 0
+Text Label 10300 6550 2    60   ~ 0
 OTG_FS_VBUS
 Text Notes -1450 13050 0    40   Italic 0
 If using over 5V power sources (17VDC max), remove\nzero ohm resistor to save the ARM's life!\n\nUSB (device mode) is still functioning, but OTG\ncannot be used.
@@ -2046,15 +2068,15 @@ Text Label 400  16050 2    60   ~ 0
 OTG_FS_VBUS
 Text Label -450 13600 2    60   ~ 0
 OTG_FS_VBUS
-Text Label 10300 8450 2    60   ~ 0
+Text Label 10300 11350 2    60   ~ 0
 GSM_TXD
-Text Label 10300 8650 2    60   ~ 0
+Text Label 10300 11050 2    60   ~ 0
 GSM_RTS
 Text Label 4950 9100 0    60   ~ 0
 GSM_RI
 Text Label 4950 9000 0    60   ~ 0
 GSM_DCD
-Text Label 10300 5950 2    60   ~ 0
+Text Label 10300 8050 2    60   ~ 0
 GPS/DBG-TXD
 Text Label 13200 33750 0    60   ~ 0
 SPK_AMP_OUT1
@@ -2681,9 +2703,9 @@ Text Label 8600 7950 2    60   ~ 0
 DCMI_D5
 Text Label 8600 12450 2    60   ~ 0
 DCMI_D2
-Text Label 8600 6650 2    60   ~ 0
+Text Label 8600 9750 2    60   ~ 0
 DCMI_D1
-Text Label 8600 6550 2    60   ~ 0
+Text Label 8600 9650 2    60   ~ 0
 DCMI_D0
 Text Label 8600 12950 2    60   ~ 0
 DCMI_D6
@@ -2932,7 +2954,7 @@ Text Notes 12050 30500 0    120  Italic 0
 MEMS Microphone
 Text Label 15550 31500 0    60   ~ 0
 OTG_FS_ID
-Text Label 9700 6650 2    60   ~ 0
+Text Label 10300 6650 2    60   ~ 0
 OTG_FS_ID
 Text Notes 16200 7650 0    30   Italic 0
 The boot loader is located in system memory. It is used to reprogram\nthe Flash memory by using USART1 (PA9/PA10), USART3 (PC10/PC11\nor PB10/PB11), CAN2 (PB5/PB13), USB OTG FS in Device mode\n(PA11/PA12) through DFU (device firmware upgrade).
@@ -3335,7 +3357,7 @@ F 1 "GND" H 700 16580 30  0001 C CNN
 	1    700  16650
 	1    0    0    -1  
 $EndComp
-Text Label 10300 9750 2    60   ~ 0
+Text Label 5150 9450 2    60   ~ 0
 SD_CARD_INSERTED
 Text Label 18650 35150 2    60   ~ 0
 SD_CARD_INSERTED
@@ -3527,7 +3549,7 @@ Text Label 10300 6850 2    60   ~ 0
 USB_DP
 Text Notes 24000 33750 0    120  Italic 0
 Line-In
-Text Label 10300 6050 2    60   ~ 0
+Text Label 10300 6150 2    60   ~ 0
 GSM_LINE_IN
 $Comp
 L C C10
@@ -3859,7 +3881,7 @@ F 1 "GND" H 27250 12030 30  0001 C CNN
 	1    27250 12100
 	1    0    0    -1  
 $EndComp
-Text Label 10300 5750 2    60   ~ 0
+Text Label 4800 7550 2    60   ~ 0
 ACCMAGN_INT2
 Text Label 10300 5650 2    60   ~ 0
 ACCMAGN_INT1
@@ -3867,9 +3889,9 @@ Text Label 27450 9100 0    60   ~ 0
 GSM_CTS
 Text Label 28000 9200 0    60   ~ 0
 GSM_RTS
-Text Label 10300 8050 2    60   ~ 0
+Text Label 10300 8250 2    60   ~ 0
 I2C_SDA
-Text Label 10300 7950 2    60   ~ 0
+Text Label 10300 8150 2    60   ~ 0
 I2C_SCL
 $Comp
 L GND #PWR055
@@ -4135,10 +4157,6 @@ Text Label 23000 9300 2    60   ~ 0
 GPS/DBG-RXD
 Text Label 23000 9200 2    60   ~ 0
 GPS/DBG-TXD
-Text Label 10300 6650 2    60   ~ 0
-USART1_RX
-Text Label 10300 6550 2    60   ~ 0
-USART1_TX
 Text Label 16400 6900 0    60   ~ 0
 STM32_RST
 NoConn ~ 11900 28650
