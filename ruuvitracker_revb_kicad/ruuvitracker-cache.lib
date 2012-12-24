@@ -1,4 +1,4 @@
-EESchema-LIBRARY Version 2.3  Date: Mon 24 Dec 2012 02:01:09 AM EET
+EESchema-LIBRARY Version 2.3  Date: Mon 24 Dec 2012 11:19:49 AM EET
 #encoding utf-8
 #
 # 24LC1025
@@ -189,8 +189,8 @@ ENDDEF
 #
 # CONN_3
 #
-DEF CONN_3 P 0 40 Y N 1 F N
-F0 "P" -50 0 50 V V C CNN
+DEF CONN_3 K 0 40 Y N 1 F N
+F0 "K" -50 0 50 V V C CNN
 F1 "CONN_3" 50 0 40 V V C CNN
 DRAW
 S -100 150 100 -150 0 1 0 N
