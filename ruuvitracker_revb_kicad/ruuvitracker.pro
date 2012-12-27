@@ -1,4 +1,4 @@
-update=Thu 27 Dec 2012 01:52:39 AM EET
+update=Thu 27 Dec 2012 02:40:02 AM EET
 last_client=pcbnew
 [cvpcb]
 version=1
@@ -103,8 +103,8 @@ LibName61=l3gd20
 [pcbnew]
 version=1
 PadDrlX=0
-PadDimH=236
-PadDimV=354
+PadDimH=709
+PadDimV=236
 BoardThickness=630
 TxtPcbV=394
 TxtPcbH=394
@@ -149,3 +149,4 @@ LibName27=LED_SMD-0603
 LibName28=RUUVITRACKER_LOGO
 LibName29=RUUVITRACKER_LOGO_FLIP
 LibName30=/home/lauri/Dropbox/Projektit/kicad_lib_oma/pcb_modules/walter/w_smd_lqfp
+LibName31=S-PWQFN-N10_2X2MM
