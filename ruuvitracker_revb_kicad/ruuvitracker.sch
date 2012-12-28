@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 28 Dec 2012 02:00:44 AM EET
+EESchema Schematic File Version 2  date Fri 28 Dec 2012 02:05:50 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -1699,10 +1699,10 @@ F 1 "GND" H 11350 5680 30  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L R R3
+L R R5
 U 1 1 50DCDE7C
 P 11700 5750
-F 0 "R3" V 11700 5650 50  0000 C CNN
+F 0 "R5" V 11700 5650 50  0000 C CNN
 F 1 "1M" V 11700 5850 50  0000 C CNN
 	1    11700 5750
 	0    1    -1   0   
@@ -3678,10 +3678,10 @@ $EndComp
 Text Notes 28850 2300 0    120  Italic 0
 LEDs (uC + GSM)
 $Comp
-L R R5
+L R R3
 U 1 1 50B1FCB2
 P 30100 3200
-F 0 "R5" V 30180 3200 50  0000 C CNN
+F 0 "R3" V 30180 3200 50  0000 C CNN
 F 1 "1k" V 30100 3200 50  0000 C CNN
 	1    30100 3200
 	0    1    1    0   
