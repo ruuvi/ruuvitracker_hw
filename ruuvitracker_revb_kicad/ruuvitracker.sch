@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 29 Dec 2012 01:45:27 PM EET
+EESchema Schematic File Version 2  date Sat 29 Dec 2012 03:38:39 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -68,13 +68,15 @@ encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
 Date "29 dec 2012"
-Rev "RevB (draft#002)"
+Rev "RevB (draft#003)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 8950 17600 0    30   Italic 0
+P-MOSFET CSD25302Q2 (2x2mm SON-6) for example:\n\n* -5A continuous current\n* -20A pulse current\n* Vgs(th) = -0,65V typical\n* Drain to source leakage (Vgs=0V) = -1uA max\n* Rds (Vgs=-2V5, Ids=-3A) = 75mohm max
 Text Label 31400 7000 0    60   ~ 0
 3V3_FET_VDD
 Text Label 16800 22000 2    60   ~ 0
@@ -4708,7 +4710,7 @@ $EndComp
 Text Notes 16300 2800 0    60   Italic 12
 http://www.ruuvitracker.fi
 Text Notes 16500 2550 0    60   Italic 12
-RevB (draft #002)
+RevB (draft #003)
 Text Notes 15500 2250 0    120  Italic 24
 Open Source Tracking Solution
 $Comp
