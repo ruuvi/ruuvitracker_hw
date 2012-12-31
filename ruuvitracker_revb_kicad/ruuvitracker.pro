@@ -1,4 +1,4 @@
-update=Mon 31 Dec 2012 12:48:49 AM EET
+update=Mon 31 Dec 2012 01:24:15 AM EET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -154,4 +154,4 @@ LibName59=conn_26
 LibName60=m24m01
 LibName61=l3gd20
 LibName62=conn_26x2
-LibName63=schottky
+LibName63=zener
