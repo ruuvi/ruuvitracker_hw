@@ -1,4 +1,4 @@
-update=Tue 01 Jan 2013 07:34:30 PM EET
+update=Thu 03 Jan 2013 10:51:32 PM EET
 last_client=eeschema
 [cvpcb]
 version=1
@@ -156,3 +156,5 @@ LibName61=l3gd20
 LibName62=conn_26x2
 LibName63=zener
 LibName64=tps2291xx
+LibName65=si8901edb
+LibName66=tvs_diode
