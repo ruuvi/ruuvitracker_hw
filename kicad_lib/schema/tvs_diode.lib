@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.3  Date: Thu 03 Jan 2013 10:51:08 PM EET
+#encoding utf-8
+#
+# TVS_DIODE
+#
+DEF TVS_DIODE D 0 40 N N 1 F N
+F0 "D" 0 100 40 H V C CNN
+F1 "TVS_DIODE" 0 -100 40 H V C CNN
+$FPLIST
+ D?
+ S*
+$ENDFPLIST
+DRAW
+P 3 0 1 0  -50 50  50 0  -50 -50 F
+P 3 0 1 0  50 0  50 -30  30 -50 N
+P 3 0 1 0  50 0  50 30  70 50 N
+X A 1 -200 0 150 R 40 40 1 1 P
+X K 2 200 0 150 L 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
