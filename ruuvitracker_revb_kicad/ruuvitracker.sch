@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 05 Jan 2013 12:03:53 AM EET
+EESchema Schematic File Version 2  date Sat 05 Jan 2013 01:57:55 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -80,6 +80,12 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 3450 19150 2    60   ~ 0
+CHG_SYS_LOAD
+Text Label 3450 19000 2    60   ~ 0
+CHG_SYS_LOAD
+Text Label 7700 18250 2    60   ~ 0
+CHG_SYS_LOAD
 Text Notes 30850 17200 0    30   Italic 0
 Tantalum capacitors preferred,\nceramic might produce some\npink noise.
 $Comp
@@ -385,8 +391,6 @@ Wire Wire Line
 	29550 9500 29650 9500
 Wire Wire Line
 	28050 9600 28050 9500
-Wire Wire Line
-	5000 18650 4050 18650
 Wire Wire Line
 	4200 19750 4200 19700
 Wire Wire Line
@@ -1306,8 +1310,6 @@ Wire Wire Line
 Wire Wire Line
 	4200 18750 5000 18750
 Wire Wire Line
-	4050 19750 4050 19700
-Wire Wire Line
 	12550 11500 14100 11500
 Wire Wire Line
 	26150 3400 26050 3400
@@ -1422,8 +1424,6 @@ Wire Wire Line
 	12550 6100 14100 6100
 Wire Wire Line
 	12550 6700 14100 6700
-Wire Wire Line
-	4050 18650 4050 19200
 Wire Wire Line
 	12550 8800 14100 8800
 Wire Wire Line
@@ -2360,15 +2360,6 @@ F 1 "M24M01" H 23150 17800 60  0000 C CNN
 $EndComp
 Text Notes 22550 18700 0    30   Italic 0
 I2C slave address: 0b1010000 / 0x50
-$Comp
-L R R37
-U 1 1 50D723FC
-P 4050 19450
-F 0 "R37" V 4130 19450 50  0000 C CNN
-F 1 "4k7" V 4050 19450 50  0000 C CNN
-	1    4050 19450
-	-1   0    0    1   
-$EndComp
 Text Notes 14400 13450 0    30   Italic 0
 Interrupt lines:\nPA0 (ACCMAGN_INT1)\nPB1 (ACCMAGN_INT2)\nPC2 (GSM_RI)\nPC3 (GSM_DCD)\nPD7 (GYRO_DRDY)\nPB10 (USER_BUTTON)\nPD11 (CHARGER_STATUS)\nPD13 (CHARGER_INTERRUPT)\nPB14 (ACCMAGN_DRDY)\nPB15 (GYRO_INT1)
 Text Label 14100 7900 2    60   ~ 0
@@ -2931,15 +2922,6 @@ Text Notes 3950 18400 2    30   Italic 0
 The INT pin sends active\nlow, 256us pulse to host\nto report charger device\nstatus and fault.
 Text Notes 3900 19250 2    30   Italic 0
 Charger status pin: Open drain charge status output to indicate various\ncharger operation. Connect to the pull up rail using pull-up resistor.\nLOW indicates charge in progress. HIGH indicates charge complete or\ncharge disabled. When any fault condition occurs, STAT pin blinks at 1Hz.\nPin is pulled high to SYSTEM_LOAD (3V5-4V2), but MCU's GPIO pins are 5V tolerant.
-$Comp
-L GND #PWR054
-U 1 1 50D723FB
-P 4050 19750
-F 0 "#PWR054" H 4050 19750 30  0001 C CNN
-F 1 "GND" H 4050 19680 30  0001 C CNN
-	1    4050 19750
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR055
 U 1 1 50D72378
@@ -4131,8 +4113,6 @@ F 1 "4k7" V 4050 18200 50  0000 C CNN
 	1    4050 18200
 	-1   0    0    1   
 $EndComp
-Text Label 3450 19150 2    60   ~ 0
-SYSTEM_LOAD
 $Comp
 L R R33
 U 1 1 5083DA6A
@@ -4209,8 +4189,6 @@ F 1 "R" V 7050 18750 50  0000 C CNN
 	1    7050 18750
 	0    1    1    0   
 $EndComp
-Text Label 3450 19000 2    60   ~ 0
-SYSTEM_LOAD
 Text Notes 5400 19750 0    30   Italic 0
 I2C slave address: 0b1101011 / 0x6B
 Text Label 7750 18950 0    60   ~ 0
