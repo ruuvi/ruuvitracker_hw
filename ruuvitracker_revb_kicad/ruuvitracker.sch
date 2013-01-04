@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 04 Jan 2013 12:45:36 AM EET
+EESchema Schematic File Version 2  date Sat 05 Jan 2013 12:03:53 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -72,7 +72,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "3 jan 2013"
+Date "4 jan 2013"
 Rev "RevB (draft#005)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -80,6 +80,28 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 30850 17200 0    30   Italic 0
+Tantalum capacitors preferred,\nceramic might produce some\npink noise.
+$Comp
+L CP1 C57
+U 1 1 50E75185
+P 30900 17750
+F 0 "C57" H 30950 17850 50  0000 L CNN
+F 1 "1u" H 30950 17650 50  0000 L CNN
+	1    30900 17750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1 C56
+U 1 1 50E7517A
+P 30900 17450
+F 0 "C56" H 30950 17550 50  0000 L CNN
+F 1 "1u" H 30950 17350 50  0000 L CNN
+	1    30900 17450
+	0    -1   -1   0   
+$EndComp
+Text Notes 4850 14450 0    30   Italic 0
+Suitable P-MOSFET: IRFHS9301PbF\n(Continuous Id = 6A, Vds = -30V, Vgs = +-20V)
 Wire Wire Line
 	17850 18300 17900 18350
 Wire Wire Line
@@ -1921,24 +1943,6 @@ F 0 "R10" V 29180 17200 50  0000 C CNN
 F 1 "22k" V 29100 17200 50  0000 C CNN
 	1    29100 17200
 	0    -1   -1   0   
-$EndComp
-$Comp
-L C C56
-U 1 1 50E20C61
-P 30900 17450
-F 0 "C56" H 30950 17550 50  0000 L CNN
-F 1 "1u" H 30950 17350 50  0000 L CNN
-	1    30900 17450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L C C57
-U 1 1 50E20C5A
-P 30900 17750
-F 0 "C57" H 30950 17850 50  0000 L CNN
-F 1 "1u" H 30950 17650 50  0000 L CNN
-	1    30900 17750
-	0    1    1    0   
 $EndComp
 $Comp
 L R R12
