@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 06 Jan 2013 11:21:48 PM EET
+EESchema Schematic File Version 2  date Mon 07 Jan 2013 12:49:24 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -80,6 +80,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 19450 18000 0    30   Italic 0
+TAJD477K006RNJ\n(case D, 2917) for example.
 Text Notes 6500 14700 0    30   Italic 0
 For example:\nON Semiconductor\nMBR230LSFT1G\n(SOD-123FL)
 Text Notes 6250 15450 2    30   Italic 0
@@ -4386,8 +4388,8 @@ F 1 "4k7" V 4550 19150 50  0000 C CNN
 	1    4550 19150
 	0    1    1    0   
 $EndComp
-Text Notes 6750 17350 0    30   Italic 0
-To get good loop stability, the resonant\nfrequency of the output inductor and\noutput capacitor should be designed\nbetween 15kHz and 25kHz. With 2.2μH\ninductor, the typical output capacitor\nvalue is 20μF.
+Text Notes 6800 17200 0    30   Italic 0
+To get good loop stability, the resonant\nfrequency of the output inductor and\noutput capacitor should be designed\nbetween 15kHz and 25kHz. With 2.2μH\ninductor, the typical output capacitor\nvalue is 20μF.\n\nVishay&Dale IHLP1616ABER2R2M11\n(3A) for example.
 Text Notes 5150 20900 0    30   Italic 0
 Protection:\n\nThe battery over-voltage limit is clamped at 4% above the battery\nregulation voltage. When battery over voltage occurs, the charger\ndevice immediately disables charge. The fault register REG09[5]\ngoes high and an INT is asserted to the host.\n\nIf the battery voltage falls below 2V, the charge current is reduced\nto 100mA for battery safety.\n\nIf the system is shorted or exceeds the over-current limit, the\nBATFET is latched off. DC source insertion on VBUS is required\nto reset the latch-off condition and turn on BATFET.
 $Comp
@@ -4842,7 +4844,7 @@ TC (only 3V3 tolerant IO pin)\n\nTC (only 3V3 tolerant IO pin)
 Text Notes 15850 9450 0    30   Italic 0
 PC13, PC14 and PC15 are supplied through the power switch.\nSince the switch only sinks a limited amount of current (3 mA),\nthe use of GPIOs PC13 to PC15 and PI8 in output mode is limited:\n- The speed should not exceed 2 MHz with a maximum load of 30 pF.\n- These I/Os must not be used as a current source (e.g. to drive an LED).\n\nMain function after the first backup domain power-up. Later on, it\ndepends on the contents of the RTC registers even after reset\n(because these registers are not reset by the main reset).
 Text Notes 22300 15800 0    30   Italic 0
-STM32F41x datasheet: On reset the 16 MHz internal RC oscillator is\nselected as the default CPU clock. The 16 MHz internal RC oscillator\nis factory-trimmed to offer 1% accuracy over the full temperature\nrange. The application can then select as system clock either the RC\noscillator or an external 4-26 MHz clock source.\n\nEthernet requires 25MHz crystal.
+STM32F41x datasheet: On reset the 16 MHz internal RC oscillator is\nselected as the default CPU clock. The 16 MHz internal RC oscillator\nis factory-trimmed to offer 1% accuracy over the full temperature\nrange. The application can then select as system clock either the RC\noscillator or an external 4-26 MHz clock source.\n\nEthernet requires 25MHz crystal. ABM8G-25.000MHZ-18-D2Y-T for example.
 $Comp
 L GND #PWR0124
 U 1 1 504B1D0C
@@ -5562,7 +5564,7 @@ Text Label 15300 15600 2    60   ~ 0
 GSM_PWRKEY
 Text Notes 15250 15750 2    30   Italic 0
 PWRKEY pin has IPU (100kohm).\n\nPull down for >1sec and release\nto power-on the module.\n\nDuring power on, pull down for >1s and\nrelease to power-down the module.\n\nMeasured current consumption when powered off = 32uA.
-Text Notes 19700 17550 0    30   Italic 0
+Text Notes 19700 17450 0    30   Italic 0
 Place tantalums +\nsmaller ceramic caps close\nto VBAT pins.\n\nMax drawn current during TX\nburst = up to 2A.\n\nReset voltage level = 3V1.
 Text Notes 16800 14100 0    30   Italic 0
 Place caps close to VDD pins.
