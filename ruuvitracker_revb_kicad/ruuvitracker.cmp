@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Mon 07 Jan 2013 10:01:44 PM EET
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 08 Jan 2013 02:03:18 AM EET
 
 BeginCmp
 TimeStamp = /50DE0915;
@@ -522,7 +522,7 @@ BeginCmp
 TimeStamp = /50465E04;
 Reference = P6;
 ValeurCmp = HAPTIC;
-IdModule  = 005INCH_PINSTRIP_THRUHOLE_2PIN;
+IdModule  = 53047-0210_2PIN_THRU;
 EndCmp
 
 BeginCmp
@@ -1061,7 +1061,7 @@ BeginCmp
 TimeStamp = /4EFFA89D;
 Reference = SP1;
 ValeurCmp = SPEAKER;
-IdModule  = 005INCH_PINSTRIP_THRUHOLE_2PIN;
+IdModule  = 53047-0210_2PIN_THRU;
 EndCmp
 
 BeginCmp
