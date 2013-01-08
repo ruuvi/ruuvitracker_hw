@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 08 Jan 2013 02:03:18 AM EET
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 08 Jan 2013 09:45:44 PM EET
 
 BeginCmp
 TimeStamp = /50DE0915;
@@ -620,7 +620,7 @@ BeginCmp
 TimeStamp = /50D77284;
 Reference = P20;
 ValeurCmp = EMI_SHIELD;
-IdModule  = BMIS-201_EMI_SHIELD;
+IdModule  = BMIS-201_EMI_SHIELD_COVER;
 EndCmp
 
 BeginCmp

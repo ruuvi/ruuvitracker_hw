@@ -1,5 +1,5 @@
-update=Tue 08 Jan 2013 09:47:23 AM EET
-last_client=eeschema
+update=Tue 08 Jan 2013 09:45:37 PM EET
+last_client=cvpcb
 [general]
 version=1
 [pcbnew]
@@ -70,12 +70,8 @@ LibName47=TANTALUM_D_E_2917
 LibName48=TSSOP8
 LibName49=UC04-NA_MICROUSBAB_TOPCONN
 LibName50=TP_SMD_05MM
+LibName51=BMIS-201_EMI_SHIELD_COVER
 LibDir=../kicad_lib/packages3d;../kicad_lib/modules
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=../kicad_lib/schema
@@ -167,3 +163,8 @@ LibName56=conn_26x2
 LibName57=zener
 LibName58=tps2291xx
 LibName59=tvs_diode
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
