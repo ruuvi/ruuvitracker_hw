@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 09 Jan 2013 01:07:19 AM EET
+EESchema Schematic File Version 2  date Wed 09 Jan 2013 08:05:40 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -65,7 +65,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "8 jan 2013"
+Date "9 jan 2013"
 Rev "RevB (draft#006)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -73,10 +73,19 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-NoConn ~ 8250 12650
-NoConn ~ 7850 12650
-NoConn ~ 8250 12350
-NoConn ~ 7850 12350
+Connection ~ 18500 17400
+Wire Wire Line
+	18500 17300 18500 17500
+Connection ~ 19650 17950
+Wire Wire Line
+	18500 17950 19950 17950
+Wire Wire Line
+	19950 17950 19950 17900
+Connection ~ 19650 17400
+Wire Wire Line
+	19950 17500 19950 17400
+Wire Wire Line
+	19950 17400 18500 17400
 Wire Wire Line
 	7800 12450 7750 12350
 Wire Wire Line
@@ -506,11 +515,7 @@ Connection ~ 19050 17400
 Wire Wire Line
 	19050 17500 19050 17400
 Wire Wire Line
-	19350 17500 19350 17400
-Wire Wire Line
-	19350 17400 18500 17400
-Wire Wire Line
-	18500 17400 18500 17500
+	19350 17400 19350 17500
 Wire Wire Line
 	17950 17200 17850 17200
 Wire Wire Line
@@ -780,8 +785,6 @@ Wire Wire Line
 	29950 15350 29950 15400
 Connection ~ 19050 17950
 Wire Wire Line
-	19350 17950 18500 17950
-Wire Wire Line
 	19350 17950 19350 17900
 Wire Wire Line
 	26750 21350 26650 21350
@@ -927,8 +930,6 @@ Wire Wire Line
 Wire Wire Line
 	17900 19100 17850 19100
 Wire Wire Line
-	18500 17950 18500 17900
-Wire Wire Line
 	19050 17900 19050 17950
 Wire Wire Line
 	18200 19700 18200 19650
@@ -985,9 +986,6 @@ Wire Wire Line
 	27400 21150 27250 21150
 Wire Wire Line
 	26750 21250 26650 21250
-Wire Wire Line
-	18900 17950 18900 18050
-Connection ~ 18900 17950
 Wire Wire Line
 	4950 10200 4950 9800
 Wire Wire Line
@@ -1233,9 +1231,6 @@ Wire Wire Line
 Wire Wire Line
 	18750 17500 18750 17400
 Connection ~ 18750 17400
-Wire Wire Line
-	18900 17400 18900 17300
-Connection ~ 18900 17400
 Wire Wire Line
 	20400 7450 20700 7450
 Wire Wire Line
@@ -1620,7 +1615,38 @@ Wire Wire Line
 	7850 12550 7800 12550
 Wire Wire Line
 	7800 12550 7750 12650
-Text Notes 19450 18000 0    30   Italic 0
+Wire Wire Line
+	19650 17400 19650 17500
+Connection ~ 19350 17400
+Wire Wire Line
+	19650 17950 19650 17900
+Connection ~ 19350 17950
+Wire Wire Line
+	18500 18050 18500 17900
+Connection ~ 18500 17950
+$Comp
+L CP1 C59
+U 1 1 50EDB13A
+P 19650 17700
+F 0 "C59" H 19700 17800 50  0000 L CNN
+F 1 "470u" H 19700 17600 50  0000 L CNN
+	1    19650 17700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C60
+U 1 1 50EDB139
+P 19950 17700
+F 0 "C60" H 20000 17800 50  0000 L CNN
+F 1 "470u" H 20000 17600 50  0000 L CNN
+	1    19950 17700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8250 12650
+NoConn ~ 7850 12650
+NoConn ~ 8250 12350
+NoConn ~ 7850 12350
+Text Notes 19400 18050 0    30   Italic 0
 TAJD477K006RNJ\n(case D, 2917) for example.
 Text Notes 6500 14700 0    30   Italic 0
 For example:\nON Semiconductor\nMBR230LSFT1G\n(SOD-123FL)
@@ -2339,7 +2365,7 @@ F 1 "1u" H 4850 2150 50  0000 L CNN
 	1    4800 2250
 	0    -1   -1   0   
 $EndComp
-Text Label 18900 17300 0    60   ~ 0
+Text Label 18500 17300 0    60   ~ 0
 GSM_VBAT
 Text Label 18050 17150 0    60   ~ 0
 GSM_VBAT
@@ -5331,7 +5357,7 @@ Text Label 15300 15600 2    60   ~ 0
 GSM_PWRKEY
 Text Notes 15250 15750 2    30   Italic 0
 PWRKEY pin has IPU (100kohm).\n\nPull down for >1sec and release\nto power-on the module.\n\nDuring power on, pull down for >1s and\nrelease to power-down the module.\n\nMeasured current consumption when powered off = 32uA.
-Text Notes 19700 17450 0    30   Italic 0
+Text Notes 20350 17500 0    30   Italic 0
 Place tantalums +\nsmaller ceramic caps close\nto VBAT pins.\n\nMax drawn current during TX\nburst = up to 2A.\n\nReset voltage level = 3V1.
 Text Notes 16800 14100 0    30   Italic 0
 Place caps close to VDD pins.
@@ -5389,10 +5415,10 @@ SIM-DATA
 $Comp
 L GND #PWR0155
 U 1 1 4EF527E9
-P 18900 18050
-F 0 "#PWR0155" H 18900 18050 30  0001 C CNN
-F 1 "GND" H 18900 17980 30  0001 C CNN
-	1    18900 18050
+P 18500 18050
+F 0 "#PWR0155" H 18500 18050 30  0001 C CNN
+F 1 "GND" H 18500 17980 30  0001 C CNN
+	1    18500 18050
 	-1   0    0    -1  
 $EndComp
 $Comp

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Tue 08 Jan 2013 09:45:44 PM EET
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Wed 09 Jan 2013 08:05:57 PM EET
 
 BeginCmp
 TimeStamp = /50DE0915;
@@ -404,6 +404,20 @@ TimeStamp = /50D5CFA9;
 Reference = C58;
 ValeurCmp = 100n;
 IdModule  = SMD_0402_RT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EDB13A;
+Reference = C59;
+ValeurCmp = 470u;
+IdModule  = TANTALUM_D_E_2917;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EDB139;
+Reference = C60;
+ValeurCmp = 470u;
+IdModule  = TANTALUM_D_E_2917;
 EndCmp
 
 BeginCmp
