@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 09 Jan 2013 08:05:40 PM EET
+EESchema Schematic File Version 2  date Thu 10 Jan 2013 09:16:56 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -65,7 +65,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "9 jan 2013"
+Date "10 jan 2013"
 Rev "RevB (draft#006)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -4935,7 +4935,7 @@ F 1 "MICROSD_SIM_COMBO" H 29350 5300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 29750 6350 0    30   Italic 0
-Compatible holders:\n\n* GCT's MES3051\n* Cheap Chinese version
+Compatible holders:\n\n* GCT's MES3051\n* Kingfont's AIO2X-21608BT00\n* Almita's AAIO2X-21608BT00
 $Comp
 L GND #PWR0138
 U 1 1 4F0E27FA
