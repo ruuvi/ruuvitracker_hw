@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Wed 09 Jan 2013 08:05:57 PM EET
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sat 12 Jan 2013 12:56:20 AM EET
 
 BeginCmp
 TimeStamp = /50DE0915;
@@ -659,6 +659,41 @@ IdModule  = TP_SMD_05MM;
 EndCmp
 
 BeginCmp
+TimeStamp = /50F082F3;
+Reference = P24;
+ValeurCmp = TP;
+IdModule  = TP_SMD_05MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50F08B73;
+Reference = P25;
+ValeurCmp = FIDU;
+IdModule  = TP_SMD_05MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50F08B74;
+Reference = P26;
+ValeurCmp = FIDU;
+IdModule  = TP_SMD_05MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50F0985F;
+Reference = P27;
+ValeurCmp = TP;
+IdModule  = TP_SMD_05MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50F09846;
+Reference = P28;
+ValeurCmp = TP;
+IdModule  = TP_SMD_05MM;
+EndCmp
+
+BeginCmp
 TimeStamp = /50E5F2C1;
 Reference = Q1;
 ValeurCmp = MOSFET_P;
@@ -990,35 +1025,35 @@ EndCmp
 BeginCmp
 TimeStamp = /50C95602;
 Reference = R43;
-ValeurCmp = 4k7;
+ValeurCmp = 22k;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /50C95604;
 Reference = R44;
-ValeurCmp = 4k7;
+ValeurCmp = 22k;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /50C95606;
 Reference = R45;
-ValeurCmp = 4k7;
+ValeurCmp = 22k;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /50C95607;
 Reference = R46;
-ValeurCmp = 4k7;
+ValeurCmp = 22k;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /50C95609;
 Reference = R47;
-ValeurCmp = 4k7;
+ValeurCmp = 22k;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -1033,6 +1068,20 @@ BeginCmp
 TimeStamp = /504A5EA7;
 Reference = R49;
 ValeurCmp = 1k;
+IdModule  = SMD_0402_RT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EF4EF9;
+Reference = R50;
+ValeurCmp = NA;
+IdModule  = SMD_0402_RT;
+EndCmp
+
+BeginCmp
+TimeStamp = /50EF4EFC;
+Reference = R51;
+ValeurCmp = NA;
 IdModule  = SMD_0402_RT;
 EndCmp
 
