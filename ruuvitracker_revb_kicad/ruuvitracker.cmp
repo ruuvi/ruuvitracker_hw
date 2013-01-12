@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = Sat 12 Jan 2013 02:42:10 PM EET
+Cmp-Mod V01 Genere par PcbNew le Sat 12 Jan 2013 11:31:28 PM EET
 
 BeginCmp
 TimeStamp = /50DE0915;
@@ -515,21 +515,21 @@ BeginCmp
 TimeStamp = /50D5927A;
 Reference = P3;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D94432;
 Reference = P4;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D94410;
 Reference = P5;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
@@ -543,42 +543,42 @@ BeginCmp
 TimeStamp = /50D591D3;
 Reference = P7;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D59207;
 Reference = P8;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D592B7;
 Reference = P9;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D591F4;
 Reference = P10;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D59241;
 Reference = P11;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50E5F19C;
 Reference = P12;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
@@ -592,28 +592,28 @@ BeginCmp
 TimeStamp = /50E5F39D;
 Reference = P14;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50E5F3B0;
 Reference = P15;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D4B258;
 Reference = P16;
 ValeurCmp = FIDU;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D4B257;
 Reference = P17;
 ValeurCmp = FIDU;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
@@ -655,42 +655,56 @@ BeginCmp
 TimeStamp = /50D592FC;
 Reference = P23;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50F082F3;
 Reference = P24;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50F08B73;
 Reference = P25;
 ValeurCmp = FIDU;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50F08B74;
 Reference = P26;
 ValeurCmp = FIDU;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50F0985F;
 Reference = P27;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
 TimeStamp = /50F09846;
 Reference = P28;
 ValeurCmp = TP;
-IdModule  = TP_SMD_05MM;
+IdModule  = TP_SMD_08MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50F1C5D2;
+Reference = P29;
+ValeurCmp = TP;
+IdModule  = TP_SMD_08MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /50F1C5E1;
+Reference = P30;
+ValeurCmp = TP;
+IdModule  = TP_SMD_08MM;
 EndCmp
 
 BeginCmp
