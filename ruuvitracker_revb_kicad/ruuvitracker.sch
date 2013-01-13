@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 13 Jan 2013 08:56:32 PM EET
+EESchema Schematic File Version 2  date Sun 13 Jan 2013 09:34:45 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -73,8 +73,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 5700 20200 2    60   ~ 0
-CHG_SYS_LOAD
 Connection ~ 6950 12350
 Wire Wire Line
 	6950 12350 6950 12100
@@ -1651,6 +1649,8 @@ Wire Wire Line
 Wire Wire Line
 	5550 12950 5450 12950
 Connection ~ 5450 12950
+Text Label 5700 20200 2    60   ~ 0
+CHG_SYS_LOAD
 Text Label 6100 13300 2    60   ~ 0
 USB_DP
 Text Label 6100 13200 2    60   ~ 0
@@ -2138,9 +2138,9 @@ NoConn ~ 24700 6050
 NoConn ~ 24700 5950
 Text Label 24700 8950 2    60   ~ 0
 USER_BUTTON
-Text Label 24700 5750 2    60   ~ 0
-GPS-VANT-IN
 Text Label 24700 5850 2    60   ~ 0
+GPS-VANT-IN
+Text Label 24700 5750 2    60   ~ 0
 GPS-ANT
 Text Label 17850 15800 0    60   ~ 0
 GPS-VANT-IN
