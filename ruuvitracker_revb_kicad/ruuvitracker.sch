@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 12 Jan 2013 10:22:11 PM EET
+EESchema Schematic File Version 2  date Sun 13 Jan 2013 04:16:10 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -65,7 +65,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "12 jan 2013"
+Date "13 jan 2013"
 Rev "RevB (draft#006)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -73,6 +73,17 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 6100 13300 2    60   ~ 0
+USB_DP
+Text Label 6100 13200 2    60   ~ 0
+USB_DM
+Text Label 5550 12950 0    60   ~ 0
+USB_DP
+Text Label 5550 12100 0    60   ~ 0
+USB_DM
+Connection ~ 5450 12950
+Wire Wire Line
+	5550 12950 5450 12950
 Wire Wire Line
 	26100 11050 26300 11050
 Wire Wire Line
@@ -83,8 +94,6 @@ Wire Wire Line
 	3700 7150 3800 7150
 Wire Wire Line
 	14100 10550 12550 10550
-Wire Wire Line
-	7700 12000 5450 12000
 Wire Wire Line
 	5750 12550 4850 12550
 Wire Wire Line
@@ -102,7 +111,7 @@ Wire Wire Line
 	20600 6000 20200 6000
 Connection ~ 27450 21550
 Wire Wire Line
-	27150 21550 27450 21550
+	27450 21550 27150 21550
 Connection ~ 27450 21350
 Wire Wire Line
 	27450 21350 27150 21350
@@ -130,16 +139,12 @@ Wire Wire Line
 	19950 17500 19950 17400
 Wire Wire Line
 	19950 17400 18500 17400
-Wire Wire Line
-	8000 12450 7950 12350
-Wire Wire Line
-	8000 12450 8050 12450
 Wire Notes Line
 	2700 21350 3200 21350
 Wire Notes Line
 	3450 21350 3450 21450
 Wire Wire Line
-	2650 21350 2650 21250
+	2650 21250 2650 21350
 Wire Wire Line
 	17850 18300 17900 18300
 Wire Wire Line
@@ -310,8 +315,6 @@ Wire Wire Line
 	14550 17200 15450 17200
 Wire Wire Line
 	14550 17000 15450 17000
-Wire Wire Line
-	7950 12350 7700 12000
 Wire Wire Line
 	12550 6950 14100 6950
 Wire Wire Line
@@ -1451,13 +1454,11 @@ Wire Wire Line
 Wire Wire Line
 	23300 17700 23200 17700
 Wire Wire Line
-	21250 7950 21350 7950
+	21350 7950 21450 7950
 Wire Wire Line
 	20150 8150 20250 8150
 Wire Wire Line
 	20150 7950 20250 7950
-Wire Wire Line
-	7950 12650 7700 13000
 Wire Wire Line
 	7100 12350 6850 12350
 Wire Wire Line
@@ -1599,10 +1600,6 @@ Wire Wire Line
 Wire Notes Line
 	3450 21450 2600 21450
 Wire Wire Line
-	8050 12550 8000 12550
-Wire Wire Line
-	8000 12550 7950 12650
-Wire Wire Line
 	19650 17400 19650 17500
 Connection ~ 19350 17400
 Wire Wire Line
@@ -1646,11 +1643,12 @@ Wire Wire Line
 Wire Wire Line
 	5750 12350 4850 12350
 Wire Wire Line
-	7700 13000 5450 13000
-Wire Wire Line
 	4300 7150 4900 7150
 Wire Wire Line
 	24050 11050 24250 11050
+Wire Wire Line
+	5550 12100 5450 12100
+Connection ~ 5450 12100
 $Comp
 L TP P30
 U 1 1 50F1C5E1
@@ -1788,10 +1786,10 @@ F 1 "470u" H 20000 17600 50  0000 L CNN
 	1    19950 17700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8450 12650
-NoConn ~ 8050 12650
-NoConn ~ 8450 12350
-NoConn ~ 8050 12350
+NoConn ~ 6500 13400
+NoConn ~ 6100 13400
+NoConn ~ 6500 13100
+NoConn ~ 6100 13100
 Text Notes 19400 18050 0    30   Italic 0
 TAJD477K006RNJ\n(case D, 2917) for example.
 Text Notes 6500 14700 0    30   Italic 0
@@ -1860,10 +1858,10 @@ $EndComp
 $Comp
 L R R10
 U 1 1 50E5F9AE
-P 21600 7950
-F 0 "R10" V 21680 7950 50  0000 C CNN
-F 1 "470k" V 21600 7950 50  0000 C CNN
-	1    21600 7950
+P 21700 7950
+F 0 "R10" V 21780 7950 50  0000 C CNN
+F 1 "470k" V 21700 7950 50  0000 C CNN
+	1    21700 7950
 	0    1    1    0   
 $EndComp
 Text Label 30000 13150 2    60   ~ 0
@@ -2396,10 +2394,10 @@ $EndComp
 $Comp
 L R_PACK4 RP2
 U 1 1 50DE2BC6
-P 8250 12700
-F 0 "RP2" H 8250 13150 40  0000 C CNN
-F 1 "22" H 8250 12650 40  0000 C CNN
-	1    8250 12700
+P 6300 13450
+F 0 "RP2" H 6300 13900 40  0000 C CNN
+F 1 "22" H 6300 13400 40  0000 C CNN
+	1    6300 13450
 	1    0    0    -1  
 $EndComp
 Text Notes 12950 13500 0    30   Italic 0
@@ -2411,10 +2409,10 @@ ENABLE_3V3
 $Comp
 L GND #PWR018
 U 1 1 50DE1804
-P 21250 7950
-F 0 "#PWR018" H 21250 7950 30  0001 C CNN
-F 1 "GND" H 21250 7880 30  0001 C CNN
-	1    21250 7950
+P 21350 7950
+F 0 "#PWR018" H 21350 7950 30  0001 C CNN
+F 1 "GND" H 21350 7880 30  0001 C CNN
+	1    21350 7950
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -2453,15 +2451,15 @@ F 1 "GND" H 20150 7880 30  0001 C CNN
 	1    20150 7950
 	0    1    -1   0   
 $EndComp
-Text Label 20650 7950 0    60   ~ 0
-PB5
-Text Label 20650 8050 0    60   ~ 0
-USB_DP
-Text Label 20650 8150 0    60   ~ 0
-USB_DM
 Text Label 20650 8250 0    60   ~ 0
+PB5
+Text Label 20650 8150 0    60   ~ 0
+USB_DP_MCU
+Text Label 20650 8050 0    60   ~ 0
+USB_DM_MCU
+Text Label 20650 7950 0    60   ~ 0
 OTG_FS_ID
-Text Label 21850 7950 0    60   ~ 0
+Text Label 21950 7950 0    60   ~ 0
 PB11
 Text Notes 22000 17250 0    120  Italic 0
 Supply voltage divider
@@ -3918,10 +3916,10 @@ F 1 "GND" H 6900 12680 30  0001 C CNN
 	1    6900 12750
 	1    0    0    -1  
 $EndComp
-Text Label 8450 12450 0    60   ~ 0
-USB_DM
-Text Label 8450 12550 0    60   ~ 0
-USB_DP
+Text Label 6500 13200 0    60   ~ 0
+USB_DM_MCU
+Text Label 6500 13300 0    60   ~ 0
+USB_DP_MCU
 Text Notes 7750 18500 0    30   Italic 0
 Iinmax = (1V/Rilim)*530\n\nThe actual input current limit is the lower value between ILIM setting and\nregister setting (REG00[2:0]). For example, if the register setting is 111\nfor 3A, and ILIM has a 353Ω resistor to ground for 1.5A, the input current\nlimit is 1.5A. ILIM pin can be used to set the input current limit rather than\nthe register settings.
 $Comp
@@ -5251,9 +5249,9 @@ SDIO_CMD
 Text Label 28550 6750 2    60   ~ 0
 SDIO_D3
 Text Label 14100 5850 2    60   ~ 0
-USB_DM
+USB_DM_MCU
 Text Label 14100 5950 2    60   ~ 0
-USB_DP
+USB_DP_MCU
 Text Notes 16100 20250 0    120  Italic 0
 GSM Line-In
 Text Label 14100 5250 2    60   ~ 0
