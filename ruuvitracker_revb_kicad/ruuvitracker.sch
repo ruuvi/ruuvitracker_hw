@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 13 Jan 2013 09:34:45 PM EET
+EESchema Schematic File Version 2  date Sun 13 Jan 2013 11:26:59 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -73,6 +73,10 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 30000 13350 2    60   ~ 0
+3V3_VDD
+Text Label 30000 13150 2    60   ~ 0
+CHG_VBUS
 Connection ~ 6950 12350
 Wire Wire Line
 	6950 12350 6950 12100
@@ -1574,10 +1578,6 @@ Wire Wire Line
 Wire Wire Line
 	7700 17500 7700 18250
 Wire Wire Line
-	29900 13400 29900 13350
-Wire Wire Line
-	29900 13350 30000 13350
-Wire Wire Line
 	17850 18200 18050 18200
 Wire Wire Line
 	18550 18200 18950 18200
@@ -1874,8 +1874,6 @@ F 1 "470k" V 21700 7950 50  0000 C CNN
 	1    21700 7950
 	0    1    1    0   
 $EndComp
-Text Label 30000 13150 2    60   ~ 0
-HV_PWR
 Text Label 14100 8150 2    60   ~ 0
 HIGH_VOLTAGE_PWR_VMEAS
 Text Label 22700 17500 2    60   ~ 0
@@ -2294,15 +2292,6 @@ Text Label 28800 10350 3    60   ~ 0
 SYSTEM_LOAD
 Text Label 30800 11750 0    60   ~ 0
 2V8_VDD-EXT
-$Comp
-L VDD #PWR013
-U 1 1 50DF56C7
-P 29900 13400
-F 0 "#PWR013" H 29900 13500 30  0001 C CNN
-F 1 "VDD" H 29900 13510 30  0000 C CNN
-	1    29900 13400
-	-1   0    0    1   
-$EndComp
 $Comp
 L GND #PWR014
 U 1 1 50DF54D1
