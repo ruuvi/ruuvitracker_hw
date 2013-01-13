@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sun 13 Jan 2013 11:26:59 PM EET
+EESchema Schematic File Version 2  date Mon 14 Jan 2013 01:33:23 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -73,10 +73,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 30000 13350 2    60   ~ 0
-3V3_VDD
-Text Label 30000 13150 2    60   ~ 0
-CHG_VBUS
+Connection ~ 28800 9450
+Wire Wire Line
+	28900 9550 28900 9450
+Wire Wire Line
+	28900 9450 28700 9450
 Connection ~ 6950 12350
 Wire Wire Line
 	6950 12350 6950 12100
@@ -251,8 +252,6 @@ Wire Wire Line
 	6300 2000 5000 2000
 Wire Wire Line
 	5000 17750 4900 17750
-Wire Wire Line
-	12550 5850 14100 5850
 Wire Wire Line
 	12550 5650 14100 5650
 Wire Wire Line
@@ -1477,8 +1476,6 @@ Wire Wire Line
 Wire Wire Line
 	14100 5750 12550 5750
 Wire Wire Line
-	14100 5950 12550 5950
-Wire Wire Line
 	4900 17750 4900 17500
 Connection ~ 4900 17650
 Wire Wire Line
@@ -1649,6 +1646,21 @@ Wire Wire Line
 Wire Wire Line
 	5550 12950 5450 12950
 Connection ~ 5450 12950
+Wire Wire Line
+	28800 9450 28800 9550
+$Comp
+L GND #PWR01
+U 1 1 50F33EB1
+P 28700 9450
+F 0 "#PWR01" H 28700 9450 30  0001 C CNN
+F 1 "GND" H 28700 9380 30  0001 C CNN
+	1    28700 9450
+	0    1    -1   0   
+$EndComp
+Text Label 30000 13350 2    60   ~ 0
+3V3_VDD
+Text Label 30000 13150 2    60   ~ 0
+CHG_VBUS
 Text Label 5700 20200 2    60   ~ 0
 CHG_SYS_LOAD
 Text Label 6100 13300 2    60   ~ 0
@@ -1681,7 +1693,7 @@ Text Label 30000 10950 2    60   ~ 0
 GSM_VBAT
 Text Label 30000 10850 2    60   ~ 0
 GSM_VBAT
-Text Label 29200 9550 1    60   ~ 0
+Text Label 29300 10350 3    60   ~ 0
 PD7
 $Comp
 L R R52
@@ -1770,10 +1782,10 @@ F 1 "NA" V 6200 3050 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L GND #PWR01
+L GND #PWR02
 U 1 1 50EF48FF
 P 5850 3700
-F 0 "#PWR01" H 5850 3700 30  0001 C CNN
+F 0 "#PWR02" H 5850 3700 30  0001 C CNN
 F 1 "GND" H 5850 3630 30  0001 C CNN
 	1    5850 3700
 	-1   0    0    -1  
@@ -1881,10 +1893,10 @@ HV_PWR
 Text Label 6900 15200 2    60   ~ 0
 HV_PWR
 $Comp
-L PWR_FLAG #FLG02
+L PWR_FLAG #FLG03
 U 1 1 50E5F4A4
 P 6400 14550
-F 0 "#FLG02" H 6400 14645 30  0001 C CNN
+F 0 "#FLG03" H 6400 14645 30  0001 C CNN
 F 1 "PWR_FLAG" H 6400 14730 30  0000 C CNN
 	1    6400 14550
 	1    0    0    -1  
@@ -1910,10 +1922,10 @@ F 1 "TP" H 8800 17600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG03
+L PWR_FLAG #FLG04
 U 1 1 50E5F31E
 P 8100 18200
-F 0 "#FLG03" H 8100 18295 30  0001 C CNN
+F 0 "#FLG04" H 8100 18295 30  0001 C CNN
 F 1 "PWR_FLAG" H 8100 18380 30  0000 C CNN
 	1    8100 18200
 	1    0    0    1   
@@ -1943,10 +1955,10 @@ GSM_VBAT
 Text Label 24150 10450 0    60   ~ 0
 SYSTEM_LOAD
 $Comp
-L VDD #PWR04
+L VDD #PWR05
 U 1 1 50E5F2D7
 P 26200 10400
-F 0 "#PWR04" H 26200 10500 30  0001 C CNN
+F 0 "#PWR05" H 26200 10500 30  0001 C CNN
 F 1 "VDD" H 26200 10510 30  0000 C CNN
 	1    26200 10400
 	1    0    0    -1  
@@ -1972,19 +1984,19 @@ $EndComp
 Text Notes 23250 10200 0    120  Italic 0
 GSM's Power
 $Comp
-L PWR_FLAG #FLG05
+L PWR_FLAG #FLG06
 U 1 1 50E5F2BF
 P 24150 11150
-F 0 "#FLG05" H 24150 11245 30  0001 C CNN
+F 0 "#FLG06" H 24150 11245 30  0001 C CNN
 F 1 "PWR_FLAG" H 24150 11330 30  0000 C CNN
 	1    24150 11150
 	-1   0    0    1   
 $EndComp
 $Comp
-L PWR_FLAG #FLG06
+L PWR_FLAG #FLG07
 U 1 1 50E5F29A
 P 26200 11150
-F 0 "#FLG06" H 26200 11245 30  0001 C CNN
+F 0 "#FLG07" H 26200 11245 30  0001 C CNN
 F 1 "PWR_FLAG" H 26200 11330 30  0000 C CNN
 	1    26200 11150
 	-1   0    0    1   
@@ -2023,10 +2035,10 @@ F 1 "TP" H 6900 15250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L GND #PWR08
 U 1 1 50E5EF7C
 P 6400 15800
-F 0 "#PWR07" H 6400 15800 30  0001 C CNN
+F 0 "#PWR08" H 6400 15800 30  0001 C CNN
 F 1 "GND" H 6400 15730 30  0001 C CNN
 	1    6400 15800
 	-1   0    0    -1  
@@ -2059,19 +2071,19 @@ F 1 "1k" V 6050 15200 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR08
+L GND #PWR09
 U 1 1 50E5E8B6
 P 5400 15850
-F 0 "#PWR08" H 5400 15850 30  0001 C CNN
+F 0 "#PWR09" H 5400 15850 30  0001 C CNN
 F 1 "GND" H 5400 15780 30  0001 C CNN
 	1    5400 15850
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L GND #PWR010
 U 1 1 50E5E876
 P 6900 15800
-F 0 "#PWR09" H 6900 15800 30  0001 C CNN
+F 0 "#PWR010" H 6900 15800 30  0001 C CNN
 F 1 "GND" H 6900 15730 30  0001 C CNN
 	1    6900 15800
 	-1   0    0    -1  
@@ -2185,10 +2197,10 @@ $EndComp
 Text Notes 3550 2850 0    30   Italic 0
 SIM908's microphone input channel can be\nconfigured to a single ended mode. In this\nmode, the MICN can be left open. The negative\nterminal of the microphone can be connected\nto GND.\n\nInput gain of the microphone on the GSM module should\nbe 0dB! AT-command to set up the gain is AT+CMIC.\n\nSIM908_HW_Design_Guide states that microphone's input characteristics are:\n* Working voltage = 1V2 - 2V0 (typical 1V5)\n* Working current = 200 - 500 uA\n* External mic's load resistance = min 1k2ohm, typical 2k2ohm\n* Internal biasing DC characteristics = max 2V5\n* Differential input voltage (gains 0dB) = 740mVrms typical\n\nHowever, SIM900_AN_AudioIN_V101 says that MIC2 Line-in input in single-ended configuration:\n* Bias voltage = 1V2\n* Vp-p <100mV
 $Comp
-L GND #PWR010
+L GND #PWR011
 U 1 1 50E20074
 P 5600 3250
-F 0 "#PWR010" H 5600 3250 30  0001 C CNN
+F 0 "#PWR011" H 5600 3250 30  0001 C CNN
 F 1 "GND" H 5600 3180 30  0001 C CNN
 	1    5600 3250
 	-1   0    0    -1  
@@ -2204,10 +2216,10 @@ SYSTEM_LOAD
 Text Label 29800 17550 0    60   ~ 0
 SYSTEM_LOAD
 $Comp
-L GND #PWR011
+L GND #PWR012
 U 1 1 50E1DECA
 P 23550 18900
-F 0 "#PWR011" H 23550 18900 30  0001 C CNN
+F 0 "#PWR012" H 23550 18900 30  0001 C CNN
 F 1 "GND" H 23550 18830 30  0001 C CNN
 	1    23550 18900
 	1    0    0    -1  
@@ -2226,10 +2238,10 @@ BATTERY_CELL_VMEAS
 Text Label 23750 18200 0    60   ~ 0
 HIGH_VOLTAGE_PWR_VMEAS
 $Comp
-L PWR_FLAG #FLG012
+L PWR_FLAG #FLG013
 U 1 1 50E0DDAF
 P 6300 2000
-F 0 "#FLG012" H 6300 2095 30  0001 C CNN
+F 0 "#FLG013" H 6300 2095 30  0001 C CNN
 F 1 "PWR_FLAG" H 6300 2180 30  0000 C CNN
 	1    6300 2000
 	0    1    1    0   
@@ -2276,14 +2288,6 @@ Text Label 29700 9550 1    60   ~ 0
 PA9
 Text Label 29700 10350 3    60   ~ 0
 PA10
-Text Label 29600 9550 1    60   ~ 0
-PA11
-Text Label 29600 10350 3    60   ~ 0
-PA12
-Text Label 12550 5950 2    60   ~ 0
-PA12
-Text Label 12550 5850 2    60   ~ 0
-PA11
 Text Label 12550 5750 2    60   ~ 0
 PA10
 Text Label 12550 5650 2    60   ~ 0
@@ -2829,31 +2833,31 @@ F 1 "GND" H 18250 13930 30  0001 C CNN
 $EndComp
 Text Notes 14250 16550 0    30   Italic 0
 Output\nfrom the\nmodule\n(2V8 level)
-Text Label 28800 9550 1    60   ~ 0
+Text Label 29600 9550 1    60   ~ 0
 PE1
-Text Label 28900 9550 1    60   ~ 0
+Text Label 29600 10350 3    60   ~ 0
 PE0
-Text Label 29000 10350 3    60   ~ 0
-PB9
-Text Label 29000 9550 1    60   ~ 0
-PB8
-Text Label 29100 10350 3    60   ~ 0
-PB7
-Text Label 29100 9550 1    60   ~ 0
-PB6
-Text Label 29200 10350 3    60   ~ 0
-PB5
 Text Label 29500 9550 1    60   ~ 0
-PD0
+PB9
 Text Label 29500 10350 3    60   ~ 0
-PD1
+PB8
 Text Label 29400 9550 1    60   ~ 0
-PD3
+PB7
 Text Label 29400 10350 3    60   ~ 0
-PD4
+PB6
 Text Label 29300 9550 1    60   ~ 0
+PB5
+Text Label 29000 10350 3    60   ~ 0
+PD0
+Text Label 29000 9550 1    60   ~ 0
+PD1
+Text Label 29100 10350 3    60   ~ 0
+PD3
+Text Label 29100 9550 1    60   ~ 0
+PD4
+Text Label 29200 10350 3    60   ~ 0
 PD5
-Text Label 29300 10350 3    60   ~ 0
+Text Label 29200 9550 1    60   ~ 0
 PD6
 Text Label 29800 10350 3    60   ~ 0
 PA8
