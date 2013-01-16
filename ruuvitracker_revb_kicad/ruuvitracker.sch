@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mon 14 Jan 2013 01:33:23 AM EET
+EESchema Schematic File Version 2  date Wed 16 Jan 2013 07:45:40 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -65,8 +65,8 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "13 jan 2013"
-Rev "RevB (draft#006)"
+Date "16 jan 2013"
+Rev "RevB (draft#007)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
 Comment2 ""
@@ -5069,7 +5069,7 @@ Optional super capacitor /\n3V non-rechargeable battery.\n\nCurrent consumption 
 Text Notes 16300 2800 0    60   Italic 12
 http://www.ruuvitracker.fi
 Text Notes 16500 2550 0    60   Italic 12
-RevB (draft #006)
+RevB (draft #007)
 Text Notes 15500 2250 0    120  Italic 24
 Open Source Tracking Solution
 $Comp
