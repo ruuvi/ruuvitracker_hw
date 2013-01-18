@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Sat 12 Jan 2013 11:31:28 PM EET
+Cmp-Mod V01 Genere par PcbNew le Fri 18 Jan 2013 11:32:23 PM EET
 
 BeginCmp
 TimeStamp = /50DE0915;
@@ -10,7 +10,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50845105;
 Reference = C2;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -24,7 +24,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50D952ED;
 Reference = C4;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -38,14 +38,14 @@ EndCmp
 BeginCmp
 TimeStamp = /50D3A50D;
 Reference = C6;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF8D00E;
 Reference = C7;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -59,21 +59,21 @@ EndCmp
 BeginCmp
 TimeStamp = /50D3A56D;
 Reference = C9;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51C84;
 Reference = C10;
-ValeurCmp = 100n;
+ValeurCmp = 220n;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51C48;
 Reference = C11;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -94,7 +94,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50D3A570;
 Reference = C14;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -108,7 +108,7 @@ EndCmp
 BeginCmp
 TimeStamp = /50D3A5DC;
 Reference = C16;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -122,21 +122,21 @@ EndCmp
 BeginCmp
 TimeStamp = /504A6500;
 Reference = C18;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF9D68A;
 Reference = C19;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF9D5C0;
 Reference = C20;
-ValeurCmp = 1u;
+ValeurCmp = 2u2;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -171,56 +171,56 @@ EndCmp
 BeginCmp
 TimeStamp = /5063229F;
 Reference = C25;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /5063229D;
 Reference = C26;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /5063229B;
 Reference = C27;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51F70;
 Reference = C28;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51F58;
 Reference = C29;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51F5E;
 Reference = C30;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51F61;
 Reference = C31;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /4EF51F63;
 Reference = C32;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -255,7 +255,7 @@ EndCmp
 BeginCmp
 TimeStamp = /5040F24C;
 Reference = C37;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -395,14 +395,14 @@ EndCmp
 BeginCmp
 TimeStamp = /50D5CFA4;
 Reference = C57;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
 BeginCmp
 TimeStamp = /50D5CFA9;
 Reference = C58;
-ValeurCmp = 100n;
+ValeurCmp = 1u;
 IdModule  = SMD_0402_RT;
 EndCmp
 
@@ -437,7 +437,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4EF52620;
 Reference = D3;
-ValeurCmp = LED_RED;
+ValeurCmp = LED_GREEN;
 IdModule  = LED_SMD-0603;
 EndCmp
 
@@ -1264,7 +1264,7 @@ BeginCmp
 TimeStamp = /50DB7426;
 Reference = U15;
 ValeurCmp = M24M01;
-IdModule  = TSSOP8;
+IdModule  = SO8N_150MILS;
 EndCmp
 
 BeginCmp

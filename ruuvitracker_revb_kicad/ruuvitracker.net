@@ -1,1173 +1,1436 @@
-# EESchema Netlist Version 1.1 created  Mon 14 Jan 2013 01:33:32 AM EET
+# EESchema Netlist Version 1.1 created  Fri 18 Jan 2013 11:31:23 PM EET
 (
- ( /50F1C5E1 $noname  P30 TP {Lib=TP}
-  (    1 /3V3_VDD )
- )
- ( /50F1C5D2 $noname  P29 TP {Lib=TP}
-  (    1 /GSM_VBAT )
- )
- ( /50F1591B $noname  R52 1k {Lib=R}
-  (    1 /ACCMAGN_INT2 )
-  (    2 N-000141 )
- )
- ( /50F0985F $noname  P27 TP {Lib=TP}
-  (    1 GND )
- )
- ( /50F09846 $noname  P28 TP {Lib=TP}
-  (    1 /BATTERY_CELL )
- )
- ( /50F08B74 $noname  P26 FIDU {Lib=CONN_1}
-  (    1 ? )
- )
- ( /50F08B73 $noname  P25 FIDU {Lib=CONN_1}
-  (    1 ? )
- )
- ( /50F082F3 $noname  P24 TP {Lib=TP}
-  (    1 /NRST-STM32_RESET )
- )
- ( /50EF4EFC $noname  R51 NA {Lib=R}
-  (    1 /GSM_MIC2P )
-  (    2 GND )
- )
- ( /50EF4EF9 $noname  R50 NA {Lib=R}
-  (    1 /MEMS_MIC_OUTPUT )
-  (    2 /GSM_MIC2P )
- )
- ( /50EDB13A $noname  C59 470u {Lib=CP1}
-  (    1 /GSM_VBAT )
-  (    2 GND )
- )
- ( /50EDB139 $noname  C60 470u {Lib=CP1}
-  (    1 /GSM_VBAT )
-  (    2 GND )
- )
- ( /50E8BE6C $noname  R1 22k {Lib=R}
-  (    1 N-000262 )
-  (    2 /MEMS_MIC_OUTPUT )
- )
- ( /50E76EB2 $noname  C51 4u7 {Lib=C}
-  (    1 GND )
-  (    2 N-000207 )
- )
- ( /50E75185 $noname  C46 1u {Lib=CP1}
-  (    1 N-000212 )
-  (    2 /GSM_SPK1P )
- )
- ( /50E7517A $noname  C40 1u {Lib=CP1}
-  (    1 N-000259 )
-  (    2 /GSM_SPK1N )
- )
- ( /50E6098E $noname  R30 1k {Lib=R}
-  (    1 N-000127 )
-  (    2 /GSM_STATUS )
- )
- ( /50E5F9AE $noname  R10 470k {Lib=R}
-  (    1 /PB11 )
-  (    2 GND )
- )
- ( /50E5F3B0 $noname  P15 TP {Lib=TP}
-  (    1 /SYSTEM_LOAD )
- )
- ( /50E5F39D $noname  P14 TP {Lib=TP}
-  (    1 /ENABLE_SYSTEM_LOAD )
- )
- ( /50E5F31D $noname  R26 470k {Lib=R}
-  (    1 /ENABLE_SYSTEM_LOAD )
-  (    2 /CHG_SYS_LOAD )
- )
- ( /50E5F31C $noname  Q5 MOSFET_P {Lib=MOSFET_P}
-  (    D /SYSTEM_LOAD )
-  (    G /ENABLE_SYSTEM_LOAD )
-  (    S /CHG_SYS_LOAD )
- )
- ( /50E5F2C1 $noname  Q1 MOSFET_P {Lib=MOSFET_P}
-  (    D /GSM_VBAT )
-  (    G /ENABLE_3V3 )
-  (    S /SYSTEM_LOAD )
- )
- ( /50E5F2C0 $noname  R14 470k {Lib=R}
-  (    1 /ENABLE_3V3 )
-  (    2 /SYSTEM_LOAD )
- )
- ( /50E5F23A $noname  R15 470k {Lib=R}
-  (    1 /ENABLE_3V3 )
-  (    2 VDD )
- )
- ( /50E5F213 $noname  Q2 MOSFET_P {Lib=MOSFET_P}
-  (    D /3V3_VDD )
-  (    G /ENABLE_3V3 )
-  (    S VDD )
- )
- ( /50E5F19C $noname  P12 TP {Lib=TP}
-  (    1 /HV_PWR )
- )
- ( /50E5EF5A $noname  D5 TVS_DIODE {Lib=TVS_DIODE}
-  (    1 GND )
-  (    2 /HV_PWR )
- )
- ( /50E5ECA8 $noname  Q3 MOSFET_P {Lib=MOSFET_P}
-  (    D N-000219 )
-  (    G N-000218 )
-  (    S /OTG_FS_VBUS_MCU )
- )
- ( /50E5EC69 $noname  R16 1k {Lib=R}
-  (    1 /HV_PWR )
-  (    2 N-000218 )
- )
- ( /50E5E875 $noname  P13 HIGH_VOLTAGE {Lib=CONN_2}
-  (    1 /HV_PWR )
-  (    2 GND )
- )
- ( /50E5E832 $noname  R17 47k {Lib=R}
-  (    1 GND )
-  (    2 N-000218 )
- )
- ( /50E5E825 $noname  D4 DIODESCH {Lib=DIODESCH}
-  (    1 /HV_PWR )
-  (    2 /CHG_VBUS )
- )
- ( /50E5E7FD $noname  Q4 MOSFET_P {Lib=MOSFET_P}
-  (    D N-000219 )
-  (    G N-000218 )
-  (    S /CHG_VBUS )
- )
- ( /50E20D4F $noname  R25 22k {Lib=R}
-  (    1 N-000211 )
-  (    2 N-000247 )
- )
- ( /50E20C4D $noname  R27 22k {Lib=R}
-  (    1 N-000213 )
-  (    2 N-000259 )
- )
- ( /50E20C41 $noname  R28 22k {Lib=R}
-  (    1 N-000212 )
-  (    2 N-000247 )
- )
- ( /50E20C1E $noname  R31 22k {Lib=R}
-  (    1 N-000213 )
-  (    2 N-000245 )
- )
- ( /50E1DE94 $noname  C50 10n {Lib=C}
-  (    1 /HIGH_VOLTAGE_PWR_VMEAS )
-  (    2 GND )
- )
- ( /50E0C59E $noname  FB1 FILTER {Lib=FILTER}
-  (    1 N-000214 )
-  (    2 /3V3_VDD )
- )
- ( /50E0A608 $noname  RP1 1M {Lib=R_PACK4}
-  (    1 GND )
-  (    2 GND )
-  (    3 GND )
-  (    4 GND )
-  (    5 /PB5 )
-  (    6 /USB_DP_MCU )
-  (    7 /USB_DM_MCU )
-  (    8 /OTG_FS_ID )
- )
- ( /50E0A5F8 $noname  RP4 1M {Lib=R_PACK4}
-  (    1 /HV_PWR )
-  (    2 N-000248 )
-  (    3 N-000248 )
-  (    4 N-000260 )
-  (    5 N-000216 )
-  (    6 N-000216 )
-  (    7 N-000209 )
-  (    8 N-000209 )
- )
- ( /50E0A5D5 $noname  RP5 1M {Lib=R_PACK4}
-  (    1 N-000260 )
-  (    2 GND )
-  (    3 /BATTERY_CELL )
-  (    4 GND )
-  (    5 /BATTERY_CELL_VMEAS )
-  (    6 /BATTERY_CELL_VMEAS )
-  (    7 /HIGH_VOLTAGE_PWR_VMEAS )
-  (    8 /HIGH_VOLTAGE_PWR_VMEAS )
- )
- ( /50DF54A7 $noname  P1 EXPANDER_1 {Lib=CONN_26X2}
-  (    1 GND )
-  (    2 /3V3_VDD )
-  (    3 /GSM_PWRKEY )
-  (    4 /OTG_FS_VBUS_MCU )
-  (    5 /PE4 )
-  (    6 /CHG_VBUS )
-  (    7 /PE5 )
-  (    8 /PE6 )
-  (    9 /HAPTIC_EN )
-  (   10 /GSM_DTR_3V3SIDE )
-  (   11 /ENABLE_3V3 )
-  (   12 /HIGH_VOLTAGE_PWR_VMEAS )
-  (   13 /PC1 )
-  (   14 /GSM_RI )
-  (   15 /GSM_DCD )
-  (   16 /ACCMAGN_INT1 )
-  (   17 /PA1 )
-  (   18 /PA2 )
-  (   19 /MEMS_MIC_OUTPUT )
-  (   20 /PA4 )
-  (   21 /GSM_LINE_IN )
-  (   22 /PA6 )
-  (   23 /PA7 )
-  (   24 /PC4 )
-  (   25 /PC5 )
-  (   26 /BATTERY_CELL_VMEAS )
-  (   27 /GYRO_DRDY )
-  (   28 /PE7 )
-  (   29 /PE8 )
-  (   30 /PE9 )
-  (   31 /PE10 )
-  (   32 /PE11 )
-  (   33 /2V8_VDD-EXT )
-  (   34 /GSM_STATUS )
-  (   35 /BOOT0 )
-  (   36 /HAPTIC_PWM )
-  (   37 VDD )
-  (   38 /LED2 )
-  (   39 /PB4-JTAG_TRST )
-  (   40 /LED1 )
-  (   41 /PA15-JTAG_TDI )
-  (   42 /PB10 )
-  (   43 /PA13-JTAG_TMS/SWDIO )
-  (   44 /PB11 )
-  (   45 /PA14-JTAG_TCK/SWCLK )
-  (   46 /PB12 )
-  (   47 /PB3-JTAG_TDO )
-  (   48 /PB13 )
-  (   49 /NRST-STM32_RESET )
-  (   50 /GSM_VBAT )
-  (   51 GND )
-  (   52 /GSM_VBAT )
- )
- ( /50DF2E42 $noname  C56 1u {Lib=CP1}
-  (    1 /GSM_MIC1P )
-  (    2 /GSM_LINE_IN )
- )
- ( /50DE3AFF $noname  R48 47k {Lib=R}
-  (    1 /LDO_EN )
-  (    2 /SYSTEM_LOAD )
- )
- ( /50DE2C6B $noname  RP3 22 {Lib=R_PACK4}
-  (    1 /SIM-DATA )
-  (    2 /SIM-RST )
-  (    3 /SIM-CLK )
-  (    4 ? )
-  (    5 ? )
-  (    6 N-000237 )
-  (    7 N-000132 )
-  (    8 N-000238 )
- )
- ( /50DE2BC6 $noname  RP2 22 {Lib=R_PACK4}
-  (    1 ? )
-  (    2 /USB_DM )
-  (    3 /USB_DP )
-  (    4 ? )
-  (    5 ? )
-  (    6 /USB_DP_MCU )
-  (    7 /USB_DM_MCU )
-  (    8 ? )
- )
- ( /50DE0B5B $noname  C49 10n {Lib=C}
-  (    1 GND )
-  (    2 /BATTERY_CELL_VMEAS )
- )
- ( /50DE0915 $noname  C1 1u {Lib=CP1}
-  (    1 N-000262 )
-  (    2 N-000026 )
- )
- ( /50DB81B2 $noname  U5 L3GD20 {Lib=L3GD20}
-  (    1 VDD )
-  (    2 /I2C_SCL )
-  (    3 /I2C_SDA )
-  (    4 GND )
-  (    5 VDD )
-  (    6 /GYRO_DRDY )
-  (    7 /GYRO_INT1 )
-  (    8 GND )
-  (    9 GND )
-  (   10 GND )
-  (   11 GND )
-  (   12 GND )
-  (   13 GND )
-  (   14 N-000215 )
-  (   15 VDD )
-  (   16 VDD )
- )
- ( /50DB7426 $noname  U15 M24M01 {Lib=M24M01}
-  (    1 ? )
-  (    2 GND )
-  (    3 GND )
-  (    4 GND )
-  (    5 /I2C_SDA )
-  (    6 /I2C_SCL )
-  (    7 GND )
-  (    8 VDD )
- )
- ( /50D95373 $noname  C3 10n {Lib=C}
-  (    1 N-000215 )
-  (    2 GND )
- )
- ( /50D952ED $noname  C4 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D952EC $noname  C5 4u7 {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D94495 $noname  R7 4k7 {Lib=R}
-  (    1 /NRST-STM32_RESET )
-  (    2 VDD )
- )
- ( /50D94432 $noname  P4 TP {Lib=TP}
-  (    1 /PB10 )
- )
- ( /50D94410 $noname  P5 TP {Lib=TP}
-  (    1 /PB11 )
- )
- ( /50D81C97 $noname  R19 0 {Lib=R}
-  (    1 /3V3_VDD )
-  (    2 /GPS-VANT-IN )
- )
- ( /50D78349 $noname  C34 4u7 {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D77284 $noname  P20 EMI_SHIELD {Lib=CONN_1}
-  (    1 GND )
- )
- ( /50D7708D $noname  R38 NTC {Lib=R}
-  (    1 /BATTERY_NTC )
-  (    2 GND )
- )
- ( /50D76C55 $noname  R37 RT2 {Lib=R}
-  (    1 /BATTERY_NTC )
-  (    2 GND )
- )
- ( /50D76C12 $noname  R36 RT1 {Lib=R}
-  (    1 N-000069 )
-  (    2 /BATTERY_NTC )
- )
- ( /50D7608B $noname  P21 BATT {Lib=CONN_3}
-  (    1 /BATTERY_CELL )
-  (    2 /BATTERY_NTC )
-  (    3 GND )
- )
- ( /50D751E9 $noname  P2 EXPANDER_2 {Lib=CONN_16X2}
-  (    1 GND )
-  (    2 VDD )
-  (    3 /ACCMAGN_DRDY )
-  (    4 /GYRO_INT1 )
-  (    5 /GPS/DBG-RXD_3V3SIDE )
-  (    6 /GPS/DBG-TXD )
-  (    7 /AUDIO_AMP_SHUTDOWN )
-  (    8 /PD14 )
-  (    9 /PD15 )
-  (   10 /PC6 )
-  (   11 /PC7 )
-  (   12 /PA8 )
-  (   13 /OTG_FS_VBUS_MCU )
-  (   14 /OTG_FS_ID )
-  (   15 /PE1 )
-  (   16 /PE0 )
-  (   17 /I2C_SDA )
-  (   18 /I2C_SCL )
-  (   19 /PB7 )
-  (   20 /PB6 )
-  (   21 /PB5 )
-  (   22 /ACCMAGN_INT2 )
-  (   23 /GSM_TXD )
-  (   24 /GSM_RXD_3V3SIDE )
-  (   25 /GSM_CTS_3V3SIDE )
-  (   26 /GSM_RTS )
-  (   27 /PD1 )
-  (   28 /PD0 )
-  (   29 GND )
-  (   30 /3V3_VDD )
-  (   31 GND )
-  (   32 /SYSTEM_LOAD )
- )
- ( /50D73BE7 $noname  R5 1k {Lib=R}
-  (    1 N-000087 )
-  (    2 /PB10 )
- )
- ( /50D72362 $noname  R39 4k7 {Lib=R}
-  (    1 /CHARGER_ENABLE )
-  (    2 GND )
- )
- ( /50D61D09 $noname  SW2 PUSH_BUTTON {Lib=PUSH_BUTTON}
-  (    1 VDD )
-  (    2 N-000087 )
-  (    3 VDD )
-  (    4 N-000087 )
-  (    5 GND )
-  (    6 GND )
- )
- ( /50D61CC7 $noname  SW1 PUSH_BUTTON {Lib=PUSH_BUTTON}
-  (    1 VDD )
-  (    2 /BOOT0 )
-  (    3 VDD )
-  (    4 /BOOT0 )
-  (    5 GND )
-  (    6 GND )
- )
- ( /50D610A2 $noname  R6 4k7 {Lib=R}
-  (    1 N-000087 )
-  (    2 GND )
- )
- ( /50D5CFA9 $noname  C58 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D5CFA4 $noname  C57 100n {Lib=C}
-  (    1 GND )
-  (    2 /2V8_VDD-EXT )
- )
- ( /50D5CADE $noname  U17 SN74AVC4T245_RSV {Lib=SN74AVC4T245_RSV}
-  (    1 GND )
-  (    2 VDD )
-  (    3 /2V8_VDD-EXT )
-  (    4 GND )
-  (    5 GND )
-  (    6 /GSM_DTR )
-  (    7 /GSM_RXD )
-  (    8 /GSM_CTS )
-  (    9 /GPS/DBG-RXD )
-  (   10 GND )
-  (   11 GND )
-  (   12 /GPS/DBG-RXD_3V3SIDE )
-  (   13 /GSM_CTS_3V3SIDE )
-  (   14 /GSM_RXD_3V3SIDE )
-  (   15 /GSM_DTR_3V3SIDE )
-  (   16 GND )
- )
- ( /50D592FC $noname  P23 TP {Lib=TP}
-  (    1 /LDO_EN )
- )
- ( /50D592B7 $noname  P9 TP {Lib=TP}
-  (    1 VDD )
- )
- ( /50D5927A $noname  P3 TP {Lib=TP}
-  (    1 /BOOT0 )
- )
- ( /50D59241 $noname  P11 TP {Lib=TP}
-  (    1 GND )
- )
- ( /50D59207 $noname  P8 TP {Lib=TP}
-  (    1 N-000224 )
- )
- ( /50D591F4 $noname  P10 TP {Lib=TP}
-  (    1 /USB_DP )
- )
- ( /50D591D3 $noname  P7 TP {Lib=TP}
-  (    1 /USB_DM )
- )
- ( /50D58D1B $noname  R23 1k {Lib=R}
-  (    1 /GPS/DBG-TXD )
-  (    2 N-000136 )
- )
- ( /50D58C94 $noname  R24 1k {Lib=R}
-  (    1 N-000139 )
-  (    2 /GSM_RTS )
- )
- ( /50D58C91 $noname  R22 1k {Lib=R}
-  (    1 N-000134 )
-  (    2 /GSM_RI )
- )
- ( /50D58C89 $noname  R21 1k {Lib=R}
-  (    1 N-000130 )
-  (    2 /GSM_DCD )
- )
- ( /50D58C84 $noname  R20 1k {Lib=R}
-  (    1 N-000131 )
-  (    2 /GSM_TXD )
- )
- ( /50D4EA66 $noname  C39 10p {Lib=C}
-  (    1 GND )
-  (    2 N-000238 )
- )
- ( /50D4B258 $noname  P16 FIDU {Lib=CONN_1}
-  (    1 ? )
- )
- ( /50D4B257 $noname  P17 FIDU {Lib=CONN_1}
-  (    1 ? )
- )
- ( /50D3A5DC $noname  C16 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D3A5DB $noname  U11 TPD4E004 {Lib=TPD4E004}
-  (    1 /SDIO_CK )
-  (    2 /SDIO_CMD )
-  (    3 GND )
-  (    4 /PB10 )
-  (    5 /BOOT0 )
-  (    6 VDD )
- )
- ( /50D3A571 $noname  U10 TPD4E004 {Lib=TPD4E004}
-  (    1 /SDIO_D0 )
-  (    2 /SDIO_D1 )
-  (    3 GND )
-  (    4 /SDIO_D2 )
-  (    5 /SDIO_D3 )
-  (    6 VDD )
- )
- ( /50D3A570 $noname  C14 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D3A56D $noname  C9 100n {Lib=C}
-  (    1 /SIM-VDD )
-  (    2 GND )
- )
- ( /50D3A56C $noname  U8 TPD4E004 {Lib=TPD4E004}
-  (    1 /SIM-VDD )
-  (    2 /SIM-RST )
-  (    3 GND )
-  (    4 /SIM-CLK )
-  (    5 /SIM-DATA )
-  (    6 /SIM-VDD )
- )
- ( /50D3A50E $noname  U6 TPD4E004 {Lib=TPD4E004}
-  (    1 /GPS-ANT )
-  (    2 /GPS-VANT-IN )
-  (    3 GND )
-  (    4 ? )
-  (    5 ? )
-  (    6 VDD )
- )
- ( /50D3A50D $noname  C6 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /50D3A4E2 $noname  C21 100n {Lib=C}
-  (    1 N-000224 )
-  (    2 GND )
- )
- ( /50D3A46A $noname  U13 TPD4E004 {Lib=TPD4E004}
-  (    1 N-000224 )
-  (    2 /OTG_FS_ID )
-  (    3 GND )
-  (    4 /USB_DP )
-  (    5 /USB_DM )
-  (    6 N-000224 )
- )
- ( /50C95609 $noname  R47 22k {Lib=R}
-  (    1 /SDIO_D3 )
-  (    2 /3V3_VDD )
- )
- ( /50C95607 $noname  R46 22k {Lib=R}
-  (    1 /SDIO_D2 )
-  (    2 /3V3_VDD )
- )
- ( /50C95606 $noname  R45 22k {Lib=R}
-  (    1 /SDIO_D1 )
-  (    2 /3V3_VDD )
- )
- ( /50C95604 $noname  R44 22k {Lib=R}
-  (    1 /SDIO_D0 )
-  (    2 /3V3_VDD )
- )
- ( /50C95602 $noname  R43 22k {Lib=R}
-  (    1 /SDIO_CMD )
-  (    2 /3V3_VDD )
- )
- ( /50C95600 $noname  R42 4k7 {Lib=R}
-  (    1 /I2C_SCL )
-  (    2 VDD )
- )
- ( /50C955B3 $noname  R41 4k7 {Lib=R}
-  (    1 /I2C_SDA )
-  (    2 VDD )
- )
- ( /50C3787D $noname  R32 4k7 {Lib=R}
-  (    1 /AUDIO_AMP_SHUTDOWN )
-  (    2 GND )
- )
- ( /50C377D6 $noname  C47 1u {Lib=C}
-  (    1 N-000245 )
-  (    2 GND )
- )
- ( /50C377C8 $noname  C48 1u {Lib=C}
-  (    1 /SYSTEM_LOAD )
-  (    2 GND )
- )
- ( /50C3775D $noname  U16 LM4890M_MM {Lib=LM4890M_MM}
-  (    1 /AUDIO_AMP_SHUTDOWN )
-  (    2 N-000245 )
-  (    3 N-000213 )
-  (    4 N-000247 )
-  (    5 N-000211 )
-  (    6 /SYSTEM_LOAD )
-  (    7 GND )
-  (    8 N-000201 )
- )
- ( /50C35BFC $noname  P22 PWR_SW {Lib=CONN_4}
-  (    1 /ENABLE_SYSTEM_LOAD )
-  (    2 N-000205 )
-  (    3 /LDO_EN )
-  (    4 GND )
- )
- ( /50B1FCB2 $noname  R4 1k {Lib=R}
-  (    1 GND )
-  (    2 N-000108 )
- )
- ( /50B1FB81 $noname  R2 1k {Lib=R}
-  (    1 N-000003 )
-  (    2 GND )
- )
- ( /50B1FB80 $noname  D1 LED_RED {Lib=LED}
-  (    1 /LED1 )
-  (    2 N-000003 )
- )
- ( /5064906F $noname  U1 STM32F4XX_LQFP100 {Lib=STM32F4XX_LQFP100}
-  (    1 /GSM_PWRKEY )
-  (    2 /SD_CARD_INSERTED )
-  (    3 /PE4 )
-  (    4 /PE5 )
-  (    5 /PE6 )
-  (    6 VDD )
-  (    7 /HAPTIC_EN )
-  (    8 /GSM_DTR_3V3SIDE )
-  (    9 /ENABLE_3V3 )
-  (   10 GND )
-  (   11 VDD )
-  (   12 /STM32_OSC_IN )
-  (   13 /STM32_OSC_OUT )
-  (   14 /NRST-STM32_RESET )
-  (   15 /HIGH_VOLTAGE_PWR_VMEAS )
-  (   16 /PC1 )
-  (   17 /GSM_RI )
-  (   18 /GSM_DCD )
-  (   19 VDD )
-  (   20 GND )
-  (   21 N-000221 )
-  (   22 N-000221 )
-  (   23 /ACCMAGN_INT1 )
-  (   24 /PA1 )
-  (   25 /PA2 )
-  (   26 /MEMS_MIC_OUTPUT )
-  (   27 GND )
-  (   28 VDD )
-  (   29 /PA4 )
-  (   30 /GSM_LINE_IN )
-  (   31 /PA6 )
-  (   32 /PA7 )
-  (   33 /PC4 )
-  (   34 /PC5 )
-  (   35 /BATTERY_CELL_VMEAS )
-  (   36 /GYRO_DRDY )
-  (   37 /OTG_CURRENT_LIMIT_SELECTION )
-  (   38 /PE7 )
-  (   39 /PE8 )
-  (   40 /PE9 )
-  (   41 /PE10 )
-  (   42 /PE11 )
-  (   43 /GSM_STATUS )
-  (   44 /HAPTIC_PWM )
-  (   45 /LED2 )
-  (   46 /LED1 )
-  (   47 /PB10 )
-  (   48 /PB11 )
-  (   49 N-000199 )
-  (   50 VDD )
-  (   51 /PB12 )
-  (   52 /PB13 )
-  (   53 /ACCMAGN_DRDY )
-  (   54 /GYRO_INT1 )
-  (   55 /GPS/DBG-RXD_3V3SIDE )
-  (   56 /GPS/DBG-TXD )
-  (   57 /AUDIO_AMP_SHUTDOWN )
-  (   58 /CHARGER_STATUS )
-  (   59 /CHARGER_ENABLE )
-  (   60 /CHARGER_INTERRUPT )
-  (   61 /PD14 )
-  (   62 /PD15 )
-  (   63 /PC6 )
-  (   64 /PC7 )
-  (   65 /SDIO_D0 )
-  (   66 /SDIO_D1 )
-  (   67 /PA8 )
-  (   68 /OTG_FS_VBUS_MCU )
-  (   69 /OTG_FS_ID )
-  (   70 /USB_DM_MCU )
-  (   71 /USB_DP_MCU )
-  (   72 /PA13-JTAG_TMS/SWDIO )
-  (   73 N-000200 )
-  (   74 GND )
-  (   75 VDD )
-  (   76 /PA14-JTAG_TCK/SWCLK )
-  (   77 /PA15-JTAG_TDI )
-  (   78 /SDIO_D2 )
-  (   79 /SDIO_D3 )
-  (   80 /SDIO_CK )
-  (   81 /PD0 )
-  (   82 /PD1 )
-  (   83 /SDIO_CMD )
-  (   84 /GSM_RTS )
-  (   85 /GSM_CTS_3V3SIDE )
-  (   86 /GSM_RXD_3V3SIDE )
-  (   87 /GSM_TXD )
-  (   88 /ACCMAGN_INT2 )
-  (   89 /PB3-JTAG_TDO )
-  (   90 /PB4-JTAG_TRST )
-  (   91 /PB5 )
-  (   92 /PB6 )
-  (   93 /PB7 )
-  (   94 /BOOT0 )
-  (   95 /I2C_SCL )
-  (   96 /I2C_SDA )
-  (   97 /PE0 )
-  (   98 /PE1 )
-  (   99 GND )
-  (  100 VDD )
- )
- ( /50B1E159 $noname  U14 TPS737XX_SON8 {Lib=TPS737XX_SON8}
-  (    1 VDD )
-  (    2 ? )
-  (    3 N-000153 )
-  (    4 GND )
-  (    5 /LDO_EN )
-  (    6 ? )
-  (    7 ? )
-  (    8 /SYSTEM_LOAD )
-  (    9 GND )
- )
- ( /50845105 $noname  C2 100n {Lib=C}
-  (    1 N-000214 )
-  (    2 GND )
- )
- ( /508450E5 $noname  U4 ADMP404 {Lib=ADMP404}
-  (    1 N-000026 )
-  (    2 GND )
-  (    3 N-000214 )
- )
- ( /5083E3A3 $noname  C55 4u7 {Lib=C}
-  (    1 /BATTERY_CELL )
-  (    2 GND )
- )
- ( /5083DAB8 $noname  R29 4k7 {Lib=R}
-  (    1 /CHARGER_INTERRUPT )
-  (    2 VDD )
- )
- ( /5083DA6A $noname  R35 4k7 {Lib=R}
-  (    1 /CHARGER_STATUS )
-  (    2 /CHG_SYS_LOAD )
- )
- ( /5081C5D5 $noname  C53 4u7 {Lib=C}
-  (    1 GND )
-  (    2 N-000069 )
- )
- ( /5081C5B3 $noname  C52 4u7 {Lib=C}
-  (    1 GND )
-  (    2 N-000025 )
- )
- ( /5081C589 $noname  C38 1u {Lib=C}
-  (    1 GND )
-  (    2 /CHG_VBUS )
- )
- ( /5081C559 $noname  R33 R {Lib=R}
-  (    1 GND )
-  (    2 N-000156 )
- )
- ( /5081A4D1 $noname  R34 1k {Lib=R}
-  (    1 /CHARGER_STATUS )
-  (    2 N-000158 )
- )
- ( /5081A4B5 $noname  D6 LED_RED {Lib=LED}
-  (    1 /CHG_SYS_LOAD )
-  (    2 N-000158 )
- )
- ( /5081A2B3 $noname  C45 47n {Lib=C}
-  (    1 N-000222 )
-  (    2 N-000159 )
- )
- ( /5081A1D5 $noname  L1 2u2 {Lib=INDUCTOR}
-  (    1 N-000222 )
-  (    2 /CHG_SYS_LOAD )
- )
- ( /50819E0D $noname  U3 BQ24190 {Lib=BQ24190}
-  (    1 /CHG_VBUS )
-  (    2 /USB_DP )
-  (    3 /USB_DM )
-  (    4 /CHARGER_STATUS )
-  (    5 /I2C_SCL )
-  (    6 /I2C_SDA )
-  (    7 /CHARGER_INTERRUPT )
-  (    8 /OTG_CURRENT_LIMIT_SELECTION )
-  (    9 /CHARGER_ENABLE )
-  (   10 N-000156 )
-  (   11 /BATTERY_NTC )
-  (   12 /BATTERY_NTC )
-  (   13 /BATTERY_CELL )
-  (   14 /BATTERY_CELL )
-  (   15 /CHG_SYS_LOAD )
-  (   16 /CHG_SYS_LOAD )
-  (   17 GND )
-  (   18 GND )
-  (   19 N-000222 )
-  (   20 N-000222 )
-  (   21 N-000159 )
-  (   22 N-000069 )
-  (   23 N-000025 )
-  (   24 /CHG_VBUS )
-  (   25 GND )
- )
- ( /5063229F $noname  C25 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /5063229D $noname  C26 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /5063229B $noname  C27 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /504B1CE8 $noname  R11 4k7 {Lib=R}
-  (    1 N-000152 )
-  (    2 /SYSTEM_LOAD )
- )
- ( /504B1CE0 $noname  R13 NA {Lib=R}
-  (    1 N-000152 )
-  (    2 GND )
- )
- ( /504A669B $noname  C23 10n {Lib=C}
-  (    1 N-000153 )
-  (    2 GND )
- )
- ( /504A6500 $noname  C18 100n {Lib=C}
-  (    1 /SYSTEM_LOAD )
-  (    2 GND )
- )
- ( /504A64C8 $noname  R12 4k7 {Lib=R}
-  (    1 GND )
-  (    2 /HAPTIC_EN )
- )
- ( /504A5EA7 $noname  R49 1k {Lib=R}
-  (    1 N-000205 )
-  (    2 GND )
- )
- ( /50465E04 $noname  P6 HAPTIC {Lib=CONN_2}
-  (    1 N-000203 )
-  (    2 N-000204 )
- )
- ( /50464394 $noname  U12 DRV2603 {Lib=DRV2603}
-  (    1 /HAPTIC_EN )
-  (    2 /HAPTIC_PWM )
-  (    3 N-000152 )
-  (    4 ? )
-  (    5 GND )
-  (    6 N-000203 )
-  (    7 /SYSTEM_LOAD )
-  (    8 GND )
-  (    9 N-000204 )
-  (   10 GND )
- )
- ( /5040F24C $noname  C37 100n {Lib=C}
-  (    1 GND )
-  (    2 VDD )
- )
- ( /503FBB2E $noname  C44 470u {Lib=CP1}
-  (    1 /GSM_VBAT )
-  (    2 GND )
- )
- ( /503A806B $noname  FB2 FILTER {Lib=FILTER}
-  (    1 N-000221 )
-  (    2 VDD )
- )
- ( /4F1219D8 $noname  P19 HOLE {Lib=CONN_1}
-  (    1 GND )
- )
- ( /4F1219CE $noname  P18 HOLE {Lib=CONN_1}
-  (    1 GND )
- )
- ( /4F0EB92A $noname  U7 MICROSD_SIM_COMBO {Lib=MICROSD_SIM_COMBO}
-  (    1 /SDIO_D2 )
-  (    2 /SDIO_D3 )
-  (    3 /SDIO_CMD )
-  (    4 /3V3_VDD )
-  (    5 /SDIO_CK )
-  (    6 GND )
-  (    7 /SDIO_D0 )
-  (    8 /SDIO_D1 )
-  (    9 /SIM-DATA )
-  (   10 /SIM-CLK )
-  (   11 ? )
-  (   12 /SIM-RST )
-  (   13 GND )
-  (   14 /SIM-VDD )
-  (   15 GND )
+ ( /50DE0915 TANTALUM_A_1206 C1 1u
+  ( 1 N-000262 )
+  ( 2 N-000026 )
+ )
+ ( /50845105 SMD_0402_RT C2 1u
+  ( 1 N-000214 )
+  ( 2 GND )
+ )
+ ( /50D95373 SMD_0402_RT C3 10n
+  ( 1 N-000215 )
+  ( 2 GND )
+ )
+ ( /50D952ED SMD_0402_RT C4 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /50D952EC SMD_0603_RT C5 4u7
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /50D3A50D SMD_0402_RT C6 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF8D00E SMD_0402_RT C7 1u
+  ( 1 GND )
+  ( 2 /SIM-VDD )
+ )
+ ( /4EF52391 SMD_0603_RT C8 4u7
+  ( 1 /3V3_VDD )
+  ( 2 GND )
+ )
+ ( /50D3A56D SMD_0402_RT C9 1u
+  ( 1 /SIM-VDD )
+  ( 2 GND )
+ )
+ ( /4EF51C84 SMD_0402_RT C10 220n
+  ( 1 N-000144 )
+  ( 2 N-000143 )
+ )
+ ( /4EF51C48 SMD_0402_RT C11 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51C50 SMD_0603_RT C12 4u7
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51CDE SMD_0603_RT C13 4u7
+  ( 1 GND )
+  ( 2 N-000142 )
+ )
+ ( /50D3A570 SMD_0402_RT C14 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EFF1439 SMD_0402_RT C15 2u2
+  ( 1 N-000199 )
+  ( 2 GND )
+ )
+ ( /50D3A5DC SMD_0402_RT C16 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EFF1430 SMD_0402_RT C17 2u2
+  ( 1 GND )
+  ( 2 N-000200 )
+ )
+ ( /504A6500 SMD_0402_RT C18 1u
+  ( 1 /SYSTEM_LOAD )
+  ( 2 GND )
+ )
+ ( /4EF9D68A SMD_0402_RT C19 1u
+  ( 1 N-000221 )
+  ( 2 GND )
+ )
+ ( /4EF9D5C0 SMD_0402_RT C20 2u2
+  ( 1 N-000221 )
+  ( 2 GND )
+ )
+ ( /50D3A4E2 SMD_0402_RT C21 100n
+  ( 1 N-000224 )
+  ( 2 GND )
+ )
+ ( /4EF8F481 SMD_0603_RT C22 4u7
+  ( 1 GND )
+  ( 2 /SYSTEM_LOAD )
+ )
+ ( /504A669B SMD_0402_RT C23 10n
+  ( 1 N-000153 )
+  ( 2 GND )
+ )
+ ( /4EF8F48B SMD_0603_RT C24 4u7
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /5063229F SMD_0402_RT C25 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /5063229D SMD_0402_RT C26 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /5063229B SMD_0402_RT C27 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51F70 SMD_0402_RT C28 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51F58 SMD_0402_RT C29 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51F5E SMD_0402_RT C30 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51F61 SMD_0402_RT C31 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51F63 SMD_0402_RT C32 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EF51F67 SMD_0603_RT C33 4u7
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /50D78349 SMD_0603_RT C34 4u7
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /4EFE0821 SMD_0402_RT C35 10p
+  ( 1 GND )
+  ( 2 /STM32_OSC_IN )
+ )
+ ( /4EF5208E SMD_0402_RT C36 10p
+  ( 1 /STM32_OSC_OUT )
+  ( 2 GND )
+ )
+ ( /5040F24C SMD_0402_RT C37 1u
+  ( 1 GND )
+  ( 2 VDD )
+ )
+ ( /5081C589 SMD_0402_RT C38 1u
+  ( 1 GND )
+  ( 2 /CHG_VBUS )
+ )
+ ( /50D4EA66 SMD_0402_RT C39 10p
+  ( 1 GND )
+  ( 2 N-000238 )
+ )
+ ( /50E7517A TANTALUM_A_1206 C40 1u
+  ( 1 N-000259 )
+  ( 2 /GSM_SPK1N )
+ )
+ ( /4EF527C5 SMD_0402_RT C41 100n
+  ( 1 /GSM_VBAT )
+  ( 2 GND )
+ )
+ ( /4EF527C8 SMD_0603_RT C42 4u7
+  ( 1 /GSM_VBAT )
+  ( 2 GND )
+ )
+ ( /4F0E0A5C TANTALUM_D_E_2917 C43 470u
+  ( 1 /GSM_VBAT )
+  ( 2 GND )
+ )
+ ( /503FBB2E TANTALUM_D_E_2917 C44 470u
+  ( 1 /GSM_VBAT )
+  ( 2 GND )
+ )
+ ( /5081A2B3 SMD_0402_RT C45 47n
+  ( 1 N-000222 )
+  ( 2 N-000159 )
+ )
+ ( /50E75185 TANTALUM_A_1206 C46 1u
+  ( 1 N-000212 )
+  ( 2 /GSM_SPK1P )
+ )
+ ( /50C377D6 SMD_0402_RT C47 1u
+  ( 1 N-000245 )
+  ( 2 GND )
+ )
+ ( /50C377C8 SMD_0402_RT C48 1u
+  ( 1 /SYSTEM_LOAD )
+  ( 2 GND )
+ )
+ ( /50DE0B5B SMD_0402_RT C49 10n
+  ( 1 GND )
+  ( 2 /BATTERY_CELL_VMEAS )
+ )
+ ( /50E1DE94 SMD_0402_RT C50 10n
+  ( 1 /HIGH_VOLTAGE_PWR_VMEAS )
+  ( 2 GND )
+ )
+ ( /50E76EB2 SMD_0603_RT C51 4u7
+  ( 1 GND )
+  ( 2 N-000207 )
+ )
+ ( /5081C5B3 SMD_0603_RT C52 4u7
+  ( 1 GND )
+  ( 2 N-000025 )
+ )
+ ( /5081C5D5 SMD_0603_RT C53 4u7
+  ( 1 GND )
+  ( 2 N-000069 )
+ )
+ ( /4F0E24EC SMD_0603_RT C54 4u7
+  ( 1 GND )
+  ( 2 /CHG_SYS_LOAD )
+ )
+ ( /5083E3A3 SMD_0603_RT C55 4u7
+  ( 1 /BATTERY_CELL )
+  ( 2 GND )
+ )
+ ( /50DF2E42 TANTALUM_A_1206 C56 1u
+  ( 1 /GSM_MIC1P )
+  ( 2 /GSM_LINE_IN )
+ )
+ ( /50D5CFA4 SMD_0402_RT C57 1u
+  ( 1 GND )
+  ( 2 /2V8_VDD-EXT )
+ )
+ ( /50D5CFA9 SMD_0402_RT C58 1u
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /50EDB13A TANTALUM_D_E_2917 C59 470u
+  ( 1 /GSM_VBAT )
+  ( 2 GND )
+ )
+ ( /50EDB139 TANTALUM_D_E_2917 C60 470u
+  ( 1 /GSM_VBAT )
+  ( 2 GND )
+ )
+ ( /50B1FB80 LED_SMD-0603 D1 LED_RED
+  ( 1 /LED1 )
+  ( 2 N-000003 )
+ )
+ ( /4F075706 LED_SMD-0603 D2 LED_GREEN
+  ( 1 /LED2 )
+  ( 2 N-000198 )
+ )
+ ( /4EF52620 LED_SMD-0603 D3 LED_GREEN
+  ( 1 /GSM_NETLIGHT )
+  ( 2 N-000108 )
+ )
+ ( /50E5E825 SOD-123FL D4 DIODESCH
+  ( 1 /HV_PWR )
+  ( 2 /CHG_VBUS )
+ )
+ ( /50E5EF5A SOD-123FL D5 TVS_DIODE
+  ( 1 GND )
+  ( 2 /HV_PWR )
+ )
+ ( /5081A4B5 LED_SMD-0603 D6 LED_RED
+  ( 1 /CHG_SYS_LOAD )
+  ( 2 N-000158 )
+ )
+ ( /50E0C59E SMD_0603_RT FB1 FILTER
+  ( 1 N-000214 )
+  ( 2 /3V3_VDD )
+ )
+ ( /503A806B SMD_0603_RT FB2 FILTER
+  ( 1 N-000221 )
+  ( 2 VDD )
+ )
+ ( /4EF9D83C SMD_0603_RT FB3 FILTER
+  ( 1 N-000224 )
+  ( 2 /OTG_FS_VBUS_MCU )
+ )
+ ( /4EF51E2C UC04-NA_MICROUSBAB_TOPCONN J1 USB_MICRO_B
+  ( 1 N-000224 )
+  ( 2 /USB_DM )
+  ( 3 /USB_DP )
+  ( 4 /OTG_FS_ID )
+  ( 5 GND )
+ )
+ ( /5081A1D5 INDUCTOR_IHLP1616 L1 2u2
+  ( 1 N-000222 )
+  ( 2 /CHG_SYS_LOAD )
+ )
+ ( /50DF54A7 005INCH_PINSTRIP_THRUHOLE_2ROW_52PIN P1 EXPANDER_1
+  ( 1 GND )
+  ( 2 /3V3_VDD )
+  ( 3 /GSM_PWRKEY )
+  ( 4 /OTG_FS_VBUS_MCU )
+  ( 5 /PE4 )
+  ( 6 /CHG_VBUS )
+  ( 7 /PE5 )
+  ( 8 /PE6 )
+  ( 9 /HAPTIC_EN )
+  ( 10 /GSM_DTR_3V3SIDE )
+  ( 11 /ENABLE_3V3 )
+  ( 12 /HIGH_VOLTAGE_PWR_VMEAS )
+  ( 13 /PC1 )
+  ( 14 /GSM_RI )
+  ( 15 /GSM_DCD )
+  ( 16 /ACCMAGN_INT1 )
+  ( 17 /PA1 )
+  ( 18 /PA2 )
+  ( 19 /MEMS_MIC_OUTPUT )
+  ( 20 /PA4 )
+  ( 21 /GSM_LINE_IN )
+  ( 22 /PA6 )
+  ( 23 /PA7 )
+  ( 24 /PC4 )
+  ( 25 /PC5 )
+  ( 26 /BATTERY_CELL_VMEAS )
+  ( 27 /GYRO_DRDY )
+  ( 28 /PE7 )
+  ( 29 /PE8 )
+  ( 30 /PE9 )
+  ( 31 /PE10 )
+  ( 32 /PE11 )
+  ( 33 /2V8_VDD-EXT )
+  ( 34 /GSM_STATUS )
+  ( 35 /BOOT0 )
+  ( 36 /HAPTIC_PWM )
+  ( 37 VDD )
+  ( 38 /LED2 )
+  ( 39 /PB4-JTAG_TRST )
+  ( 40 /LED1 )
+  ( 41 /PA15-JTAG_TDI )
+  ( 42 /PB10 )
+  ( 43 /PA13-JTAG_TMS/SWDIO )
+  ( 44 /PB11 )
+  ( 45 /PA14-JTAG_TCK/SWCLK )
+  ( 46 /PB12 )
+  ( 47 /PB3-JTAG_TDO )
+  ( 48 /PB13 )
+  ( 49 /NRST-STM32_RESET )
+  ( 50 /GSM_VBAT )
+  ( 51 GND )
+  ( 52 /GSM_VBAT )
+ )
+ ( /50D751E9 005INCH_PINSTRIP_THRUHOLE_2ROW_32PIN P2 EXPANDER_2
+  ( 1 GND )
+  ( 2 VDD )
+  ( 3 /ACCMAGN_DRDY )
+  ( 4 /GYRO_INT1 )
+  ( 5 /GPS/DBG-RXD_3V3SIDE )
+  ( 6 /GPS/DBG-TXD )
+  ( 7 /AUDIO_AMP_SHUTDOWN )
+  ( 8 /PD14 )
+  ( 9 /PD15 )
+  ( 10 /PC6 )
+  ( 11 /PC7 )
+  ( 12 /PA8 )
+  ( 13 /OTG_FS_VBUS_MCU )
+  ( 14 /OTG_FS_ID )
+  ( 15 /PE1 )
+  ( 16 /PE0 )
+  ( 17 /I2C_SDA )
+  ( 18 /I2C_SCL )
+  ( 19 /PB7 )
+  ( 20 /PB6 )
+  ( 21 /PB5 )
+  ( 22 /ACCMAGN_INT2 )
+  ( 23 /GSM_TXD )
+  ( 24 /GSM_RXD_3V3SIDE )
+  ( 25 /GSM_CTS_3V3SIDE )
+  ( 26 /GSM_RTS )
+  ( 27 /PD1 )
+  ( 28 /PD0 )
+  ( 29 GND )
+  ( 30 /3V3_VDD )
+  ( 31 GND )
+  ( 32 /SYSTEM_LOAD )
+ )
+ ( /50D5927A TP_SMD_08MM P3 TP
+  ( 1 /BOOT0 )
+ )
+ ( /50D94432 TP_SMD_08MM P4 TP
+  ( 1 /PB10 )
+ )
+ ( /50D94410 TP_SMD_08MM P5 TP
+  ( 1 /PB11 )
+ )
+ ( /50465E04 53047-0210_2PIN_THRU P6 HAPTIC
+  ( 1 N-000203 )
+  ( 2 N-000204 )
+ )
+ ( /50D591D3 TP_SMD_08MM P7 TP
+  ( 1 /USB_DM )
+ )
+ ( /50D59207 TP_SMD_08MM P8 TP
+  ( 1 N-000224 )
+ )
+ ( /50D592B7 TP_SMD_08MM P9 TP
+  ( 1 VDD )
+ )
+ ( /50D591F4 TP_SMD_08MM P10 TP
+  ( 1 /USB_DP )
+ )
+ ( /50D59241 TP_SMD_08MM P11 TP
+  ( 1 GND )
+ )
+ ( /50E5F19C TP_SMD_08MM P12 TP
+  ( 1 /HV_PWR )
+ )
+ ( /50E5E875 53047-0210_2PIN_THRU P13 HIGH_VOLTAGE
+  ( 1 /HV_PWR )
+  ( 2 GND )
+ )
+ ( /50E5F39D TP_SMD_08MM P14 TP
+  ( 1 /ENABLE_SYSTEM_LOAD )
+ )
+ ( /50E5F3B0 TP_SMD_08MM P15 TP
+  ( 1 /SYSTEM_LOAD )
+ )
+ ( /50D4B258 TP_SMD_08MM P16 FIDU
+  ( 1 ? )
+ )
+ ( /50D4B257 TP_SMD_08MM P17 FIDU
+  ( 1 ? )
+ )
+ ( /4F1219CE 3MM_PLATED_HOLE P18 HOLE
+  ( 1 GND )
+ )
+ ( /4F1219D8 3MM_PLATED_HOLE P19 HOLE
+  ( 1 GND )
+ )
+ ( /50D77284 BMIS-201_EMI_SHIELD_COVER P20 EMI_SHIELD
+  ( 1 GND )
+ )
+ ( /50D7608B 53047-0310_3PIN_THRU P21 BATT
+  ( 1 /BATTERY_CELL )
+  ( 2 /BATTERY_NTC )
+  ( 3 GND )
+ )
+ ( /50C35BFC SSSS811101 P22 PWR_SW
+  ( 1 /ENABLE_SYSTEM_LOAD )
+  ( 2 N-000205 )
+  ( 3 /LDO_EN )
+  ( 4 GND )
+ )
+ ( /50D592FC TP_SMD_08MM P23 TP
+  ( 1 /LDO_EN )
+ )
+ ( /50F082F3 TP_SMD_08MM P24 TP
+  ( 1 /NRST-STM32_RESET )
+ )
+ ( /50F08B73 TP_SMD_08MM P25 FIDU
+  ( 1 ? )
+ )
+ ( /50F08B74 TP_SMD_08MM P26 FIDU
+  ( 1 ? )
+ )
+ ( /50F0985F TP_SMD_08MM P27 TP
+  ( 1 GND )
+ )
+ ( /50F09846 TP_SMD_08MM P28 TP
+  ( 1 /BATTERY_CELL )
+ )
+ ( /50F1C5D2 TP_SMD_08MM P29 TP
+  ( 1 /GSM_VBAT )
+ )
+ ( /50F1C5E1 TP_SMD_08MM P30 TP
+  ( 1 /3V3_VDD )
+ )
+ ( /50E5F2C1 PQFN_GDS_SINGLE_2X2MM Q1 MOSFET_P
+  ( D /GSM_VBAT )
+  ( G /ENABLE_3V3 )
+  ( S /SYSTEM_LOAD )
+ )
+ ( /50E5F213 PQFN_GDS_SINGLE_2X2MM Q2 MOSFET_P
+  ( D /3V3_VDD )
+  ( G /ENABLE_3V3 )
+  ( S VDD )
+ )
+ ( /50E5ECA8 PQFN_GDS_SINGLE_2X2MM Q3 MOSFET_P
+  ( D N-000219 )
+  ( G N-000218 )
+  ( S /OTG_FS_VBUS_MCU )
+ )
+ ( /50E5E7FD PQFN_GDS_SINGLE_2X2MM Q4 MOSFET_P
+  ( D N-000219 )
+  ( G N-000218 )
+  ( S /CHG_VBUS )
+ )
+ ( /50E5F31C PQFN_GDS_SINGLE_2X2MM Q5 MOSFET_P
+  ( D /SYSTEM_LOAD )
+  ( G /ENABLE_SYSTEM_LOAD )
+  ( S /CHG_SYS_LOAD )
+ )
+ ( /50E8BE6C SMD_0402_RT R1 22k
+  ( 1 N-000262 )
+  ( 2 /MEMS_MIC_OUTPUT )
+ )
+ ( /50B1FB81 SMD_0402_RT R2 1k
+  ( 1 N-000003 )
+  ( 2 GND )
+ )
+ ( /4F075703 SMD_0402_RT R3 1k
+  ( 1 N-000198 )
+  ( 2 GND )
+ )
+ ( /50B1FCB2 SMD_0402_RT R4 1k
+  ( 1 GND )
+  ( 2 N-000108 )
+ )
+ ( /50D73BE7 SMD_0402_RT R5 1k
+  ( 1 N-000087 )
+  ( 2 /PB10 )
+ )
+ ( /50D610A2 SMD_0402_RT R6 4k7
+  ( 1 N-000087 )
+  ( 2 GND )
+ )
+ ( /50D94495 SMD_0402_RT R7 4k7
+  ( 1 /NRST-STM32_RESET )
+  ( 2 VDD )
+ )
+ ( /4EFE07CA SMD_0402_RT R8 4k7
+  ( 1 /OTG_CURRENT_LIMIT_SELECTION )
+  ( 2 GND )
+ )
+ ( /4EF52049 SMD_0402_RT R9 4k7
+  ( 1 GND )
+  ( 2 /BOOT0 )
+ )
+ ( /50E5F9AE SMD_0402_RT R10 470k
+  ( 1 /PB11 )
+  ( 2 GND )
+ )
+ ( /504B1CE8 SMD_0402_RT R11 4k7
+  ( 1 N-000152 )
+  ( 2 /SYSTEM_LOAD )
+ )
+ ( /504A64C8 SMD_0402_RT R12 4k7
+  ( 1 GND )
+  ( 2 /HAPTIC_EN )
+ )
+ ( /504B1CE0 SMD_0402_RT R13 NA
+  ( 1 N-000152 )
+  ( 2 GND )
+ )
+ ( /50E5F2C0 SMD_0402_RT R14 470k
+  ( 1 /ENABLE_3V3 )
+  ( 2 /SYSTEM_LOAD )
+ )
+ ( /50E5F23A SMD_0402_RT R15 470k
+  ( 1 /ENABLE_3V3 )
+  ( 2 VDD )
+ )
+ ( /50E5EC69 SMD_0402_RT R16 1k
+  ( 1 /HV_PWR )
+  ( 2 N-000218 )
+ )
+ ( /50E5E832 SMD_0402_RT R17 47k
+  ( 1 GND )
+  ( 2 N-000218 )
+ )
+ ( /4F0CCA07 SMD_0603_RT R18 NA
+  ( 1 /GPS-VANT-IN )
+  ( 2 N-000196 )
+ )
+ ( /50D81C97 SMD_0603_RT R19 0
+  ( 1 /3V3_VDD )
+  ( 2 /GPS-VANT-IN )
+ )
+ ( /50D58C84 SMD_0402_RT R20 1k
+  ( 1 N-000131 )
+  ( 2 /GSM_TXD )
+ )
+ ( /50D58C89 SMD_0402_RT R21 1k
+  ( 1 N-000130 )
+  ( 2 /GSM_DCD )
+ )
+ ( /50D58C91 SMD_0402_RT R22 1k
+  ( 1 N-000134 )
+  ( 2 /GSM_RI )
+ )
+ ( /50D58D1B SMD_0402_RT R23 1k
+  ( 1 /GPS/DBG-TXD )
+  ( 2 N-000136 )
+ )
+ ( /50D58C94 SMD_0402_RT R24 1k
+  ( 1 N-000139 )
+  ( 2 /GSM_RTS )
+ )
+ ( /50E20D4F SMD_0402_RT R25 22k
+  ( 1 N-000211 )
+  ( 2 N-000247 )
+ )
+ ( /50E5F31D SMD_0402_RT R26 470k
+  ( 1 /ENABLE_SYSTEM_LOAD )
+  ( 2 /CHG_SYS_LOAD )
+ )
+ ( /50E20C4D SMD_0402_RT R27 22k
+  ( 1 N-000213 )
+  ( 2 N-000259 )
+ )
+ ( /50E20C41 SMD_0402_RT R28 22k
+  ( 1 N-000212 )
+  ( 2 N-000247 )
+ )
+ ( /5083DAB8 SMD_0402_RT R29 4k7
+  ( 1 /CHARGER_INTERRUPT )
+  ( 2 VDD )
+ )
+ ( /50E6098E SMD_0402_RT R30 1k
+  ( 1 N-000127 )
+  ( 2 /GSM_STATUS )
+ )
+ ( /50E20C1E SMD_0402_RT R31 22k
+  ( 1 N-000213 )
+  ( 2 N-000245 )
+ )
+ ( /50C3787D SMD_0402_RT R32 4k7
+  ( 1 /AUDIO_AMP_SHUTDOWN )
+  ( 2 GND )
+ )
+ ( /5081C559 SMD_0402_RT R33 R
+  ( 1 GND )
+  ( 2 N-000156 )
+ )
+ ( /5081A4D1 SMD_0402_RT R34 1k
+  ( 1 /CHARGER_STATUS )
+  ( 2 N-000158 )
+ )
+ ( /5083DA6A SMD_0402_RT R35 4k7
+  ( 1 /CHARGER_STATUS )
+  ( 2 /CHG_SYS_LOAD )
+ )
+ ( /50D76C12 SMD_0402_RT R36 RT1
+  ( 1 N-000069 )
+  ( 2 /BATTERY_NTC )
+ )
+ ( /50D76C55 SMD_0402_RT R37 RT2
+  ( 1 /BATTERY_NTC )
+  ( 2 GND )
+ )
+ ( /50D7708D SMD_0603_RT R38 NTC
+  ( 1 /BATTERY_NTC )
+  ( 2 GND )
+ )
+ ( /50D72362 SMD_0402_RT R39 4k7
+  ( 1 /CHARGER_ENABLE )
+  ( 2 GND )
+ )
+ ( /4EFFB327 SMD_0402_RT R40 1k
+  ( 1 /GSM_MIC1N )
+  ( 2 /GSM_MIC1P )
+ )
+ ( /50C955B3 SMD_0402_RT R41 4k7
+  ( 1 /I2C_SDA )
+  ( 2 VDD )
+ )
+ ( /50C95600 SMD_0402_RT R42 4k7
+  ( 1 /I2C_SCL )
+  ( 2 VDD )
+ )
+ ( /50C95602 SMD_0402_RT R43 22k
+  ( 1 /SDIO_CMD )
+  ( 2 /3V3_VDD )
+ )
+ ( /50C95604 SMD_0402_RT R44 22k
+  ( 1 /SDIO_D0 )
+  ( 2 /3V3_VDD )
+ )
+ ( /50C95606 SMD_0402_RT R45 22k
+  ( 1 /SDIO_D1 )
+  ( 2 /3V3_VDD )
+ )
+ ( /50C95607 SMD_0402_RT R46 22k
+  ( 1 /SDIO_D2 )
+  ( 2 /3V3_VDD )
+ )
+ ( /50C95609 SMD_0402_RT R47 22k
+  ( 1 /SDIO_D3 )
+  ( 2 /3V3_VDD )
+ )
+ ( /50DE3AFF SMD_0402_RT R48 47k
+  ( 1 /LDO_EN )
+  ( 2 /SYSTEM_LOAD )
+ )
+ ( /504A5EA7 SMD_0402_RT R49 1k
+  ( 1 N-000205 )
+  ( 2 GND )
+ )
+ ( /50EF4EF9 SMD_0402_RT R50 NA
+  ( 1 /MEMS_MIC_OUTPUT )
+  ( 2 /GSM_MIC2P )
+ )
+ ( /50EF4EFC SMD_0402_RT R51 NA
+  ( 1 /GSM_MIC2P )
+  ( 2 GND )
+ )
+ ( /50F1591B SMD_0402_RT R52 1k
+  ( 1 /ACCMAGN_INT2 )
+  ( 2 N-000141 )
+ )
+ ( /50E0A608 0402_4_RESISTOR_ARRAY_1X2MM RP1 1M
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 GND )
+  ( 5 /PB5 )
+  ( 6 /USB_DP_MCU )
+  ( 7 /USB_DM_MCU )
+  ( 8 /OTG_FS_ID )
+ )
+ ( /50DE2BC6 0402_4_RESISTOR_ARRAY_1X2MM RP2 22
+  ( 1 ? )
+  ( 2 /USB_DM )
+  ( 3 /USB_DP )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 /USB_DP_MCU )
+  ( 7 /USB_DM_MCU )
+  ( 8 ? )
+ )
+ ( /50DE2C6B 0402_4_RESISTOR_ARRAY_1X2MM RP3 22
+  ( 1 /SIM-DATA )
+  ( 2 /SIM-RST )
+  ( 3 /SIM-CLK )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 N-000237 )
+  ( 7 N-000132 )
+  ( 8 N-000238 )
+ )
+ ( /50E0A5F8 0402_4_RESISTOR_ARRAY_1X2MM RP4 1M
+  ( 1 /HV_PWR )
+  ( 2 N-000248 )
+  ( 3 N-000248 )
+  ( 4 N-000260 )
+  ( 5 N-000216 )
+  ( 6 N-000216 )
+  ( 7 N-000209 )
+  ( 8 N-000209 )
+ )
+ ( /50E0A5D5 0402_4_RESISTOR_ARRAY_1X2MM RP5 1M
+  ( 1 N-000260 )
+  ( 2 GND )
+  ( 3 /BATTERY_CELL )
+  ( 4 GND )
+  ( 5 /BATTERY_CELL_VMEAS )
+  ( 6 /BATTERY_CELL_VMEAS )
+  ( 7 /HIGH_VOLTAGE_PWR_VMEAS )
+  ( 8 /HIGH_VOLTAGE_PWR_VMEAS )
+ )
+ ( /4EFFA89D 53047-0210_2PIN_THRU SP1 SPEAKER
+  ( 1 N-000211 )
+  ( 2 N-000201 )
+ )
+ ( /50D61CC7 SKSGPAE010 SW1 PUSH_BUTTON
+  ( 1 VDD )
+  ( 2 /BOOT0 )
+  ( 3 VDD )
+  ( 4 /BOOT0 )
+  ( 5 GND )
+  ( 6 GND )
+ )
+ ( /50D61D09 SKSGPAE010 SW2 PUSH_BUTTON
+  ( 1 VDD )
+  ( 2 N-000087 )
+  ( 3 VDD )
+  ( 4 N-000087 )
+  ( 5 GND )
+  ( 6 GND )
+ )
+ ( /5064906F LQFP-100 U1 STM32F4XX_LQFP100
+  ( 1 /GSM_PWRKEY )
+  ( 2 /SD_CARD_INSERTED )
+  ( 3 /PE4 )
+  ( 4 /PE5 )
+  ( 5 /PE6 )
+  ( 6 VDD )
+  ( 7 /HAPTIC_EN )
+  ( 8 /GSM_DTR_3V3SIDE )
+  ( 9 /ENABLE_3V3 )
+  ( 10 GND )
+  ( 11 VDD )
+  ( 12 /STM32_OSC_IN )
+  ( 13 /STM32_OSC_OUT )
+  ( 14 /NRST-STM32_RESET )
+  ( 15 /HIGH_VOLTAGE_PWR_VMEAS )
+  ( 16 /PC1 )
+  ( 17 /GSM_RI )
+  ( 18 /GSM_DCD )
+  ( 19 VDD )
+  ( 20 GND )
+  ( 21 N-000221 )
+  ( 22 N-000221 )
+  ( 23 /ACCMAGN_INT1 )
+  ( 24 /PA1 )
+  ( 25 /PA2 )
+  ( 26 /MEMS_MIC_OUTPUT )
+  ( 27 GND )
+  ( 28 VDD )
+  ( 29 /PA4 )
+  ( 30 /GSM_LINE_IN )
+  ( 31 /PA6 )
+  ( 32 /PA7 )
+  ( 33 /PC4 )
+  ( 34 /PC5 )
+  ( 35 /BATTERY_CELL_VMEAS )
+  ( 36 /GYRO_DRDY )
+  ( 37 /OTG_CURRENT_LIMIT_SELECTION )
+  ( 38 /PE7 )
+  ( 39 /PE8 )
+  ( 40 /PE9 )
+  ( 41 /PE10 )
+  ( 42 /PE11 )
+  ( 43 /GSM_STATUS )
+  ( 44 /HAPTIC_PWM )
+  ( 45 /LED2 )
+  ( 46 /LED1 )
+  ( 47 /PB10 )
+  ( 48 /PB11 )
+  ( 49 N-000199 )
+  ( 50 VDD )
+  ( 51 /PB12 )
+  ( 52 /PB13 )
+  ( 53 /ACCMAGN_DRDY )
+  ( 54 /GYRO_INT1 )
+  ( 55 /GPS/DBG-RXD_3V3SIDE )
+  ( 56 /GPS/DBG-TXD )
+  ( 57 /AUDIO_AMP_SHUTDOWN )
+  ( 58 /CHARGER_STATUS )
+  ( 59 /CHARGER_ENABLE )
+  ( 60 /CHARGER_INTERRUPT )
+  ( 61 /PD14 )
+  ( 62 /PD15 )
+  ( 63 /PC6 )
+  ( 64 /PC7 )
+  ( 65 /SDIO_D0 )
+  ( 66 /SDIO_D1 )
+  ( 67 /PA8 )
+  ( 68 /OTG_FS_VBUS_MCU )
+  ( 69 /OTG_FS_ID )
+  ( 70 /USB_DM_MCU )
+  ( 71 /USB_DP_MCU )
+  ( 72 /PA13-JTAG_TMS/SWDIO )
+  ( 73 N-000200 )
+  ( 74 GND )
+  ( 75 VDD )
+  ( 76 /PA14-JTAG_TCK/SWCLK )
+  ( 77 /PA15-JTAG_TDI )
+  ( 78 /SDIO_D2 )
+  ( 79 /SDIO_D3 )
+  ( 80 /SDIO_CK )
+  ( 81 /PD0 )
+  ( 82 /PD1 )
+  ( 83 /SDIO_CMD )
+  ( 84 /GSM_RTS )
+  ( 85 /GSM_CTS_3V3SIDE )
+  ( 86 /GSM_RXD_3V3SIDE )
+  ( 87 /GSM_TXD )
+  ( 88 /ACCMAGN_INT2 )
+  ( 89 /PB3-JTAG_TDO )
+  ( 90 /PB4-JTAG_TRST )
+  ( 91 /PB5 )
+  ( 92 /PB6 )
+  ( 93 /PB7 )
+  ( 94 /BOOT0 )
+  ( 95 /I2C_SCL )
+  ( 96 /I2C_SDA )
+  ( 97 /PE0 )
+  ( 98 /PE1 )
+  ( 99 GND )
+  ( 100 VDD )
+ )
+ ( /4EF518E9 SIM908 U2 SIM908
+  ( 1 GND )
+  ( 2 GND )
+  ( 3 /GSM_PWRKEY )
+  ( 4 ? )
+  ( 5 GND )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 GND )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 GND )
+  ( 15 N-000136 )
+  ( 16 /GPS/DBG-RXD )
+  ( 17 N-000238 )
+  ( 18 N-000132 )
+  ( 19 N-000237 )
+  ( 20 /SIM-VDD )
+  ( 21 /GSM_SPK1N )
+  ( 22 /GSM_SPK1P )
+  ( 23 /GSM_MIC1P )
+  ( 24 /GSM_MIC1N )
+  ( 25 ? )
+  ( 26 ? )
+  ( 27 /GSM_MIC2P )
+  ( 28 GND )
+  ( 29 ? )
+  ( 30 ? )
+  ( 31 ? )
+  ( 32 ? )
+  ( 33 ? )
+  ( 34 ? )
+  ( 35 ? )
+  ( 36 ? )
+  ( 37 GND )
+  ( 38 ? )
+  ( 39 ? )
+  ( 40 GND )
+  ( 41 GND )
+  ( 42 N-000207 )
+  ( 43 GND )
+  ( 44 /2V8_VDD-EXT )
+  ( 45 ? )
+  ( 46 ? )
+  ( 47 ? )
+  ( 48 ? )
+  ( 49 ? )
+  ( 50 ? )
+  ( 51 /GSM_NETLIGHT )
+  ( 52 N-000127 )
+  ( 53 ? )
+  ( 54 ? )
+  ( 55 ? )
+  ( 56 ? )
+  ( 57 GND )
+  ( 58 GND )
+  ( 59 ? )
+  ( 60 GND )
+  ( 61 GND )
+  ( 62 /GSM_VBAT )
+  ( 63 /GSM_VBAT )
+  ( 64 GND )
+  ( 65 GND )
+  ( 66 N-000139 )
+  ( 67 /GSM_CTS )
+  ( 68 /GSM_RXD )
+  ( 69 N-000134 )
+  ( 70 N-000130 )
+  ( 71 N-000131 )
+  ( 72 /GSM_DTR )
+  ( 73 ? )
+  ( 74 ? )
+  ( 75 N-000196 )
+  ( 76 /GPS-VANT-IN )
+  ( 77 GND )
+  ( 78 GND )
+  ( 79 /GPS-ANT )
+  ( 80 GND )
+ )
+ ( /50819E0D S-PVQFN-N24 U3 BQ24190
+  ( 1 /CHG_VBUS )
+  ( 2 /USB_DP )
+  ( 3 /USB_DM )
+  ( 4 /CHARGER_STATUS )
+  ( 5 /I2C_SCL )
+  ( 6 /I2C_SDA )
+  ( 7 /CHARGER_INTERRUPT )
+  ( 8 /OTG_CURRENT_LIMIT_SELECTION )
+  ( 9 /CHARGER_ENABLE )
+  ( 10 N-000156 )
+  ( 11 /BATTERY_NTC )
+  ( 12 /BATTERY_NTC )
+  ( 13 /BATTERY_CELL )
+  ( 14 /BATTERY_CELL )
+  ( 15 /CHG_SYS_LOAD )
+  ( 16 /CHG_SYS_LOAD )
+  ( 17 GND )
+  ( 18 GND )
+  ( 19 N-000222 )
+  ( 20 N-000222 )
+  ( 21 N-000159 )
+  ( 22 N-000069 )
+  ( 23 N-000025 )
+  ( 24 /CHG_VBUS )
+  ( 25 GND )
+ )
+ ( /508450E5 ADMP404_504_MEMS_MIC U4 ADMP404
+  ( 1 N-000026 )
+  ( 2 GND )
+  ( 3 N-000214 )
+ )
+ ( /50DB81B2 LGA-16_4X4MM U5 L3GD20
+  ( 1 VDD )
+  ( 2 /I2C_SCL )
+  ( 3 /I2C_SDA )
+  ( 4 GND )
+  ( 5 VDD )
+  ( 6 /GYRO_DRDY )
+  ( 7 /GYRO_INT1 )
+  ( 8 GND )
+  ( 9 GND )
+  ( 10 GND )
+  ( 11 GND )
+  ( 12 GND )
+  ( 13 GND )
+  ( 14 N-000215 )
+  ( 15 VDD )
+  ( 16 VDD )
+ )
+ ( /50D3A50E S-PUSON-N6 U6 TPD4E004
+  ( 1 /GPS-ANT )
+  ( 2 /GPS-VANT-IN )
+  ( 3 GND )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 VDD )
+ )
+ ( /4F0EB92A COMBO_CARDSLOT_MES3051_CHINESE_COMPATIBLE U7 MICROSD_SIM_COMBO
+  ( 1 /SDIO_D2 )
+  ( 2 /SDIO_D3 )
+  ( 3 /SDIO_CMD )
+  ( 4 /3V3_VDD )
+  ( 5 /SDIO_CK )
+  ( 6 GND )
+  ( 7 /SDIO_D0 )
+  ( 8 /SDIO_D1 )
+  ( 9 /SIM-DATA )
+  ( 10 /SIM-CLK )
+  ( 11 ? )
+  ( 12 /SIM-RST )
+  ( 13 GND )
+  ( 14 /SIM-VDD )
+  ( 15 GND )
   ( SW-A /SD_CARD_INSERTED )
   ( SW-B GND )
  )
- ( /4F0E24EC $noname  C54 4u7 {Lib=C}
-  (    1 GND )
-  (    2 /CHG_SYS_LOAD )
+ ( /50D3A56C S-PUSON-N6 U8 TPD4E004
+  ( 1 /SIM-VDD )
+  ( 2 /SIM-RST )
+  ( 3 GND )
+  ( 4 /SIM-CLK )
+  ( 5 /SIM-DATA )
+  ( 6 /SIM-VDD )
  )
- ( /4F0E0A5C $noname  C43 470u {Lib=CP1}
-  (    1 /GSM_VBAT )
-  (    2 GND )
+ ( /4EF51C1E LGA-14 U9 LSM303DLHC
+  ( 1 VDD )
+  ( 2 /I2C_SCL )
+  ( 3 /I2C_SDA )
+  ( 4 N-000141 )
+  ( 5 /ACCMAGN_INT1 )
+  ( 6 N-000142 )
+  ( 7 GND )
+  ( 8 ? )
+  ( 9 /ACCMAGN_DRDY )
+  ( 10 GND )
+  ( 11 GND )
+  ( 12 N-000143 )
+  ( 13 N-000144 )
+  ( 14 VDD )
  )
- ( /4F0CCA07 $noname  R18 NA {Lib=R}
-  (    1 /GPS-VANT-IN )
-  (    2 N-000196 )
+ ( /50D3A571 S-PUSON-N6 U10 TPD4E004
+  ( 1 /SDIO_D0 )
+  ( 2 /SDIO_D1 )
+  ( 3 GND )
+  ( 4 /SDIO_D2 )
+  ( 5 /SDIO_D3 )
+  ( 6 VDD )
  )
- ( /4F075706 $noname  D2 LED_GREEN {Lib=LED}
-  (    1 /LED2 )
-  (    2 N-000198 )
+ ( /50D3A5DB S-PUSON-N6 U11 TPD4E004
+  ( 1 /SDIO_CK )
+  ( 2 /SDIO_CMD )
+  ( 3 GND )
+  ( 4 /PB10 )
+  ( 5 /BOOT0 )
+  ( 6 VDD )
  )
- ( /4F075703 $noname  R3 1k {Lib=R}
-  (    1 N-000198 )
-  (    2 GND )
+ ( /50464394 S-PWQFN-N10_2X2MM U12 DRV2603
+  ( 1 /HAPTIC_EN )
+  ( 2 /HAPTIC_PWM )
+  ( 3 N-000152 )
+  ( 4 ? )
+  ( 5 GND )
+  ( 6 N-000203 )
+  ( 7 /SYSTEM_LOAD )
+  ( 8 GND )
+  ( 9 N-000204 )
+  ( 10 GND )
  )
- ( /4EFFB327 $noname  R40 1k {Lib=R}
-  (    1 /GSM_MIC1N )
-  (    2 /GSM_MIC1P )
+ ( /50D3A46A S-PUSON-N6 U13 TPD4E004
+  ( 1 N-000224 )
+  ( 2 /OTG_FS_ID )
+  ( 3 GND )
+  ( 4 /USB_DP )
+  ( 5 /USB_DM )
+  ( 6 N-000224 )
  )
- ( /4EFFA89D $noname  SP1 SPEAKER {Lib=SPEAKER}
-  (    1 N-000211 )
-  (    2 N-000201 )
+ ( /50B1E159 S-PWSON-N8 U14 TPS737XX_SON8
+  ( 1 VDD )
+  ( 2 ? )
+  ( 3 N-000153 )
+  ( 4 GND )
+  ( 5 /LDO_EN )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 /SYSTEM_LOAD )
+  ( 9 GND )
  )
- ( /4EFF1439 $noname  C15 2u2 {Lib=C}
-  (    1 N-000199 )
-  (    2 GND )
+ ( /50DB7426 SO8N_150MILS U15 M24M01
+  ( 1 ? )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 GND )
+  ( 5 /I2C_SDA )
+  ( 6 /I2C_SCL )
+  ( 7 GND )
+  ( 8 VDD )
  )
- ( /4EFF1430 $noname  C17 2u2 {Lib=C}
-  (    1 GND )
-  (    2 N-000200 )
+ ( /50C3775D MSOP-8 U16 LM4890M_MM
+  ( 1 /AUDIO_AMP_SHUTDOWN )
+  ( 2 N-000245 )
+  ( 3 N-000213 )
+  ( 4 N-000247 )
+  ( 5 N-000211 )
+  ( 6 /SYSTEM_LOAD )
+  ( 7 GND )
+  ( 8 N-000201 )
  )
- ( /4EFE0821 $noname  C35 10p {Lib=C}
-  (    1 GND )
-  (    2 /STM32_OSC_IN )
+ ( /50D5CADE R-PUQFN-N16 U17 SN74AVC4T245_RSV
+  ( 1 GND )
+  ( 2 VDD )
+  ( 3 /2V8_VDD-EXT )
+  ( 4 GND )
+  ( 5 GND )
+  ( 6 /GSM_DTR )
+  ( 7 /GSM_RXD )
+  ( 8 /GSM_CTS )
+  ( 9 /GPS/DBG-RXD )
+  ( 10 GND )
+  ( 11 GND )
+  ( 12 /GPS/DBG-RXD_3V3SIDE )
+  ( 13 /GSM_CTS_3V3SIDE )
+  ( 14 /GSM_RXD_3V3SIDE )
+  ( 15 /GSM_DTR_3V3SIDE )
+  ( 16 GND )
  )
- ( /4EFE0805 $noname  X1 4-26MHZ {Lib=CRYSTAL_4PIN}
-  (    1 /STM32_OSC_IN )
-  (    2 GND )
-  (    3 /STM32_OSC_OUT )
-  (    4 GND )
- )
- ( /4EFE07CA $noname  R8 4k7 {Lib=R}
-  (    1 /OTG_CURRENT_LIMIT_SELECTION )
-  (    2 GND )
- )
- ( /4EF9D83C $noname  FB3 FILTER {Lib=FILTER}
-  (    1 N-000224 )
-  (    2 /OTG_FS_VBUS_MCU )
- )
- ( /4EF9D68A $noname  C19 100n {Lib=C}
-  (    1 N-000221 )
-  (    2 GND )
- )
- ( /4EF9D5C0 $noname  C20 1u {Lib=C}
-  (    1 N-000221 )
-  (    2 GND )
- )
- ( /4EF8F48B $noname  C24 4u7 {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF8F481 $noname  C22 4u7 {Lib=C}
-  (    1 GND )
-  (    2 /SYSTEM_LOAD )
- )
- ( /4EF8D00E $noname  C7 100n {Lib=C}
-  (    1 GND )
-  (    2 /SIM-VDD )
- )
- ( /4EF527C8 $noname  C42 4u7 {Lib=C}
-  (    1 /GSM_VBAT )
-  (    2 GND )
- )
- ( /4EF527C5 $noname  C41 100n {Lib=C}
-  (    1 /GSM_VBAT )
-  (    2 GND )
- )
- ( /4EF52620 $noname  D3 LED_RED {Lib=LED}
-  (    1 /GSM_NETLIGHT )
-  (    2 N-000108 )
- )
- ( /4EF52391 $noname  C8 4u7 {Lib=C}
-  (    1 /3V3_VDD )
-  (    2 GND )
- )
- ( /4EF5208E $noname  C36 10p {Lib=C}
-  (    1 /STM32_OSC_OUT )
-  (    2 GND )
- )
- ( /4EF52049 $noname  R9 4k7 {Lib=R}
-  (    1 GND )
-  (    2 /BOOT0 )
- )
- ( /4EF51F70 $noname  C28 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51F67 $noname  C33 4u7 {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51F63 $noname  C32 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51F61 $noname  C31 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51F5E $noname  C30 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51F58 $noname  C29 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51E2C $noname  J1 USB_MICRO_B {Lib=USB_MICRO_B}
-  (    1 N-000224 )
-  (    2 /USB_DM )
-  (    3 /USB_DP )
-  (    4 /OTG_FS_ID )
-  (    5 GND )
- )
- ( /4EF51CDE $noname  C13 4u7 {Lib=C}
-  (    1 GND )
-  (    2 N-000142 )
- )
- ( /4EF51C84 $noname  C10 100n {Lib=C}
-  (    1 N-000144 )
-  (    2 N-000143 )
- )
- ( /4EF51C50 $noname  C12 4u7 {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51C48 $noname  C11 100n {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /4EF51C1E $noname  U9 LSM303DLHC {Lib=LSM303DLHC}
-  (    1 VDD )
-  (    2 /I2C_SCL )
-  (    3 /I2C_SDA )
-  (    4 N-000141 )
-  (    5 /ACCMAGN_INT1 )
-  (    6 N-000142 )
-  (    7 GND )
-  (    8 ? )
-  (    9 /ACCMAGN_DRDY )
-  (   10 GND )
-  (   11 GND )
-  (   12 N-000143 )
-  (   13 N-000144 )
-  (   14 VDD )
- )
- ( /4EF518E9 $noname  U2 SIM908 {Lib=SIM908}
-  (    1 GND )
-  (    2 GND )
-  (    3 /GSM_PWRKEY )
-  (    4 ? )
-  (    5 GND )
-  (    6 ? )
-  (    7 ? )
-  (    8 ? )
-  (    9 ? )
-  (   10 GND )
-  (   11 ? )
-  (   12 ? )
-  (   13 ? )
-  (   14 GND )
-  (   15 N-000136 )
-  (   16 /GPS/DBG-RXD )
-  (   17 N-000238 )
-  (   18 N-000132 )
-  (   19 N-000237 )
-  (   20 /SIM-VDD )
-  (   21 /GSM_SPK1N )
-  (   22 /GSM_SPK1P )
-  (   23 /GSM_MIC1P )
-  (   24 /GSM_MIC1N )
-  (   25 ? )
-  (   26 ? )
-  (   27 /GSM_MIC2P )
-  (   28 GND )
-  (   29 ? )
-  (   30 ? )
-  (   31 ? )
-  (   32 ? )
-  (   33 ? )
-  (   34 ? )
-  (   35 ? )
-  (   36 ? )
-  (   37 GND )
-  (   38 ? )
-  (   39 ? )
-  (   40 GND )
-  (   41 GND )
-  (   42 N-000207 )
-  (   43 GND )
-  (   44 /2V8_VDD-EXT )
-  (   45 ? )
-  (   46 ? )
-  (   47 ? )
-  (   48 ? )
-  (   49 ? )
-  (   50 ? )
-  (   51 /GSM_NETLIGHT )
-  (   52 N-000127 )
-  (   53 ? )
-  (   54 ? )
-  (   55 ? )
-  (   56 ? )
-  (   57 GND )
-  (   58 GND )
-  (   59 ? )
-  (   60 GND )
-  (   61 GND )
-  (   62 /GSM_VBAT )
-  (   63 /GSM_VBAT )
-  (   64 GND )
-  (   65 GND )
-  (   66 N-000139 )
-  (   67 /GSM_CTS )
-  (   68 /GSM_RXD )
-  (   69 N-000134 )
-  (   70 N-000130 )
-  (   71 N-000131 )
-  (   72 /GSM_DTR )
-  (   73 ? )
-  (   74 ? )
-  (   75 N-000196 )
-  (   76 /GPS-VANT-IN )
-  (   77 GND )
-  (   78 GND )
-  (   79 /GPS-ANT )
-  (   80 GND )
+ ( /4EFE0805 ABM8G_3_2X2_5MM_4PIN_CRYSTAL X1 4-26MHZ
+  ( 1 /STM32_OSC_IN )
+  ( 2 GND )
+  ( 3 /STM32_OSC_OUT )
+  ( 4 GND )
  )
 )
 *
 { Allowed footprints by component:
-$component R52
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component C1
+ CP*
+ SM*
 $endlist
-$component R51
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component C2
+ SM*
+ C?
+ C1-1
 $endlist
-$component R50
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component C12
+ SM*
+ C?
+ C1-1
+$endlist
+$component C13
+ SM*
+ C?
+ C1-1
+$endlist
+$component C14
+ SM*
+ C?
+ C1-1
+$endlist
+$component C15
+ SM*
+ C?
+ C1-1
+$endlist
+$component C16
+ SM*
+ C?
+ C1-1
+$endlist
+$component C17
+ SM*
+ C?
+ C1-1
+$endlist
+$component C18
+ SM*
+ C?
+ C1-1
+$endlist
+$component C19
+ SM*
+ C?
+ C1-1
+$endlist
+$component C20
+ SM*
+ C?
+ C1-1
+$endlist
+$component C21
+ SM*
+ C?
+ C1-1
+$endlist
+$component C22
+ SM*
+ C?
+ C1-1
+$endlist
+$component C23
+ SM*
+ C?
+ C1-1
+$endlist
+$component C24
+ SM*
+ C?
+ C1-1
+$endlist
+$component C25
+ SM*
+ C?
+ C1-1
+$endlist
+$component C26
+ SM*
+ C?
+ C1-1
+$endlist
+$component C27
+ SM*
+ C?
+ C1-1
+$endlist
+$component C28
+ SM*
+ C?
+ C1-1
+$endlist
+$component C29
+ SM*
+ C?
+ C1-1
+$endlist
+$component C30
+ SM*
+ C?
+ C1-1
+$endlist
+$component C31
+ SM*
+ C?
+ C1-1
+$endlist
+$component C32
+ SM*
+ C?
+ C1-1
+$endlist
+$component C33
+ SM*
+ C?
+ C1-1
+$endlist
+$component C34
+ SM*
+ C?
+ C1-1
+$endlist
+$component C35
+ SM*
+ C?
+ C1-1
+$endlist
+$component C36
+ SM*
+ C?
+ C1-1
+$endlist
+$component C37
+ SM*
+ C?
+ C1-1
+$endlist
+$component C38
+ SM*
+ C?
+ C1-1
+$endlist
+$component C39
+ SM*
+ C?
+ C1-1
+$endlist
+$component C40
+ CP*
+ SM*
+$endlist
+$component C41
+ SM*
+ C?
+ C1-1
+$endlist
+$component C42
+ SM*
+ C?
+ C1-1
+$endlist
+$component C43
+ CP*
+ SM*
+$endlist
+$component C44
+ CP*
+ SM*
+$endlist
+$component C45
+ SM*
+ C?
+ C1-1
+$endlist
+$component C46
+ CP*
+ SM*
+$endlist
+$component C47
+ SM*
+ C?
+ C1-1
+$endlist
+$component C48
+ SM*
+ C?
+ C1-1
+$endlist
+$component C49
+ SM*
+ C?
+ C1-1
+$endlist
+$component C50
+ SM*
+ C?
+ C1-1
+$endlist
+$component C51
+ SM*
+ C?
+ C1-1
+$endlist
+$component C52
+ SM*
+ C?
+ C1-1
+$endlist
+$component C53
+ SM*
+ C?
+ C1-1
+$endlist
+$component C54
+ SM*
+ C?
+ C1-1
+$endlist
+$component C55
+ SM*
+ C?
+ C1-1
+$endlist
+$component C56
+ CP*
+ SM*
+$endlist
+$component C57
+ SM*
+ C?
+ C1-1
+$endlist
+$component C58
+ SM*
+ C?
+ C1-1
 $endlist
 $component C59
  CP*
@@ -1177,6 +1440,50 @@ $component C60
  CP*
  SM*
 $endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ D?
+ S*
+$endlist
+$component D5
+ D?
+ S*
+$endlist
+$component D6
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
 $component R1
  R?
  SM0603
@@ -1184,20 +1491,56 @@ $component R1
  R?-*
  SM1206
 $endlist
-$component C51
- SM*
- C?
- C1-1
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C46
- CP*
- SM*
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C40
- CP*
- SM*
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component R30
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R9
  R?
  SM0603
  SM0805
@@ -1211,7 +1554,21 @@ $component R10
  R?-*
  SM1206
 $endlist
-$component R26
+$component R11
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R13
  R?
  SM0603
  SM0805
@@ -1232,10 +1589,6 @@ $component R15
  R?-*
  SM1206
 $endlist
-$component D5
- D?
- S*
-$endlist
 $component R16
  R?
  SM0603
@@ -1250,11 +1603,63 @@ $component R17
  R?-*
  SM1206
 $endlist
-$component D4
- D?
- S*
+$component R18
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R19
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R20
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R21
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R22
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R23
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R24
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $component R25
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R26
  R?
  SM0603
  SM0805
@@ -1275,232 +1680,21 @@ $component R28
  R?-*
  SM1206
 $endlist
+$component R29
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R30
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
 $component R31
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C50
- SM*
- C?
- C1-1
-$endlist
-$component C56
- CP*
- SM*
-$endlist
-$component R48
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C49
- SM*
- C?
- C1-1
-$endlist
-$component C1
- CP*
- SM*
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$component C4
- SM*
- C?
- C1-1
-$endlist
-$component C5
- SM*
- C?
- C1-1
-$endlist
-$component R7
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R19
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C34
- SM*
- C?
- C1-1
-$endlist
-$component R38
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R37
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R36
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R5
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R39
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R6
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C58
- SM*
- C?
- C1-1
-$endlist
-$component C57
- SM*
- C?
- C1-1
-$endlist
-$component R23
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R24
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R22
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R21
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R20
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C39
- SM*
- C?
- C1-1
-$endlist
-$component C16
- SM*
- C?
- C1-1
-$endlist
-$component C14
- SM*
- C?
- C1-1
-$endlist
-$component C9
- SM*
- C?
- C1-1
-$endlist
-$component C6
- SM*
- C?
- C1-1
-$endlist
-$component C21
- SM*
- C?
- C1-1
-$endlist
-$component R47
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R46
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R45
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R44
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R43
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R42
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R41
  R?
  SM0603
  SM0805
@@ -1513,78 +1707,6 @@ $component R32
  SM0805
  R?-*
  SM1206
-$endlist
-$component C47
- SM*
- C?
- C1-1
-$endlist
-$component C48
- SM*
- C?
- C1-1
-$endlist
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component C55
- SM*
- C?
- C1-1
-$endlist
-$component R29
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R35
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component C53
- SM*
- C?
- C1-1
-$endlist
-$component C52
- SM*
- C?
- C1-1
-$endlist
-$component C38
- SM*
- C?
- C1-1
 $endlist
 $component R33
  R?
@@ -1600,108 +1722,35 @@ $component R34
  R?-*
  SM1206
 $endlist
-$component D6
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C45
- SM*
- C?
- C1-1
-$endlist
-$component C25
- SM*
- C?
- C1-1
-$endlist
-$component C26
- SM*
- C?
- C1-1
-$endlist
-$component C27
- SM*
- C?
- C1-1
-$endlist
-$component R11
+$component R35
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R13
+$component R36
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component C23
- SM*
- C?
- C1-1
-$endlist
-$component C18
- SM*
- C?
- C1-1
-$endlist
-$component R12
+$component R37
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R49
+$component R38
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component C37
- SM*
- C?
- C1-1
-$endlist
-$component C44
- CP*
- SM*
-$endlist
-$component C54
- SM*
- C?
- C1-1
-$endlist
-$component C43
- CP*
- SM*
-$endlist
-$component R18
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component R3
+$component R39
  R?
  SM0603
  SM0805
@@ -1715,1032 +1764,89 @@ $component R40
  R?-*
  SM1206
 $endlist
-$component C15
- SM*
- C?
- C1-1
-$endlist
-$component C17
- SM*
- C?
- C1-1
-$endlist
-$component C35
- SM*
- C?
- C1-1
-$endlist
-$component R8
+$component R41
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component C19
- SM*
- C?
- C1-1
-$endlist
-$component C20
- SM*
- C?
- C1-1
-$endlist
-$component C24
- SM*
- C?
- C1-1
-$endlist
-$component C22
- SM*
- C?
- C1-1
-$endlist
-$component C7
- SM*
- C?
- C1-1
-$endlist
-$component C42
- SM*
- C?
- C1-1
-$endlist
-$component C41
- SM*
- C?
- C1-1
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C8
- SM*
- C?
- C1-1
-$endlist
-$component C36
- SM*
- C?
- C1-1
-$endlist
-$component R9
+$component R42
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component C28
- SM*
- C?
- C1-1
+$component R43
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C33
- SM*
- C?
- C1-1
+$component R44
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C32
- SM*
- C?
- C1-1
+$component R45
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C31
- SM*
- C?
- C1-1
+$component R46
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C30
- SM*
- C?
- C1-1
+$component R47
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C29
- SM*
- C?
- C1-1
+$component R48
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C13
- SM*
- C?
- C1-1
+$component R49
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C10
- SM*
- C?
- C1-1
+$component R50
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C12
- SM*
- C?
- C1-1
+$component R51
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
-$component C11
- SM*
- C?
- C1-1
+$component R52
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $endfootprintlist
 }
-{ Pin List by Nets
-Net 1 "/GSM_STATUS" "GSM_STATUS"
- P1 34
- U1 43
- R30 2
-Net 2 "/LED1" "LED1"
- U1 46
- P1 40
- D1 1
-Net 3 "" ""
- D1 2
- R2 1
-Net 4 "/SD_CARD_INSERTED" "SD_CARD_INSERTED"
- U7 SW-A
- U1 2
-Net 5 "/ENABLE_SYSTEM_LOAD" "ENABLE_SYSTEM_LOAD"
- R26 1
- P22 1
- Q5 G
- P14 1
-Net 14 "/GPS-ANT" "GPS-ANT"
- U2 79
- U6 1
-Net 15 "/GPS-VANT-IN" "GPS-VANT-IN"
- R19 2
- U6 2
- U2 76
- R18 1
-Net 18 "VDD" "VDD"
- FB2 2
- U1 50
- U1 11
- C37 2
- R29 2
- U1 6
- C24 1
- C28 1
- C33 1
- C32 1
- C31 1
- C30 1
- C29 1
- U9 14
- P2 2
- P9 1
- U17 2
- C16 1
- U11 6
- SW2 1
- SW2 3
- C58 1
- SW1 1
- SW1 3
- C25 1
- C26 1
- C27 1
- U1 75
- C12 1
- C11 1
- U9 1
- P1 37
- R15 2
- U15 8
- Q2 S
- U10 6
- U5 1
- C14 1
- U5 5
- U5 15
- U6 6
- C6 1
- C34 1
- C5 1
- C4 1
- R7 2
- U1 28
- R41 2
- R42 2
- U1 19
- U5 16
- U1 100
- U14 1
-Net 22 "/CHARGER_STATUS" "CHARGER_STATUS"
- R34 1
- R35 1
- U3 4
- U1 58
-Net 23 "/CHARGER_ENABLE" "CHARGER_ENABLE"
- U1 59
- U3 9
- R39 1
-Net 24 "/CHG_SYS_LOAD" "CHG_SYS_LOAD"
- Q5 S
- R26 2
- R35 2
- D6 1
- L1 2
- U3 15
- U3 16
- C54 2
-Net 25 "" ""
- U3 23
- C52 2
-Net 26 "" ""
- U4 1
- C1 2
-Net 27 "/BATTERY_CELL" "BATTERY_CELL"
- P21 1
- P28 1
- RP5 3
- U3 13
- U3 14
- C55 1
-Net 28 "/STM32_OSC_IN" "STM32_OSC_IN"
- C35 2
- X1 1
- U1 12
-Net 29 "/CHARGER_INTERRUPT" "CHARGER_INTERRUPT"
- U3 7
- R29 1
- U1 60
-Net 30 "/SDIO_CK" "SDIO_CK"
- U1 80
- U7 5
- U11 1
-Net 31 "/HAPTIC_PWM" "HAPTIC_PWM"
- U1 44
- U12 2
- P1 36
-Net 32 "/ACCMAGN_INT2" "ACCMAGN_INT2"
- P2 22
- R52 1
- U1 88
-Net 33 "/OTG_FS_VBUS_MCU" "OTG_FS_VBUS_MCU"
- U1 68
- Q3 S
- P2 13
- P1 4
- FB3 2
-Net 34 "/OTG_FS_ID" "OTG_FS_ID"
- RP1 8
- U13 2
- J1 4
- P2 14
- U1 69
-Net 35 "/GSM_RTS" "GSM_RTS"
- R24 2
- U1 84
- P2 26
-Net 36 "/PD1" "PD1"
- P2 27
- U1 82
-Net 37 "/PD0" "PD0"
- P2 28
- U1 81
-Net 38 "/GSM_DTR_3V3SIDE" "GSM_DTR_3V3SIDE"
- U1 8
- U17 15
- P1 10
-Net 39 "/HAPTIC_EN" "HAPTIC_EN"
- U1 7
- R12 2
- U12 1
- P1 9
-Net 40 "/PC7" "PC7"
- P2 11
- U1 64
-Net 41 "/PC6" "PC6"
- P2 10
- U1 63
-Net 42 "/PC5" "PC5"
- U1 34
- P1 25
-Net 43 "/PC4" "PC4"
- U1 33
- P1 24
-Net 44 "/GSM_DCD" "GSM_DCD"
- U1 18
- R21 2
- P1 15
-Net 45 "/GSM_RI" "GSM_RI"
- P1 14
- R22 2
- U1 17
-Net 46 "/PC1" "PC1"
- U1 16
- P1 13
-Net 47 "/ACCMAGN_DRDY" "ACCMAGN_DRDY"
- U9 9
- U1 53
- P2 3
-Net 48 "/PB13" "PB13"
- P1 48
- U1 52
-Net 49 "/PB12" "PB12"
- U1 51
- P1 46
-Net 50 "/PE11" "PE11"
- P1 32
- U1 42
-Net 51 "/PE10" "PE10"
- U1 41
- P1 31
-Net 52 "/PE9" "PE9"
- P1 30
- U1 40
-Net 53 "/PE8" "PE8"
- U1 39
- P1 29
-Net 54 "/PE7" "PE7"
- U1 38
- P1 28
-Net 55 "/PE6" "PE6"
- U1 5
- P1 8
-Net 56 "/PE5" "PE5"
- U1 4
- P1 7
-Net 57 "/PE4" "PE4"
- P1 5
- U1 3
-Net 58 "/GSM_PWRKEY" "GSM_PWRKEY"
- U2 3
- P1 3
- U1 1
-Net 59 "/PE1" "PE1"
- P2 15
- U1 98
-Net 60 "/PE0" "PE0"
- U1 97
- P2 16
-Net 61 "/PD15" "PD15"
- P2 9
- U1 62
-Net 62 "/PD14" "PD14"
- U1 61
- P2 8
-Net 63 "/AUDIO_AMP_SHUTDOWN" "AUDIO_AMP_SHUTDOWN"
- R32 1
- U16 1
- U1 57
- P2 7
-Net 64 "/GPS/DBG-TXD" "GPS/DBG-TXD"
- R23 1
- P2 6
- U1 56
-Net 65 "/GPS/DBG-RXD_3V3SIDE" "GPS/DBG-RXD_3V3SIDE"
- U17 12
- P2 5
- U1 55
-Net 66 "/GSM_TXD" "GSM_TXD"
- R20 2
- U1 87
- P2 23
-Net 67 "/GSM_RXD_3V3SIDE" "GSM_RXD_3V3SIDE"
- P2 24
- U17 14
- U1 86
-Net 68 "/GSM_CTS_3V3SIDE" "GSM_CTS_3V3SIDE"
- U1 85
- U17 13
- P2 25
-Net 69 "" ""
- C53 2
- R36 1
- U3 22
-Net 70 "/2V8_VDD-EXT" "2V8_VDD-EXT"
- U17 3
- U2 44
- P1 33
- C57 2
-Net 71 "/GSM_DTR" "GSM_DTR"
- U17 6
- U2 72
-Net 72 "/GSM_RXD" "GSM_RXD"
- U17 7
- U2 68
-Net 73 "/GSM_CTS" "GSM_CTS"
- U17 8
- U2 67
-Net 74 "/GPS/DBG-RXD" "GPS/DBG-RXD"
- U2 16
- U17 9
-Net 75 "/SIM-VDD" "SIM-VDD"
- U7 14
- U2 20
- U8 6
- C7 2
- U8 1
- C9 1
-Net 78 "/GSM_SPK1N" "GSM_SPK1N"
- C40 2
- U2 21
-Net 79 "/GSM_SPK1P" "GSM_SPK1P"
- U2 22
- C46 2
-Net 87 "" ""
- SW2 2
- SW2 4
- R5 1
- R6 1
-Net 88 "/I2C_SCL" "I2C_SCL"
- R42 1
- U9 2
- U15 6
- U1 95
- U5 2
- U3 5
- P2 18
-Net 89 "/PB5" "PB5"
- P2 21
- U1 91
- RP1 5
-Net 90 "/PA8" "PA8"
- P2 12
- U1 67
-Net 91 "/PB7" "PB7"
- P2 19
- U1 93
-Net 92 "/PB6" "PB6"
- U1 92
- P2 20
-Net 94 "/SIM-CLK" "SIM-CLK"
- RP3 3
- U7 10
- U8 4
-Net 95 "/SIM-RST" "SIM-RST"
- U7 12
- U8 2
- RP3 2
-Net 96 "/SIM-DATA" "SIM-DATA"
- RP3 1
- U8 5
- U7 9
-Net 107 "/GSM_NETLIGHT" "GSM_NETLIGHT"
- D3 1
- U2 51
-Net 108 "" ""
- R4 2
- D3 2
-Net 116 "/3V3_VDD" "3V3_VDD"
- R43 2
- Q2 D
- U7 4
- P2 30
- R47 2
- R46 2
- C8 1
- R45 2
- R44 2
- FB1 2
- P1 2
- R19 1
- P30 1
-Net 123 "/STM32_OSC_OUT" "STM32_OSC_OUT"
- X1 3
- U1 13
- C36 1
-Net 124 "/OTG_CURRENT_LIMIT_SELECTION" "OTG_CURRENT_LIMIT_SELECTION"
- U3 8
- U1 37
- R8 1
-Net 127 "" ""
- U2 52
- R30 1
-Net 130 "" ""
- U2 70
- R21 1
-Net 131 "" ""
- U2 71
- R20 1
-Net 132 "" ""
- RP3 7
- U2 18
-Net 133 "GND" "GND"
- RP5 2
- RP1 4
- RP1 3
- RP1 2
- RP1 1
- U4 2
- C20 2
- C9 2
- U9 11
- U2 40
- U8 3
- SW2 6
- SW2 5
- U9 10
- U2 10
- RP5 4
- R33 1
- C29 2
- C38 1
- U9 7
- P1 1
- C2 2
- C24 2
- C22 1
- U2 5
- U2 61
- P22 4
- U2 77
- P21 3
- U2 57
- C13 1
- C4 2
- C3 2
- C55 2
- U2 60
- U2 41
- U2 2
- U2 80
- U2 1
- C5 2
- R9 1
- C16 2
- U11 3
- U14 9
- U14 4
- U1 99
- P27 1
- U6 3
- C6 2
- C39 1
- C21 2
- U13 3
- P11 1
- C35 1
- X1 2
- C32 2
- P1 51
- U10 3
- U17 1
- X1 4
- U17 4
- U17 5
- C33 2
- C52 1
- U2 14
- C53 1
- P2 29
- C50 2
- C30 2
- C31 2
- C41 2
- C28 2
- J1 5
- C14 2
- R8 2
- U17 10
- U17 11
- C19 2
- U2 43
- U17 16
- C7 1
- C42 2
- U7 SW-B
- C54 1
- C43 2
- R4 1
- P2 1
- R39 2
- R2 2
- U5 13
- U5 12
- R3 2
- C8 2
- C15 2
- C17 1
- U2 37
- R51 2
- U2 64
- R32 2
- D5 1
- SW1 6
- SW1 5
- U1 74
- R13 2
- P20 1
- C18 2
- C23 2
- R6 2
- C25 2
- C26 2
- C27 2
- U3 25
- U3 17
- U3 18
- U1 27
- R17 1
- P13 2
- U2 65
- R10 2
- C47 2
- C48 2
- C51 1
- U2 28
- U16 7
- C12 2
- C60 2
- C34 2
- C49 1
- R37 2
- P2 31
- R38 2
- P19 1
- P18 1
- U15 7
- U7 6
- U15 4
- U15 3
- C11 2
- U7 13
- C59 2
- U7 15
- U12 5
- U5 11
- U5 10
- U12 8
- U5 9
- U12 10
- U5 8
- R12 1
- C36 2
- R49 2
- U5 4
- C57 1
- C58 2
- C44 2
- U1 20
- U15 2
- U2 58
- C37 1
- U2 78
- U1 10
-Net 134 "" ""
- U2 69
- R22 1
-Net 136 "" ""
- U2 15
- R23 2
-Net 139 "" ""
- R24 1
- U2 66
-Net 140 "/GSM_MIC2P" "GSM_MIC2P"
- U2 27
- R50 2
- R51 1
-Net 141 "" ""
- U9 4
- R52 2
-Net 142 "" ""
- C13 2
- U9 6
-Net 143 "" ""
- C10 2
- U9 12
-Net 144 "" ""
- U9 13
- C10 1
-Net 147 "/I2C_SDA" "I2C_SDA"
- U15 5
- R41 1
- U5 3
- U9 3
- U1 96
- U3 6
- P2 17
-Net 151 "/SYSTEM_LOAD" "SYSTEM_LOAD"
- C18 1
- Q1 S
- C22 2
- R14 2
- R11 2
- Q5 D
- R48 2
- P15 1
- U16 6
- U14 8
- P2 32
- U12 7
- C48 1
-Net 152 "" ""
- R13 1
- R11 1
- U12 3
-Net 153 "" ""
- C23 1
- U14 3
-Net 154 "/USB_DP" "USB_DP"
- J1 3
- RP2 3
- U3 2
- P10 1
- U13 4
-Net 155 "/USB_DM" "USB_DM"
- U3 3
- U13 5
- J1 2
- RP2 2
- P7 1
-Net 156 "" ""
- U3 10
- R33 2
-Net 157 "/BATTERY_NTC" "BATTERY_NTC"
- U3 11
- U3 12
- R38 1
- R37 1
- R36 2
- P21 2
-Net 158 "" ""
- D6 2
- R34 2
-Net 159 "" ""
- C45 2
- U3 21
-Net 190 "/SDIO_D3" "SDIO_D3"
- U7 2
- U1 79
- U10 5
- R47 1
-Net 191 "/SDIO_CMD" "SDIO_CMD"
- R43 1
- U11 2
- U1 83
- U7 3
-Net 192 "/SDIO_D0" "SDIO_D0"
- R44 1
- U7 7
- U10 1
- U1 65
-Net 193 "/SDIO_D1" "SDIO_D1"
- U1 66
- R45 1
- U7 8
- U10 2
-Net 194 "/SDIO_D2" "SDIO_D2"
- U10 4
- U1 78
- U7 1
- R46 1
-Net 195 "/GSM_MIC1N" "GSM_MIC1N"
- R40 1
- U2 24
-Net 196 "" ""
- R18 2
- U2 75
-Net 197 "/LED2" "LED2"
- U1 45
- D2 1
- P1 38
-Net 198 "" ""
- D2 2
- R3 1
-Net 199 "" ""
- U1 49
- C15 1
-Net 200 "" ""
- C17 2
- U1 73
-Net 201 "" ""
- SP1 2
- U16 8
-Net 203 "" ""
- U12 6
- P6 1
-Net 204 "" ""
- P6 2
- U12 9
-Net 205 "" ""
- R49 1
- P22 2
-Net 206 "/LDO_EN" "LDO_EN"
- U14 5
- R48 1
- P23 1
- P22 3
-Net 207 "" ""
- U2 42
- C51 2
-Net 208 "/GSM_MIC1P" "GSM_MIC1P"
- C56 1
- U2 23
- R40 2
-Net 209 "" ""
- RP4 8
- RP4 7
-Net 210 "/ENABLE_3V3" "ENABLE_3V3"
- U1 9
- R15 1
- R14 1
- Q2 G
- Q1 G
- P1 11
-Net 211 "" ""
- SP1 1
- R25 1
- U16 5
-Net 212 "" ""
- C46 1
- R28 1
-Net 213 "" ""
- R31 1
- R27 1
- U16 3
-Net 214 "" ""
- U4 3
- FB1 1
- C2 1
-Net 215 "" ""
- U5 14
- C3 1
-Net 216 "" ""
- RP4 6
- RP4 5
-Net 217 "/GSM_VBAT" "GSM_VBAT"
- C43 1
- U2 63
- P29 1
- C44 1
- P1 50
- C59 1
- Q1 D
- C60 1
- U2 62
- C41 1
- C42 1
- P1 52
-Net 218 "" ""
- R16 2
- R17 2
- Q4 G
- Q3 G
-Net 219 "" ""
- Q3 D
- Q4 D
-Net 220 "/HV_PWR" "HV_PWR"
- RP4 1
- D5 2
- D4 1
- P12 1
- R16 1
- P13 1
-Net 221 "" ""
- U1 21
- U1 22
- FB2 1
- C19 1
- C20 1
-Net 222 "" ""
- U3 19
- U3 20
- C45 1
- L1 1
-Net 223 "/PB10" "PB10"
- U11 4
- U1 47
- P4 1
- P1 42
- R5 2
-Net 224 "" ""
- U13 6
- FB3 1
- J1 1
- U13 1
- P8 1
- C21 1
-Net 225 "/PA7" "PA7"
- U1 32
- P1 23
-Net 226 "/PA13-JTAG_TMS/SWDIO" "PA13-JTAG_TMS/SWDIO"
- P1 43
- U1 72
-Net 227 "/BOOT0" "BOOT0"
- P1 35
- U1 94
- P3 1
- R9 2
- SW1 2
- SW1 4
- U11 5
-Net 228 "/PA14-JTAG_TCK/SWCLK" "PA14-JTAG_TCK/SWCLK"
- P1 45
- U1 76
-Net 229 "/ACCMAGN_INT1" "ACCMAGN_INT1"
- U1 23
- P1 16
- U9 5
-Net 230 "/BATTERY_CELL_VMEAS" "BATTERY_CELL_VMEAS"
- RP5 6
- C49 2
- RP5 5
- U1 35
- P1 26
-Net 231 "/PA4" "PA4"
- U1 29
- P1 20
-Net 232 "/GSM_LINE_IN" "GSM_LINE_IN"
- P1 21
- U1 30
- C56 2
-Net 233 "/PA15-JTAG_TDI" "PA15-JTAG_TDI"
- P1 41
- U1 77
-Net 234 "/PA6" "PA6"
- P1 22
- U1 31
-Net 237 "" ""
- U2 19
- RP3 6
-Net 238 "" ""
- RP3 8
- U2 17
- C39 2
-Net 239 "/PA1" "PA1"
- U1 24
- P1 17
-Net 240 "/PB3-JTAG_TDO" "PB3-JTAG_TDO"
- P1 47
- U1 89
-Net 241 "/PA2" "PA2"
- U1 25
- P1 18
-Net 242 "/MEMS_MIC_OUTPUT" "MEMS_MIC_OUTPUT"
- R1 2
- U1 26
- P1 19
- R50 1
-Net 243 "/PB4-JTAG_TRST" "PB4-JTAG_TRST"
- P1 39
- U1 90
-Net 244 "/NRST-STM32_RESET" "NRST-STM32_RESET"
- U1 14
- R7 1
- P24 1
- P1 49
-Net 245 "" ""
- C47 1
- R31 2
- U16 2
-Net 246 "/HIGH_VOLTAGE_PWR_VMEAS" "HIGH_VOLTAGE_PWR_VMEAS"
- C50 1
- RP5 7
- RP5 8
- U1 15
- P1 12
-Net 247 "" ""
- R25 2
- R28 2
- U16 4
-Net 248 "" ""
- RP4 2
- RP4 3
-Net 249 "/PB11" "PB11"
- P5 1
- U1 48
- P1 44
- R10 1
-Net 253 "/USB_DP_MCU" "USB_DP_MCU"
- U1 71
- RP1 6
- RP2 6
-Net 254 "/USB_DM_MCU" "USB_DM_MCU"
- RP1 7
- RP2 7
- U1 70
-Net 257 "/GYRO_DRDY" "GYRO_DRDY"
- U5 6
- P1 27
- U1 36
-Net 258 "/GYRO_INT1" "GYRO_INT1"
- U5 7
- P2 4
- U1 54
-Net 259 "" ""
- C40 1
- R27 2
-Net 260 "" ""
- RP5 1
- RP4 4
-Net 261 "/CHG_VBUS" "CHG_VBUS"
- U3 1
- P1 6
- D4 2
- Q4 S
- U3 24
- C38 2
-Net 262 "" ""
- C1 1
- R1 1
-}
-#End

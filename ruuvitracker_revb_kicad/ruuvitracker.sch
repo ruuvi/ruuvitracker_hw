@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 18 Jan 2013 08:28:49 PM EET
+EESchema Schematic File Version 2  date Fri 18 Jan 2013 10:09:56 PM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -2531,7 +2531,7 @@ F 1 "GND" H 28150 15830 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 30150 15500 0    30   Italic 0
-- Read current 1 mA, typical\n- Write current 2mA, typical\n- Standby current 3 uA, typical\n- Data retention >200 years\n- 4 million erase/write cycles\n- M24M01 = 128k x 8bit = 128 kbytes\n- SO8 (narrow, 150 mil width) or TSSOP8 (we use this one)
+- Read current 1 mA, typical\n- Write current 2mA, typical\n- Standby current 3 uA, typical\n- Data retention >200 years\n- 4 million erase/write cycles\n- M24M01 = 128k x 8bit = 128 kbytes\n- SO8 (narrow, 150 mil width) or TSSOP8 (bad availability)
 NoConn ~ 29550 15650
 $Comp
 L VDD #PWR026
@@ -5583,7 +5583,7 @@ L LED D3
 U 1 1 4EF52620
 P 29550 3200
 F 0 "D3" H 29550 3300 50  0000 C CNN
-F 1 "LED_RED" H 29550 3100 50  0000 C CNN
+F 1 "LED_GREEN" H 29550 3100 50  0000 C CNN
 	1    29550 3200
 	1    0    0    -1  
 $EndComp

@@ -1,5 +1,5 @@
-update=Thu 17 Jan 2013 09:06:45 PM EET
-last_client=pcbnew
+update=Fri 18 Jan 2013 11:31:14 PM EET
+last_client=cvpcb
 [general]
 version=1
 [eeschema]
@@ -93,11 +93,6 @@ LibName56=conn_26x2
 LibName57=zener
 LibName58=tps2291xx
 LibName59=tvs_diode
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 PadDrlX=0
@@ -116,7 +111,6 @@ TxtLar=39
 MSegLar=28
 LastNetListRead=ruuvitracker.net
 [pcbnew/libraries]
-LibDir=../kicad_lib/packages3d;../kicad_lib/modules
 LibName1=3MM_PLATED_HOLE
 LibName2=005INCH_PINSTRIP_THRUHOLE_2PIN
 LibName3=005INCH_PINSTRIP_THRUHOLE_2ROW_32PIN
@@ -171,6 +165,12 @@ LibName51=RUUVITRACKER_LOGO_035INCH_BOTMASK
 LibName52=RUUVITRACKER_LOGO_035INCH_BOTSILK
 LibName53=RUUVITRACKER_LOGO_035INCH_TOPMASK
 LibName54=RUUVITRACKER_LOGO_035INCH_TOPSILK
-LibName55=WORLD_MAP_WITH_MARKERS_29INCH
-LibName56=WORLD_MAP_WITH_MARKERS_3INCH
-LibName57=MARKER_TOP_MASK_014INCH
+LibName55=WORLD_MAP_WITH_MARKERS_3INCH
+LibName56=MARKER_TOP_MASK_014INCH
+LibName57=SO8N_150MILS
+LibDir=../kicad_lib/packages3d;../kicad_lib/modules
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
