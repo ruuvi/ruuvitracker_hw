@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 31 Jan 2013 12:23:45 AM EET
+EESchema Schematic File Version 2  date Thu 31 Jan 2013 12:31:59 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -66,7 +66,7 @@ encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
 Date "30 jan 2013"
-Rev "RevB (draft#007)"
+Rev "Rev.B1"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
 Comment2 ""
@@ -5068,8 +5068,8 @@ Text Notes 18350 19250 0    30   Italic 0
 Optional super capacitor /\n3V non-rechargeable battery.\n\nCurrent consumption 2uA after VBAT is removed.\n\nDon't leave unconnected. If not used, populate\n10uF ceramic capacitor for example.\n\n10uF discharging time from 2V8 to\n1V8 @ 2uA = approx. 5 seconds.\n(10mF super cap = approx. one hour)
 Text Notes 16300 2800 0    60   Italic 12
 http://www.ruuvitracker.fi
-Text Notes 16500 2550 0    60   Italic 12
-RevB (draft #007)
+Text Notes 16750 2550 0    60   Italic 12
+Rev.B1
 Text Notes 15500 2250 0    120  Italic 24
 Open Source Tracking Solution
 $Comp
