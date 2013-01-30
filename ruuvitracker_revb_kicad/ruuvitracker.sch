@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fri 18 Jan 2013 10:09:56 PM EET
+EESchema Schematic File Version 2  date Thu 31 Jan 2013 12:23:45 AM EET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -65,7 +65,7 @@ $Descr A1 33070 23400
 encoding utf-8
 Sheet 1 1
 Title "RuuviTracker"
-Date "18 jan 2013"
+Date "30 jan 2013"
 Rev "RevB (draft#007)"
 Comp "RuuviTracker.fi / Lauri Jämsä / lauri.jamsa@ruuvipenkki.fi"
 Comment1 "Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)"
@@ -3889,7 +3889,7 @@ L C C21
 U 1 1 50D3A4E2
 P 7100 12600
 F 0 "C21" H 7150 12700 50  0000 L CNN
-F 1 "100n" H 7150 12500 50  0000 L CNN
+F 1 "1u" H 7150 12500 50  0000 L CNN
 	1    7100 12600
 	1    0    0    -1  
 $EndComp
@@ -5475,7 +5475,7 @@ GSM_PWRKEY
 Text Label 15300 15600 2    60   ~ 0
 GSM_PWRKEY
 Text Notes 15250 15750 2    30   Italic 0
-PWRKEY pin has IPU (100kohm).\n\nPull down for >1sec and release\nto power-on the module.\n\nDuring power on, pull down for >1s and\nrelease to power-down the module.\n\nMeasured current consumption when powered off = 32uA.
+PWRKEY pin has IPU (100kohm).\n\nPull down for >1sec and release\nto power-on the module.\n\nDuring power on, pull down for >1s and\nrelease to power-down the module.\n\nMeasured current consumption when powered off = 32uA.\n\nDo not pull GSM_PWRKEY pin high!\nChange GPIO pin's mode directly from IN_FLOATING to OUTPUT_LOW and back.
 Text Notes 20350 17500 0    30   Italic 0
 Place tantalums +\nsmaller ceramic caps close\nto VBAT pins.\n\nMax drawn current during TX\nburst = up to 2A.\n\nReset voltage level = 3V1.
 Text Notes 16800 14150 0    30   Italic 0
@@ -5554,7 +5554,7 @@ L C C41
 U 1 1 4EF527C5
 P 18500 17700
 F 0 "C41" H 18550 17800 50  0000 L CNN
-F 1 "100n" H 18550 17600 50  0000 L CNN
+F 1 "1u" H 18550 17600 50  0000 L CNN
 	1    18500 17700
 	1    0    0    -1  
 $EndComp
