@@ -410,6 +410,14 @@ SMT- SWCH-08247</description>
 <text x="58.42" y="63.5" size="1.778" layer="97">NRST is pulled up to VDD
 It can be used to drive BOOT0 HIGH
 to enter bootloader mode</text>
+<text x="78.74" y="40.64" size="1.778" layer="97">BOOT0 is not on the expansion header
+you need to solder a patch wire to the 
+tactile switch on board
+
+Luckily we can solder on the board edge side.
+It's the left leg when looking from the edge.
+
+See http://bit.ly/1dblugA</text>
 </plain>
 <instances>
 <instance part="RESET" gate="S" x="35.56" y="48.26"/>
