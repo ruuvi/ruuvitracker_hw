@@ -1,5 +1,5 @@
-This repository includes RuuviTracker's KiCad project files.
+# RuuviTracker hardware
 
-More info about RuuviTracker project: http://www.ruuvitracker.fi
+See the branches for documentation of the various hardware revisions. 
 
-Licensed using: Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+Current hardware [RevC3](./tree/revC3)
