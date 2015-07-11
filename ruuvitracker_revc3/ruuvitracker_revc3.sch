@@ -1,0 +1,3999 @@
+EESchema Schematic File Version 2
+LIBS:ruuvitracker_revc3-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:sim908
+LIBS:microsd_sim_combo
+LIBS:lsm303dlhc
+LIBS:usb_micro_b
+LIBS:mcp73831
+LIBS:mma8652fc
+LIBS:tps799xx
+LIBS:tps783xx
+LIBS:crystal_4pin
+LIBS:rf_conn
+LIBS:push_button
+LIBS:iprotoxi_conn
+LIBS:stm32f10xxx_lqfp64
+LIBS:sim968
+LIBS:sn74ahc1g04_inverter
+LIBS:solder_jumper_2
+LIBS:solder_jumper_3
+LIBS:ruuvitracker_revc3-cache
+EELAYER 25 0
+EELAYER END
+$Descr A2 23386 16535
+encoding utf-8
+Sheet 1 1
+Title "RuuviTracker"
+Date "5 feb 2015"
+Rev "C3"
+Comp "Lauri Jämsä / lauri@ruuvi.com / ruuvi.com"
+Comment1 "http://creativecommons.org/licenses/by-sa/4.0/"
+Comment2 "License: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R17
+U 1 1 51BA44D2
+P 14300 11550
+F 0 "R17" V 14380 11550 50  0000 C CNN
+F 1 "10" V 14300 11550 50  0000 C CNN
+F 2 "" H 14300 11550 60  0001 C CNN
+F 3 "" H 14300 11550 60  0001 C CNN
+	1    14300 11550
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 51BA44D8
+P 13800 11400
+F 0 "#FLG01" H 13800 11495 30  0001 C CNN
+F 1 "PWR_FLAG" H 13800 11580 30  0000 C CNN
+F 2 "" H 13800 11400 60  0001 C CNN
+F 3 "" H 13800 11400 60  0001 C CNN
+	1    13800 11400
+	1    0    0    -1  
+$EndComp
+Text Notes 13950 12300 0    30   Italic 0
+Leave copper keep-out area under the GSM and GPS antenna pins (pins 59 and 79).
+Text Label 13250 13950 0    60   ~ 0
+GSM_NETLIGHT
+Text Label 13250 13850 0    60   ~ 0
+GSM_STATUS
+Text Notes 11500 15250 0    30   Italic 0
+IO pins' absolute maximum voltage = 3V1\nIO pins' high level voltage output = 2V8\nMaximum current from the IO pin = 10mA\n
+NoConn ~ 13150 11650
+Text Notes 14100 14550 0    30   Italic 0
+Optional super capacitor /\n3V non-rechargeable battery.\n\nCurrent consumption 2uA after VBAT is removed.\n\nDon't leave unconnected. If not used, populate\n10uF ceramic capacitor for example.\n\n10uF discharging time from 2V8 to\n1V8 @ 2uA = approx. 5 seconds.\n(10mF super cap = approx. one hour)
+$Comp
+L CP1-RESCUE-ruuvitracker_revc3 C18
+U 1 1 51BA451A
+P 13450 13100
+F 0 "C18" H 13500 13200 50  0000 L CNN
+F 1 "680u" H 13500 13000 50  0000 L CNN
+F 2 "" H 13450 13100 60  0001 C CNN
+F 3 "" H 13450 13100 60  0001 C CNN
+	1    13450 13100
+	1    0    0    -1  
+$EndComp
+Text Notes 13950 11900 0    30   Italic 0
+Short GPS-VANT-IN to GPS-VANT-OUT (2V8)\nor VDD (3V) using 10 ohm resistor to apply\nvoltage for the active GPS antenna. If using passive\nantenna, both resistors should be removed.\nDo not populate both resistors at the same time!
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R14
+U 1 1 51BA4521
+P 13450 11550
+F 0 "R14" V 13530 11550 50  0000 C CNN
+F 1 "NA" V 13450 11550 50  0000 C CNN
+F 2 "" H 13450 11550 60  0001 C CNN
+F 3 "" H 13450 11550 60  0001 C CNN
+	1    13450 11550
+	0    1    1    0   
+$EndComp
+NoConn ~ 10750 11850
+NoConn ~ 10750 11750
+NoConn ~ 10750 11650
+NoConn ~ 10750 11550
+NoConn ~ 13150 13550
+NoConn ~ 13150 13450
+Text Label 13250 12050 0    60   ~ 0
+GSM_DCD
+Text Label 13250 12150 0    60   ~ 0
+GSM_RI
+Text Label 13250 11850 0    60   ~ 0
+GSM_DTR
+Text Label 10600 11250 2    60   ~ 0
+GSM_PWRKEY
+Text Notes 10150 12400 2    30   Italic 0
+PWRKEY pin has IPU (100kohm).\n\nPull down for >1sec and release\nto power-on the module.\n\nDuring power on, pull down for >1s and\nrelease to power-down the module.\n\nThe external RESET pin is used to reset the module.\nThis function is used as an emergency reset only when\nAT command “AT+CPOWD=1” and the PWRKEY pin\nhave no effect. The NRESET pin could be pulled down\nto reset the module. Pull down for min 20us low to reset.\n\nNOTE: It is recommended to cut off the VBAT power supply\ndirectly instead of using external reset pin when SIM968\ncan not respond to the AT command “AT+CPOWD=1” and PWRKEY pin.
+Text Label 13250 12350 0    60   ~ 0
+GSM_CTS
+Text Label 13250 12450 0    60   ~ 0
+GSM_RTS
+Text Label 13250 11950 0    60   ~ 0
+GSM_TXD
+Text Label 13250 12250 0    60   ~ 0
+GSM_RXD
+NoConn ~ 10750 13550
+NoConn ~ 10750 13450
+Text Label 10650 12950 2    60   ~ 0
+SIM-VDD
+Text Label 10650 12850 2    60   ~ 0
+SIM-CLK
+Text Label 10650 12750 2    60   ~ 0
+SIM-RST
+Text Label 10650 12650 2    60   ~ 0
+SIM-DATA
+NoConn ~ 10750 14550
+NoConn ~ 10750 14450
+NoConn ~ 10750 14350
+NoConn ~ 10750 14250
+NoConn ~ 10750 14150
+NoConn ~ 10750 14050
+NoConn ~ 13150 14350
+NoConn ~ 13150 14250
+NoConn ~ 13150 14150
+NoConn ~ 13150 14050
+NoConn ~ 13150 13750
+NoConn ~ 13150 14450
+NoConn ~ 13150 14550
+Text Label 10650 14850 2    60   ~ 0
+GSM_DBG_RXD
+Text Label 10650 14750 2    60   ~ 0
+GSM_DBG_TXD
+Text Notes 10300 10300 0    120  Italic 0
+GSM+GPS+GLONASS+Galileo Module
+Text Label 12850 6900 0    60   ~ 0
+SD_CARD_INSERTED
+Text Label 11050 6650 2    60   ~ 0
+USB_DM
+Text Label 11050 6750 2    60   ~ 0
+USB_DP
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR02
+U 1 1 51BA482C
+P 13200 9050
+F 0 "#PWR02" H 13200 9050 30  0001 C CNN
+F 1 "GND" H 13200 8980 30  0001 C CNN
+F 2 "" H 13200 9050 60  0001 C CNN
+F 3 "" H 13200 9050 60  0001 C CNN
+	1    13200 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR03
+U 1 1 51BA4832
+P 12950 9050
+F 0 "#PWR03" H 12950 9050 30  0001 C CNN
+F 1 "GND" H 12950 8980 30  0001 C CNN
+F 2 "" H 12950 9050 60  0001 C CNN
+F 3 "" H 12950 9050 60  0001 C CNN
+	1    12950 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C17
+U 1 1 51BA4838
+P 13200 8700
+F 0 "C17" H 13250 8800 50  0000 L CNN
+F 1 "2u2" H 13250 8600 50  0000 L CNN
+F 2 "" H 13200 8700 60  0001 C CNN
+F 3 "" H 13200 8700 60  0001 C CNN
+	1    13200 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C16
+U 1 1 51BA483E
+P 12950 8700
+F 0 "C16" H 13000 8800 50  0000 L CNN
+F 1 "2u2" H 13000 8600 50  0000 L CNN
+F 2 "" H 12950 8700 60  0001 C CNN
+F 3 "" H 12950 8700 60  0001 C CNN
+	1    12950 8700
+	1    0    0    -1  
+$EndComp
+Text Notes 13450 8550 0    40   Italic 0
+These components are for\nmaintaining compability\nbetween STM32F1xx, STM32F2-4xx\nmicrocontrollers.\n\nPopulate capacitors if\nF2xx or F4xx series MCU is used.\n\nPopulate 0ohm resistors instead\nof caps if F1xx series MCU is used.
+Text Label 12850 5750 0    60   ~ 0
+MICROSD_CS
+Text Label 11050 6150 2    60   ~ 0
+SPI1_MISO
+Text Label 11050 6050 2    60   ~ 0
+SPI1_SCK
+Text Label 11050 6250 2    60   ~ 0
+SPI1_MOSI
+Text Label 11050 6850 2    60   ~ 0
+PA13_JTAG_TMS
+Text Label 11050 6950 2    60   ~ 0
+PA14_JTAG_TCK
+Text Label 11050 7050 2    60   ~ 0
+PA15_JTAG_TDI
+Text Label 12850 4550 0    60   ~ 0
+PB3_JTAG_TDO
+Text Label 12850 4650 0    60   ~ 0
+PB4_JTAG_TRST
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C6
+U 1 1 51BA4875
+P 12100 8700
+F 0 "C6" H 12150 8800 50  0000 L CNN
+F 1 "2u2" H 12150 8600 50  0000 L CNN
+F 2 "" H 12100 8700 60  0001 C CNN
+F 3 "" H 12100 8700 60  0001 C CNN
+	1    12100 8700
+	1    0    0    -1  
+$EndComp
+Text Label 11050 4750 2    60   ~ 0
+STM32_OSC_OUT
+Text Label 11050 4650 2    60   ~ 0
+STM32_OSC_IN
+Text Label 12850 6300 0    60   ~ 0
+GSM_PWRKEY
+Text Notes 10950 9100 0    40   Italic 0
+Place C1-4 close to VDD1-VDD4, C5\nclose to VDDA and C6 close to VDD3.
+Text Label 11050 5650 2    60   ~ 0
+ACC_INT2
+Text Label 12850 4950 0    60   ~ 0
+I2C1_SDA
+Text Label 12850 4850 0    60   ~ 0
+I2C1_SCL
+Text Label 11050 6550 2    60   ~ 0
+USART1_RX
+Text Label 11050 6450 2    60   ~ 0
+USART1_TX
+Text Label 10900 5000 2    60   ~ 0
+STM32_RST
+$Comp
+L VDD #PWR04
+U 1 1 51BA488E
+P 10150 5150
+F 0 "#PWR04" H 10150 5250 30  0001 C CNN
+F 1 "VDD" H 10150 5260 30  0000 C CNN
+F 2 "" H 10150 5150 60  0001 C CNN
+F 3 "" H 10150 5150 60  0001 C CNN
+	1    10150 5150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R12
+U 1 1 51BA4894
+P 10500 5150
+F 0 "R12" V 10580 5150 50  0000 C CNN
+F 1 "4k7" V 10500 5150 50  0000 C CNN
+F 2 "" H 10500 5150 60  0001 C CNN
+F 3 "" H 10500 5150 60  0001 C CNN
+	1    10500 5150
+	0    -1   -1   0   
+$EndComp
+Text Label 10050 4050 0    60   ~ 0
+BOOT0
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR05
+U 1 1 51BA48A1
+P 10300 4250
+F 0 "#PWR05" H 10300 4250 30  0001 C CNN
+F 1 "GND" H 10300 4180 30  0001 C CNN
+F 2 "" H 10300 4250 60  0001 C CNN
+F 3 "" H 10300 4250 60  0001 C CNN
+	1    10300 4250
+	0    1    1    0   
+$EndComp
+Text Notes 13200 4400 0    40   Italic 0
+<- BOOT1
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR06
+U 1 1 51BA48A8
+P 13150 4300
+F 0 "#PWR06" H 13150 4300 30  0001 C CNN
+F 1 "GND" H 13150 4230 30  0001 C CNN
+F 2 "" H 13150 4300 60  0001 C CNN
+F 3 "" H 13150 4300 60  0001 C CNN
+	1    13150 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR07
+U 1 1 51BA48AE
+P 10850 9050
+F 0 "#PWR07" H 10850 9050 30  0001 C CNN
+F 1 "GND" H 10850 8980 30  0001 C CNN
+F 2 "" H 10850 9050 60  0001 C CNN
+F 3 "" H 10850 9050 60  0001 C CNN
+	1    10850 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C1
+U 1 1 51BA48B4
+P 10850 8700
+F 0 "C1" H 10900 8800 50  0000 L CNN
+F 1 "220n" H 10900 8600 50  0000 L CNN
+F 2 "" H 10850 8700 60  0001 C CNN
+F 3 "" H 10850 8700 60  0001 C CNN
+	1    10850 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C4
+U 1 1 51BA48C6
+P 11600 8700
+F 0 "C4" H 11650 8800 50  0000 L CNN
+F 1 "220n" H 11650 8600 50  0000 L CNN
+F 2 "" H 11600 8700 60  0001 C CNN
+F 3 "" H 11600 8700 60  0001 C CNN
+	1    11600 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C3
+U 1 1 51BA48CC
+P 11350 8700
+F 0 "C3" H 11400 8800 50  0000 L CNN
+F 1 "220n" H 11400 8600 50  0000 L CNN
+F 2 "" H 11350 8700 60  0001 C CNN
+F 3 "" H 11350 8700 60  0001 C CNN
+	1    11350 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C2
+U 1 1 51BA48D2
+P 11100 8700
+F 0 "C2" H 11150 8800 50  0000 L CNN
+F 1 "220n" H 11150 8600 50  0000 L CNN
+F 2 "" H 11100 8700 60  0001 C CNN
+F 3 "" H 11100 8700 60  0001 C CNN
+	1    11100 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR08
+U 1 1 51BA48D8
+P 13450 8350
+F 0 "#PWR08" H 13450 8350 30  0001 C CNN
+F 1 "GND" H 13450 8280 30  0001 C CNN
+F 2 "" H 13450 8350 60  0001 C CNN
+F 3 "" H 13450 8350 60  0001 C CNN
+	1    13450 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR09
+U 1 1 51BA48DE
+P 10850 7600
+F 0 "#PWR09" H 10850 7700 30  0001 C CNN
+F 1 "VDD" H 10850 7710 30  0000 C CNN
+F 2 "" H 10850 7600 60  0001 C CNN
+F 3 "" H 10850 7600 60  0001 C CNN
+	1    10850 7600
+	1    0    0    -1  
+$EndComp
+Text Notes 11050 3850 0    120  Italic 0
+ARM Cortex-M3/M4
+Text Notes 16900 14000 0    40   Italic 0
+Inserting MicroSD card shorts SW-A to SW-B\nie. SD_CARD_INSERTED goes low (IPU required).
+$Comp
+L MICROSD_SIM_COMBO U9
+U 1 1 51BA501B
+P 19750 13150
+F 0 "U9" H 20600 12050 60  0000 C CNN
+F 1 "MICROSD_SIM_COMBO" H 19300 12050 60  0000 C CNN
+F 2 "" H 19750 13150 60  0001 C CNN
+F 3 "" H 19750 13150 60  0001 C CNN
+	1    19750 13150
+	1    0    0    -1  
+$EndComp
+Text Notes 19850 14300 0    40   Italic 0
+Compatible holders:\n\n* GCT's MES3051\n* Cheap Chinese version
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR010
+U 1 1 51BA5022
+P 18400 13100
+F 0 "#PWR010" H 18400 13100 30  0001 C CNN
+F 1 "GND" H 18400 13030 30  0001 C CNN
+F 2 "" H 18400 13100 60  0001 C CNN
+F 3 "" H 18400 13100 60  0001 C CNN
+	1    18400 13100
+	0    1    1    0   
+$EndComp
+Text Label 18350 13900 2    60   ~ 0
+SD_CARD_INSERTED
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR011
+U 1 1 51BA502F
+P 18400 14200
+F 0 "#PWR011" H 18400 14200 30  0001 C CNN
+F 1 "GND" H 18400 14130 30  0001 C CNN
+F 2 "" H 18400 14200 60  0001 C CNN
+F 3 "" H 18400 14200 60  0001 C CNN
+	1    18400 14200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR012
+U 1 1 51BA5035
+P 21150 13350
+F 0 "#PWR012" H 21150 13350 30  0001 C CNN
+F 1 "GND" H 21150 13280 30  0001 C CNN
+F 2 "" H 21150 13350 60  0001 C CNN
+F 3 "" H 21150 13350 60  0001 C CNN
+	1    21150 13350
+	1    0    0    -1  
+$EndComp
+Text Label 21150 12750 2    60   ~ 0
+SIM-VDD
+NoConn ~ 18500 12500
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR013
+U 1 1 51BA503D
+P 18400 12300
+F 0 "#PWR013" H 18400 12300 30  0001 C CNN
+F 1 "GND" H 18400 12230 30  0001 C CNN
+F 2 "" H 18400 12300 60  0001 C CNN
+F 3 "" H 18400 12300 60  0001 C CNN
+	1    18400 12300
+	0    1    1    0   
+$EndComp
+Text Notes 17400 6500 0    300  Italic 60
+!     !
+Text Notes 17600 6200 0    40   Italic 0
+If no battery present, it's also\npossible to power the device\nusing 3V2 - 4V2 regulated power\nsource.\n\nIf so, don't connect simultaneously\nMicro-USB charger.
+Text Notes 20900 13500 0    40   Italic 0
+Place bypass capacitors +\nSIM's ESD (TVS) protection array\nclose to the card holder.
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR014
+U 1 1 51BA50BC
+P 19550 6200
+F 0 "#PWR014" H 19550 6200 30  0001 C CNN
+F 1 "GND" H 19550 6130 30  0001 C CNN
+F 2 "" H 19550 6200 60  0001 C CNN
+F 3 "" H 19550 6200 60  0001 C CNN
+	1    19550 6200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C28
+U 1 1 51BA50D4
+P 21150 13050
+F 0 "C28" H 21200 13150 50  0000 L CNN
+F 1 "2u2" H 21200 12950 50  0000 L CNN
+F 2 "" H 21150 13050 60  0001 C CNN
+F 3 "" H 21150 13050 60  0001 C CNN
+	1    21150 13050
+	-1   0    0    1   
+$EndComp
+Text Label 18350 12200 2    60   ~ 0
+SIM-VDD
+Text Label 18350 12600 2    60   ~ 0
+SIM-CLK
+Text Label 18350 12400 2    60   ~ 0
+SIM-RST
+Text Label 18350 12700 2    60   ~ 0
+SIM-DATA
+Text Notes 18650 5550 0    120  Italic 0
+    Single Cell\nLiPo/Li-ion Battery
+$Comp
+L CONN_3 K1
+U 1 1 51BA50E8
+P 19100 6300
+F 0 "K1" V 19050 6300 50  0000 C CNN
+F 1 "BATTERY" V 19150 6300 40  0000 C CNN
+F 2 "" H 19100 6300 60  0001 C CNN
+F 3 "" H 19100 6300 60  0001 C CNN
+	1    19100 6300
+	-1   0    0    1   
+$EndComp
+Text Notes 18650 11900 0    120  Italic 0
+MicroSD + SIM
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR015
+U 1 1 51BA50F5
+P 21400 13350
+F 0 "#PWR015" H 21400 13350 30  0001 C CNN
+F 1 "GND" H 21400 13280 30  0001 C CNN
+F 2 "" H 21400 13350 60  0001 C CNN
+F 3 "" H 21400 13350 60  0001 C CNN
+	1    21400 13350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C29
+U 1 1 51BA50FB
+P 21400 13050
+F 0 "C29" H 21450 13150 50  0000 L CNN
+F 1 "2u2" H 21450 12950 50  0000 L CNN
+F 2 "" H 21400 13050 60  0001 C CNN
+F 3 "" H 21400 13050 60  0001 C CNN
+	1    21400 13050
+	1    0    0    -1  
+$EndComp
+Text Label 18350 13200 2    60   ~ 0
+SPI1_SCK
+Text Label 18350 13500 2    60   ~ 0
+MICROSD_CS
+Text Label 18350 13400 2    60   ~ 0
+SPI1_MOSI
+Text Label 18350 13000 2    60   ~ 0
+SPI1_MISO
+Text Notes 20300 10600 0    120  Italic 0
+I2C Pull-ups
+$Comp
+L VDD #PWR016
+U 1 1 51BA5106
+P 21400 10850
+F 0 "#PWR016" H 21400 10950 30  0001 C CNN
+F 1 "VDD" H 21400 10960 30  0000 C CNN
+F 2 "" H 21400 10850 60  0001 C CNN
+F 3 "" H 21400 10850 60  0001 C CNN
+	1    21400 10850
+	1    0    0    -1  
+$EndComp
+Text Label 20750 10900 2    60   ~ 0
+I2C1_SDA
+Text Label 20750 11100 2    60   ~ 0
+I2C1_SCL
+NoConn ~ 18500 13600
+NoConn ~ 18500 12900
+NoConn ~ 10750 13650
+NoConn ~ 10750 13750
+NoConn ~ 13150 14650
+Text Notes 5000 12100 0    30   Italic 0
+VLMS1300-GS08 Super red (Vf typical 2V0)\nVLMO1300-GS08 Soft orange (Vf typical 2V0)\nVLMG1300-GS08 Yellow green (Vf typical 2V0)
+Text Notes 4700 10900 0    120  Italic 0
+LEDs (uC + GSM)
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R10
+U 1 1 51BA5E99
+P 5950 11800
+F 0 "R10" V 6030 11800 50  0000 C CNN
+F 1 "330" V 5950 11800 50  0000 C CNN
+F 2 "" H 5950 11800 60  0001 C CNN
+F 3 "" H 5950 11800 60  0001 C CNN
+	1    5950 11800
+	0    1    1    0   
+$EndComp
+Text Label 5100 11800 2    60   ~ 0
+GSM_NETLIGHT
+Text Label 5100 11500 2    60   ~ 0
+LED2
+Text Label 5100 11200 2    60   ~ 0
+LED1
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR017
+U 1 1 51BA5EA2
+P 6400 11500
+F 0 "#PWR017" H 6400 11500 30  0001 C CNN
+F 1 "GND" H 6400 11430 30  0001 C CNN
+F 2 "" H 6400 11500 60  0001 C CNN
+F 3 "" H 6400 11500 60  0001 C CNN
+	1    6400 11500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R8
+U 1 1 51BA5EA8
+P 5950 11200
+F 0 "R8" V 6030 11200 50  0000 C CNN
+F 1 "330" V 5950 11200 50  0000 C CNN
+F 2 "" H 5950 11200 60  0001 C CNN
+F 3 "" H 5950 11200 60  0001 C CNN
+	1    5950 11200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-ruuvitracker_revc3 D1
+U 1 1 51BA5EAE
+P 5400 11200
+F 0 "D1" H 5400 11300 50  0000 C CNN
+F 1 "LED_RED" H 5400 11100 50  0000 C CNN
+F 2 "" H 5400 11200 60  0001 C CNN
+F 3 "" H 5400 11200 60  0001 C CNN
+	1    5400 11200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED-RESCUE-ruuvitracker_revc3 D2
+U 1 1 51BA5EB4
+P 5400 11500
+F 0 "D2" H 5400 11600 50  0000 C CNN
+F 1 "LED_GREEN" H 5400 11400 50  0000 C CNN
+F 2 "" H 5400 11500 60  0001 C CNN
+F 3 "" H 5400 11500 60  0001 C CNN
+	1    5400 11500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R9
+U 1 1 51BA5EBA
+P 5950 11500
+F 0 "R9" V 6030 11500 50  0000 C CNN
+F 1 "330" V 5950 11500 50  0000 C CNN
+F 2 "" H 5950 11500 60  0001 C CNN
+F 3 "" H 5950 11500 60  0001 C CNN
+	1    5950 11500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-ruuvitracker_revc3 D3
+U 1 1 51BA5EC0
+P 5400 11800
+F 0 "D3" H 5400 11900 50  0000 C CNN
+F 1 "LED_GREEN" H 5400 11700 50  0000 C CNN
+F 2 "" H 5400 11800 60  0001 C CNN
+F 3 "" H 5400 11800 60  0001 C CNN
+	1    5400 11800
+	1    0    0    -1  
+$EndComp
+Text Label 2000 11500 2    60   ~ 0
+I2C1_SDA
+Text Label 2000 11400 2    60   ~ 0
+I2C1_SCL
+Text Label 2000 11650 2    60   ~ 0
+ACC_INT1
+Text Label 2000 11750 2    60   ~ 0
+ACC_INT2
+Text Notes 18100 7500 0    120  Italic 0
+Single Cell LiPo/Li-ion Charger
+$Comp
+L MCP73831 U8
+U 1 1 51BACA4B
+P 19550 8250
+F 0 "U8" H 19850 8000 60  0000 C CNN
+F 1 "MCP73831" H 19400 8000 60  0000 C CNN
+F 2 "" H 19550 8250 60  0001 C CNN
+F 3 "" H 19550 8250 60  0001 C CNN
+	1    19550 8250
+	1    0    0    -1  
+$EndComp
+Text Label 20950 8800 0    60   ~ 0
+DISABLE_CHARGER
+$Comp
+L LED-RESCUE-ruuvitracker_revc3 D4
+U 1 1 51BACA52
+P 19100 8700
+F 0 "D4" H 19100 8800 50  0000 C CNN
+F 1 "LED_CHG" H 19100 8600 50  0000 C CNN
+F 2 "" H 19100 8700 60  0001 C CNN
+F 3 "" H 19100 8700 60  0001 C CNN
+	1    19100 8700
+	-1   0    0    1   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R21
+U 1 1 51BACA58
+P 19750 8700
+F 0 "R21" V 19830 8700 50  0000 C CNN
+F 1 "330" V 19750 8700 50  0000 C CNN
+F 2 "" H 19750 8700 60  0001 C CNN
+F 3 "" H 19750 8700 60  0001 C CNN
+	1    19750 8700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C25
+U 1 1 51BACA5E
+P 18500 8400
+F 0 "C25" H 18550 8500 50  0000 L CNN
+F 1 "2u2" H 18550 8300 50  0000 L CNN
+F 2 "" H 18500 8400 60  0001 C CNN
+F 3 "" H 18500 8400 60  0001 C CNN
+	1    18500 8400
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR018
+U 1 1 51BACA64
+P 18500 8650
+F 0 "#PWR018" H 18500 8650 30  0001 C CNN
+F 1 "GND" H 18500 8580 30  0001 C CNN
+F 2 "" H 18500 8650 60  0001 C CNN
+F 3 "" H 18500 8650 60  0001 C CNN
+	1    18500 8650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C27
+U 1 1 51BACA6A
+P 20700 8400
+F 0 "C27" H 20750 8500 50  0000 L CNN
+F 1 "2u2" H 20750 8300 50  0000 L CNN
+F 2 "" H 20700 8400 60  0001 C CNN
+F 3 "" H 20700 8400 60  0001 C CNN
+	1    20700 8400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR019
+U 1 1 51BACA70
+P 20700 8650
+F 0 "#PWR019" H 20700 8650 30  0001 C CNN
+F 1 "GND" H 20700 8580 30  0001 C CNN
+F 2 "" H 20700 8650 60  0001 C CNN
+F 3 "" H 20700 8650 60  0001 C CNN
+	1    20700 8650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R22
+U 1 1 51BACA76
+P 20450 9100
+F 0 "R22" V 20530 9100 50  0000 C CNN
+F 1 "2k" V 20450 9100 50  0000 C CNN
+F 2 "" H 20450 9100 60  0001 C CNN
+F 3 "" H 20450 9100 60  0001 C CNN
+	1    20450 9100
+	1    0    0    -1  
+$EndComp
+Text Notes 18550 9000 2    40   Italic 0
+STAT1 PIN-STATES\nShutdown = Hi-Z\nNo Battery Present = Hi-Z\nPreconditioning = L\nConstant-Current Fast Charge = L\nConstant Voltage = L\nCharge Complete – Standby = H
+Text Label 19150 7950 0    60   ~ 0
+CHARGER_STATUS
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR020
+U 1 1 51BACA7E
+P 20350 8650
+F 0 "#PWR020" H 20350 8650 30  0001 C CNN
+F 1 "GND" H 20350 8580 30  0001 C CNN
+F 2 "" H 20350 8650 60  0001 C CNN
+F 3 "" H 20350 8650 60  0001 C CNN
+	1    20350 8650
+	-1   0    0    -1  
+$EndComp
+Text Notes 18650 9000 0    40   Italic 0
+The current regulation set input pin (PROG) can be\nused to terminate a charge at any time during the\ncharge cycle, as well as to initiate a charge cycle or\ninitiate a recharge cycle.\nPlacing a programming resistor from the PROG input to\nVSS enables the device. Allowing the PROG input to\nfloat or by applying a logic-high input signal, disables\nthe device and terminates a charge cycle. When\ndisabled, the device’s supply current is reduced to\n25 μA, typically.
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR021
+U 1 1 51BACA85
+P 20450 9400
+F 0 "#PWR021" H 20450 9400 30  0001 C CNN
+F 1 "GND" H 20450 9330 30  0001 C CNN
+F 2 "" H 20450 9400 60  0001 C CNN
+F 3 "" H 20450 9400 60  0001 C CNN
+	1    20450 9400
+	-1   0    0    -1  
+$EndComp
+Text Notes 20600 9100 0    40   Italic 0
+RPROG = 2k => Charge current = 500mA\nRPROG = 10k => Charge current = 100mA
+$Comp
+L +5V #PWR022
+U 1 1 51BACA8C
+P 18350 8000
+F 0 "#PWR022" H 18350 8090 20  0001 C CNN
+F 1 "+5V" H 18350 8090 30  0000 C CNN
+F 2 "" H 18350 8000 60  0001 C CNN
+F 3 "" H 18350 8000 60  0001 C CNN
+	1    18350 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR023
+U 1 1 51BACA92
+P 20850 8000
+F 0 "#PWR023" H 20850 7950 20  0001 C CNN
+F 1 "+BATT" H 20850 8100 30  0000 C CNN
+F 2 "" H 20850 8000 60  0001 C CNN
+F 3 "" H 20850 8000 60  0001 C CNN
+	1    20850 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MMA8652FC U3
+U 1 1 51BADA09
+P 2700 11500
+F 0 "U3" H 2350 11100 60  0000 C CNN
+F 1 "MMA8652FC" H 2900 11100 60  0000 C CNN
+F 2 "~" H 2500 11250 60  0000 C CNN
+F 3 "~" H 2500 11250 60  0000 C CNN
+	1    2700 11500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C7
+U 1 1 51BADA2A
+P 1400 11600
+F 0 "C7" H 1450 11700 50  0000 L CNN
+F 1 "220n" H 1450 11500 50  0000 L CNN
+F 2 "" H 1400 11600 60  0001 C CNN
+F 3 "" H 1400 11600 60  0001 C CNN
+	1    1400 11600
+	-1   0    0    1   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C11
+U 1 1 51BADB0E
+P 3700 11650
+F 0 "C11" H 3750 11750 50  0000 L CNN
+F 1 "2u2" H 3750 11550 50  0000 L CNN
+F 2 "" H 3700 11650 60  0001 C CNN
+F 3 "" H 3700 11650 60  0001 C CNN
+	1    3700 11650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR024
+U 1 1 51BADB14
+P 3550 11950
+F 0 "#PWR024" H 3550 11950 30  0001 C CNN
+F 1 "GND" H 3550 11880 30  0001 C CNN
+F 2 "" H 3550 11950 60  0001 C CNN
+F 3 "" H 3550 11950 60  0001 C CNN
+	1    3550 11950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR025
+U 1 1 51BADDBE
+P 1400 11950
+F 0 "#PWR025" H 1400 11950 30  0001 C CNN
+F 1 "GND" H 1400 11880 30  0001 C CNN
+F 2 "" H 1400 11950 60  0001 C CNN
+F 3 "" H 1400 11950 60  0001 C CNN
+	1    1400 11950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR026
+U 1 1 51BAE138
+P 3700 11950
+F 0 "#PWR026" H 3700 11950 30  0001 C CNN
+F 1 "GND" H 3700 11880 30  0001 C CNN
+F 2 "" H 3700 11950 60  0001 C CNN
+F 3 "" H 3700 11950 60  0001 C CNN
+	1    3700 11950
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR027
+U 1 1 51BAE259
+P 3700 11150
+F 0 "#PWR027" H 3700 11250 30  0001 C CNN
+F 1 "VDD" H 3700 11260 30  0000 C CNN
+F 2 "" H 3700 11150 60  0001 C CNN
+F 3 "" H 3700 11150 60  0001 C CNN
+	1    3700 11150
+	1    0    0    -1  
+$EndComp
+Text Notes 2100 10900 0    120  Italic 0
+Accelerometer
+Text Label 12850 7000 0    60   ~ 0
+CHARGER_STATUS
+Text Label 12850 7100 0    60   ~ 0
+DISABLE_CHARGER
+Text Label 17900 10500 2    60   ~ 0
+STM32_OSC_IN
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR028
+U 1 1 51BBAB11
+P 19100 11250
+F 0 "#PWR028" H 19100 11250 30  0001 C CNN
+F 1 "GND" H 19100 11180 30  0001 C CNN
+F 2 "" H 19100 11250 60  0001 C CNN
+F 3 "" H 19100 11250 60  0001 C CNN
+	1    19100 11250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR029
+U 1 1 51BBAB17
+P 18950 11250
+F 0 "#PWR029" H 18950 11250 30  0001 C CNN
+F 1 "GND" H 18950 11180 30  0001 C CNN
+F 2 "" H 18950 11250 60  0001 C CNN
+F 3 "" H 18950 11250 60  0001 C CNN
+	1    18950 11250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR030
+U 1 1 51BBAB1D
+P 18050 11250
+F 0 "#PWR030" H 18050 11250 30  0001 C CNN
+F 1 "GND" H 18050 11180 30  0001 C CNN
+F 2 "" H 18050 11250 60  0001 C CNN
+F 3 "" H 18050 11250 60  0001 C CNN
+	1    18050 11250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR031
+U 1 1 51BBAB23
+P 17900 11250
+F 0 "#PWR031" H 17900 11250 30  0001 C CNN
+F 1 "GND" H 17900 11180 30  0001 C CNN
+F 2 "" H 17900 11250 60  0001 C CNN
+F 3 "" H 17900 11250 60  0001 C CNN
+	1    17900 11250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C24
+U 1 1 51BBAB29
+P 17900 10950
+F 0 "C24" H 17950 11050 50  0000 L CNN
+F 1 "10p" H 17950 10850 50  0000 L CNN
+F 2 "" H 17900 10950 60  0001 C CNN
+F 3 "" H 17900 10950 60  0001 C CNN
+	1    17900 10950
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRYSTAL_4PIN X1
+U 1 1 51BBAB2F
+P 18500 10650
+F 0 "X1" H 18500 10850 60  0000 C CNN
+F 1 "8-24MHZ" H 18500 10400 60  0000 C CNN
+F 2 "" H 18500 10650 60  0001 C CNN
+F 3 "" H 18500 10650 60  0001 C CNN
+	1    18500 10650
+	1    0    0    -1  
+$EndComp
+Text Notes 18200 10250 0    120  Italic 0
+Crystal
+Text Label 19100 10500 0    60   ~ 0
+STM32_OSC_OUT
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C26
+U 1 1 51BBAB37
+P 19100 10950
+F 0 "C26" H 19150 11050 50  0000 L CNN
+F 1 "10p" H 19150 10850 50  0000 L CNN
+F 2 "" H 19100 10950 60  0001 C CNN
+F 3 "" H 19100 10950 60  0001 C CNN
+	1    19100 10950
+	1    0    0    -1  
+$EndComp
+Text Label 12850 5150 0    60   ~ 0
+LED2
+Text Label 12850 5050 0    60   ~ 0
+LED1
+Text Notes 10600 14950 2    30   Italic 0
+Debug port supports the baud rate of 115200bps for\ndebugging and 460800bps for upgrading firmware.
+Text Label 10450 6450 2    60   ~ 0
+GSM_DBG_RXD
+Text Label 10450 6550 2    60   ~ 0
+GSM_DBG_TXD
+Text Notes 20750 3250 0    40   Italic 0
+Serial wire JTAG debug port (SWJ-DP) pins:\nJTAG_TMS = SWDIO\nJTAG_TCK = SWCLK
+Text Notes 1950 4100 1    40   Italic 0
+500nA quiescent current
+Text Notes 2700 1150 0    120  Italic 0
+LDO #1 (always on)
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR032
+U 1 1 51BC4E69
+P 2950 2150
+F 0 "#PWR032" H 2950 2150 30  0001 C CNN
+F 1 "GND" H 2950 2080 30  0001 C CNN
+F 2 "" H 2950 2150 60  0001 C CNN
+F 3 "" H 2950 2150 60  0001 C CNN
+	1    2950 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR033
+U 1 1 51BC4E6F
+P 4550 1450
+F 0 "#PWR033" H 4550 1550 30  0001 C CNN
+F 1 "VDD" H 4550 1560 30  0000 C CNN
+F 2 "" H 4550 1450 60  0001 C CNN
+F 3 "" H 4550 1450 60  0001 C CNN
+	1    4550 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR034
+U 1 1 51BC4E75
+P 2750 2150
+F 0 "#PWR034" H 2750 2150 30  0001 C CNN
+F 1 "GND" H 2750 2080 30  0001 C CNN
+F 2 "" H 2750 2150 60  0001 C CNN
+F 3 "" H 2750 2150 60  0001 C CNN
+	1    2750 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR035
+U 1 1 51BC4E7B
+P 4550 2150
+F 0 "#PWR035" H 4550 2150 30  0001 C CNN
+F 1 "GND" H 4550 2080 30  0001 C CNN
+F 2 "" H 4550 2150 60  0001 C CNN
+F 3 "" H 4550 2150 60  0001 C CNN
+	1    4550 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR036
+U 1 1 51BC4E81
+P 4350 2150
+F 0 "#PWR036" H 4350 2150 30  0001 C CNN
+F 1 "GND" H 4350 2080 30  0001 C CNN
+F 2 "" H 4350 2150 60  0001 C CNN
+F 3 "" H 4350 2150 60  0001 C CNN
+	1    4350 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C12
+U 1 1 51BC4E8D
+P 4550 1850
+F 0 "C12" H 4600 1950 50  0000 L CNN
+F 1 "2u2" H 4600 1750 50  0000 L CNN
+F 2 "" H 4550 1850 60  0001 C CNN
+F 3 "" H 4550 1850 60  0001 C CNN
+	1    4550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C8
+U 1 1 51BC4E93
+P 2750 1850
+F 0 "C8" H 2800 1950 50  0000 L CNN
+F 1 "2u2" H 2800 1750 50  0000 L CNN
+F 2 "" H 2750 1850 60  0001 C CNN
+F 3 "" H 2750 1850 60  0001 C CNN
+	1    2750 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L TPS783XX U4
+U 1 1 51BC63C7
+P 3650 1650
+F 0 "U4" H 3400 1400 60  0000 C CNN
+F 1 "TPS783XX" H 3750 1400 60  0000 C CNN
+F 2 "" H 3650 1650 60  0000 C CNN
+F 3 "" H 3650 1650 60  0000 C CNN
+	1    3650 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR037
+U 1 1 51BCB4E0
+P 2650 1450
+F 0 "#PWR037" H 2650 1400 20  0001 C CNN
+F 1 "+BATT" H 2650 1550 30  0000 C CNN
+F 2 "" H 2650 1450 60  0001 C CNN
+F 3 "" H 2650 1450 60  0001 C CNN
+	1    2650 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R11
+U 1 1 51BCB787
+P 9650 5850
+F 0 "R11" V 9730 5850 50  0000 C CNN
+F 1 "4k7" V 9650 5850 50  0000 C CNN
+F 2 "" H 9650 5850 60  0001 C CNN
+F 3 "" H 9650 5850 60  0001 C CNN
+	1    9650 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R13
+U 1 1 51BA489B
+P 10600 4250
+F 0 "R13" V 10680 4250 50  0000 C CNN
+F 1 "47k" V 10600 4250 50  0000 C CNN
+F 2 "" H 10600 4250 60  0001 C CNN
+F 3 "" H 10600 4250 60  0001 C CNN
+	1    10600 4250
+	0    -1   -1   0   
+$EndComp
+Text Notes 3500 8800 0    120  Italic 0
+Audio
+Text Label 11050 5950 2    60   ~ 0
+GSM_DCD
+Text Label 11050 6350 2    60   ~ 0
+GSM_RI
+Text Label 12850 6400 0    60   ~ 0
+GSM_DTR
+Text Label 12850 5650 0    60   ~ 0
+GSM_CTS
+Text Label 12850 5550 0    60   ~ 0
+GSM_RTS
+Text Label 12850 5350 0    60   ~ 0
+GSM_TXD
+Text Label 12850 5250 0    60   ~ 0
+GSM_RXD
+NoConn ~ 11050 7400
+Text Label 10650 12450 2    60   ~ 0
+GPS_TXD
+Text Label 10650 12550 2    60   ~ 0
+GPS_RXD
+Text Label 11050 5850 2    60   ~ 0
+GPS_TXD
+Text Label 11050 5750 2    60   ~ 0
+GPS_RXD
+$Comp
+L +BATT #PWR038
+U 1 1 51BCF916
+P 19550 6400
+F 0 "#PWR038" H 19550 6350 20  0001 C CNN
+F 1 "+BATT" H 19550 6500 30  0000 C CNN
+F 2 "" H 19550 6400 60  0001 C CNN
+F 3 "" H 19550 6400 60  0001 C CNN
+	1    19550 6400
+	0    1    1    0   
+$EndComp
+NoConn ~ 3150 14400
+$Comp
+L VDD #PWR039
+U 1 1 51BD0AEE
+P 5450 13450
+F 0 "#PWR039" H 5450 13550 30  0001 C CNN
+F 1 "VDD" H 5450 13560 30  0000 C CNN
+F 2 "" H 5450 13450 60  0001 C CNN
+F 3 "" H 5450 13450 60  0001 C CNN
+	1    5450 13450
+	1    0    0    -1  
+$EndComp
+Text Notes 2350 13450 0    120  Italic 0
+Micro-USB-B + ESD Protection
+Text Label 5650 14350 0    60   ~ 0
+USB_DP
+Text Label 5650 14150 0    60   ~ 0
+USB_DM
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R7
+U 1 1 51BD0AF7
+P 5450 13800
+F 0 "R7" V 5530 13800 50  0000 C CNN
+F 1 "2k" V 5450 13800 50  0000 C CNN
+F 2 "" H 5450 13800 60  0001 C CNN
+F 3 "" H 5450 13800 60  0001 C CNN
+	1    5450 13800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R6
+U 1 1 51BD0AFD
+P 5100 14350
+F 0 "R6" V 5180 14350 50  0000 C CNN
+F 1 "10" V 5100 14350 50  0000 C CNN
+F 2 "" H 5100 14350 60  0001 C CNN
+F 3 "" H 5100 14350 60  0001 C CNN
+	1    5100 14350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R5
+U 1 1 51BD0B03
+P 5100 14150
+F 0 "R5" V 5180 14150 50  0000 C CNN
+F 1 "10" V 5100 14150 50  0000 C CNN
+F 2 "" H 5100 14150 60  0001 C CNN
+F 3 "" H 5100 14150 60  0001 C CNN
+	1    5100 14150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR040
+U 1 1 51BD0B09
+P 4150 13750
+F 0 "#PWR040" H 4150 13840 20  0001 C CNN
+F 1 "+5V" H 4150 13840 30  0000 C CNN
+F 2 "" H 4150 13750 60  0001 C CNN
+F 3 "" H 4150 13750 60  0001 C CNN
+	1    4150 13750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR041
+U 1 1 51BD0B0F
+P 4150 14750
+F 0 "#PWR041" H 4150 14750 30  0001 C CNN
+F 1 "GND" H 4150 14680 30  0001 C CNN
+F 2 "" H 4150 14750 60  0001 C CNN
+F 3 "" H 4150 14750 60  0001 C CNN
+	1    4150 14750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR042
+U 1 1 51BD0B15
+P 3200 14650
+F 0 "#PWR042" H 3200 14650 30  0001 C CNN
+F 1 "GND" H 3200 14580 30  0001 C CNN
+F 2 "" H 3200 14650 60  0001 C CNN
+F 3 "" H 3200 14650 60  0001 C CNN
+	1    3200 14650
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB_MICRO_B J1
+U 1 1 51BD0B1B
+P 2850 14300
+F 0 "J1" H 2825 13950 60  0000 C CNN
+F 1 "USB_MICRO_B" H 2850 14650 60  0001 C CNN
+F 2 "" H 2850 14300 60  0001 C CNN
+F 3 "" H 2850 14300 60  0001 C CNN
+	1    2850 14300
+	1    0    0    -1  
+$EndComp
+$Comp
+L TPD2S017 U7
+U 1 1 51BD0B21
+P 4150 14250
+F 0 "U7" H 4250 14550 60  0000 L CNN
+F 1 "TPD2S017" H 4250 13950 60  0000 L CNN
+F 2 "" H 4150 14250 60  0001 C CNN
+F 3 "" H 4150 14250 60  0001 C CNN
+	1    4150 14250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R19
+U 1 1 51BD2E5E
+P 14600 13450
+F 0 "R19" V 14680 13450 50  0000 C CNN
+F 1 "GSMRES1" V 14600 13450 50  0000 C CNN
+F 2 "" H 14600 13450 60  0001 C CNN
+F 3 "" H 14600 13450 60  0001 C CNN
+	1    14600 13450
+	0    1    1    0   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R20
+U 1 1 51BD2E64
+P 15200 13450
+F 0 "R20" V 15280 13450 50  0000 C CNN
+F 1 "GSMRES2" V 15200 13450 50  0000 C CNN
+F 2 "" H 15200 13450 60  0001 C CNN
+F 3 "" H 15200 13450 60  0001 C CNN
+	1    15200 13450
+	0    1    1    0   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C23
+U 1 1 51BD2E6A
+P 14900 13750
+F 0 "C23" H 14950 13850 50  0000 L CNN
+F 1 "GSMCAP2" H 14950 13650 50  0000 L CNN
+F 2 "" H 14900 13750 60  0001 C CNN
+F 3 "" H 14900 13750 60  0001 C CNN
+	1    14900 13750
+	-1   0    0    1   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C21
+U 1 1 51BD2E70
+P 14300 13750
+F 0 "C21" H 14350 13850 50  0000 L CNN
+F 1 "GSMCAP1" H 14350 13650 50  0000 L CNN
+F 2 "" H 14300 13750 60  0001 C CNN
+F 3 "" H 14300 13750 60  0001 C CNN
+	1    14300 13750
+	-1   0    0    1   
+$EndComp
+Text Label 3200 7400 2    60   ~ 0
+ENABLE_GSM_VBAT
+$Comp
+L MOSFET_P Q1
+U 1 1 51BD45F4
+P 3900 7400
+F 0 "Q1" H 3900 7590 60  0000 R CNN
+F 1 "MOSFET_P" H 3900 7220 60  0000 R CNN
+F 2 "" H 3900 7400 60  0001 C CNN
+F 3 "" H 3900 7400 60  0001 C CNN
+	1    3900 7400
+	1    0    0    1   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R3
+U 1 1 51BD45FA
+P 3650 7100
+F 0 "R3" V 3730 7100 50  0000 C CNN
+F 1 "47k" V 3650 7100 50  0000 C CNN
+F 2 "" H 3650 7100 60  0001 C CNN
+F 3 "" H 3650 7100 60  0001 C CNN
+	1    3650 7100
+	0    -1   -1   0   
+$EndComp
+Text Notes 3100 6850 0    120  Italic 0
+GSM's Power
+$Comp
+L PWR_FLAG #FLG043
+U 1 1 51BD4601
+P 4000 7850
+F 0 "#FLG043" H 4000 7945 30  0001 C CNN
+F 1 "PWR_FLAG" H 4000 8030 30  0000 C CNN
+F 2 "" H 4000 7850 60  0001 C CNN
+F 3 "" H 4000 7850 60  0001 C CNN
+	1    4000 7850
+	-1   0    0    1   
+$EndComp
+$Comp
+L +BATT #PWR044
+U 1 1 51BD4626
+P 4000 7050
+F 0 "#PWR044" H 4000 7000 20  0001 C CNN
+F 1 "+BATT" H 4000 7150 30  0000 C CNN
+F 2 "" H 4000 7050 60  0001 C CNN
+F 3 "" H 4000 7050 60  0001 C CNN
+	1    4000 7050
+	1    0    0    -1  
+$EndComp
+Text Label 12850 6600 0    60   ~ 0
+ENABLE_GSM_VBAT
+Text Label 10650 12250 2    60   ~ 0
+GPS_V_BACKUP_PWR
+Text Label 12850 7200 0    60   ~ 0
+GPS_V_BACKUP_PWR
+Text Label 3350 3400 0    60   ~ 0
+ENABLE_LDO2
+Text Label 10650 12050 2    60   ~ 0
+GPS_1PPS_SIGNAL
+Text Label 12850 6800 0    60   ~ 0
+GPS_1PPS_SIGNAL
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R18
+U 1 1 51BD6D05
+P 14300 10650
+F 0 "R18" V 14380 10650 50  0000 C CNN
+F 1 "GPSRES" V 14300 10650 50  0000 C CNN
+F 2 "" H 14300 10650 60  0001 C CNN
+F 3 "" H 14300 10650 60  0001 C CNN
+	1    14300 10650
+	0    1    1    0   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C22
+U 1 1 51BD6D0B
+P 14600 10950
+F 0 "C22" H 14650 11050 50  0000 L CNN
+F 1 "GPSCAP2" H 14650 10850 50  0000 L CNN
+F 2 "" H 14600 10950 60  0001 C CNN
+F 3 "" H 14600 10950 60  0001 C CNN
+	1    14600 10950
+	-1   0    0    1   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C20
+U 1 1 51BD6D11
+P 14000 10950
+F 0 "C20" H 14050 11050 50  0000 L CNN
+F 1 "GPSCAP1" H 14050 10850 50  0000 L CNN
+F 2 "" H 14000 10950 60  0001 C CNN
+F 3 "" H 14000 10950 60  0001 C CNN
+	1    14000 10950
+	-1   0    0    1   
+$EndComp
+Text Notes 4150 7250 0    40   Italic 0
+SOT-23 P-MOSFET (NX2301P for example)
+Text Notes 3300 2600 0    120  Italic 0
+LDO #2
+Text Notes 4150 7400 0    40   Italic 0
+Configure GPIO pin to input or open-drain to disable FET.
+Text Label 12850 6700 0    60   ~ 0
+ENABLE_LDO2
+Text Label 13250 13650 0    60   ~ 0
+GPS_WAKEUP
+Text Label 12850 6000 0    60   ~ 0
+GPS_WAKEUP
+Text Label 19700 6300 0    60   ~ 0
+BATTERY_TEMP
+Text Label 13250 11750 0    60   ~ 0
+BATTERY_TEMP
+Text Label 10650 13050 2    60   ~ 0
+SPK1N
+Text Label 10650 13150 2    60   ~ 0
+SPK1P
+Text Label 10650 13250 2    60   ~ 0
+MIC1P
+Text Label 10650 13350 2    60   ~ 0
+MIC1N
+Text Label 3100 9100 2    60   ~ 0
+SPK1N
+Text Label 3100 9300 2    60   ~ 0
+SPK1P
+Text Label 3950 9300 2    60   ~ 0
+MIC1P
+Text Label 3950 9100 2    60   ~ 0
+MIC1N
+$Comp
+L CONN_2 P5
+U 1 1 51BD8B5B
+P 3450 9200
+F 0 "P5" V 3400 9200 40  0000 C CNN
+F 1 "GSM_SPK" V 3500 9200 40  0000 C CNN
+F 2 "" H 3450 9200 60  0000 C CNN
+F 3 "" H 3450 9200 60  0000 C CNN
+	1    3450 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P6
+U 1 1 51BD8B68
+P 4300 9200
+F 0 "P6" V 4250 9200 40  0000 C CNN
+F 1 "GSM_MIC" V 4350 9200 40  0000 C CNN
+F 2 "" H 4300 9200 60  0000 C CNN
+F 3 "" H 4300 9200 60  0000 C CNN
+	1    4300 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1-RESCUE-ruuvitracker_revc3 C19
+U 1 1 51BD8ED2
+P 13750 13100
+F 0 "C19" H 13800 13200 50  0000 L CNN
+F 1 "680u" H 13800 13000 50  0000 L CNN
+F 2 "" H 13750 13100 60  0001 C CNN
+F 3 "" H 13750 13100 60  0001 C CNN
+	1    13750 13100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10750 13850
+NoConn ~ 10750 13950
+Text Label 12850 4750 0    60   ~ 0
+PB5
+Text Label 12850 5450 0    60   ~ 0
+PB12
+Text Notes 8250 4800 0    40   Italic 0
+Button's usecases:\n\n1) Wake-up the device (uC's WKUP pin [PA0] requires rising edge)\n2) Act as a regular button (press 5 sec to power off for example)
+Text Notes 10050 1750 0    394  Italic 79
+RuuviTracker
+Text Notes 11450 2300 0    197  Italic 39
+Rev.C3
+Text Label 12850 7400 0    60   ~ 0
+GSM_STATUS
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C5
+U 1 1 51BA48C0
+P 11850 8700
+F 0 "C5" H 11900 8800 50  0000 L CNN
+F 1 "220n" H 11900 8600 50  0000 L CNN
+F 2 "" H 11850 8700 60  0001 C CNN
+F 3 "" H 11850 8700 60  0001 C CNN
+	1    11850 8700
+	1    0    0    -1  
+$EndComp
+Text Notes 18750 7800 0    40   Italic 0
+Current consumption typically 1uA when VDD<VBAT.
+NoConn ~ 10750 11350
+$Comp
+L RF_CONN P3
+U 1 1 51BE0A41
+P 14600 12950
+F 0 "P3" H 14600 13300 60  0000 C CNN
+F 1 "GSM_CONN" H 14600 13200 60  0000 C CNN
+F 2 "" H 14600 12950 60  0000 C CNN
+F 3 "" H 14600 12950 60  0000 C CNN
+	1    14600 12950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P7
+U 1 1 51BE0E37
+P 15650 13450
+F 0 "P7" H 15730 13450 40  0000 L CNN
+F 1 "GSM_ANT" H 15650 13505 30  0001 C CNN
+F 2 "" H 15650 13450 60  0000 C CNN
+F 3 "" H 15650 13450 60  0000 C CNN
+	1    15650 13450
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_CONN P2
+U 1 1 51BE0E4F
+P 15050 10850
+F 0 "P2" H 15050 11200 60  0000 C CNN
+F 1 "GPS_CONN" H 15050 11100 60  0000 C CNN
+F 2 "" H 15050 10850 60  0000 C CNN
+F 3 "" H 15050 10850 60  0000 C CNN
+	1    15050 10850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR045
+U 1 1 51C33B6D
+P 2900 3500
+F 0 "#PWR045" H 2900 3500 30  0001 C CNN
+F 1 "GND" H 2900 3430 30  0001 C CNN
+F 2 "" H 2900 3500 60  0001 C CNN
+F 3 "" H 2900 3500 60  0001 C CNN
+	1    2900 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR046
+U 1 1 51C33B79
+P 2750 3500
+F 0 "#PWR046" H 2750 3500 30  0001 C CNN
+F 1 "GND" H 2750 3430 30  0001 C CNN
+F 2 "" H 2750 3500 60  0001 C CNN
+F 3 "" H 2750 3500 60  0001 C CNN
+	1    2750 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR047
+U 1 1 51C33B7F
+P 4550 3500
+F 0 "#PWR047" H 4550 3500 30  0001 C CNN
+F 1 "GND" H 4550 3430 30  0001 C CNN
+F 2 "" H 4550 3500 60  0001 C CNN
+F 3 "" H 4550 3500 60  0001 C CNN
+	1    4550 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR048
+U 1 1 51C33B85
+P 4350 3500
+F 0 "#PWR048" H 4350 3500 30  0001 C CNN
+F 1 "GND" H 4350 3430 30  0001 C CNN
+F 2 "" H 4350 3500 60  0001 C CNN
+F 3 "" H 4350 3500 60  0001 C CNN
+	1    4350 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C13
+U 1 1 51C33B8B
+P 4550 3200
+F 0 "C13" H 4600 3300 50  0000 L CNN
+F 1 "2u2" H 4600 3100 50  0000 L CNN
+F 2 "" H 4550 3200 60  0001 C CNN
+F 3 "" H 4550 3200 60  0001 C CNN
+	1    4550 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C9
+U 1 1 51C33B91
+P 2750 3200
+F 0 "C9" H 2800 3300 50  0000 L CNN
+F 1 "2u2" H 2800 3100 50  0000 L CNN
+F 2 "" H 2750 3200 60  0001 C CNN
+F 3 "" H 2750 3200 60  0001 C CNN
+	1    2750 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L TPS783XX U5
+U 1 1 51C33B97
+P 3650 3000
+F 0 "U5" H 3400 2750 60  0000 C CNN
+F 1 "TPS783XX" H 3750 2750 60  0000 C CNN
+F 2 "" H 3650 3000 60  0000 C CNN
+F 3 "" H 3650 3000 60  0000 C CNN
+	1    3650 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR049
+U 1 1 51C33B9D
+P 2650 2800
+F 0 "#PWR049" H 2650 2750 20  0001 C CNN
+F 1 "+BATT" H 2650 2900 30  0000 C CNN
+F 2 "" H 2650 2800 60  0001 C CNN
+F 3 "" H 2650 2800 60  0001 C CNN
+	1    2650 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R1
+U 1 1 51C3459C
+P 3650 3500
+F 0 "R1" V 3730 3500 50  0000 C CNN
+F 1 "47k" V 3650 3500 50  0000 C CNN
+F 2 "" H 3650 3500 60  0001 C CNN
+F 3 "" H 3650 3500 60  0001 C CNN
+	1    3650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR050
+U 1 1 51C34722
+P 4000 3500
+F 0 "#PWR050" H 4000 3500 30  0001 C CNN
+F 1 "GND" H 4000 3430 30  0001 C CNN
+F 2 "" H 4000 3500 60  0001 C CNN
+F 3 "" H 4000 3500 60  0001 C CNN
+	1    4000 3500
+	0    -1   1    0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR051
+U 1 1 51C34BB4
+P 2900 4950
+F 0 "#PWR051" H 2900 4950 30  0001 C CNN
+F 1 "GND" H 2900 4880 30  0001 C CNN
+F 2 "" H 2900 4950 60  0001 C CNN
+F 3 "" H 2900 4950 60  0001 C CNN
+	1    2900 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR052
+U 1 1 51C34BBA
+P 2750 4950
+F 0 "#PWR052" H 2750 4950 30  0001 C CNN
+F 1 "GND" H 2750 4880 30  0001 C CNN
+F 2 "" H 2750 4950 60  0001 C CNN
+F 3 "" H 2750 4950 60  0001 C CNN
+	1    2750 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR053
+U 1 1 51C34BC0
+P 4550 4950
+F 0 "#PWR053" H 4550 4950 30  0001 C CNN
+F 1 "GND" H 4550 4880 30  0001 C CNN
+F 2 "" H 4550 4950 60  0001 C CNN
+F 3 "" H 4550 4950 60  0001 C CNN
+	1    4550 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR054
+U 1 1 51C34BC6
+P 4350 4950
+F 0 "#PWR054" H 4350 4950 30  0001 C CNN
+F 1 "GND" H 4350 4880 30  0001 C CNN
+F 2 "" H 4350 4950 60  0001 C CNN
+F 3 "" H 4350 4950 60  0001 C CNN
+	1    4350 4950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C14
+U 1 1 51C34BCC
+P 4550 4650
+F 0 "C14" H 4600 4750 50  0000 L CNN
+F 1 "2u2" H 4600 4550 50  0000 L CNN
+F 2 "" H 4550 4650 60  0001 C CNN
+F 3 "" H 4550 4650 60  0001 C CNN
+	1    4550 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C10
+U 1 1 51C34BD2
+P 2750 4650
+F 0 "C10" H 2800 4750 50  0000 L CNN
+F 1 "2u2" H 2800 4550 50  0000 L CNN
+F 2 "" H 2750 4650 60  0001 C CNN
+F 3 "" H 2750 4650 60  0001 C CNN
+	1    2750 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L TPS783XX U6
+U 1 1 51C34BD8
+P 3650 4450
+F 0 "U6" H 3400 4200 60  0000 C CNN
+F 1 "TPS783XX" H 3750 4200 60  0000 C CNN
+F 2 "" H 3650 4450 60  0000 C CNN
+F 3 "" H 3650 4450 60  0000 C CNN
+	1    3650 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR055
+U 1 1 51C34BDE
+P 2650 4250
+F 0 "#PWR055" H 2650 4200 20  0001 C CNN
+F 1 "+BATT" H 2650 4350 30  0000 C CNN
+F 2 "" H 2650 4250 60  0001 C CNN
+F 3 "" H 2650 4250 60  0001 C CNN
+	1    2650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R2
+U 1 1 51C34BF4
+P 3650 4950
+F 0 "R2" V 3730 4950 50  0000 C CNN
+F 1 "47k" V 3650 4950 50  0000 C CNN
+F 2 "" H 3650 4950 60  0001 C CNN
+F 3 "" H 3650 4950 60  0001 C CNN
+	1    3650 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR056
+U 1 1 51C34BFC
+P 4000 4950
+F 0 "#PWR056" H 4000 4950 30  0001 C CNN
+F 1 "GND" H 4000 4880 30  0001 C CNN
+F 2 "" H 4000 4950 60  0001 C CNN
+F 3 "" H 4000 4950 60  0001 C CNN
+	1    4000 4950
+	0    -1   1    0   
+$EndComp
+Text Label 3350 4850 0    60   ~ 0
+ENABLE_LDO3
+Text Notes 3300 4050 0    120  Italic 0
+LDO #3
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R23
+U 1 1 51C35514
+P 21050 10900
+F 0 "R23" V 21130 10900 50  0000 C CNN
+F 1 "4k7" V 21050 10900 50  0000 C CNN
+F 2 "" H 21050 10900 60  0001 C CNN
+F 3 "" H 21050 10900 60  0001 C CNN
+	1    21050 10900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R24
+U 1 1 51C3551A
+P 21050 11100
+F 0 "R24" V 21130 11100 50  0000 C CNN
+F 1 "4k7" V 21050 11100 50  0000 C CNN
+F 2 "" H 21050 11100 60  0001 C CNN
+F 3 "" H 21050 11100 60  0001 C CNN
+	1    21050 11100
+	0    1    1    0   
+$EndComp
+Text Label 4650 2900 0    60   ~ 0
+LDO_2
+Text Label 4650 4350 0    60   ~ 0
+LDO_3
+$Comp
+L +5V #PWR057
+U 1 1 51C365C0
+P 3200 14000
+F 0 "#PWR057" H 3200 14090 20  0001 C CNN
+F 1 "+5V" H 3200 14090 30  0000 C CNN
+F 2 "" H 3200 14000 60  0001 C CNN
+F 3 "" H 3200 14000 60  0001 C CNN
+	1    3200 14000
+	1    0    0    -1  
+$EndComp
+Text Notes 10600 6650 2    40   Italic 0
+During flashing the MCU, GSM's power is cutted off -> DBG_TXD cannot cause any conflicts.
+$Comp
+L PUSH_BUTTON SW1
+U 1 1 51E78619
+P 9650 5350
+F 0 "SW1" H 9650 5510 50  0000 C CNN
+F 1 "WKUP_BUT" H 9650 5070 50  0000 C CNN
+F 2 "" H 9650 5350 60  0000 C CNN
+F 3 "" H 9650 5350 60  0000 C CNN
+	1    9650 5350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 19300 2750
+NoConn ~ 19300 4250
+$Comp
+L +BATT #PWR058
+U 1 1 51E83960
+P 18850 2900
+F 0 "#PWR058" H 18850 2850 20  0001 C CNN
+F 1 "+BATT" H 18850 3000 30  0000 C CNN
+F 2 "" H 18850 2900 60  0001 C CNN
+F 3 "" H 18850 2900 60  0001 C CNN
+	1    18850 2900
+	1    0    0    -1  
+$EndComp
+Text Label 19700 3850 0    60   ~ 0
+STM32_RST
+Text Label 19700 2950 0    60   ~ 0
+USART1_TX
+Text Label 19700 3050 0    60   ~ 0
+USART1_RX
+Text Label 18900 3350 2    60   ~ 0
+I2C1_SDA
+Text Label 18900 3450 2    60   ~ 0
+I2C1_SCL
+Text Label 18900 3850 2    60   ~ 0
+SPI1_SCK
+Text Label 18900 4050 2    60   ~ 0
+SPI1_MISO
+Text Label 18900 3950 2    60   ~ 0
+SPI1_MOSI
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR059
+U 1 1 51E83B35
+P 18200 3650
+F 0 "#PWR059" H 18200 3650 30  0001 C CNN
+F 1 "GND" H 18200 3580 30  0001 C CNN
+F 2 "" H 18200 3650 60  0001 C CNN
+F 3 "" H 18200 3650 60  0001 C CNN
+	1    18200 3650
+	0    1    -1   0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR060
+U 1 1 51E83CBA
+P 20450 3350
+F 0 "#PWR060" H 20450 3350 30  0001 C CNN
+F 1 "GND" H 20450 3280 30  0001 C CNN
+F 2 "" H 20450 3350 60  0001 C CNN
+F 3 "" H 20450 3350 60  0001 C CNN
+	1    20450 3350
+	0    -1   1    0   
+$EndComp
+Text Notes 19000 4450 0    40   Italic 0
+Hirose DF37NB-24DS
+Text Label 18900 3250 2    60   ~ 0
+PB5
+Text Label 18900 3150 2    60   ~ 0
+PB12
+Text Label 12850 6200 0    60   ~ 0
+PC3
+Text Label 18900 3550 2    60   ~ 0
+PC3
+$Comp
+L IPROTOXI_CONN P1
+U 1 1 51E84665
+P 19300 3500
+F 0 "P1" H 19300 4350 60  0000 C CNN
+F 1 "AISTIN_BUS24_CONNECTOR" V 19300 3500 50  0000 C CNN
+F 2 "" H 19300 3600 60  0000 C CNN
+F 3 "" H 19300 3600 60  0000 C CNN
+	1    19300 3500
+	1    0    0    -1  
+$EndComp
+Text Label 12850 6500 0    60   ~ 0
+ENABLE_LDO3
+Text Label 19700 3150 0    60   ~ 0
+PB3_JTAG_TDO
+Text Label 19700 3750 0    60   ~ 0
+PB4_JTAG_TRST
+Text Label 19700 3450 0    60   ~ 0
+PA13_JTAG_TMS
+Text Label 19700 3250 0    60   ~ 0
+PA14_JTAG_TCK
+Text Label 18900 3750 2    60   ~ 0
+PA15_JTAG_TDI
+Text Notes 18400 2550 0    120  Italic 0
+Expander Connector
+Text Label 12850 4250 0    60   ~ 0
+PB0
+Text Label 12850 4350 0    60   ~ 0
+PB1
+Text Label 19700 3650 0    60   ~ 0
+PB0
+Text Label 19700 3550 0    60   ~ 0
+PB1
+$Comp
+L PWR_FLAG #FLG061
+U 1 1 51E96663
+P 3450 14050
+F 0 "#FLG061" H 3450 14145 30  0001 C CNN
+F 1 "PWR_FLAG" H 3450 14230 30  0000 C CNN
+F 2 "" H 3450 14050 60  0000 C CNN
+F 3 "" H 3450 14050 60  0000 C CNN
+	1    3450 14050
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG062
+U 1 1 51E967E6
+P 3450 14550
+F 0 "#FLG062" H 3450 14645 30  0001 C CNN
+F 1 "PWR_FLAG" H 3450 14730 30  0000 C CNN
+F 2 "" H 3450 14550 60  0000 C CNN
+F 3 "" H 3450 14550 60  0000 C CNN
+	1    3450 14550
+	-1   0    0    1   
+$EndComp
+$Comp
+L STM32F10xxx_LQFP64 U1
+U 1 1 51E96B56
+P 11950 6200
+F 0 "U1" H 12550 4050 50  0000 C CNN
+F 1 "STM32F10XXX_LQFP64" H 11700 4050 50  0000 C CNN
+F 2 "" H 11950 6200 60  0000 C CNN
+F 3 "" H 11950 6200 60  0000 C CNN
+	1    11950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SIM968 U2
+U 1 1 51E96E00
+P 11950 13000
+F 0 "U2" H 12700 10900 60  0000 C CNN
+F 1 "SIM968" H 11250 10900 60  0000 C CNN
+F 2 "" H 11950 13000 60  0000 C CNN
+F 3 "" H 11950 13000 60  0000 C CNN
+	1    11950 13000
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG063
+U 1 1 51E96E17
+P 13200 7750
+F 0 "#FLG063" H 13200 7845 30  0001 C CNN
+F 1 "PWR_FLAG" H 13200 7930 30  0000 C CNN
+F 2 "" H 13200 7750 60  0000 C CNN
+F 3 "" H 13200 7750 60  0000 C CNN
+	1    13200 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG064
+U 1 1 51E96E24
+P 12950 7750
+F 0 "#FLG064" H 12950 7845 30  0001 C CNN
+F 1 "PWR_FLAG" H 12950 7930 30  0000 C CNN
+F 2 "" H 12950 7750 60  0000 C CNN
+F 3 "" H 12950 7750 60  0000 C CNN
+	1    12950 7750
+	1    0    0    -1  
+$EndComp
+Text Label 19700 4050 0    60   ~ 0
+LDO_4
+Text Notes 1850 3550 3    40   Italic 0
+4 x 3V0 LDO
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR065
+U 1 1 51EB9334
+P 9400 12150
+F 0 "#PWR065" H 9400 12150 30  0001 C CNN
+F 1 "GND" H 9400 12080 30  0001 C CNN
+F 2 "" H 9400 12150 60  0001 C CNN
+F 3 "" H 9400 12150 60  0001 C CNN
+	1    9400 12150
+	0    1    1    0   
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C15
+U 1 1 51EB933A
+P 9650 12150
+F 0 "C15" H 9700 12250 50  0000 L CNN
+F 1 "2u2" H 9700 12050 50  0000 L CNN
+F 2 "" H 9650 12150 60  0001 C CNN
+F 3 "" H 9650 12150 60  0001 C CNN
+	1    9650 12150
+	0    -1   -1   0   
+$EndComp
+Text Label 4200 7700 0    60   ~ 0
+BATT_PFET
+Text Label 19700 3950 0    60   ~ 0
+VCC
+Text Label 18900 3050 2    60   ~ 0
+VCC
+$Comp
+L CONN_1 P8
+U 1 1 52072282
+P 17850 3350
+F 0 "P8" H 17930 3350 40  0000 L CNN
+F 1 "ALIGNMENT" H 17850 3405 30  0001 C CNN
+F 2 "" H 17850 3350 60  0000 C CNN
+F 3 "" H 17850 3350 60  0000 C CNN
+	1    17850 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR066
+U 1 1 52072312
+P 17850 3550
+F 0 "#PWR066" H 17850 3550 30  0001 C CNN
+F 1 "GND" H 17850 3480 30  0001 C CNN
+F 2 "" H 17850 3550 60  0001 C CNN
+F 3 "" H 17850 3550 60  0001 C CNN
+	1    17850 3550
+	-1   0    0    -1  
+$EndComp
+Text Notes 17750 3650 1    40   Italic 0
+Alignment hole
+Text Notes 17100 8350 0    40   Italic 0
+Select the correct version:\nMCP73831T-2ACI/OT\nMCP73831T-2DCI/OT\nMCP73831T-2ATI/OT
+$Comp
+L CONN_1 P4
+U 1 1 520F56A6
+P 11600 15700
+F 0 "P4" H 11680 15700 40  0000 L CNN
+F 1 "FIDU" H 11600 15755 30  0001 C CNN
+F 2 "" H 11600 15700 60  0000 C CNN
+F 3 "" H 11600 15700 60  0000 C CNN
+	1    11600 15700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P9
+U 1 1 520F56B8
+P 11700 15700
+F 0 "P9" H 11780 15700 40  0000 L CNN
+F 1 "FIDU" H 11700 15755 30  0001 C CNN
+F 2 "" H 11700 15700 60  0000 C CNN
+F 3 "" H 11700 15700 60  0000 C CNN
+	1    11700 15700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P10
+U 1 1 520F56BE
+P 11800 15700
+F 0 "P10" H 11880 15700 40  0000 L CNN
+F 1 "FIDU" H 11800 15755 30  0001 C CNN
+F 2 "" H 11800 15700 60  0000 C CNN
+F 3 "" H 11800 15700 60  0000 C CNN
+	1    11800 15700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P11
+U 1 1 520F56C4
+P 11900 15700
+F 0 "P11" H 11980 15700 40  0000 L CNN
+F 1 "FIDU" H 11900 15755 30  0001 C CNN
+F 2 "" H 11900 15700 60  0000 C CNN
+F 3 "" H 11900 15700 60  0000 C CNN
+	1    11900 15700
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 11600 15850
+NoConn ~ 11700 15850
+NoConn ~ 11800 15850
+NoConn ~ 11900 15850
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR067
+U 1 1 52760CCD
+P 2900 6350
+F 0 "#PWR067" H 2900 6350 30  0001 C CNN
+F 1 "GND" H 2900 6280 30  0001 C CNN
+F 2 "" H 2900 6350 60  0001 C CNN
+F 3 "" H 2900 6350 60  0001 C CNN
+	1    2900 6350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR068
+U 1 1 52760CD3
+P 2750 6350
+F 0 "#PWR068" H 2750 6350 30  0001 C CNN
+F 1 "GND" H 2750 6280 30  0001 C CNN
+F 2 "" H 2750 6350 60  0001 C CNN
+F 3 "" H 2750 6350 60  0001 C CNN
+	1    2750 6350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR069
+U 1 1 52760CD9
+P 4550 6350
+F 0 "#PWR069" H 4550 6350 30  0001 C CNN
+F 1 "GND" H 4550 6280 30  0001 C CNN
+F 2 "" H 4550 6350 60  0001 C CNN
+F 3 "" H 4550 6350 60  0001 C CNN
+	1    4550 6350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR070
+U 1 1 52760CDF
+P 4350 6350
+F 0 "#PWR070" H 4350 6350 30  0001 C CNN
+F 1 "GND" H 4350 6280 30  0001 C CNN
+F 2 "" H 4350 6350 60  0001 C CNN
+F 3 "" H 4350 6350 60  0001 C CNN
+	1    4350 6350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C31
+U 1 1 52760CE5
+P 4550 6050
+F 0 "C31" H 4600 6150 50  0000 L CNN
+F 1 "2u2" H 4600 5950 50  0000 L CNN
+F 2 "" H 4550 6050 60  0001 C CNN
+F 3 "" H 4550 6050 60  0001 C CNN
+	1    4550 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C30
+U 1 1 52760CEB
+P 2750 6050
+F 0 "C30" H 2800 6150 50  0000 L CNN
+F 1 "2u2" H 2800 5950 50  0000 L CNN
+F 2 "" H 2750 6050 60  0001 C CNN
+F 3 "" H 2750 6050 60  0001 C CNN
+	1    2750 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L TPS783XX U11
+U 1 1 52760CF1
+P 3650 5850
+F 0 "U11" H 3400 5600 60  0000 C CNN
+F 1 "TPS783XX" H 3750 5600 60  0000 C CNN
+F 2 "" H 3650 5850 60  0000 C CNN
+F 3 "" H 3650 5850 60  0000 C CNN
+	1    3650 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L +BATT #PWR071
+U 1 1 52760CF7
+P 2650 5650
+F 0 "#PWR071" H 2650 5600 20  0001 C CNN
+F 1 "+BATT" H 2650 5750 30  0000 C CNN
+F 2 "" H 2650 5650 60  0001 C CNN
+F 3 "" H 2650 5650 60  0001 C CNN
+	1    2650 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R-RESCUE-ruuvitracker_revc3 R4
+U 1 1 52760CFD
+P 3650 6350
+F 0 "R4" V 3730 6350 50  0000 C CNN
+F 1 "47k" V 3650 6350 50  0000 C CNN
+F 2 "" H 3650 6350 60  0001 C CNN
+F 3 "" H 3650 6350 60  0001 C CNN
+	1    3650 6350
+	0    1    1    0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR072
+U 1 1 52760D03
+P 4000 6350
+F 0 "#PWR072" H 4000 6350 30  0001 C CNN
+F 1 "GND" H 4000 6280 30  0001 C CNN
+F 2 "" H 4000 6350 60  0001 C CNN
+F 3 "" H 4000 6350 60  0001 C CNN
+	1    4000 6350
+	0    -1   1    0   
+$EndComp
+Text Label 3350 6250 0    60   ~ 0
+ENABLE_LDO4
+Text Notes 3300 5450 0    120  Italic 0
+LDO #4
+Text Label 4650 5750 0    60   ~ 0
+LDO_4
+Text Label 13850 12800 0    60   ~ 0
+BATT_PFET
+Text Label 10650 12150 2    60   ~ 0
+LDO_3
+Text Label 14950 11450 2    60   ~ 0
+LDO_2
+Text Label 21400 12750 0    60   ~ 0
+LDO_2
+Text Label 18350 13300 2    60   ~ 0
+LDO_2
+$Comp
+L CONN_2 P12
+U 1 1 52B565F2
+P 1800 14300
+F 0 "P12" V 1750 14300 40  0000 C CNN
+F 1 "5V_IN" V 1850 14300 40  0000 C CNN
+F 2 "" H 1800 14300 60  0000 C CNN
+F 3 "" H 1800 14300 60  0000 C CNN
+	1    1800 14300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR073
+U 1 1 52B56618
+P 2200 14500
+F 0 "#PWR073" H 2200 14500 30  0001 C CNN
+F 1 "GND" H 2200 14430 30  0001 C CNN
+F 2 "" H 2200 14500 60  0001 C CNN
+F 3 "" H 2200 14500 60  0001 C CNN
+	1    2200 14500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR074
+U 1 1 52B5661E
+P 2200 14100
+F 0 "#PWR074" H 2200 14190 20  0001 C CNN
+F 1 "+5V" H 2200 14190 30  0000 C CNN
+F 2 "" H 2200 14100 60  0001 C CNN
+F 3 "" H 2200 14100 60  0001 C CNN
+	1    2200 14100
+	1    0    0    -1  
+$EndComp
+Text Notes 5350 3050 0    40   Italic 0
+microSD\nGPS active antenna
+Text Notes 5350 4550 0    40   Italic 0
+GPS_VCC
+Text Notes 5350 6050 0    40   Italic 0
+Expansion port
+Text Label 12850 5900 0    60   ~ 0
+ENABLE_LDO4
+Text Notes 11600 5900 0    40   Italic 0
+Interrupt input pins:\n\nPA0 = ACC_INT1\nPA1 = ACC_INT2\nPC5 = GSM_DTR\nPA8 = GSM_RI\nPC9 = GPS_1PPS_SIGNAL\nPC10 = SD_CARD_INSERTED\nPC11 = CHARGER_STATUS\nPC14 = GSM_NETLIGHT\nPC15 = GSM_STATUS
+Text Label 9250 5850 2    60   ~ 0
+ACC_INT1
+$Comp
+L VDD #PWR075
+U 1 1 52C329DC
+P 9200 5250
+F 0 "#PWR075" H 9200 5350 30  0001 C CNN
+F 1 "VDD" H 9200 5360 30  0000 C CNN
+F 2 "" H 9200 5250 60  0001 C CNN
+F 3 "" H 9200 5250 60  0001 C CNN
+	1    9200 5250
+	1    0    0    -1  
+$EndComp
+Text Label 21450 3800 2    60   ~ 0
+VCC
+Text Label 21450 3700 2    60   ~ 0
+LDO_4
+Text Label 21450 3900 2    60   ~ 0
+BATT_PFET
+$Comp
+L SOLDER_JUMPER_3 SJ1
+U 1 1 52C40328
+P 21800 3750
+F 0 "SJ1" H 21810 3890 60  0000 C CNN
+F 1 "SOLDER_JUMPER_3_PASTE1&2" H 21800 3500 60  0000 C CNN
+F 2 "" H 21740 3650 60  0000 C CNN
+F 3 "" H 21740 3650 60  0000 C CNN
+	1    21800 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P19
+U 1 1 52D0E800
+P 18150 3150
+F 0 "P19" H 18230 3150 40  0000 L CNN
+F 1 "CONN_1" H 18150 3205 30  0001 C CNN
+F 2 "" H 18150 3150 60  0000 C CNN
+F 3 "" H 18150 3150 60  0000 C CNN
+	1    18150 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P20
+U 1 1 52D0E81B
+P 18150 3250
+F 0 "P20" H 18230 3250 40  0000 L CNN
+F 1 "CONN_1" H 18150 3305 30  0001 C CNN
+F 2 "" H 18150 3250 60  0000 C CNN
+F 3 "" H 18150 3250 60  0000 C CNN
+	1    18150 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P21
+U 1 1 52D0E821
+P 18150 3350
+F 0 "P21" H 18230 3350 40  0000 L CNN
+F 1 "CONN_1" H 18150 3405 30  0001 C CNN
+F 2 "" H 18150 3350 60  0000 C CNN
+F 3 "" H 18150 3350 60  0000 C CNN
+	1    18150 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P22
+U 1 1 52D0E827
+P 18150 3450
+F 0 "P22" H 18230 3450 40  0000 L CNN
+F 1 "CONN_1" H 18150 3505 30  0001 C CNN
+F 2 "" H 18150 3450 60  0000 C CNN
+F 3 "" H 18150 3450 60  0000 C CNN
+	1    18150 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P23
+U 1 1 52D0E82D
+P 18150 3550
+F 0 "P23" H 18230 3550 40  0000 L CNN
+F 1 "CONN_1" H 18150 3605 30  0001 C CNN
+F 2 "" H 18150 3550 60  0000 C CNN
+F 3 "" H 18150 3550 60  0000 C CNN
+	1    18150 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P24
+U 1 1 52D0E833
+P 18150 3750
+F 0 "P24" H 18230 3750 40  0000 L CNN
+F 1 "CONN_1" H 18150 3805 30  0001 C CNN
+F 2 "" H 18150 3750 60  0000 C CNN
+F 3 "" H 18150 3750 60  0000 C CNN
+	1    18150 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P25
+U 1 1 52D0E839
+P 18150 3850
+F 0 "P25" H 18230 3850 40  0000 L CNN
+F 1 "CONN_1" H 18150 3905 30  0001 C CNN
+F 2 "" H 18150 3850 60  0000 C CNN
+F 3 "" H 18150 3850 60  0000 C CNN
+	1    18150 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P26
+U 1 1 52D0E83F
+P 18150 3950
+F 0 "P26" H 18230 3950 40  0000 L CNN
+F 1 "CONN_1" H 18150 4005 30  0001 C CNN
+F 2 "" H 18150 3950 60  0000 C CNN
+F 3 "" H 18150 3950 60  0000 C CNN
+	1    18150 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P27
+U 1 1 52D0E845
+P 18150 4050
+F 0 "P27" H 18230 4050 40  0000 L CNN
+F 1 "CONN_1" H 18150 4105 30  0001 C CNN
+F 2 "" H 18150 4050 60  0000 C CNN
+F 3 "" H 18150 4050 60  0000 C CNN
+	1    18150 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P18
+U 1 1 52D0E84B
+P 18150 3050
+F 0 "P18" H 18230 3050 40  0000 L CNN
+F 1 "CONN_1" H 18150 3105 30  0001 C CNN
+F 2 "" H 18150 3050 60  0000 C CNN
+F 3 "" H 18150 3050 60  0000 C CNN
+	1    18150 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_1 P28
+U 1 1 52D0E851
+P 20500 2950
+F 0 "P28" H 20580 2950 40  0000 L CNN
+F 1 "CONN_1" H 20500 3005 30  0001 C CNN
+F 2 "" H 20500 2950 60  0000 C CNN
+F 3 "" H 20500 2950 60  0000 C CNN
+	1    20500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P29
+U 1 1 52D0E857
+P 20500 3050
+F 0 "P29" H 20580 3050 40  0000 L CNN
+F 1 "CONN_1" H 20500 3105 30  0001 C CNN
+F 2 "" H 20500 3050 60  0000 C CNN
+F 3 "" H 20500 3050 60  0000 C CNN
+	1    20500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P30
+U 1 1 52D0E85D
+P 20500 3150
+F 0 "P30" H 20580 3150 40  0000 L CNN
+F 1 "CONN_1" H 20500 3205 30  0001 C CNN
+F 2 "" H 20500 3150 60  0000 C CNN
+F 3 "" H 20500 3150 60  0000 C CNN
+	1    20500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P31
+U 1 1 52D0E863
+P 20500 3250
+F 0 "P31" H 20580 3250 40  0000 L CNN
+F 1 "CONN_1" H 20500 3305 30  0001 C CNN
+F 2 "" H 20500 3250 60  0000 C CNN
+F 3 "" H 20500 3250 60  0000 C CNN
+	1    20500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P32
+U 1 1 52D0E869
+P 20500 3450
+F 0 "P32" H 20580 3450 40  0000 L CNN
+F 1 "CONN_1" H 20500 3505 30  0001 C CNN
+F 2 "" H 20500 3450 60  0000 C CNN
+F 3 "" H 20500 3450 60  0000 C CNN
+	1    20500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P33
+U 1 1 52D0E86F
+P 20500 3550
+F 0 "P33" H 20580 3550 40  0000 L CNN
+F 1 "CONN_1" H 20500 3605 30  0001 C CNN
+F 2 "" H 20500 3550 60  0000 C CNN
+F 3 "" H 20500 3550 60  0000 C CNN
+	1    20500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P34
+U 1 1 52D0E875
+P 20500 3650
+F 0 "P34" H 20580 3650 40  0000 L CNN
+F 1 "CONN_1" H 20500 3705 30  0001 C CNN
+F 2 "" H 20500 3650 60  0000 C CNN
+F 3 "" H 20500 3650 60  0000 C CNN
+	1    20500 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P35
+U 1 1 52D0E87B
+P 20500 3750
+F 0 "P35" H 20580 3750 40  0000 L CNN
+F 1 "CONN_1" H 20500 3805 30  0001 C CNN
+F 2 "" H 20500 3750 60  0000 C CNN
+F 3 "" H 20500 3750 60  0000 C CNN
+	1    20500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P36
+U 1 1 52D0E881
+P 20500 3850
+F 0 "P36" H 20580 3850 40  0000 L CNN
+F 1 "CONN_1" H 20500 3905 30  0001 C CNN
+F 2 "" H 20500 3850 60  0000 C CNN
+F 3 "" H 20500 3850 60  0000 C CNN
+	1    20500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P37
+U 1 1 52D0E8A8
+P 20500 3950
+F 0 "P37" H 20580 3950 40  0000 L CNN
+F 1 "CONN_1" H 20500 4005 30  0001 C CNN
+F 2 "" H 20500 3950 60  0000 C CNN
+F 3 "" H 20500 3950 60  0000 C CNN
+	1    20500 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR076
+U 1 1 52D0E8B1
+P 20300 4000
+F 0 "#PWR076" H 20300 4000 30  0001 C CNN
+F 1 "GND" H 20300 3930 30  0001 C CNN
+F 2 "" H 20300 4000 60  0001 C CNN
+F 3 "" H 20300 4000 60  0001 C CNN
+	1    20300 4000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P16
+U 1 1 52D1083D
+P 4800 1550
+F 0 "P16" H 4880 1550 40  0000 L CNN
+F 1 "CONN_1" H 4800 1605 30  0001 C CNN
+F 2 "" H 4800 1550 60  0000 C CNN
+F 3 "" H 4800 1550 60  0000 C CNN
+	1    4800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P13
+U 1 1 52D109E1
+P 4550 2650
+F 0 "P13" H 4630 2650 40  0000 L CNN
+F 1 "CONN_1" H 4550 2705 30  0001 C CNN
+F 2 "" H 4550 2650 60  0000 C CNN
+F 3 "" H 4550 2650 60  0000 C CNN
+	1    4550 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P14
+U 1 1 52D10B85
+P 4550 4100
+F 0 "P14" H 4630 4100 40  0000 L CNN
+F 1 "CONN_1" H 4550 4155 30  0001 C CNN
+F 2 "" H 4550 4100 60  0000 C CNN
+F 3 "" H 4550 4100 60  0000 C CNN
+	1    4550 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P15
+U 1 1 52D10D29
+P 4550 5500
+F 0 "P15" H 4630 5500 40  0000 L CNN
+F 1 "CONN_1" H 4550 5555 30  0001 C CNN
+F 2 "" H 4550 5500 60  0000 C CNN
+F 3 "" H 4550 5500 60  0000 C CNN
+	1    4550 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P17
+U 1 1 52D10ECD
+P 10700 3950
+F 0 "P17" H 10780 3950 40  0000 L CNN
+F 1 "CONN_1" H 10700 4005 30  0001 C CNN
+F 2 "" H 10700 3950 60  0000 C CNN
+F 3 "" H 10700 3950 60  0000 C CNN
+	1    10700 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR077
+U 1 1 52D11A46
+P 14650 13300
+F 0 "#PWR077" H 14650 13300 40  0001 C CNN
+F 1 "GNDA" H 14650 13230 40  0000 C CNN
+F 2 "" H 14650 13300 60  0000 C CNN
+F 3 "" H 14650 13300 60  0000 C CNN
+	1    14650 13300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR078
+U 1 1 52D11A67
+P 15100 11250
+F 0 "#PWR078" H 15100 11250 40  0001 C CNN
+F 1 "GNDA" H 15100 11180 40  0000 C CNN
+F 2 "" H 15100 11250 60  0000 C CNN
+F 3 "" H 15100 11250 60  0000 C CNN
+	1    15100 11250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR079
+U 1 1 52D11D58
+P 13200 11050
+F 0 "#PWR079" H 13200 11050 40  0001 C CNN
+F 1 "GNDA" H 13200 10980 40  0000 C CNN
+F 2 "" H 13200 11050 60  0000 C CNN
+F 3 "" H 13200 11050 60  0000 C CNN
+	1    13200 11050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR080
+U 1 1 52D11D5E
+P 13200 11250
+F 0 "#PWR080" H 13200 11250 40  0001 C CNN
+F 1 "GNDA" H 13200 11180 40  0000 C CNN
+F 2 "" H 13200 11250 60  0000 C CNN
+F 3 "" H 13200 11250 60  0000 C CNN
+	1    13200 11250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR081
+U 1 1 52D11D64
+P 13200 11350
+F 0 "#PWR081" H 13200 11350 40  0001 C CNN
+F 1 "GNDA" H 13200 11280 40  0000 C CNN
+F 2 "" H 13200 11350 60  0000 C CNN
+F 3 "" H 13200 11350 60  0000 C CNN
+	1    13200 11350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR082
+U 1 1 52D11D6A
+P 13200 12550
+F 0 "#PWR082" H 13200 12550 40  0001 C CNN
+F 1 "GNDA" H 13200 12480 40  0000 C CNN
+F 2 "" H 13200 12550 60  0000 C CNN
+F 3 "" H 13200 12550 60  0000 C CNN
+	1    13200 12550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR083
+U 1 1 52D11D70
+P 13200 12650
+F 0 "#PWR083" H 13200 12650 40  0001 C CNN
+F 1 "GNDA" H 13200 12580 40  0000 C CNN
+F 2 "" H 13200 12650 60  0000 C CNN
+F 3 "" H 13200 12650 60  0000 C CNN
+	1    13200 12650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR084
+U 1 1 52D11D76
+P 13450 13400
+F 0 "#PWR084" H 13450 13400 40  0001 C CNN
+F 1 "GNDA" H 13450 13330 40  0000 C CNN
+F 2 "" H 13450 13400 60  0000 C CNN
+F 3 "" H 13450 13400 60  0000 C CNN
+	1    13450 13400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR085
+U 1 1 52D11D7C
+P 13750 13400
+F 0 "#PWR085" H 13750 13400 40  0001 C CNN
+F 1 "GNDA" H 13750 13330 40  0000 C CNN
+F 2 "" H 13750 13400 60  0000 C CNN
+F 3 "" H 13750 13400 60  0000 C CNN
+	1    13750 13400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR086
+U 1 1 52D11D82
+P 13200 13250
+F 0 "#PWR086" H 13200 13250 40  0001 C CNN
+F 1 "GNDA" H 13200 13180 40  0000 C CNN
+F 2 "" H 13200 13250 60  0000 C CNN
+F 3 "" H 13200 13250 60  0000 C CNN
+	1    13200 13250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR087
+U 1 1 52D11D88
+P 13200 13350
+F 0 "#PWR087" H 13200 13350 40  0001 C CNN
+F 1 "GNDA" H 13200 13280 40  0000 C CNN
+F 2 "" H 13200 13350 60  0000 C CNN
+F 3 "" H 13200 13350 60  0000 C CNN
+	1    13200 13350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR088
+U 1 1 52D11D8E
+P 13200 14750
+F 0 "#PWR088" H 13200 14750 40  0001 C CNN
+F 1 "GNDA" H 13200 14680 40  0000 C CNN
+F 2 "" H 13200 14750 60  0000 C CNN
+F 3 "" H 13200 14750 60  0000 C CNN
+	1    13200 14750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR089
+U 1 1 52D11D94
+P 13200 14950
+F 0 "#PWR089" H 13200 14950 40  0001 C CNN
+F 1 "GNDA" H 13200 14880 40  0000 C CNN
+F 2 "" H 13200 14950 60  0000 C CNN
+F 3 "" H 13200 14950 60  0000 C CNN
+	1    13200 14950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR090
+U 1 1 52D11D9A
+P 10700 14950
+F 0 "#PWR090" H 10700 14950 40  0001 C CNN
+F 1 "GNDA" H 10700 14880 40  0000 C CNN
+F 2 "" H 10700 14950 60  0000 C CNN
+F 3 "" H 10700 14950 60  0000 C CNN
+	1    10700 14950
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR091
+U 1 1 52D11DA0
+P 10700 14650
+F 0 "#PWR091" H 10700 14650 40  0001 C CNN
+F 1 "GNDA" H 10700 14580 40  0000 C CNN
+F 2 "" H 10700 14650 60  0000 C CNN
+F 3 "" H 10700 14650 60  0000 C CNN
+	1    10700 14650
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR092
+U 1 1 52D11DA6
+P 10700 11950
+F 0 "#PWR092" H 10700 11950 40  0001 C CNN
+F 1 "GNDA" H 10700 11880 40  0000 C CNN
+F 2 "" H 10700 11950 60  0000 C CNN
+F 3 "" H 10700 11950 60  0000 C CNN
+	1    10700 11950
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR093
+U 1 1 52D11DAC
+P 10700 11450
+F 0 "#PWR093" H 10700 11450 40  0001 C CNN
+F 1 "GNDA" H 10700 11380 40  0000 C CNN
+F 2 "" H 10700 11450 60  0000 C CNN
+F 3 "" H 10700 11450 60  0000 C CNN
+	1    10700 11450
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR094
+U 1 1 52D11DB2
+P 10700 11150
+F 0 "#PWR094" H 10700 11150 40  0001 C CNN
+F 1 "GNDA" H 10700 11080 40  0000 C CNN
+F 2 "" H 10700 11150 60  0000 C CNN
+F 3 "" H 10700 11150 60  0000 C CNN
+	1    10700 11150
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR095
+U 1 1 52D11DB8
+P 10700 11050
+F 0 "#PWR095" H 10700 11050 40  0001 C CNN
+F 1 "GNDA" H 10700 10980 40  0000 C CNN
+F 2 "" H 10700 11050 60  0000 C CNN
+F 3 "" H 10700 11050 60  0000 C CNN
+	1    10700 11050
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR096
+U 1 1 52D11DBE
+P 14300 11350
+F 0 "#PWR096" H 14300 11350 40  0001 C CNN
+F 1 "GNDA" H 14300 11280 40  0000 C CNN
+F 2 "" H 14300 11350 60  0000 C CNN
+F 3 "" H 14300 11350 60  0000 C CNN
+	1    14300 11350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR097
+U 1 1 52D11DC4
+P 14600 14150
+F 0 "#PWR097" H 14600 14150 40  0001 C CNN
+F 1 "GNDA" H 14600 14080 40  0000 C CNN
+F 2 "" H 14600 14150 60  0000 C CNN
+F 3 "" H 14600 14150 60  0000 C CNN
+	1    14600 14150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR098
+U 1 1 52D11DCA
+P 20600 6250
+F 0 "#PWR098" H 20600 6250 40  0001 C CNN
+F 1 "GNDA" H 20600 6180 40  0000 C CNN
+F 2 "" H 20600 6250 60  0000 C CNN
+F 3 "" H 20600 6250 60  0000 C CNN
+	1    20600 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L SOLDER_JUMPER_2 SJ2
+U 1 1 52D12108
+P 21050 6300
+F 0 "SJ2" H 21060 6440 60  0000 C CNN
+F 1 "SOLDER_JUMPER_2_PASTE1&2" H 21050 6150 60  0000 C CNN
+F 2 "" H 20990 6200 60  0000 C CNN
+F 3 "" H 20990 6200 60  0000 C CNN
+	1    21050 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR099
+U 1 1 52D1211F
+P 20600 6350
+F 0 "#PWR099" H 20600 6350 30  0001 C CNN
+F 1 "GND" H 20600 6280 30  0001 C CNN
+F 2 "" H 20600 6350 60  0001 C CNN
+F 3 "" H 20600 6350 60  0001 C CNN
+	1    20600 6350
+	0    1    1    0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG0100
+U 1 1 52D12471
+P 20650 6200
+F 0 "#FLG0100" H 20650 6295 30  0001 C CNN
+F 1 "PWR_FLAG" H 20650 6380 30  0000 C CNN
+F 2 "" H 20650 6200 60  0000 C CNN
+F 3 "" H 20650 6200 60  0000 C CNN
+	1    20650 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR0101
+U 1 1 52D1261B
+P 13200 12950
+F 0 "#PWR0101" H 13200 12950 40  0001 C CNN
+F 1 "GNDA" H 13200 12880 40  0000 C CNN
+F 2 "" H 13200 12950 60  0000 C CNN
+F 3 "" H 13200 12950 60  0000 C CNN
+	1    13200 12950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR0102
+U 1 1 52D12621
+P 13200 13050
+F 0 "#PWR0102" H 13200 13050 40  0001 C CNN
+F 1 "GNDA" H 13200 12980 40  0000 C CNN
+F 2 "" H 13200 13050 60  0000 C CNN
+F 3 "" H 13200 13050 60  0000 C CNN
+	1    13200 13050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA-RESCUE-ruuvitracker_revc3 #PWR0103
+U 1 1 52D12628
+P 10700 12350
+F 0 "#PWR0103" H 10700 12350 40  0001 C CNN
+F 1 "GNDA" H 10700 12280 40  0000 C CNN
+F 2 "" H 10700 12350 60  0000 C CNN
+F 3 "" H 10700 12350 60  0000 C CNN
+	1    10700 12350
+	0    1    1    0   
+$EndComp
+$Comp
+L SOLDER_JUMPER_3 SJ3
+U 1 1 52D12910
+P 15300 11500
+F 0 "SJ3" H 15310 11640 60  0000 C CNN
+F 1 "SOLDER_JUMPER_3_PASTE1&2" H 15300 11250 60  0000 C CNN
+F 2 "" H 15240 11400 60  0000 C CNN
+F 3 "" H 15240 11400 60  0000 C CNN
+	1    15300 11500
+	1    0    0    -1  
+$EndComp
+Text Label 14950 11650 2    60   ~ 0
+LDO_3
+$Comp
+L CONN_1 P39
+U 1 1 52D261D5
+P 19500 5950
+F 0 "P39" H 19580 5950 40  0000 L CNN
+F 1 "CONN_1" H 19500 6005 30  0001 C CNN
+F 2 "" H 19500 5950 60  0000 C CNN
+F 3 "" H 19500 5950 60  0000 C CNN
+	1    19500 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P40
+U 1 1 52D261DD
+P 19500 6600
+F 0 "P40" H 19580 6600 40  0000 L CNN
+F 1 "CONN_1" H 19500 6655 30  0001 C CNN
+F 2 "" H 19500 6600 60  0000 C CNN
+F 3 "" H 19500 6600 60  0000 C CNN
+	1    19500 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_1 P38
+U 1 1 52D2652D
+P 19400 5950
+F 0 "P38" H 19480 5950 40  0000 L CNN
+F 1 "CONN_1" H 19400 6005 30  0001 C CNN
+F 2 "" H 19400 5950 60  0000 C CNN
+F 3 "" H 19400 5950 60  0000 C CNN
+	1    19400 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P41
+U 1 1 52D26C00
+P 19600 5950
+F 0 "P41" H 19680 5950 40  0000 L CNN
+F 1 "CONN_1" H 19600 6005 30  0001 C CNN
+F 2 "" H 19600 5950 60  0000 C CNN
+F 3 "" H 19600 5950 60  0000 C CNN
+	1    19600 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P42
+U 1 1 52D27093
+P 2300 14000
+F 0 "P42" H 2380 14000 40  0000 L CNN
+F 1 "CONN_1" H 2300 14055 30  0001 C CNN
+F 2 "" H 2300 14000 60  0000 C CNN
+F 3 "" H 2300 14000 60  0000 C CNN
+	1    2300 14000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P43
+U 1 1 52D270A3
+P 2300 14600
+F 0 "P43" H 2380 14600 40  0000 L CNN
+F 1 "CONN_1" H 2300 14655 30  0001 C CNN
+F 2 "" H 2300 14600 60  0000 C CNN
+F 3 "" H 2300 14600 60  0000 C CNN
+	1    2300 14600
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_1 P44
+U 1 1 52D27409
+P 20200 4100
+F 0 "P44" H 20280 4100 40  0000 L CNN
+F 1 "CONN_1" H 20200 4155 30  0001 C CNN
+F 2 "" H 20200 4100 60  0000 C CNN
+F 3 "" H 20200 4100 60  0000 C CNN
+	1    20200 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10850 3950 10950 3950
+Wire Wire Line
+	18900 4050 18300 4050
+Wire Wire Line
+	18300 3950 18900 3950
+Wire Wire Line
+	18900 3850 18300 3850
+Wire Wire Line
+	18300 3750 18900 3750
+Wire Wire Line
+	18300 3550 18900 3550
+Wire Wire Line
+	18900 3450 18300 3450
+Wire Wire Line
+	18300 3350 18900 3350
+Wire Wire Line
+	18900 3250 18300 3250
+Wire Wire Line
+	18300 3150 18900 3150
+Wire Wire Line
+	18900 3050 18300 3050
+Wire Wire Line
+	20350 2950 19700 2950
+Wire Wire Line
+	19700 3050 20350 3050
+Wire Wire Line
+	20350 3150 19700 3150
+Wire Wire Line
+	19700 3250 20350 3250
+Wire Wire Line
+	20350 3450 19700 3450
+Wire Wire Line
+	19700 3550 20350 3550
+Wire Wire Line
+	20350 3650 19700 3650
+Wire Wire Line
+	19700 3750 20350 3750
+Wire Wire Line
+	19700 3850 20350 3850
+Wire Wire Line
+	20300 3950 20350 3950
+Wire Wire Line
+	20300 4000 20300 3950
+Wire Wire Line
+	13450 8200 12850 8200
+Wire Wire Line
+	13450 8100 12850 8100
+Wire Wire Line
+	13200 7800 12850 7800
+Wire Wire Line
+	12850 7900 12950 7900
+Wire Wire Line
+	13450 8000 13450 8350
+Wire Wire Line
+	9200 5250 9200 5350
+Wire Wire Line
+	4550 2800 4550 3000
+Connection ~ 4550 2900
+Wire Wire Line
+	4250 2900 4650 2900
+Wire Wire Line
+	2150 14400 2300 14400
+Wire Wire Line
+	2200 14500 2200 14400
+Wire Wire Line
+	2150 14200 2300 14200
+Wire Wire Line
+	2200 14100 2200 14200
+Wire Wire Line
+	4550 4250 4550 4450
+Connection ~ 4550 5750
+Wire Wire Line
+	4550 5650 4550 5850
+Wire Wire Line
+	3000 5950 3000 6350
+Wire Wire Line
+	4000 6350 3900 6350
+Connection ~ 3000 6250
+Wire Wire Line
+	3000 6350 3400 6350
+Wire Wire Line
+	3000 6250 3350 6250
+Wire Wire Line
+	3050 5950 3000 5950
+Wire Wire Line
+	2900 5850 3050 5850
+Wire Wire Line
+	2900 6350 2900 5850
+Wire Wire Line
+	2650 5650 2650 5750
+Wire Wire Line
+	4250 5750 4650 5750
+Connection ~ 2750 5750
+Wire Wire Line
+	2650 5750 3050 5750
+Wire Wire Line
+	2750 5850 2750 5750
+Wire Wire Line
+	4550 6250 4550 6350
+Wire Wire Line
+	2750 6350 2750 6250
+Wire Wire Line
+	4350 5950 4350 6350
+Wire Wire Line
+	4250 5950 4350 5950
+Wire Wire Line
+	17850 3550 17850 3500
+Wire Wire Line
+	9400 12150 9450 12150
+Connection ~ 3200 14500
+Wire Wire Line
+	3450 14500 3450 14550
+Connection ~ 3200 14100
+Wire Wire Line
+	3450 14100 3450 14050
+Wire Wire Line
+	20450 3350 19700 3350
+Wire Wire Line
+	18200 3650 18900 3650
+Wire Wire Line
+	18850 2950 18900 2950
+Wire Wire Line
+	18850 2900 18850 2950
+Wire Wire Line
+	10050 5550 11050 5550
+Wire Wire Line
+	10050 5350 9950 5350
+Wire Wire Line
+	9200 5350 9350 5350
+Wire Wire Line
+	3200 14100 3200 14000
+Wire Wire Line
+	3550 14300 3550 14350
+Wire Wire Line
+	3000 4550 3000 4950
+Wire Wire Line
+	4000 4950 3900 4950
+Connection ~ 3000 4850
+Wire Wire Line
+	3000 4950 3400 4950
+Wire Wire Line
+	3000 4850 3350 4850
+Wire Wire Line
+	3050 4550 3000 4550
+Wire Wire Line
+	2900 4450 3050 4450
+Wire Wire Line
+	2900 4950 2900 4450
+Wire Wire Line
+	2650 4250 2650 4350
+Connection ~ 4550 4350
+Wire Wire Line
+	4250 4350 4650 4350
+Connection ~ 2750 4350
+Wire Wire Line
+	2650 4350 3050 4350
+Wire Wire Line
+	2750 4450 2750 4350
+Wire Wire Line
+	4550 4850 4550 4950
+Wire Wire Line
+	2750 4950 2750 4850
+Wire Wire Line
+	4350 4550 4350 4950
+Wire Wire Line
+	4250 4550 4350 4550
+Wire Wire Line
+	3000 3100 3000 3500
+Wire Wire Line
+	4000 3500 3900 3500
+Connection ~ 3000 3400
+Wire Wire Line
+	3000 3500 3400 3500
+Wire Wire Line
+	3000 3400 3350 3400
+Wire Wire Line
+	3050 3100 3000 3100
+Wire Wire Line
+	2900 3000 3050 3000
+Wire Wire Line
+	2900 3500 2900 3000
+Wire Wire Line
+	2650 2800 2650 2900
+Connection ~ 2750 2900
+Wire Wire Line
+	2650 2900 3050 2900
+Wire Wire Line
+	2750 3000 2750 2900
+Wire Wire Line
+	4550 3400 4550 3500
+Wire Wire Line
+	2750 3500 2750 3400
+Wire Wire Line
+	4350 3100 4350 3500
+Wire Wire Line
+	4250 3100 4350 3100
+Wire Wire Line
+	18350 13500 18500 13500
+Wire Wire Line
+	18500 13400 18350 13400
+Wire Wire Line
+	18350 13300 18500 13300
+Wire Wire Line
+	18500 13200 18350 13200
+Wire Wire Line
+	18350 13000 18500 13000
+Wire Wire Line
+	18500 12700 18350 12700
+Wire Wire Line
+	18350 12600 18500 12600
+Wire Wire Line
+	18500 12400 18350 12400
+Wire Wire Line
+	18350 12200 18500 12200
+Wire Wire Line
+	18400 12300 18500 12300
+Wire Wire Line
+	13150 12450 13250 12450
+Wire Wire Line
+	13150 12350 13250 12350
+Wire Wire Line
+	13150 12250 13250 12250
+Wire Wire Line
+	13150 12150 13250 12150
+Wire Wire Line
+	13150 12050 13250 12050
+Wire Wire Line
+	13150 11950 13250 11950
+Wire Wire Line
+	13150 11850 13250 11850
+Wire Wire Line
+	13150 11750 13250 11750
+Wire Wire Line
+	13150 13950 13250 13950
+Wire Wire Line
+	13150 13850 13250 13850
+Wire Wire Line
+	13150 13650 13250 13650
+Wire Wire Line
+	10650 14850 10750 14850
+Wire Wire Line
+	10650 14750 10750 14750
+Wire Wire Line
+	10650 13350 10750 13350
+Wire Wire Line
+	10750 13250 10650 13250
+Wire Wire Line
+	10650 13150 10750 13150
+Wire Wire Line
+	10750 13050 10650 13050
+Wire Wire Line
+	10650 12950 10750 12950
+Wire Wire Line
+	10750 12850 10650 12850
+Wire Wire Line
+	10650 12750 10750 12750
+Wire Wire Line
+	10750 12650 10650 12650
+Wire Wire Line
+	10650 12550 10750 12550
+Wire Wire Line
+	10750 12450 10650 12450
+Wire Wire Line
+	10650 12250 10750 12250
+Wire Wire Line
+	9850 12150 10750 12150
+Wire Wire Line
+	10650 12050 10750 12050
+Wire Wire Line
+	15000 11250 15000 11150
+Wire Wire Line
+	14750 11250 15000 11250
+Wire Wire Line
+	14750 10650 14750 11250
+Wire Wire Line
+	15100 11250 15100 11150
+Wire Wire Line
+	14550 13300 14550 13250
+Wire Wire Line
+	14650 13300 14650 13250
+Connection ~ 14150 13450
+Wire Wire Line
+	14150 13500 13300 13500
+Wire Wire Line
+	13300 13500 13300 13150
+Wire Wire Line
+	14150 13300 14550 13300
+Wire Wire Line
+	14150 13300 14150 13500
+Wire Wire Line
+	14150 13450 14350 13450
+Wire Wire Line
+	13350 11150 13150 11150
+Wire Wire Line
+	13350 10650 13350 11150
+Wire Wire Line
+	10850 8950 12100 8950
+Wire Wire Line
+	10850 8450 12100 8450
+Wire Wire Line
+	9900 5850 10150 5850
+Wire Wire Line
+	13300 13150 13150 13150
+Wire Wire Line
+	13750 13400 13750 13300
+Connection ~ 13750 12800
+Wire Wire Line
+	13750 12800 13750 12900
+Wire Wire Line
+	19700 6300 19450 6300
+Wire Wire Line
+	13350 10650 14050 10650
+Connection ~ 14000 10650
+Connection ~ 14600 10650
+Wire Wire Line
+	14600 10750 14600 10650
+Wire Wire Line
+	14550 10650 14750 10650
+Wire Wire Line
+	14000 10650 14000 10750
+Connection ~ 14300 11250
+Wire Wire Line
+	14300 11350 14300 11250
+Wire Wire Line
+	14600 11250 14600 11150
+Wire Wire Line
+	14000 11250 14600 11250
+Wire Wire Line
+	14000 11150 14000 11250
+Wire Wire Line
+	4000 7700 4200 7700
+Connection ~ 4000 7100
+Wire Wire Line
+	3200 7400 3700 7400
+Wire Wire Line
+	3900 7100 4050 7100
+Wire Wire Line
+	4000 7050 4000 7200
+Wire Wire Line
+	3300 7100 3300 7400
+Connection ~ 3300 7400
+Wire Wire Line
+	3400 7100 3300 7100
+Wire Wire Line
+	4000 7600 4000 7850
+Connection ~ 4000 7700
+Connection ~ 14300 13450
+Wire Wire Line
+	15500 13450 15450 13450
+Connection ~ 14900 13450
+Wire Wire Line
+	14900 13550 14900 13450
+Wire Wire Line
+	14850 13450 14950 13450
+Wire Wire Line
+	14300 13450 14300 13550
+Connection ~ 14600 14050
+Wire Wire Line
+	14600 14150 14600 14050
+Wire Wire Line
+	14900 14050 14900 13950
+Wire Wire Line
+	14300 14050 14900 14050
+Wire Wire Line
+	14300 13950 14300 14050
+Wire Wire Line
+	3550 14150 3650 14150
+Wire Wire Line
+	3550 14200 3550 14150
+Wire Wire Line
+	3150 14200 3550 14200
+Wire Wire Line
+	5450 13450 5450 13550
+Wire Wire Line
+	5650 14150 5350 14150
+Wire Wire Line
+	4650 14350 4850 14350
+Wire Wire Line
+	4150 13750 4150 13800
+Wire Wire Line
+	3150 14500 3450 14500
+Wire Wire Line
+	3200 14650 3200 14500
+Wire Wire Line
+	4150 14750 4150 14700
+Wire Wire Line
+	4650 14150 4850 14150
+Wire Wire Line
+	5350 14350 5650 14350
+Wire Wire Line
+	5450 14050 5450 14350
+Connection ~ 5450 14350
+Wire Wire Line
+	3550 14350 3650 14350
+Wire Wire Line
+	3150 14300 3550 14300
+Wire Wire Line
+	3150 14100 3450 14100
+Wire Wire Line
+	19450 6400 19550 6400
+Wire Wire Line
+	11050 6550 10450 6550
+Wire Wire Line
+	10450 6450 11050 6450
+Wire Wire Line
+	10050 5350 10050 5850
+Connection ~ 10050 5550
+Connection ~ 10900 5150
+Wire Wire Line
+	10900 5000 10900 5150
+Wire Wire Line
+	9250 5850 9400 5850
+Wire Wire Line
+	2650 1450 2650 1550
+Connection ~ 3000 1550
+Wire Wire Line
+	3000 1550 3000 1750
+Wire Wire Line
+	3000 1750 3050 1750
+Connection ~ 4550 1550
+Wire Wire Line
+	4250 1550 4650 1550
+Wire Wire Line
+	4550 1450 4550 1650
+Connection ~ 2750 1550
+Wire Wire Line
+	2650 1550 3050 1550
+Wire Wire Line
+	2750 1650 2750 1550
+Wire Wire Line
+	2950 1650 2950 2150
+Wire Wire Line
+	3050 1650 2950 1650
+Wire Wire Line
+	4550 2050 4550 2150
+Wire Wire Line
+	2750 2150 2750 2050
+Wire Wire Line
+	4350 1750 4350 2150
+Wire Wire Line
+	4250 1750 4350 1750
+Wire Wire Line
+	18950 10800 18900 10800
+Wire Wire Line
+	18950 11250 18950 10800
+Wire Wire Line
+	18050 10800 18100 10800
+Wire Wire Line
+	18050 11250 18050 10800
+Connection ~ 17900 10650
+Wire Wire Line
+	18100 10650 17900 10650
+Connection ~ 19100 10650
+Wire Wire Line
+	18900 10650 19100 10650
+Wire Wire Line
+	19100 10500 19100 10750
+Wire Wire Line
+	17900 10500 17900 10750
+Wire Wire Line
+	17900 11150 17900 11250
+Wire Wire Line
+	19100 11250 19100 11150
+Connection ~ 3700 11250
+Wire Wire Line
+	3700 11950 3700 11850
+Connection ~ 3700 11350
+Wire Wire Line
+	3700 11350 3450 11350
+Wire Wire Line
+	3700 11250 3450 11250
+Wire Wire Line
+	3700 11150 3700 11450
+Wire Wire Line
+	1400 11950 1400 11800
+Connection ~ 3550 11750
+Wire Wire Line
+	3550 11750 3450 11750
+Connection ~ 3550 11650
+Wire Wire Line
+	3450 11650 3550 11650
+Wire Wire Line
+	3550 11550 3450 11550
+Wire Wire Line
+	3550 11550 3550 11950
+Wire Wire Line
+	1400 11250 2000 11250
+Wire Wire Line
+	1400 11400 1400 11250
+Connection ~ 18500 8150
+Wire Wire Line
+	18500 8150 18500 8200
+Wire Wire Line
+	20850 8150 20850 8000
+Wire Wire Line
+	20250 8150 20850 8150
+Wire Wire Line
+	20450 9400 20450 9350
+Connection ~ 20700 8150
+Wire Wire Line
+	20700 8200 20700 8150
+Wire Wire Line
+	18500 8650 18500 8600
+Wire Wire Line
+	20350 8350 20250 8350
+Wire Wire Line
+	19300 8700 19500 8700
+Wire Wire Line
+	18750 8700 18900 8700
+Wire Wire Line
+	18850 8350 18750 8350
+Wire Wire Line
+	20700 8650 20700 8600
+Wire Wire Line
+	18750 7950 19150 7950
+Wire Wire Line
+	18750 7950 18750 8700
+Connection ~ 18750 8350
+Wire Wire Line
+	20350 8650 20350 8350
+Wire Wire Line
+	20450 8250 20250 8250
+Wire Wire Line
+	20950 8800 20450 8800
+Wire Wire Line
+	20450 8250 20450 8850
+Connection ~ 20450 8800
+Wire Wire Line
+	18350 8150 18850 8150
+Wire Wire Line
+	20150 8700 20000 8700
+Wire Wire Line
+	20150 8900 20150 8700
+Wire Wire Line
+	18650 8900 20150 8900
+Wire Wire Line
+	18650 8150 18650 8900
+Connection ~ 18650 8150
+Wire Wire Line
+	18350 8000 18350 8150
+Wire Wire Line
+	6300 11200 6300 11800
+Wire Wire Line
+	5100 11800 5200 11800
+Wire Wire Line
+	6300 11800 6200 11800
+Wire Wire Line
+	5100 11500 5200 11500
+Wire Wire Line
+	5600 11500 5700 11500
+Wire Wire Line
+	5200 11200 5100 11200
+Wire Wire Line
+	5600 11200 5700 11200
+Wire Wire Line
+	6200 11200 6300 11200
+Wire Wire Line
+	5600 11800 5700 11800
+Connection ~ 6300 11500
+Wire Wire Line
+	6200 11500 6400 11500
+Wire Wire Line
+	13450 13400 13450 13300
+Connection ~ 13450 12800
+Wire Wire Line
+	13450 12900 13450 12800
+Wire Wire Line
+	19450 6200 19550 6200
+Wire Wire Line
+	18350 13900 18500 13900
+Wire Wire Line
+	18400 13100 18500 13100
+Wire Wire Line
+	21150 13350 21150 13250
+Wire Wire Line
+	21400 10850 21400 11100
+Wire Wire Line
+	21400 10900 21300 10900
+Wire Wire Line
+	20800 10900 20750 10900
+Wire Wire Line
+	21400 12750 21400 12850
+Wire Wire Line
+	21400 13250 21400 13350
+Wire Wire Line
+	20800 11100 20750 11100
+Wire Wire Line
+	21400 11100 21300 11100
+Connection ~ 21400 10900
+Wire Wire Line
+	21150 12750 21150 12850
+Wire Wire Line
+	18500 14100 18400 14100
+Wire Wire Line
+	18400 13800 18500 13800
+Wire Wire Line
+	18400 13800 18400 14200
+Connection ~ 18400 14100
+Wire Wire Line
+	12950 9050 12950 8900
+Wire Wire Line
+	13450 8000 12850 8000
+Connection ~ 13200 7800
+Wire Wire Line
+	12950 7750 12950 8500
+Wire Wire Line
+	12100 8450 12100 8500
+Wire Wire Line
+	10850 4250 11050 4250
+Connection ~ 10850 8450
+Connection ~ 10850 8200
+Wire Wire Line
+	10850 7600 10850 8500
+Connection ~ 11350 8450
+Wire Wire Line
+	11350 8450 11350 8500
+Connection ~ 11850 8450
+Wire Wire Line
+	11850 8450 11850 8500
+Connection ~ 11100 8950
+Wire Wire Line
+	11100 8950 11100 8900
+Connection ~ 11600 8950
+Wire Wire Line
+	11600 8950 11600 8900
+Connection ~ 13450 8200
+Wire Wire Line
+	10850 8200 11050 8200
+Connection ~ 10850 7900
+Wire Wire Line
+	10850 8000 11050 8000
+Connection ~ 10850 7700
+Wire Wire Line
+	10850 7800 11050 7800
+Wire Wire Line
+	11050 7700 10850 7700
+Wire Wire Line
+	10850 7900 11050 7900
+Connection ~ 10850 7800
+Connection ~ 10850 8000
+Connection ~ 13450 8100
+Wire Wire Line
+	11850 8950 11850 8900
+Connection ~ 11850 8950
+Wire Wire Line
+	11350 8950 11350 8900
+Connection ~ 11350 8950
+Wire Wire Line
+	11600 8450 11600 8500
+Connection ~ 11600 8450
+Wire Wire Line
+	11100 8450 11100 8500
+Connection ~ 11100 8450
+Wire Wire Line
+	10850 8900 10850 9050
+Connection ~ 10850 8950
+Wire Wire Line
+	10300 4250 10350 4250
+Wire Wire Line
+	10950 3950 10950 4250
+Connection ~ 10950 4250
+Wire Wire Line
+	10150 5150 10250 5150
+Wire Wire Line
+	12100 8950 12100 8900
+Wire Wire Line
+	13200 7750 13200 8500
+Connection ~ 12950 7900
+Wire Wire Line
+	13200 9050 13200 8900
+Wire Wire Line
+	10750 5150 11050 5150
+Wire Wire Line
+	13250 12750 13250 12850
+Connection ~ 13800 11450
+Wire Wire Line
+	13800 11400 13800 11550
+Wire Wire Line
+	14550 11550 14950 11550
+Wire Wire Line
+	13200 11550 13150 11550
+Wire Wire Line
+	13250 12850 13150 12850
+Wire Wire Line
+	10700 11450 10750 11450
+Wire Wire Line
+	13200 14950 13150 14950
+Wire Wire Line
+	10700 14950 10750 14950
+Wire Wire Line
+	10700 12350 10750 12350
+Wire Wire Line
+	10700 11150 10750 11150
+Wire Wire Line
+	13200 11050 13150 11050
+Wire Wire Line
+	13200 11250 13150 11250
+Wire Wire Line
+	13200 12550 13150 12550
+Wire Wire Line
+	13150 13250 13200 13250
+Wire Wire Line
+	13200 12950 13150 12950
+Wire Wire Line
+	13150 13050 13200 13050
+Wire Wire Line
+	13150 13350 13200 13350
+Wire Wire Line
+	13150 12650 13200 12650
+Wire Wire Line
+	13150 11350 13200 11350
+Wire Wire Line
+	10700 11050 10750 11050
+Wire Wire Line
+	10700 11950 10750 11950
+Wire Wire Line
+	10700 14650 10750 14650
+Wire Wire Line
+	13200 14750 13150 14750
+Wire Wire Line
+	10600 11250 10750 11250
+Wire Wire Line
+	13150 12750 13250 12750
+Wire Wire Line
+	13700 11550 14050 11550
+Connection ~ 13800 11550
+Wire Wire Line
+	13150 11450 13800 11450
+Wire Wire Line
+	13250 12800 13850 12800
+Connection ~ 13250 12800
+Wire Wire Line
+	20600 6350 20700 6350
+Wire Wire Line
+	20600 6250 20700 6250
+Wire Wire Line
+	20650 6200 20650 6250
+Connection ~ 20650 6250
+Wire Wire Line
+	19500 6450 19500 6400
+Connection ~ 19500 6400
+Wire Wire Line
+	19500 6100 19500 6200
+Connection ~ 19500 6200
+Wire Wire Line
+	19400 6100 19400 6150
+Wire Wire Line
+	19400 6150 19600 6150
+Connection ~ 19500 6150
+Wire Wire Line
+	19600 6150 19600 6100
+Wire Wire Line
+	2300 14400 2300 14450
+Connection ~ 2200 14400
+Wire Wire Line
+	2300 14200 2300 14150
+Connection ~ 2200 14200
+Wire Wire Line
+	20200 3950 20200 3850
+Connection ~ 20200 3850
+$Comp
+L CONN_1 P45
+U 1 1 52D27E9B
+P 4800 1650
+F 0 "P45" H 4880 1650 40  0000 L CNN
+F 1 "CONN_1" H 4800 1705 30  0001 C CNN
+F 2 "" H 4800 1650 60  0000 C CNN
+F 3 "" H 4800 1650 60  0000 C CNN
+	1    4800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1650 4600 1650
+Wire Wire Line
+	4600 1650 4600 1550
+Connection ~ 4600 1550
+$Comp
+L CONN_1 P46
+U 1 1 52D28335
+P 4200 7100
+F 0 "P46" H 4280 7100 40  0000 L CNN
+F 1 "CONN_1" H 4200 7155 30  0001 C CNN
+F 2 "" H 4200 7100 60  0000 C CNN
+F 3 "" H 4200 7100 60  0000 C CNN
+	1    4200 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_1 P47
+U 1 1 52D2833B
+P 4200 7800
+F 0 "P47" H 4280 7800 40  0000 L CNN
+F 1 "CONN_1" H 4200 7855 30  0001 C CNN
+F 2 "" H 4200 7800 60  0000 C CNN
+F 3 "" H 4200 7800 60  0000 C CNN
+	1    4200 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 7800 4000 7800
+Connection ~ 4000 7800
+$Comp
+L CONN_1 P48
+U 1 1 52D2AC78
+P 12350 15700
+F 0 "P48" H 12430 15700 40  0000 L CNN
+F 1 "HOLE" H 12350 15755 30  0001 C CNN
+F 2 "" H 12350 15700 60  0000 C CNN
+F 3 "" H 12350 15700 60  0000 C CNN
+	1    12350 15700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P49
+U 1 1 52D2AC7F
+P 12450 15700
+F 0 "P49" H 12530 15700 40  0000 L CNN
+F 1 "HOLE" H 12450 15755 30  0001 C CNN
+F 2 "" H 12450 15700 60  0000 C CNN
+F 3 "" H 12450 15700 60  0000 C CNN
+	1    12450 15700
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 12350 15850
+NoConn ~ 12450 15850
+Text Notes 11250 15800 0    30   Italic 0
+Fiducials:
+Text Notes 12100 15800 0    30   Italic 0
+Holes:
+$Comp
+L C-RESCUE-ruuvitracker_revc3 C32
+U 1 1 53746C0D
+P 13850 5600
+F 0 "C32" H 13850 5700 40  0000 L CNN
+F 1 "NA" H 13856 5515 40  0000 L CNN
+F 2 "~" H 13888 5450 30  0000 C CNN
+F 3 "~" H 13850 5600 60  0000 C CNN
+	1    13850 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 5400 13850 5350
+Wire Wire Line
+	13850 5350 12850 5350
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR0104
+U 1 1 53746DCB
+P 13850 5850
+F 0 "#PWR0104" H 13850 5850 30  0001 C CNN
+F 1 "GND" H 13850 5780 30  0001 C CNN
+F 2 "" H 13850 5850 60  0001 C CNN
+F 3 "" H 13850 5850 60  0001 C CNN
+	1    13850 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 5850 13850 5800
+Text Notes 14100 5350 0    40   Italic 0
+Populate 2u2 cap if STM32F401 series uC is used.\nPB11 isn't available any more. GSM module needs\nUART, so if STM32F401 or 411 etc. is used, GSM module\ncannot be used... Let's figure this out in future versions :)
+$Comp
+L CONN_1 P50
+U 1 1 53747474
+P 3600 13950
+F 0 "P50" H 3680 13950 40  0000 L CNN
+F 1 "CONN_1" H 3600 14005 30  0001 C CNN
+F 2 "" H 3600 13950 60  0000 C CNN
+F 3 "" H 3600 13950 60  0000 C CNN
+	1    3600 13950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_1 P51
+U 1 1 5374747A
+P 3600 14550
+F 0 "P51" H 3680 14550 40  0000 L CNN
+F 1 "CONN_1" H 3600 14605 30  0001 C CNN
+F 2 "" H 3600 14550 60  0000 C CNN
+F 3 "" H 3600 14550 60  0000 C CNN
+	1    3600 14550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3600 14400 3600 14350
+Connection ~ 3600 14350
+Wire Wire Line
+	3600 14150 3600 14100
+Connection ~ 3600 14150
+$Comp
+L PUSH_BUTTON SW2
+U 1 1 53747A5E
+P 9650 3950
+F 0 "SW2" H 9650 4110 50  0000 C CNN
+F 1 "BOOT0_BUT" H 9650 3670 50  0000 C CNN
+F 2 "" H 9650 3950 60  0000 C CNN
+F 3 "" H 9650 3950 60  0000 C CNN
+	1    9650 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 4050 10950 4050
+Connection ~ 10950 4050
+$Comp
+L VDD #PWR0105
+U 1 1 53748064
+P 9200 3950
+F 0 "#PWR0105" H 9200 4050 30  0001 C CNN
+F 1 "VDD" H 9200 4060 30  0000 C CNN
+F 2 "" H 9200 3950 60  0001 C CNN
+F 3 "" H 9200 3950 60  0001 C CNN
+	1    9200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 3950 9200 4050
+Wire Wire Line
+	9200 4050 9350 4050
+NoConn ~ 9350 5550
+NoConn ~ 9950 5550
+NoConn ~ 9350 4150
+NoConn ~ 9350 3950
+NoConn ~ 9950 4150
+NoConn ~ 9950 3950
+NoConn ~ 9350 5450
+NoConn ~ 9950 5450
+$Comp
+L CONN_1 P52
+U 1 1 5411582C
+P 10300 5850
+F 0 "P52" H 10380 5850 40  0000 L CNN
+F 1 "CONN_1" H 10300 5905 30  0001 C CNN
+F 2 "" H 10300 5850 60  0000 C CNN
+F 3 "" H 10300 5850 60  0000 C CNN
+	1    10300 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 10050 5850
+$Comp
+L CONN_1 P54
+U 1 1 5411B0FF
+P 13850 7300
+F 0 "P54" H 13930 7300 40  0000 L CNN
+F 1 "CONN_1" H 13850 7355 30  0001 C CNN
+F 2 "" H 13850 7300 60  0000 C CNN
+F 3 "" H 13850 7300 60  0000 C CNN
+	1    13850 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13700 7300 12850 7300
+$Comp
+L CONN_1 P53
+U 1 1 5411B2BD
+P 13550 6100
+F 0 "P53" H 13630 6100 40  0000 L CNN
+F 1 "CONN_1" H 13550 6155 30  0001 C CNN
+F 2 "" H 13550 6100 60  0000 C CNN
+F 3 "" H 13550 6100 60  0000 C CNN
+	1    13550 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13400 6100 12850 6100
+Text Label 13350 14850 0    60   ~ 0
+GSM_VRTC
+Wire Wire Line
+	13350 14850 13150 14850
+Text Label 10300 8000 0    60   ~ 0
+GSM_VRTC
+Wire Wire Line
+	11050 8100 10900 8100
+Wire Wire Line
+	10900 8100 10900 8050
+Wire Wire Line
+	10900 8050 10800 8050
+Wire Wire Line
+	10800 8050 10800 8100
+Wire Wire Line
+	10800 8100 9750 8100
+$Comp
+L SOLDER_JUMPER_2 SJ4
+U 1 1 5411BFAF
+P 9400 8150
+F 0 "SJ4" H 9410 8290 60  0000 C CNN
+F 1 "SOLDER_JUMPER_2_PASTE1&2" H 9400 8000 60  0000 C CNN
+F 2 "" H 9340 8050 60  0000 C CNN
+F 3 "" H 9340 8050 60  0000 C CNN
+	1    9400 8150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10300 8000 10200 8000
+Wire Wire Line
+	10200 8000 10200 8200
+Connection ~ 10200 8100
+$Comp
+L VDD #PWR0106
+U 1 1 5411C50B
+P 9850 8200
+F 0 "#PWR0106" H 9850 8300 30  0001 C CNN
+F 1 "VDD" H 9850 8310 30  0000 C CNN
+F 2 "" H 9850 8200 60  0001 C CNN
+F 3 "" H 9850 8200 60  0001 C CNN
+	1    9850 8200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9850 8200 9750 8200
+$Comp
+L CONN_1 P55
+U 1 1 5411C6D0
+P 10200 8350
+F 0 "P55" H 10280 8350 40  0000 L CNN
+F 1 "CONN_1" H 10200 8405 30  0001 C CNN
+F 2 "" H 10200 8350 60  0000 C CNN
+F 3 "" H 10200 8350 60  0000 C CNN
+	1    10200 8350
+	0    1    1    0   
+$EndComp
+Text Notes 10050 8450 2    40   Italic 0
+This is done this way so that one could\nuse super cap or coin cell to power GSM\nmodule's RTC and uC's VBAT if needed. Enjoy!
+$Comp
+L CONN_1 P56
+U 1 1 5411CD83
+P 13850 6800
+F 0 "P56" H 13930 6800 40  0000 L CNN
+F 1 "CONN_1" H 13850 6855 30  0001 C CNN
+F 2 "" H 13850 6800 60  0000 C CNN
+F 3 "" H 13850 6800 60  0000 C CNN
+	1    13850 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13700 6800 12850 6800
+Wire Wire Line
+	12850 4450 13150 4450
+Wire Wire Line
+	13150 4450 13150 4300
+$Comp
+L CONN_1 P57
+U 1 1 548B0E99
+P 10350 8350
+F 0 "P57" H 10430 8350 40  0000 L CNN
+F 1 "CONN_1" H 10350 8405 30  0001 C CNN
+F 2 "" H 10350 8350 60  0000 C CNN
+F 3 "" H 10350 8350 60  0000 C CNN
+	1    10350 8350
+	0    1    1    0   
+$EndComp
+$Comp
+L GND-RESCUE-ruuvitracker_revc3 #PWR0107
+U 1 1 548B0EA0
+P 10350 8200
+F 0 "#PWR0107" H 10350 8200 30  0001 C CNN
+F 1 "GND" H 10350 8130 30  0001 C CNN
+F 2 "" H 10350 8200 60  0001 C CNN
+F 3 "" H 10350 8200 60  0001 C CNN
+	1    10350 8200
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC

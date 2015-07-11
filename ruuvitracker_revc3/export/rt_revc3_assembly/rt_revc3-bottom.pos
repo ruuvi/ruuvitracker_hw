@@ -1,0 +1,18 @@
+### Module positions - created on ke  3. kesäkuuta 2015 20.03.06 ###
+### Printed by Pcbnew version pcbnew 0.201505120158+5650~23~ubuntu15.04.1-product
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref    Val                  Package         PosX       PosY        Rot     Side
+C18      680u             TANTALUM_D_E_291   35.7000   -11.7000      90.0    bottom
+C19      680u             TANTALUM_D_E_291   35.7000   -21.7000     270.0    bottom
+C20      GPSCAP1          SMD_0603_RT        35.6000   -27.1000     180.0    bottom
+C21      GSMCAP1          SMD_0603_RT        34.2000    -6.1000     180.0    bottom
+C22      GPSCAP2          SMD_0603_RT        35.6000   -28.3000     180.0    bottom
+C23      GSMCAP2          SMD_0603_RT        36.9000    -6.1000     180.0    bottom
+P10      FIDU             TP_SMD_08MM         5.8000    -1.1000       0.0    bottom
+P11      FIDU             TP_SMD_08MM        37.6000   -29.3000       0.0    bottom
+R18      GPSRES           SMD_0603_RT        33.5000   -28.2000      90.0    bottom
+R19      GSMRES1          SMD_0603_RT        34.2000    -4.9000     180.0    bottom
+R20      GSMRES2          SMD_0603_RT        36.9000    -4.9000     180.0    bottom
+U2       SIM968           SIM968_RECT        17.7000   -16.7000      90.0    bottom
+## End
