@@ -1,0 +1,162 @@
+PCBNEW-LibModule-V1  Sat 12 Jan 2013 12:19:34 AM EET
+# encoding utf-8
+$INDEX
+ADMP404_504_MEMS_MIC
+$EndINDEX
+$MODULE ADMP404_504_MEMS_MIC
+Po 0 0 0 15 50F08FED 50F08FC9 ~~
+Li ADMP404_504_MEMS_MIC
+Sc 50F08FC9
+AR ADMP404_504_MEMS_MIC
+Op 0 0 0
+At SMD 
+T0 0 0 276 276 0 28 N V 21 N "ADMP404_504_MEMS_MIC"
+T1 0 0 276 276 0 28 N V 21 N "VAL**"
+DS 433 -433 -433 -433 28 21
+DS 591 276 591 -276 28 21
+DS -433 433 433 433 28 21
+DS -591 -276 -591 276 28 21
+DA -433 276 -433 433 900 28 21
+DA 433 276 591 276 900 28 21
+DA 433 -276 433 -433 900 28 21
+DA -433 -276 -591 -276 900 28 21
+DC -787 394 -748 354 28 21
+DS -669 -492 669 -492 28 21
+DS 669 -492 669 492 28 21
+DS 669 492 -669 492 28 21
+DS -669 492 -669 -492 28 21
+$PAD
+Sh "1" R 268 354 0 0 900
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -358 240
+.SolderMask 12
+.SolderPaste -28
+$EndPAD
+$PAD
+Sh "3" R 268 354 0 0 900
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -358 -240
+.SolderMask 12
+.SolderPaste -28
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 0
+Dr 0 0 0 O 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 240 240
+.SolderMask 20
+.SolderPaste -20
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 0
+Dr 0 0 0 O 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 240 -240
+.SolderMask 20
+.SolderPaste -20
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 900
+Dr 0 0 0 O 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 480 0
+.SolderMask 20
+.SolderPaste -20
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 900
+Dr 0 0 0 O 0 0
+At SMD N 00808000
+Ne 0 ""
+Po 0 0
+.SolderMask 20
+.SolderPaste -20
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 600
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 35 -118
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 3000
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 445 -118
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 300
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 358 205
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 3300
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 122 205
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 3000
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 35 118
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 600
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 445 118
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 3300
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 358 -205
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "2" O 197 98 0 0 300
+Dr 0 0 0 O 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 122 -205
+.SolderMask 20
+.SolderPaste -4
+$EndPAD
+$PAD
+Sh "" C 276 276 0 0 900
+Dr 276 0 0
+At HOLE N 00C0FFFF
+Ne 0 ""
+Po 240 0
+$EndPAD
+$EndMODULE  ADMP404_504_MEMS_MIC
+$EndLIBRARY

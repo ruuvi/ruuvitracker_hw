@@ -1,0 +1,23 @@
+EESchema-LIBRARY Version 2.3  Date: Mon 31 Dec 2012 01:23:38 AM EET
+#encoding utf-8
+#
+# ZENER
+#
+DEF ZENER D 0 40 N N 1 F N
+F0 "D" 0 100 40 H V C CNN
+F1 "ZENER" 0 -100 40 H V C CNN
+$FPLIST
+ D?
+ S*
+$ENDFPLIST
+DRAW
+P 2 0 1 0  50 -40  30 -60 N
+P 2 0 1 6  50 40  50 -40 N
+P 2 0 1 0  50 40  70 60 N
+P 3 0 1 0  -50 50  50 0  -50 -50 F
+X A 1 -200 0 150 R 40 40 1 1 P
+X K 2 200 0 150 L 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,107 @@
+PCBNEW-LibModule-V1  Sat 10 Aug 2013 10:36:08 PM EEST
+# encoding utf-8
+Units mm
+$INDEX
+DFN_10PIN_2X2MM
+$EndINDEX
+$MODULE DFN_10PIN_2X2MM
+Po 0 0 0 15 5206960C 00000000 ~~
+Li DFN_10PIN_2X2MM
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 0.7 0.7 0 0.07 N V 21 N "DFN_10PIN_2X2MM"
+T1 0 0 0.7 0.7 0 0.07 N V 21 N "VAL**"
+DC -0.9 -1.3 -0.8 -1.2 0.07 21
+DS -1 -1 -1 1 0.07 21
+DS -1 1 1 1 0.07 21
+DS 1 1 1 -1 0.07 21
+DS 1 -1 -1 -1 0.07 21
+$PAD
+Sh "1" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9 -0.8
+$EndPAD
+$PAD
+Sh "2" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9 -0.4
+$EndPAD
+$PAD
+Sh "3" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9 0
+$EndPAD
+$PAD
+Sh "4" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9 0.4
+$EndPAD
+$PAD
+Sh "5" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.9 0.8
+$EndPAD
+$PAD
+Sh "6" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 0.8
+$EndPAD
+$PAD
+Sh "7" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 0.4
+$EndPAD
+$PAD
+Sh "8" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 0
+$EndPAD
+$PAD
+Sh "9" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 -0.4
+$EndPAD
+$PAD
+Sh "10" R 0.6 0.225 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 -0.8
+$EndPAD
+$PAD
+Sh "~" R 0.725 1.95 0 0 0
+Dr 0 0 0
+At SMD N 00800000
+Ne 0 ""
+Po -0.9 0
+.SolderMask 0.01
+$EndPAD
+$PAD
+Sh "~" R 0.725 1.95 0 0 0
+Dr 0 0 0
+At SMD N 00800000
+Ne 0 ""
+Po 0.9 0
+.SolderMask 0.01
+$EndPAD
+$EndMODULE DFN_10PIN_2X2MM
+$EndLIBRARY

@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.3  Date: Sun 16 Jun 2013 12:15:41 PM EEST
+#encoding utf-8
+#
+# RF_CONN
+#
+DEF RF_CONN P 0 40 Y Y 1 F N
+F0 "P" 0 350 60 H V C CNN
+F1 "RF_CONN" 0 250 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+P 4 0 1 0  0 -50  -250 200  250 200  0 -50 N
+X SIG 1 -50 -300 300 U 50 50 1 1 P
+X GND 2 50 -300 300 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
