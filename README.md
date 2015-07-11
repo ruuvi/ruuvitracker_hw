@@ -1,5 +1,5 @@
-# RuuviTracker hardware
+# ruuvitracker_hw
 
-See the branches for documentation of the various hardware revisions. 
+This repository has all the necessary files to modify and manufacture RuuviTracker hardware.
 
-Current hardware [RevC3](../../tree/revC3)
+Latest hardware version is Rev.C3. First one was Rev.A1 and then Rev.B1 came out. And after that, Rev.C1 and Rev.C2. Revisions A, B and C are completely different devices.
