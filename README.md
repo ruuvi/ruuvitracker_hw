@@ -1,6 +1,6 @@
 # RuuviTracker: Open Source GPS/GSM Positioning Device
 
-[![RuuviTracker](https://github.com/ruuvi/ruuvitracker_hw/raw/master/ruuvitracker_revc3.jpg)]
+[![RuuviTracker](https://github.com/ruuvi/ruuvitracker_hw/raw/master/ruuvitracker_revc3.jpg)](http://ruuvi.com)
 
 This repository has all the necessary files to modify and manufacture RuuviTracker hardware.
 
